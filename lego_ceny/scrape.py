@@ -65,17 +65,30 @@ def save_rows(path: str, rows: list[dict]) -> None:
         w.writerows(kept + rows)
 
 
+def _key(p: dict) -> dict:
+    return {"set_num": p["set_num"], "shop": p["shop"]}
+
+
+def save_report(path: str, report: list[dict]) -> None:
+    """Stan ostatniego przebiegu dla każdej pary zestaw-sklep, do szybkiej diagnozy."""
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=["set_num", "shop", "status", "detail"])
+        w.writeheader()
+        w.writerows(report)
+
+
 def main(data_dir: str = "data", delay: float = 3.0) -> int:
     shops = load_shops(os.path.join(data_dir, "shops.json"))
     rates = load_rates()
     today = dt.date.today().isoformat()
-    rows, failures = [], 0
+    rows, failures, report = [], 0, []
     with open(os.path.join(data_dir, "products.csv"), newline="", encoding="utf-8") as f:
         products = list(csv.DictReader(f))
     for p in products:
         shop = shops.get(p["shop"])
         if not shop:
             warn(f"nieznany sklep {p['shop']}")
+            report.append({**_key(p), "status": "blad", "detail": "nieznany sklep"})
             failures += 1
             continue
         try:
@@ -83,17 +96,22 @@ def main(data_dir: str = "data", delay: float = 3.0) -> int:
             offer = extract_offer(html)
         except Exception as e:  # sieć, blokada, 404
             warn(f"{p['set_num']} @ {p['shop']}: {e}")
+            report.append({**_key(p), "status": "blad", "detail": str(e)})
             failures += 1
             continue
         if offer is None:
-            warn(f"{p['set_num']} @ {p['shop']}: nie znaleziono ceny (strona: {page_title(html)!r}, {len(html)} znaków)")
+            detail = f"nie znaleziono ceny (strona: {page_title(html)!r}, {len(html)} znaków)"
+            warn(f"{p['set_num']} @ {p['shop']}: {detail}")
+            report.append({**_key(p), "status": "brak ceny", "detail": detail})
             failures += 1
             continue
         rows.append(build_row(today, p["set_num"], shop, p["url"], offer, rates))
         msg = f"{p['set_num']} @ {p['shop']}: {offer.price} {offer.currency}"
+        report.append({**_key(p), "status": "ok", "detail": f"{offer.price} {offer.currency}"})
         print(f"::notice::{msg}" if IN_ACTIONS else f"  {msg}")
         time.sleep(delay)
     save_rows(os.path.join(data_dir, "prices.csv"), rows)
+    save_report(os.path.join(data_dir, "last_run.csv"), report)
     summary = f"Zapisano {len(rows)} cen, błędów: {failures}"
     print(f"::notice::{summary}" if IN_ACTIONS else summary)
     return 0
