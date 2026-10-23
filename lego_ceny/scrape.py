@@ -11,6 +11,14 @@ from .fx import load_rates, to_pln
 from .net import fetch
 from .price_parser import extract_offer
 
+IN_ACTIONS = os.environ.get("GITHUB_ACTIONS") == "true"
+
+
+def warn(msg: str) -> None:
+    # W GitHub Actions ostrzeżenia trafiają do adnotacji przebiegu, widocznych bez otwierania logów.
+    print(f"::warning::{msg}" if IN_ACTIONS else f"! {msg}", file=sys.stdout if IN_ACTIONS else sys.stderr)
+
+
 FIELDS = ["date", "set_num", "shop", "price", "currency", "in_stock",
           "price_pln", "shipping_pln", "total_pln", "url"]
 
@@ -67,24 +75,26 @@ def main(data_dir: str = "data", delay: float = 3.0) -> int:
     for p in products:
         shop = shops.get(p["shop"])
         if not shop:
-            print(f"! nieznany sklep {p['shop']}", file=sys.stderr)
+            warn(f"nieznany sklep {p['shop']}")
             failures += 1
             continue
         try:
             offer = extract_offer(fetch(p["url"]).decode("utf-8", errors="replace"))
         except Exception as e:  # sieć, blokada, 404
-            print(f"! {p['set_num']} @ {p['shop']}: {e}", file=sys.stderr)
+            warn(f"{p['set_num']} @ {p['shop']}: {e}")
             failures += 1
             continue
         if offer is None:
-            print(f"! {p['set_num']} @ {p['shop']}: nie znaleziono ceny", file=sys.stderr)
+            warn(f"{p['set_num']} @ {p['shop']}: nie znaleziono ceny")
             failures += 1
             continue
         rows.append(build_row(today, p["set_num"], shop, p["url"], offer, rates))
-        print(f"  {p['set_num']} @ {p['shop']}: {offer.price} {offer.currency}")
+        msg = f"{p['set_num']} @ {p['shop']}: {offer.price} {offer.currency}"
+        print(f"::notice::{msg}" if IN_ACTIONS else f"  {msg}")
         time.sleep(delay)
     save_rows(os.path.join(data_dir, "prices.csv"), rows)
-    print(f"Zapisano {len(rows)} cen, błędów: {failures}")
+    summary = f"Zapisano {len(rows)} cen, błędów: {failures}"
+    print(f"::notice::{summary}" if IN_ACTIONS else summary)
     return 0
 
 
