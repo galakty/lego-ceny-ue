@@ -9,7 +9,7 @@ import time
 
 from .fx import load_rates, to_pln
 from .net import fetch
-from .price_parser import extract_offer
+from .price_parser import extract_offer, page_title
 
 IN_ACTIONS = os.environ.get("GITHUB_ACTIONS") == "true"
 
@@ -79,13 +79,14 @@ def main(data_dir: str = "data", delay: float = 3.0) -> int:
             failures += 1
             continue
         try:
-            offer = extract_offer(fetch(p["url"]).decode("utf-8", errors="replace"))
+            html = fetch(p["url"]).decode("utf-8", errors="replace")
+            offer = extract_offer(html)
         except Exception as e:  # sieć, blokada, 404
             warn(f"{p['set_num']} @ {p['shop']}: {e}")
             failures += 1
             continue
         if offer is None:
-            warn(f"{p['set_num']} @ {p['shop']}: nie znaleziono ceny")
+            warn(f"{p['set_num']} @ {p['shop']}: nie znaleziono ceny (strona: {page_title(html)!r}, {len(html)} znaków)")
             failures += 1
             continue
         rows.append(build_row(today, p["set_num"], shop, p["url"], offer, rates))

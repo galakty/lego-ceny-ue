@@ -97,10 +97,34 @@ def _offer_from_jsonld(blocks: list[str]) -> Offer | None:
     return None
 
 
+_AMAZON_PRICE = re.compile(r'id="(?:corePrice_feature_div|corePriceDisplay_desktop_feature_div|apex_desktop)".*?<span class="a-offscreen">([^<]+)</span>', re.S)
+_CURRENCY_SIGNS = {"€": "EUR", "zł": "PLN", "kr": "SEK", "£": "GBP"}
+
+
+def _amazon_offer(html: str) -> Offer | None:
+    m = _AMAZON_PRICE.search(html)
+    if not m:
+        return None
+    text = m.group(1).replace("\xa0", " ")
+    currency = next((code for sign, code in _CURRENCY_SIGNS.items() if sign in text), None)
+    price = _parse_price(text)
+    if price is None or currency is None:
+        return None
+    in_stock = None
+    if 'id="availability"' in html:
+        in_stock = 'id="add-to-cart-button"' in html
+    return Offer(price, currency, in_stock)
+
+
+def page_title(html: str) -> str:
+    m = re.search(r"<title[^>]*>(.*?)</title>", html, re.S | re.I)
+    return re.sub(r"\s+", " ", m.group(1)).strip()[:80] if m else ""
+
+
 def extract_offer(html: str) -> Offer | None:
     c = _Collector()
     c.feed(html)
-    offer = _offer_from_jsonld(c.jsonld)
+    offer = _offer_from_jsonld(c.jsonld) or _amazon_offer(html)
     if offer:
         return offer
     for prefix in ("product:price", "og:price"):

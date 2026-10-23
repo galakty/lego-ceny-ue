@@ -7,7 +7,7 @@ import unittest
 
 from lego_ceny.catalog import parse_sets
 from lego_ceny.fx import parse_nbp, to_pln
-from lego_ceny.price_parser import Offer, _parse_price, extract_offer
+from lego_ceny.price_parser import Offer, _parse_price, extract_offer, page_title
 from lego_ceny.scrape import build_row, save_rows
 
 FIX = os.path.join(os.path.dirname(__file__), "fixtures")
@@ -24,6 +24,12 @@ class PriceParserTest(unittest.TestCase):
 
     def test_meta_fallback(self):
         self.assertEqual(extract_offer(read("meta_only.html")), Offer(3199.99, "PLN", None))
+
+    def test_amazon_html(self):
+        self.assertEqual(extract_offer(read("amazon.html")), Offer(29.99, "EUR", True))
+
+    def test_page_title(self):
+        self.assertEqual(page_title(read("amazon.html")), "LEGO City 60510 : Amazon.de: Spielzeug")
 
     def test_no_price(self):
         self.assertIsNone(extract_offer("<html><body>brak</body></html>"))
