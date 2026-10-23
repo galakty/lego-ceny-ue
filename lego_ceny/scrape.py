@@ -99,6 +99,11 @@ def main(data_dir: str = "data", delay: float = 3.0) -> int:
             report.append({**_key(p), "status": "blad", "detail": str(e)})
             failures += 1
             continue
+        debug_dir = os.environ.get("DEBUG_HTML_DIR")
+        if debug_dir:
+            os.makedirs(debug_dir, exist_ok=True)
+            with open(os.path.join(debug_dir, f"{p['set_num']}_{p['shop']}.html"), "w", encoding="utf-8") as f:
+                f.write(html)
         if offer is None:
             detail = f"nie znaleziono ceny (strona: {page_title(html)!r}, {len(html)} znaków)"
             warn(f"{p['set_num']} @ {p['shop']}: {detail}")
