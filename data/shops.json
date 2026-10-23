@@ -1,12 +1,104 @@
 {
-  "_opis": "Sklepy. shipping_to_pl: koszt dostawy do Polski w walucie sklepu (null = nie sprawdzono). free_shipping_from: próg darmowej dostawy do PL (null = brak/nie sprawdzono). ships_to_pl: czy sklep w ogóle wysyła do Polski.",
+  "_opis": "Sklepy. shipping_to_pl: koszt dostawy do Polski w walucie sklepu (null = nie sprawdzono). free_shipping_from: próg darmowej dostawy do PL (null = brak/nie sprawdzono). ships_to_pl: czy sklep w ogóle wysyła do Polski. ships_to_pl: null = jeszcze nie sprawdzono.",
   "shops": [
-    {"id": "lego-pl", "name": "LEGO.com Polska", "country": "PL", "currency": "PLN", "ships_to_pl": true, "shipping_to_pl": null, "free_shipping_from": null},
-    {"id": "amazon-pl", "name": "Amazon.pl", "country": "PL", "currency": "PLN", "ships_to_pl": true, "shipping_to_pl": null, "free_shipping_from": null},
-    {"id": "amazon-de", "name": "Amazon.de", "country": "DE", "currency": "EUR", "ships_to_pl": true, "shipping_to_pl": null, "free_shipping_from": null},
-    {"id": "amazon-fr", "name": "Amazon.fr", "country": "FR", "currency": "EUR", "ships_to_pl": true, "shipping_to_pl": null, "free_shipping_from": null},
-    {"id": "amazon-it", "name": "Amazon.it", "country": "IT", "currency": "EUR", "ships_to_pl": true, "shipping_to_pl": null, "free_shipping_from": null},
-    {"id": "amazon-es", "name": "Amazon.es", "country": "ES", "currency": "EUR", "ships_to_pl": true, "shipping_to_pl": null, "free_shipping_from": null},
-    {"id": "lego-be", "name": "LEGO.com Belgia (tylko porównanie)", "country": "BE", "currency": "EUR", "ships_to_pl": false, "shipping_to_pl": null, "free_shipping_from": null}
+    {
+      "id": "lego-pl",
+      "name": "LEGO.com Polska",
+      "country": "PL",
+      "currency": "PLN",
+      "ships_to_pl": true,
+      "shipping_to_pl": null,
+      "free_shipping_from": null
+    },
+    {
+      "id": "amazon-pl",
+      "name": "Amazon.pl",
+      "country": "PL",
+      "currency": "PLN",
+      "ships_to_pl": true,
+      "shipping_to_pl": null,
+      "free_shipping_from": null
+    },
+    {
+      "id": "amazon-de",
+      "name": "Amazon.de",
+      "country": "DE",
+      "currency": "EUR",
+      "ships_to_pl": true,
+      "shipping_to_pl": null,
+      "free_shipping_from": null
+    },
+    {
+      "id": "amazon-fr",
+      "name": "Amazon.fr",
+      "country": "FR",
+      "currency": "EUR",
+      "ships_to_pl": true,
+      "shipping_to_pl": null,
+      "free_shipping_from": null
+    },
+    {
+      "id": "amazon-it",
+      "name": "Amazon.it",
+      "country": "IT",
+      "currency": "EUR",
+      "ships_to_pl": true,
+      "shipping_to_pl": null,
+      "free_shipping_from": null
+    },
+    {
+      "id": "amazon-es",
+      "name": "Amazon.es",
+      "country": "ES",
+      "currency": "EUR",
+      "ships_to_pl": true,
+      "shipping_to_pl": null,
+      "free_shipping_from": null
+    },
+    {
+      "id": "lego-be",
+      "name": "LEGO.com Belgia (tylko porównanie)",
+      "country": "BE",
+      "currency": "EUR",
+      "ships_to_pl": false,
+      "shipping_to_pl": null,
+      "free_shipping_from": null
+    },
+    {
+      "id": "mediamarkt-pl",
+      "name": "MediaMarkt.pl",
+      "country": "PL",
+      "currency": "PLN",
+      "ships_to_pl": true,
+      "shipping_to_pl": null,
+      "free_shipping_from": null
+    },
+    {
+      "id": "proshop-pl",
+      "name": "Proshop.pl",
+      "country": "PL",
+      "currency": "PLN",
+      "ships_to_pl": true,
+      "shipping_to_pl": null,
+      "free_shipping_from": null
+    },
+    {
+      "id": "proshop-de",
+      "name": "Proshop.de",
+      "country": "DE",
+      "currency": "EUR",
+      "ships_to_pl": null,
+      "shipping_to_pl": null,
+      "free_shipping_from": null
+    },
+    {
+      "id": "proshop-nl",
+      "name": "Proshop.nl",
+      "country": "NL",
+      "currency": "EUR",
+      "ships_to_pl": null,
+      "shipping_to_pl": null,
+      "free_shipping_from": null
+    }
   ]
 }
