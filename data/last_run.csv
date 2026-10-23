@@ -1,18 +1,3 @@
 set_num,shop,status,detail
-60510,lego-pl,blad,HTTP Error 403: Forbidden
-60510,lego-be,blad,HTTP Error 403: Forbidden
-75456,lego-pl,blad,HTTP Error 403: Forbidden
-75456,lego-be,blad,HTTP Error 403: Forbidden
-60510,amazon-pl,brak ceny,"nie znaleziono ceny (strona: 'Amazon.pl', 4235 znaków)"
-60510,amazon-de,brak ceny,"nie znaleziono ceny (strona: 'LEGO City kalendarz adwentowy 2026 – prezent przedświąteczny zabawka dla dzieci ', 1274082 znaków)"
-60510,amazon-fr,brak ceny,"nie znaleziono ceny (strona: 'Amazon.fr', 3812 znaków)"
-60510,amazon-it,brak ceny,"nie znaleziono ceny (strona: 'LEGO City Advent Calendar 2026-60510 | 252 Pieces Toys for Children from 5 Years', 545308 znaków)"
-60510,amazon-es,brak ceny,"nie znaleziono ceny (strona: 'Amazon.es', 3788 znaków)"
-76340,amazon-pl,brak ceny,"nie znaleziono ceny (strona: 'Amazon.pl', 4235 znaków)"
-76340,amazon-de,brak ceny,"nie znaleziono ceny (strona: 'LEGO Marvel kalendarz adwentowy 2026-76340 | Spielzeug ab 6 Jahren für Jungen &a', 1306883 znaków)"
-21066,amazon-pl,brak ceny,"nie znaleziono ceny (strona: 'LEGO New York City: The Big Apple - Architecture LEGO 21066, nowość 2026 : Amazo', 487481 znaków)"
-21066,amazon-de,brak ceny,"nie znaleziono ceny (strona: 'LEGO New York City: The Big Apple - Architecture LEGO 21066, nowość 2026: Amazon', 982350 znaków)"
-60510,mediamarkt-pl,brak ceny,"nie znaleziono ceny (strona: 'Klocki LEGO 60510 | City, Kalendarz Adwentowy 2026, 252 el., 5 lat - sprawdź cen', 1160805 znaków)"
-60510,proshop-nl,blad,HTTP Error 403: Forbidden
-60510,proshop-pl,blad,HTTP Error 403: Forbidden
-60510,proshop-de,blad,HTTP Error 403: Forbidden
+60510,mediamarkt-pl,ok,164.86 PLN
+21066,mediamarkt-at,blad,HTTP Error 403: Forbidden
