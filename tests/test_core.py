@@ -22,6 +22,9 @@ class PriceParserTest(unittest.TestCase):
     def test_jsonld_graph(self):
         self.assertEqual(extract_offer(read("jsonld_product.html")), Offer(749.99, "EUR", True))
 
+    def test_jsonld_nested_in_buyaction(self):
+        self.assertEqual(extract_offer(read("buyaction.html")), Offer(164.86, "PLN", True))
+
     def test_meta_fallback(self):
         self.assertEqual(extract_offer(read("meta_only.html")), Offer(3199.99, "PLN", None))
 

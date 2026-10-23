@@ -99,6 +99,15 @@
       "ships_to_pl": null,
       "shipping_to_pl": null,
       "free_shipping_from": null
+    },
+    {
+      "id": "mediamarkt-at",
+      "name": "MediaMarkt.at (tylko porównanie)",
+      "country": "AT",
+      "currency": "EUR",
+      "ships_to_pl": false,
+      "shipping_to_pl": null,
+      "free_shipping_from": null
     }
   ]
 }

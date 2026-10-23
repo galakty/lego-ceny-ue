@@ -30,6 +30,17 @@ Sklep musi istnieć w `data/shops.json`. Pole `shipping_to_pl` ustaw na koszt do
 python -m unittest discover -s tests -v
 ```
 
+## Sklepy, które blokują odczyt
+
+Test z 23.10.2026 (z serwerów GitHub Actions):
+- **LEGO.com i Proshop**: błąd 403.
+- **Amazon**: na zmianę captcha albo strona z cenami w USD, bo serwery GitHuba stoją w USA. Ceny w EUR/PLN da się wiarygodnie dostać tylko przez oficjalne API programu partnerskiego.
+- **MediaMarkt** (PL, AT) działa przez JSON-LD.
+
+Zablokowane adresy są w `data/products_zablokowane.csv`, żeby wrócić do nich, gdy będzie API.
+
+Diagnoza: uruchom workflow ręcznie z opcją `debug`, a pobrane strony trafią na gałąź `debug-html`. Stan ostatniego przebiegu jest w `data/last_run.csv`.
+
 ## Do zrobienia
 
 - Uzupełnić koszty dostawy do PL w `data/shops.json`.

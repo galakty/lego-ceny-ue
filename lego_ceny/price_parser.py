@@ -69,7 +69,7 @@ def _walk(node):
             yield from _walk(item)
     elif isinstance(node, dict):
         yield node
-        for key in ("@graph", "offers", "mainEntity", "itemOffered"):
+        for key in ("@graph", "offers", "mainEntity", "itemOffered", "object"):
             if key in node:
                 yield from _walk(node[key])
 
