@@ -134,10 +134,7 @@
       "ships_to_pl": true,
       "shipping_to_pl": null,
       "free_shipping_from": null,
-      "discover": {
-        "base_url": "https://www.empik.com",
-        "url_filter": "lego.*,p\\d+,"
-      }
+      "note": "Product pages return 403 to scrapers (2026-10-26); sitemap discovery disabled."
     }
   ]
 }

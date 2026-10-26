@@ -54,7 +54,9 @@ python -m unittest discover -s tests -v
 Tested on 2026-10-23 from GitHub Actions runners:
 - **LEGO.com, Proshop, MediaMarkt.at**: HTTP 403.
 - **Amazon**: either a captcha or a page with USD prices, because GitHub runners are in the US. Reliable EUR/PLN prices need the official affiliate API.
-- **MediaMarkt.pl** works via JSON-LD.
+- **MediaMarkt.pl** and **Neonet** work via JSON-LD, with products found from their sitemaps (`discover` workflow).
+- **Empik**: sitemap lists LEGO products, but product pages return 403.
+- **x-kom** (403), **al.to** (429); **Media Expert, Smyk, Euro, Carrefour, Komputronik** have no LEGO products in their sitemaps.
 
 Blocked URLs are kept in `data/products_blocked.csv` so we can come back to them once an API is available.
 
