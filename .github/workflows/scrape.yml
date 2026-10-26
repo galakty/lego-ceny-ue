@@ -31,6 +31,8 @@ jobs:
         if: ${{ inputs.debug }}
         run: |
           cd /tmp/debug-html
+          # Shop pages embed their own public API keys (e.g. Google Maps); redact them so secret scanning stays quiet.
+          sed -i -E 's/AIza[0-9A-Za-z_-]{35}/AIza-REDACTED/g' *.html
           git init -q -b debug-html
           git config user.name "lego-prices-bot"
           git config user.email "lego-prices-bot@users.noreply.github.com"

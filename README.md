@@ -52,7 +52,7 @@ Tested on 2026-10-23 from GitHub Actions runners:
 
 Blocked URLs are kept in `data/products_blocked.csv` so we can come back to them once an API is available.
 
-Debugging: run the workflow manually with the `debug` option and the fetched pages are pushed to the `debug-html` branch. The status of the last run is in `data/last_run.csv`.
+Debugging: run the workflow manually with the `debug` option and the fetched pages are pushed to the `debug-html` branch (with embedded Google API keys redacted). Delete the branch when done. The status of the last run is in `data/last_run.csv`.
 
 ## TODO
 
