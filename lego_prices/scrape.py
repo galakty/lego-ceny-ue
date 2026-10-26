@@ -2,6 +2,7 @@
 and appends them to the history in data/prices.csv."""
 import csv
 import datetime as dt
+import glob
 import json
 import os
 import sys
@@ -77,13 +78,25 @@ def save_report(path: str, report: list[dict]) -> None:
         w.writerows(report)
 
 
-def main(data_dir: str = "data", delay: float = 3.0) -> int:
+def load_products(data_dir: str) -> list[dict]:
+    """Hand-picked products.csv plus the per-shop lists found by `discover`; the first URL per (set, shop) wins."""
+    paths = [os.path.join(data_dir, "products.csv")] + sorted(glob.glob(os.path.join(data_dir, "discovered", "*.csv")))
+    products, seen = [], set()
+    for path in paths:
+        with open(path, newline="", encoding="utf-8") as f:
+            for p in csv.DictReader(f):
+                if (p["set_num"], p["shop"]) not in seen:
+                    seen.add((p["set_num"], p["shop"]))
+                    products.append(p)
+    return products
+
+
+def main(data_dir: str = "data", delay: float = 2.0) -> int:
     shops = load_shops(os.path.join(data_dir, "shops.json"))
     rates = load_rates()
     today = dt.date.today().isoformat()
     rows, failures, report = [], 0, []
-    with open(os.path.join(data_dir, "products.csv"), newline="", encoding="utf-8") as f:
-        products = list(csv.DictReader(f))
+    products = load_products(data_dir)
     for p in products:
         shop = shops.get(p["shop"])
         if not shop:
