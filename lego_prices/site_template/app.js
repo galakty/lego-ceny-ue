@@ -1,6 +1,7 @@
 "use strict";
 
 const PAGE = 60;
+const AGE_SPAN = 3; // keep in sync with pages.AGE_SPAN
 const $ = (id) => document.getElementById(id);
 const pln = new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN" });
 const eur = new Intl.NumberFormat("pl-PL", { style: "currency", currency: "EUR" });
@@ -53,7 +54,8 @@ function matches(s, f) {
   if (f.theme && s.theme !== f.theme) return false;
   if (f.offers && !s.offers.length) return false;
   if (f.age != null) {
-    if (s.age_min == null || s.age_min > f.age) return false;
+    // only sets aimed at this age: a "2+" Duplo set is technically fine for a 6-year-old, but not what a parent wants
+    if (s.age_min == null || s.age_min > f.age || s.age_min < f.age - AGE_SPAN) return false;
     if (s.age_max != null && s.age_max < f.age) return false;
   }
   return true;

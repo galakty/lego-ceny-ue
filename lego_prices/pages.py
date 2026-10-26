@@ -67,8 +67,12 @@ def best_cost(s: dict) -> float | None:
     return o["total"] if o["total"] is not None else o["pln"]
 
 
+AGE_SPAN = 3  # a "2+" Duplo set is technically fine for a 6-year-old, but not what a parent is looking for
+
+
 def fits_age(s: dict, age: int) -> bool:
-    return s["age_min"] is not None and s["age_min"] <= age and (s["age_max"] is None or s["age_max"] >= age)
+    return (s["age_min"] is not None and age - AGE_SPAN <= s["age_min"] <= age
+            and (s["age_max"] is None or s["age_max"] >= age))
 
 
 def in_range(s: dict, lo: int | None, hi: int | None) -> bool:

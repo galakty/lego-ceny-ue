@@ -32,6 +32,8 @@ class HelpersTest(unittest.TestCase):
         self.assertFalse(pages.fits_age(make_set("a", 10, 7), 6))
         self.assertFalse(pages.fits_age(make_set("a", 10, 2, 5), 6))
         self.assertFalse(pages.fits_age(make_set("a", 10), 6))
+        self.assertFalse(pages.fits_age(make_set("duplo", 10, 2), 6))
+        self.assertTrue(pages.fits_age(make_set("a", 10, 3), 6))
 
     def test_ranked_puts_priced_first(self):
         sets = [make_set("old", 10, year=2020), make_set("priced", 10, year=2021, offers=[OFFER]), make_set("new", 10, year=2026)]
