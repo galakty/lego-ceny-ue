@@ -5,10 +5,10 @@ import os
 import tempfile
 import unittest
 
-from lego_ceny.catalog import parse_sets
-from lego_ceny.fx import parse_nbp, to_pln
-from lego_ceny.price_parser import Offer, _parse_price, extract_offer, page_title
-from lego_ceny.scrape import build_row, save_rows
+from lego_prices.catalog import parse_sets
+from lego_prices.fx import parse_nbp, to_pln
+from lego_prices.price_parser import Offer, _parse_price, extract_offer, page_title
+from lego_prices.scrape import build_row, save_rows
 
 FIX = os.path.join(os.path.dirname(__file__), "fixtures")
 
@@ -35,7 +35,7 @@ class PriceParserTest(unittest.TestCase):
         self.assertEqual(page_title(read("amazon.html")), "LEGO City 60510 : Amazon.de: Spielzeug")
 
     def test_no_price(self):
-        self.assertIsNone(extract_offer("<html><body>brak</body></html>"))
+        self.assertIsNone(extract_offer("<html><body>nothing</body></html>"))
 
     def test_number_formats(self):
         self.assertEqual(_parse_price("1.299,99 €"), 1299.99)

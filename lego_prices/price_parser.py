@@ -1,8 +1,8 @@
-"""Wyciąga cenę i dostępność ze strony produktu.
+"""Extracts price and availability from a product page.
 
-Większość sklepów osadza dane produktu jako JSON-LD (schema.org Product/Offer),
-więc jeden parser działa dla wielu sklepów. Jako zapas czytamy meta tagi
-product:price:amount / og:price:amount.
+Most shops embed product data as JSON-LD (schema.org Product/Offer),
+so one parser works for many shops. As a fallback we read the
+product:price:amount / og:price:amount meta tags.
 """
 import json
 import re

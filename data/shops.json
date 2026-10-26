@@ -1,9 +1,9 @@
 {
-  "_opis": "Sklepy. shipping_to_pl: koszt dostawy do Polski w walucie sklepu (null = nie sprawdzono). free_shipping_from: próg darmowej dostawy do PL (null = brak/nie sprawdzono). ships_to_pl: czy sklep w ogóle wysyła do Polski. ships_to_pl: null = jeszcze nie sprawdzono.",
+  "_doc": "Shops. ships_to_pl: whether the shop ships to Poland (null = not checked yet). shipping_to_pl: shipping cost to Poland in the shop's currency (null = not checked). free_shipping_from: free-shipping threshold for Poland (null = none or not checked).",
   "shops": [
     {
       "id": "lego-pl",
-      "name": "LEGO.com Polska",
+      "name": "LEGO.com Poland",
       "country": "PL",
       "currency": "PLN",
       "ships_to_pl": true,
@@ -57,7 +57,7 @@
     },
     {
       "id": "lego-be",
-      "name": "LEGO.com Belgia (tylko porównanie)",
+      "name": "LEGO.com Belgium",
       "country": "BE",
       "currency": "EUR",
       "ships_to_pl": false,
@@ -102,7 +102,7 @@
     },
     {
       "id": "mediamarkt-at",
-      "name": "MediaMarkt.at (tylko porównanie)",
+      "name": "MediaMarkt.at",
       "country": "AT",
       "currency": "EUR",
       "ships_to_pl": false,

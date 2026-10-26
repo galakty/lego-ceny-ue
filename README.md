@@ -1,48 +1,48 @@
 # lego-ceny-ue
 
-Porównywarka cen LEGO w sklepach z całej UE. Pokazuje cenę w złotówkach **razem z kosztem dostawy do Polski**.
+LEGO price comparison across EU shops. For each set it shows the price in PLN **including shipping to Poland**. The site itself is aimed at Polish users, so its UI text will be in Polish; code and docs are in English.
 
-## Jak to działa
+## How it works
 
-1. `data/products.csv` to lista par: numer zestawu, sklep, adres strony produktu.
-2. `python -m lego_ceny scrape` pobiera każdą stronę i odczytuje z niej cenę. Większość sklepów osadza dane produktu w formacie schema.org (JSON-LD), więc jeden parser obsługuje wiele sklepów.
-3. Ceny są przeliczane na PLN po średnim kursie NBP, a do ceny dochodzi dostawa do Polski z `data/shops.json`.
-4. Wynik trafia do historii w `data/prices.csv`, jeden wiersz na zestaw, sklep i dzień.
-5. GitHub Actions uruchamia to codziennie o 5:00 UTC i zapisuje historię w repo (`.github/workflows/scrape.yml`).
+1. `data/products.csv` lists (set number, shop, product page URL) pairs.
+2. `python -m lego_prices scrape` fetches each page and reads the price. Most shops embed schema.org product data (JSON-LD), so one parser covers many shops.
+3. Prices are converted to PLN at the National Bank of Poland mid rate, and shipping to Poland from `data/shops.json` is added.
+4. Results are appended to `data/prices.csv`, one row per set, shop and day.
+5. GitHub Actions runs this daily at 05:00 UTC and commits the history (`.github/workflows/scrape.yml`).
 
-## Dodawanie zestawu
+## Adding a set
 
-Dopisz wiersz do `data/products.csv`:
+Add a row to `data/products.csv`:
 
 ```
-75313,amazon-de,https://www.amazon.de/dp/XXXXXXXXXX
+75313,mediamarkt-pl,https://mediamarkt.pl/pl/product/...
 ```
 
-Sklep musi istnieć w `data/shops.json`. Pole `shipping_to_pl` ustaw na koszt dostawy do Polski w walucie sklepu. Dopóki jest `null`, strona pokaże samą cenę bez sumy.
+The shop must exist in `data/shops.json`. Set `shipping_to_pl` to the shipping cost to Poland in the shop's currency. While it is `null`, the site shows only the price, without a total.
 
-## Katalog zestawów
+## Set catalog
 
-`python -m lego_ceny catalog` pobiera listę zestawów od 2020 roku z darmowego zrzutu [Rebrickable](https://rebrickable.com/downloads/) do `data/sets.csv`.
+`python -m lego_prices catalog` downloads all sets since 2020 from the free [Rebrickable](https://rebrickable.com/downloads/) dump into `data/sets.csv`.
 
-## Testy
+## Tests
 
 ```
 python -m unittest discover -s tests -v
 ```
 
-## Sklepy, które blokują odczyt
+## Shops that block scraping
 
-Test z 23.10.2026 (z serwerów GitHub Actions):
-- **LEGO.com i Proshop**: błąd 403.
-- **Amazon**: na zmianę captcha albo strona z cenami w USD, bo serwery GitHuba stoją w USA. Ceny w EUR/PLN da się wiarygodnie dostać tylko przez oficjalne API programu partnerskiego.
-- **MediaMarkt** (PL, AT) działa przez JSON-LD.
+Tested on 2026-10-23 from GitHub Actions runners:
+- **LEGO.com, Proshop, MediaMarkt.at**: HTTP 403.
+- **Amazon**: either a captcha or a page with USD prices, because GitHub runners are in the US. Reliable EUR/PLN prices need the official affiliate API.
+- **MediaMarkt.pl** works via JSON-LD.
 
-Zablokowane adresy są w `data/products_zablokowane.csv`, żeby wrócić do nich, gdy będzie API.
+Blocked URLs are kept in `data/products_blocked.csv` so we can come back to them once an API is available.
 
-Diagnoza: uruchom workflow ręcznie z opcją `debug`, a pobrane strony trafią na gałąź `debug-html`. Stan ostatniego przebiegu jest w `data/last_run.csv`.
+Debugging: run the workflow manually with the `debug` option and the fetched pages are pushed to the `debug-html` branch. The status of the last run is in `data/last_run.csv`.
 
-## Do zrobienia
+## TODO
 
-- Uzupełnić koszty dostawy do PL w `data/shops.json`.
-- Sprawdzić, które sklepy blokują automatyczne pobieranie (Amazon często to robi). Docelowo dla Amazona lepsze jest oficjalne API programu partnerskiego.
-- Krok 3: strona statyczna na GitHub Pages.
+- Fill in shipping costs to Poland in `data/shops.json`.
+- Get EU prices through affiliate APIs and product feeds (Amazon, Awin and similar).
+- Step 3: static site on GitHub Pages.

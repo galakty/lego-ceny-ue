@@ -1,4 +1,4 @@
-"""Katalog zestawów LEGO z darmowego zrzutu Rebrickable (sets.csv.gz)."""
+"""LEGO set catalog from the free Rebrickable dump (sets.csv.gz)."""
 import csv
 import gzip
 import io

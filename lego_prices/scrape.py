@@ -1,5 +1,5 @@
-"""Pobiera aktualne ceny dla par (zestaw, sklep) z data/products.csv
-i dopisuje je do historii w data/prices.csv."""
+"""Fetches current prices for the (set, shop) pairs in data/products.csv
+and appends them to the history in data/prices.csv."""
 import csv
 import datetime as dt
 import json
@@ -15,7 +15,7 @@ IN_ACTIONS = os.environ.get("GITHUB_ACTIONS") == "true"
 
 
 def warn(msg: str) -> None:
-    # W GitHub Actions ostrzeżenia trafiają do adnotacji przebiegu, widocznych bez otwierania logów.
+    # In GitHub Actions, warnings become run annotations, visible without opening the logs.
     print(f"::warning::{msg}" if IN_ACTIONS else f"! {msg}", file=sys.stdout if IN_ACTIONS else sys.stderr)
 
 
@@ -52,7 +52,7 @@ def build_row(date: str, set_num: str, shop: dict, url: str, offer, rates) -> di
 
 
 def save_rows(path: str, rows: list[dict]) -> None:
-    """Dopisuje wiersze; ponowne uruchomienie tego samego dnia nadpisuje wpisy z tego dnia."""
+    """Appends rows; a rerun on the same day replaces that day's entries."""
     existing = []
     if os.path.exists(path):
         with open(path, newline="", encoding="utf-8") as f:
@@ -70,7 +70,7 @@ def _key(p: dict) -> dict:
 
 
 def save_report(path: str, report: list[dict]) -> None:
-    """Stan ostatniego przebiegu dla każdej pary zestaw-sklep, do szybkiej diagnozy."""
+    """Status of the last run for each set-shop pair, for quick diagnosis."""
     with open(path, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=["set_num", "shop", "status", "detail"])
         w.writeheader()
@@ -87,16 +87,16 @@ def main(data_dir: str = "data", delay: float = 3.0) -> int:
     for p in products:
         shop = shops.get(p["shop"])
         if not shop:
-            warn(f"nieznany sklep {p['shop']}")
-            report.append({**_key(p), "status": "blad", "detail": "nieznany sklep"})
+            warn(f"unknown shop {p['shop']}")
+            report.append({**_key(p), "status": "error", "detail": "unknown shop"})
             failures += 1
             continue
         try:
             html = fetch(p["url"]).decode("utf-8", errors="replace")
             offer = extract_offer(html)
-        except Exception as e:  # sieć, blokada, 404
+        except Exception as e:  # network error, block, 404
             warn(f"{p['set_num']} @ {p['shop']}: {e}")
-            report.append({**_key(p), "status": "blad", "detail": str(e)})
+            report.append({**_key(p), "status": "error", "detail": str(e)})
             failures += 1
             continue
         debug_dir = os.environ.get("DEBUG_HTML_DIR")
@@ -105,9 +105,9 @@ def main(data_dir: str = "data", delay: float = 3.0) -> int:
             with open(os.path.join(debug_dir, f"{p['set_num']}_{p['shop']}.html"), "w", encoding="utf-8") as f:
                 f.write(html)
         if offer is None:
-            detail = f"nie znaleziono ceny (strona: {page_title(html)!r}, {len(html)} znaków)"
+            detail = f"price not found (page: {page_title(html)!r}, {len(html)} chars)"
             warn(f"{p['set_num']} @ {p['shop']}: {detail}")
-            report.append({**_key(p), "status": "brak ceny", "detail": detail})
+            report.append({**_key(p), "status": "no_price", "detail": detail})
             failures += 1
             continue
         rows.append(build_row(today, p["set_num"], shop, p["url"], offer, rates))
@@ -117,7 +117,7 @@ def main(data_dir: str = "data", delay: float = 3.0) -> int:
         time.sleep(delay)
     save_rows(os.path.join(data_dir, "prices.csv"), rows)
     save_report(os.path.join(data_dir, "last_run.csv"), report)
-    summary = f"Zapisano {len(rows)} cen, błędów: {failures}"
+    summary = f"Saved {len(rows)} prices, failures: {failures}"
     print(f"::notice::{summary}" if IN_ACTIONS else summary)
     return 0
 

@@ -1,6 +1,6 @@
 import urllib.request
 
-USER_AGENT = "Mozilla/5.0 (compatible; lego-ceny-ue/0.1; +https://github.com/galakty/lego-ceny-ue)"
+USER_AGENT = "Mozilla/5.0 (compatible; lego-prices/0.1; +https://github.com/galakty/lego-ceny-ue)"
 
 
 def fetch(url: str, timeout: int = 30) -> bytes:

@@ -1,4 +1,4 @@
-"""Kursy walut z API Narodowego Banku Polskiego (tabela A, kurs średni)."""
+"""Exchange rates from the National Bank of Poland API (table A, mid rate)."""
 import json
 
 from .net import fetch
