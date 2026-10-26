@@ -7,6 +7,7 @@ import json
 import os
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 
 from .fx import load_rates, to_pln
 from .net import fetch
@@ -91,49 +92,72 @@ def load_products(data_dir: str) -> list[dict]:
     return products
 
 
+def scrape_product(p: dict, shop: dict, today: str, rates: dict) -> tuple[dict | None, dict]:
+    """Returns (price row or None, report row) for one product page."""
+    try:
+        html = fetch(p["url"]).decode("utf-8", errors="replace")
+        offer = extract_offer(html)
+    except Exception as e:  # network error, block, 404
+        return None, {**_key(p), "status": "error", "detail": str(e)}
+    debug_dir = os.environ.get("DEBUG_HTML_DIR")
+    if debug_dir:
+        os.makedirs(debug_dir, exist_ok=True)
+        with open(os.path.join(debug_dir, f"{p['set_num']}_{p['shop']}.html"), "w", encoding="utf-8") as f:
+            f.write(html)
+    if offer is None:
+        return None, {**_key(p), "status": "no_price",
+                      "detail": f"price not found (page: {page_title(html)!r}, {len(html)} chars)"}
+    return build_row(today, p["set_num"], shop, p["url"], offer, rates), \
+        {**_key(p), "status": "ok", "detail": f"{offer.price} {offer.currency}"}
+
+
+def scrape_shop(products: list[dict], shop: dict, today: str, rates: dict, delay: float) -> tuple[list, list]:
+    rows, report = [], []
+    for p in products:
+        row, rep = scrape_product(p, shop, today, rates)
+        report.append(rep)
+        if row:
+            rows.append(row)
+        print(f"{p['set_num']} @ {p['shop']}: {rep['status']} {rep['detail']}")
+        time.sleep(delay)
+    ok = len(rows)
+    errors = [r["detail"] for r in report if r["status"] != "ok"]
+    msg = f"{shop['id']}: {ok}/{len(products)} prices" + (f", e.g. {errors[0][:120]}" if errors else "")
+    (notice if ok else warn)(msg)
+    return rows, report
+
+
+def notice(msg: str) -> None:
+    print(f"::notice::{msg}" if IN_ACTIONS else msg)
+
+
 def main(data_dir: str = "data", delay: float = 2.0) -> int:
     shops = load_shops(os.path.join(data_dir, "shops.json"))
     rates = load_rates()
     today = dt.date.today().isoformat()
-    rows, failures, report = [], 0, []
-    products = load_products(data_dir)
-    for p in products:
-        shop = shops.get(p["shop"])
-        if not shop:
+    by_shop: dict[str, list[dict]] = {}
+    report = []
+    for p in load_products(data_dir):
+        if p["shop"] in shops:
+            by_shop.setdefault(p["shop"], []).append(p)
+        else:
             warn(f"unknown shop {p['shop']}")
             report.append({**_key(p), "status": "error", "detail": "unknown shop"})
-            failures += 1
-            continue
-        try:
-            html = fetch(p["url"]).decode("utf-8", errors="replace")
-            offer = extract_offer(html)
-        except Exception as e:  # network error, block, 404
-            warn(f"{p['set_num']} @ {p['shop']}: {e}")
-            report.append({**_key(p), "status": "error", "detail": str(e)})
-            failures += 1
-            continue
-        debug_dir = os.environ.get("DEBUG_HTML_DIR")
-        if debug_dir:
-            os.makedirs(debug_dir, exist_ok=True)
-            with open(os.path.join(debug_dir, f"{p['set_num']}_{p['shop']}.html"), "w", encoding="utf-8") as f:
-                f.write(html)
-        if offer is None:
-            detail = f"price not found (page: {page_title(html)!r}, {len(html)} chars)"
-            warn(f"{p['set_num']} @ {p['shop']}: {detail}")
-            report.append({**_key(p), "status": "no_price", "detail": detail})
-            failures += 1
-            continue
-        rows.append(build_row(today, p["set_num"], shop, p["url"], offer, rates))
-        msg = f"{p['set_num']} @ {p['shop']}: {offer.price} {offer.currency}"
-        report.append({**_key(p), "status": "ok", "detail": f"{offer.price} {offer.currency}"})
-        print(f"::notice::{msg}" if IN_ACTIONS else f"  {msg}")
-        time.sleep(delay)
+
+    # one thread per shop: each shop still gets one request every `delay` seconds
+    rows = []
+    with ThreadPoolExecutor(max_workers=max(1, len(by_shop))) as pool:
+        futures = [pool.submit(scrape_shop, products, shops[shop_id], today, rates, delay)
+                   for shop_id, products in by_shop.items()]
+        for future in futures:
+            shop_rows, shop_report = future.result()
+            rows += shop_rows
+            report += shop_report
+
     save_rows(os.path.join(data_dir, "prices.csv"), rows)
     save_report(os.path.join(data_dir, "last_run.csv"), report)
-    summary = f"Saved {len(rows)} prices, failures: {failures}"
-    print(f"::notice::{summary}" if IN_ACTIONS else summary)
+    notice(f"Saved {len(rows)} prices, failures: {len(report) - len(rows)}")
     return 0
-
 
 if __name__ == "__main__":
     sys.exit(main())

@@ -1,5 +1,5 @@
 {
-  "_doc": "Shops. ships_to_pl: whether the shop ships to Poland (null = not checked yet). shipping_to_pl: shipping cost to Poland in the shop's currency (null = not checked). free_shipping_from: free-shipping threshold for Poland (null = none or not checked).",
+  "_doc": "Shops. ships_to_pl: whether the shop ships to Poland (null = not checked yet). shipping_to_pl: shipping cost to Poland in the shop's currency (null = not checked). free_shipping_from: free-shipping threshold for Poland (null = none or not checked). discover: optional sitemap discovery (base_url, url_filter regex for product URLs).",
   "shops": [
     {
       "id": "lego-pl",
@@ -71,7 +71,11 @@
       "currency": "PLN",
       "ships_to_pl": true,
       "shipping_to_pl": null,
-      "free_shipping_from": null
+      "free_shipping_from": null,
+      "discover": {
+        "base_url": "https://mediamarkt.pl",
+        "url_filter": "/product/.*lego"
+      }
     },
     {
       "id": "proshop-pl",
@@ -108,6 +112,32 @@
       "ships_to_pl": false,
       "shipping_to_pl": null,
       "free_shipping_from": null
+    },
+    {
+      "id": "neonet-pl",
+      "name": "Neonet",
+      "country": "PL",
+      "currency": "PLN",
+      "ships_to_pl": true,
+      "shipping_to_pl": null,
+      "free_shipping_from": null,
+      "discover": {
+        "base_url": "https://www.neonet.pl",
+        "url_filter": "lego"
+      }
+    },
+    {
+      "id": "empik-pl",
+      "name": "Empik",
+      "country": "PL",
+      "currency": "PLN",
+      "ships_to_pl": true,
+      "shipping_to_pl": null,
+      "free_shipping_from": null,
+      "discover": {
+        "base_url": "https://www.empik.com",
+        "url_filter": "lego.*,p\\d+,"
+      }
     }
   ]
 }

@@ -38,7 +38,9 @@ def robots(base_url: str) -> tuple[urllib.robotparser.RobotFileParser, list[str]
 
 
 def lego_urls(sitemap_urls: list[str], url_filter: str = "lego") -> tuple[list[str], int]:
-    """Walks sitemap indexes breadth-first; returns product URLs containing url_filter and the number of sitemaps read."""
+    """Walks sitemap indexes breadth-first; returns URLs matching the url_filter regex (case-insensitive)
+    and the number of sitemaps read."""
+    pattern = re.compile(url_filter, re.I)
     queue, seen, found = list(sitemap_urls), set(), []
     while queue and len(seen) < MAX_SITEMAPS:
         sm = queue.pop(0)
@@ -53,7 +55,7 @@ def lego_urls(sitemap_urls: list[str], url_filter: str = "lego") -> tuple[list[s
         if "<sitemapindex" in body:
             queue += locs
         else:
-            found += [u for u in locs if url_filter in u.lower()]
+            found += [u for u in locs if pattern.search(u)]
     return found, len(seen)
 
 
