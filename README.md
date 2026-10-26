@@ -39,6 +39,10 @@ Setup, once:
 1. Settings → Pages → Build and deployment → Source: **GitHub Actions**.
 2. Settings → Secrets and variables → Actions → New repository secret: `BRICKSET_API_KEY`.
 
+## Affiliate links
+
+`data/affiliates.json` lists affiliate programs. Every set page and the set popup in the search get a "Sprawdź na <shop>" button that searches the shop for the set number with our tag (Amazon.pl, tag `klockownik-21`). Links use `rel="sponsored nofollow"` and the footer shows the required disclosure.
+
 ## Tests
 
 ```

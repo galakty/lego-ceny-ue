@@ -75,3 +75,6 @@ a.card { text-decoration: none; color: inherit; }
 .more-link { font-weight: 600; }
 .browse { padding-bottom: 16px; font-size: 0.95rem; }
 .browse a { margin-right: 10px; white-space: nowrap; }
+.shop-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.shop-btn { display: inline-block; padding: 10px 16px; border-radius: 8px; background: var(--accent); color: var(--accent-ink); font-weight: 600; text-decoration: none; }
+.shop-btn:hover { filter: brightness(0.95); }

@@ -1,0 +1,9 @@
+{
+  "_doc": "Affiliate programs. Each entry adds a search link to every set page. search_url gets ?k=LEGO <set number>&tag=<tag>.",
+  "amazon": {
+    "name": "Amazon.pl",
+    "search_url": "https://www.amazon.pl/s",
+    "tag": "klockownik-21",
+    "disclosure": "Jako partner Amazon uzyskujemy przychody z kwalifikujących się zakupów."
+  }
+}

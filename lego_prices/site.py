@@ -6,7 +6,7 @@ import os
 import shutil
 from collections import defaultdict
 
-from . import brickset, catalog, pages
+from . import affiliates, brickset, catalog, pages
 from .scrape import load_shops
 
 TEMPLATE_DIR = os.path.join(os.path.dirname(__file__), "site_template")
@@ -100,5 +100,10 @@ def build(data_dir: str = "data", out_dir: str = "site") -> str:
     os.makedirs(os.path.join(out_dir, "data"), exist_ok=True)
     with open(os.path.join(out_dir, "data", "sets.json"), "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
-    page_count = pages.build(payload, out_dir, os.environ.get("SITE_URL", pages.DEFAULT_SITE_URL))
+    programs = affiliates.load(os.path.join(data_dir, "affiliates.json"))
+    with open(os.path.join(out_dir, "config.js"), "w", encoding="utf-8") as f:
+        # the browser search builds the same affiliate links as the static pages
+        config = [{"name": a["name"], "search_url": a["search_url"], "tag": a["tag"]} for a in programs.values()]
+        f.write(f"window.AFFILIATES = {json.dumps(config, ensure_ascii=False)};\n")
+    page_count = pages.build(payload, out_dir, os.environ.get("SITE_URL", pages.DEFAULT_SITE_URL), programs)
     return stats(payload, page_count)

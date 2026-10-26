@@ -83,3 +83,28 @@ class BuildTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class AffiliateTest(unittest.TestCase):
+    programs = {"amazon": {"name": "Amazon.pl", "search_url": "https://www.amazon.pl/s", "tag": "klockownik-21",
+                           "disclosure": "Jako partner Amazon uzyskujemy przychody z kwalifikujących się zakupów."}}
+
+    def test_search_link(self):
+        from lego_prices.affiliates import search_links
+        self.assertEqual(search_links("60510", self.programs),
+                         [("Amazon.pl", "https://www.amazon.pl/s?k=LEGO+60510&tag=klockownik-21")])
+
+    def test_set_page_has_button_and_disclosure(self):
+        out = tempfile.mkdtemp()
+        try:
+            with open(os.path.join(out, "index.html"), "w") as f:
+                f.write("<!-- BROWSE --><!-- DISCLOSURE -->")
+            pages.build([make_set("60510", 252, 5)], out, "https://example.org", self.programs)
+            with open(os.path.join(out, "zestaw/60510/index.html"), encoding="utf-8") as f:
+                page = f.read()
+            self.assertIn('href="https://www.amazon.pl/s?k=LEGO+60510&amp;tag=klockownik-21" rel="sponsored nofollow noopener"', page)
+            self.assertIn("Jako partner Amazon", page)
+            with open(os.path.join(out, "index.html"), encoding="utf-8") as f:
+                self.assertIn("Jako partner Amazon", f.read())
+        finally:
+            shutil.rmtree(out)

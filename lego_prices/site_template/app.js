@@ -151,6 +151,15 @@ function offersTable(s) {
     el("tbody", {}, ...rows));
 }
 
+function affiliateLinks(s) {
+  const programs = window.AFFILIATES || [];
+  if (!programs.length) return null;
+  return el("p", { class: "shop-links" }, ...programs.map((a) => {
+    const url = `${a.search_url}?${new URLSearchParams({ k: `LEGO ${s.num}`, tag: a.tag })}`;
+    return el("a", { class: "shop-btn", href: url, rel: "sponsored nofollow noopener", target: "_blank" }, `Sprawdź na ${a.name}`);
+  }));
+}
+
 function openDetail(s) {
   const close = el("button", { class: "close", type: "button", "aria-label": "Zamknij" }, "×");
   close.addEventListener("click", () => els.detail.close());
@@ -166,6 +175,7 @@ function openDetail(s) {
         el("p", {}, el("a", { href: `zestaw/${s.num}/` }, "Strona zestawu →"))),
       close),
     offersTable(s),
+    affiliateLinks(s),
     historyChart(s.history)));
   els.detail.showModal();
 }

@@ -12,6 +12,8 @@ import re
 import unicodedata
 from urllib.parse import urlencode
 
+from .affiliates import search_links
+
 DEFAULT_SITE_URL = "https://galakty.github.io/lego-ceny-ue"
 SITE_NAME = "Klockownik"
 LIST_LIMIT = 120  # sets per landing page; the full list is one click away in the search
@@ -88,6 +90,9 @@ def set_path(s: dict) -> str:
     return f"zestaw/{s['num']}/"
 
 
+DISCLOSURE = ""  # set by build() from data/affiliates.json
+
+
 def layout(root: str, title: str, description: str, canonical: str, body: str, jsonld: dict | None = None) -> str:
     ld = f'\n  <script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>' if jsonld else ""
     return f"""<!doctype html>
@@ -112,7 +117,7 @@ def layout(root: str, title: str, description: str, canonical: str, body: str, j
   </main>
   <footer class="wrap foot">
     Dane o zestawach: <a href="https://rebrickable.com">Rebrickable</a> i <a href="https://brickset.com">Brickset</a>.
-    Kursy walut: NBP. LEGO® jest znakiem towarowym Grupy LEGO, która nie sponsoruje tej strony.
+    Kursy walut: NBP. LEGO® jest znakiem towarowym Grupy LEGO, która nie sponsoruje tej strony. {e(DISCLOSURE)}
   </footer>
 </body>
 </html>
@@ -139,7 +144,13 @@ def breadcrumbs(root: str, trail: list[tuple[str, str | None]]) -> str:
     return f'<nav class="crumbs" aria-label="Okruszki">{" › ".join(parts)}</nav>'
 
 
-def set_page(s: dict, related: list[dict], site_url: str) -> str:
+def affiliate_buttons(s: dict, affiliates: dict) -> str:
+    links = "".join(f'<a class="shop-btn" href="{e(url)}" rel="sponsored nofollow noopener" target="_blank">Sprawdź na {e(name)}</a>'
+                    for name, url in search_links(s["num"], affiliates))
+    return f'<p class="shop-links">{links}</p>' if links else ""
+
+
+def set_page(s: dict, related: list[dict], site_url: str, affiliates: dict | None = None) -> str:
     root = "../../"
     url = f"{site_url}/{set_path(s)}"
     facts = [f"Numer {s['num']}", pieces_text(s["pieces"]), age_text(s) and f"wiek {age_text(s)}", s["theme"], str(s["year"])]
@@ -176,6 +187,7 @@ def set_page(s: dict, related: list[dict], site_url: str) -> str:
       </div>
       <h2>Ceny</h2>
       {offers}
+      {affiliate_buttons(s, affiliates or {})}
     </article>
     {f'<h2>Podobne zestawy</h2>{card_list(root, related)}' if related else ""}"""
 
@@ -227,7 +239,10 @@ def write(out_dir: str, rel: str, content: str) -> None:
         f.write(content)
 
 
-def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL) -> int:
+def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affiliates: dict | None = None) -> int:
+    global DISCLOSURE
+    affiliates = affiliates or {}
+    DISCLOSURE = " ".join(a.get("disclosure", "") for a in affiliates.values()).strip()
     site_url = site_url.rstrip("/")
     urls = [""]
     by_theme: dict[str, list[dict]] = {}
@@ -235,7 +250,7 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL) -> i
         by_theme.setdefault(s["theme"], []).append(s)
 
     for s in sets:
-        write(out_dir, set_path(s), set_page(s, related_sets(s, by_theme), site_url))
+        write(out_dir, set_path(s), set_page(s, related_sets(s, by_theme), site_url, affiliates))
         urls.append(set_path(s))
 
     for age in AGES:
@@ -268,7 +283,8 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL) -> i
     index_path = os.path.join(out_dir, "index.html")
     with open(index_path, encoding="utf-8") as f:
         index = f.read()
-    index = index.replace("<!-- BROWSE -->", browse_nav(themes)).replace("{{SITE_URL}}", site_url)
+    index = (index.replace("<!-- BROWSE -->", browse_nav(themes)).replace("{{SITE_URL}}", site_url)
+             .replace("<!-- DISCLOSURE -->", e(DISCLOSURE)))
     with open(index_path, "w", encoding="utf-8") as f:
         f.write(index)
 
