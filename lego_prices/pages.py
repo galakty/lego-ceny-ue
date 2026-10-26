@@ -79,9 +79,9 @@ def in_range(s: dict, lo: int | None, hi: int | None) -> bool:
     return (lo is None or s["pieces"] >= lo) and (hi is None or s["pieces"] <= hi)
 
 
-def ranked(sets: list[dict]) -> list[dict]:
-    """Sets with prices first, then newest."""
-    return sorted(sets, key=lambda s: (best_cost(s) is None, -s["year"], s["num"]))
+def ranked(sets: list[dict], age: int | None = None) -> list[dict]:
+    """Sets with prices first, then (on age pages) those aimed closest to the age, then newest."""
+    return sorted(sets, key=lambda s: (best_cost(s) is None, age - s["age_min"] if age is not None else 0, -s["year"], s["num"]))
 
 
 def set_path(s: dict) -> str:
@@ -190,8 +190,9 @@ def set_page(s: dict, related: list[dict], site_url: str) -> str:
     return layout(root, title, description, url, body, product)
 
 
-def landing_page(root: str, title: str, intro: str, sets: list[dict], search_query: str, canonical: str, trail_label: str) -> str:
-    shown = ranked(sets)[:LIST_LIMIT]
+def landing_page(root: str, title: str, intro: str, sets: list[dict], search_query: str, canonical: str, trail_label: str,
+                 age: int | None = None) -> str:
+    shown = ranked(sets, age)[:LIST_LIMIT]
     more = (f'<p><a class="more-link" href="{root}?{search_query}">Zobacz wszystkie ({len(sets)}) '
             f'w wyszukiwarce z filtrami</a></p>') if search_query else ""
     body = f"""{breadcrumbs(root, [(trail_label, None)])}
@@ -242,7 +243,7 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL) -> i
         matching = [s for s in sets if fits_age(s, age)]
         intro = (f"Zestawy LEGO odpowiednie dla dziecka w wieku {age} {plural(age, 'roku', 'lat', 'lat')} według zaleceń producenta. "
                  f"Porównaj ceny w Polsce i UE i wybierz prezent dla {age}-latka.")
-        write(out_dir, rel, landing_page("../../", age_title(age), intro, matching, urlencode({"wiek": age}), f"{site_url}/{rel}", f"Wiek {age} {plural(age, 'rok', 'lata', 'lat')}"))
+        write(out_dir, rel, landing_page("../../", age_title(age), intro, matching, urlencode({"wiek": age}), f"{site_url}/{rel}", f"Wiek {age} {plural(age, 'rok', 'lata', 'lat')}", age))
         urls.append(rel)
     adults = [s for s in sets if s["age_min"] is not None and s["age_min"] >= 16]
     write(out_dir, "wiek/dorosli/", landing_page(
