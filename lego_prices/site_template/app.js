@@ -160,7 +160,8 @@ function openDetail(s) {
   els.detail.replaceChildren(el("div", { class: "detail" },
     el("header", {},
       s.img ? el("img", { src: s.img, alt: s.name }) : null,
-      el("div", {}, el("h2", {}, s.name), el("div", { class: "meta" }, facts), refPrice),
+      el("div", {}, el("h2", {}, s.name), el("div", { class: "meta" }, facts), refPrice,
+        el("p", {}, el("a", { href: `zestaw/${s.num}/` }, "Strona zestawu →"))),
       close),
     offersTable(s),
     historyChart(s.history)));

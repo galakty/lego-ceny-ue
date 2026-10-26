@@ -6,7 +6,7 @@ import os
 import shutil
 from collections import defaultdict
 
-from . import brickset, catalog
+from . import brickset, catalog, pages
 from .scrape import load_shops
 
 TEMPLATE_DIR = os.path.join(os.path.dirname(__file__), "site_template")
@@ -81,10 +81,10 @@ def build_sets(sets: list[dict], ages: dict[str, dict], offers, history) -> list
     return out
 
 
-def stats(payload: list[dict]) -> str:
+def stats(payload: list[dict], page_count: int) -> str:
     with_age = sum(s["age_min"] is not None for s in payload)
     with_offers = sum(bool(s["offers"]) for s in payload)
-    return f"{len(payload)} sets, {with_age} with age, {with_offers} with prices"
+    return f"{len(payload)} sets, {with_age} with age, {with_offers} with prices, {page_count} pages in sitemap"
 
 
 def build(data_dir: str = "data", out_dir: str = "site") -> str:
@@ -100,4 +100,5 @@ def build(data_dir: str = "data", out_dir: str = "site") -> str:
     os.makedirs(os.path.join(out_dir, "data"), exist_ok=True)
     with open(os.path.join(out_dir, "data", "sets.json"), "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
-    return stats(payload)
+    page_count = pages.build(payload, out_dir, os.environ.get("SITE_URL", pages.DEFAULT_SITE_URL))
+    return stats(payload, page_count)

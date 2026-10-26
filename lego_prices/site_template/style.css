@@ -10,7 +10,7 @@ body { margin: 0; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, s
 a { color: inherit; }
 .wrap { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
 .top { background: var(--accent); color: var(--accent-ink); padding: 20px 0; }
-.top h1 { margin: 0; font-size: 1.8rem; letter-spacing: -0.02em; }
+.brand { display: block; margin: 0; font-size: 1.8rem; font-weight: 700; letter-spacing: -0.02em; text-decoration: none; color: inherit; }
 .tagline { margin: 4px 0 0; }
 .layout { display: grid; grid-template-columns: 260px 1fr; gap: 24px; padding-top: 24px; padding-bottom: 24px; }
 @media (max-width: 760px) { .layout { grid-template-columns: 1fr; } }
@@ -63,3 +63,15 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .chart { margin-top: 16px; }
 .chart svg { width: 100%; height: 120px; }
 .foot { color: var(--muted); font-size: 0.85rem; padding-bottom: 32px; }
+a.card { text-decoration: none; color: inherit; }
+.page { padding-top: 16px; padding-bottom: 32px; }
+.page h1 { font-size: 1.6rem; margin: 8px 0; }
+.lead { color: var(--muted); max-width: 70ch; }
+.crumbs { color: var(--muted); font-size: 0.9rem; }
+.crumbs a { color: inherit; }
+.set-head { display: flex; gap: 20px; align-items: start; flex-wrap: wrap; }
+.set-head img { width: 280px; max-width: 100%; object-fit: contain; background: #fff; border-radius: 12px; }
+.set h2, .page > h2 { margin-top: 28px; }
+.more-link { font-weight: 600; }
+.browse { padding-bottom: 16px; font-size: 0.95rem; }
+.browse a { margin-right: 10px; white-space: nowrap; }

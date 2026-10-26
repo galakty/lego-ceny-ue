@@ -31,6 +31,8 @@ Both files are generated on every site build and are not committed.
 
 `python -m lego_prices site` builds a static site into `site/`: the template from `lego_prices/site_template/` plus `site/data/sets.json`. Search and filters (piece count ranges, child's age, theme, sets with prices only) run in the browser, and the current filters are kept in the URL (e.g. `?wiek=6&od=500`), so filtered views can be shared.
 
+Besides the interactive search, the build writes plain HTML pages that search engines can index (`lego_prices/pages.py`): one per set (`zestaw/<number>/`), per child's age (`wiek/<age>/`, `wiek/dorosli/`), per piece count range (`klocki/<range>/`) and per theme (`seria/<theme>/`), plus `sitemap.xml`. Set `SITE_URL` when the site moves to its own domain.
+
 `.github/workflows/pages.yml` builds and deploys the site to GitHub Pages on every push to `main` and after each daily scrape.
 
 Setup, once:
