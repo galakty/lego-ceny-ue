@@ -41,7 +41,7 @@ Setup, once:
 
 ## Affiliate links
 
-`data/affiliates.json` lists affiliate programs. Every set page and the set popup in the search get a "Sprawdź na <shop>" button that searches the shop for the set number with our tag (Amazon.pl, tag `klockownik-21`). Links use `rel="sponsored nofollow"` and the footer shows the required disclosure.
+`data/affiliates.json` lists affiliate programs. Every set page and the set popup in the search get a "Sprawdź na <shop>" button that searches the shop for the set number with our affiliate parameters (Amazon.pl tag `klockownik-21`, Allegro Share UTM campaign). Links use `rel="sponsored nofollow"` and the footer shows the required disclosure.
 
 ## Tests
 

@@ -155,7 +155,7 @@ function affiliateLinks(s) {
   const programs = window.AFFILIATES || [];
   if (!programs.length) return null;
   return el("p", { class: "shop-links" }, ...programs.map((a) => {
-    const url = `${a.search_url}?${new URLSearchParams({ k: `LEGO ${s.num}`, tag: a.tag })}`;
+    const url = `${a.search_url}?${new URLSearchParams({ [a.query_param]: `LEGO ${s.num}`, ...a.params })}`;
     return el("a", { class: "shop-btn", href: url, rel: "sponsored nofollow noopener", target: "_blank" }, `Sprawdź na ${a.name}`);
   }));
 }

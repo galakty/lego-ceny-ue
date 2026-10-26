@@ -86,13 +86,18 @@ if __name__ == "__main__":
 
 
 class AffiliateTest(unittest.TestCase):
-    programs = {"amazon": {"name": "Amazon.pl", "search_url": "https://www.amazon.pl/s", "tag": "klockownik-21",
-                           "disclosure": "Jako partner Amazon uzyskujemy przychody z kwalifikujących się zakupów."}}
+    programs = {"amazon": {"name": "Amazon.pl", "search_url": "https://www.amazon.pl/s", "query_param": "k",
+                           "params": {"tag": "klockownik-21"},
+                           "disclosure": "Jako partner Amazon uzyskujemy przychody z kwalifikujących się zakupów."},
+                "allegro": {"name": "Allegro", "search_url": "https://allegro.pl/listing", "query_param": "string",
+                            "params": {"utm_medium": "afiliacja", "utm_campaign": "abc"}}}
 
     def test_search_link(self):
         from lego_prices.affiliates import search_links
-        self.assertEqual(search_links("60510", self.programs),
-                         [("Amazon.pl", "https://www.amazon.pl/s?k=LEGO+60510&tag=klockownik-21")])
+        self.assertEqual(search_links("60510", self.programs), [
+            ("Amazon.pl", "https://www.amazon.pl/s?k=LEGO+60510&tag=klockownik-21"),
+            ("Allegro", "https://allegro.pl/listing?string=LEGO+60510&utm_medium=afiliacja&utm_campaign=abc"),
+        ])
 
     def test_set_page_has_button_and_disclosure(self):
         out = tempfile.mkdtemp()

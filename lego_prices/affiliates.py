@@ -13,5 +13,5 @@ def load(path: str) -> dict[str, dict]:
 
 def search_links(set_num: str, affiliates: dict[str, dict]) -> list[tuple[str, str]]:
     """(shop name, URL) pairs: a search for the set number, tagged with our affiliate ID."""
-    return [(a["name"], f"{a['search_url']}?{urlencode({'k': f'LEGO {set_num}', 'tag': a['tag']})}")
+    return [(a["name"], f"{a['search_url']}?{urlencode({a['query_param']: f'LEGO {set_num}', **a['params']})}")
             for a in affiliates.values()]

@@ -103,7 +103,7 @@ def build(data_dir: str = "data", out_dir: str = "site") -> str:
     programs = affiliates.load(os.path.join(data_dir, "affiliates.json"))
     with open(os.path.join(out_dir, "config.js"), "w", encoding="utf-8") as f:
         # the browser search builds the same affiliate links as the static pages
-        config = [{"name": a["name"], "search_url": a["search_url"], "tag": a["tag"]} for a in programs.values()]
+        config = [{k: a[k] for k in ("name", "search_url", "query_param", "params")} for a in programs.values()]
         f.write(f"window.AFFILIATES = {json.dumps(config, ensure_ascii=False)};\n")
     page_count = pages.build(payload, out_dir, os.environ.get("SITE_URL", pages.DEFAULT_SITE_URL), programs)
     return stats(payload, page_count)

@@ -1,9 +1,17 @@
 {
-  "_doc": "Affiliate programs. Each entry adds a search link to every set page. search_url gets ?k=LEGO <set number>&tag=<tag>.",
+  "_doc": "Affiliate programs. Each entry adds a 'Sprawdź na <name>' button to every set page: search_url?<query_param>=LEGO <set number>&<params>.",
   "amazon": {
     "name": "Amazon.pl",
     "search_url": "https://www.amazon.pl/s",
-    "tag": "klockownik-21",
+    "query_param": "k",
+    "params": {"tag": "klockownik-21"},
     "disclosure": "Jako partner Amazon uzyskujemy przychody z kwalifikujących się zakupów."
+  },
+  "allegro": {
+    "name": "Allegro",
+    "search_url": "https://allegro.pl/listing",
+    "query_param": "string",
+    "params": {"utm_medium": "afiliacja", "utm_source": "ctr_2", "utm_campaign": "153defd3-168e-4320-9be6-072825cd5814"},
+    "disclosure": "Linki do Allegro są linkami partnerskimi (Allegro Share)."
   }
 }
