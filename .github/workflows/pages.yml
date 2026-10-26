@@ -1,0 +1,50 @@
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_run:            # rebuild after the daily scrape commits new prices
+    workflows: ["Daily price scrape"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main        # workflow_run would otherwise check out the commit before the new prices
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download set catalog
+        run: python -m lego_prices catalog
+      - name: Download ages from Brickset
+        run: python -m lego_prices ages
+        env:
+          BRICKSET_API_KEY: ${{ secrets.BRICKSET_API_KEY }}
+      - name: Build site
+        run: python -m lego_prices site
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

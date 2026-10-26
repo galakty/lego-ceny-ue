@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Klockownik – ceny LEGO w Polsce i UE</title>
+  <meta name="description" content="Porównaj ceny zestawów LEGO w Polsce i w Unii Europejskiej. Szukaj po liczbie klocków, wieku dziecka i serii.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <h1>Klockownik</h1>
+      <p class="tagline">Ceny LEGO w Polsce i UE. Szukaj po liczbie klocków, wieku dziecka i serii.</p>
+    </div>
+  </header>
+
+  <main class="wrap layout">
+    <aside class="filters" aria-label="Filtry">
+      <details id="filters-box" open>
+      <summary>Filtry</summary>
+      <div class="filters-body">
+      <label class="field">
+        <span>Szukaj</span>
+        <input id="q" type="search" placeholder="Nazwa lub numer, np. 75313" autocomplete="off">
+      </label>
+
+      <fieldset class="field">
+        <legend>Wiek dziecka</legend>
+        <select id="age">
+          <option value="">Dowolny</option>
+        </select>
+        <small class="hint" id="age-hint"></small>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend>Liczba klocków</legend>
+        <div class="chips" id="piece-chips">
+          <button type="button" data-min="" data-max="250">do 250</button>
+          <button type="button" data-min="250" data-max="500">250–500</button>
+          <button type="button" data-min="500" data-max="1000">500–1000</button>
+          <button type="button" data-min="1000" data-max="">1000+</button>
+          <button type="button" data-min="1500" data-max="">1500+</button>
+          <button type="button" data-min="2000" data-max="">2000+</button>
+          <button type="button" data-min="3000" data-max="">3000+</button>
+        </div>
+        <div class="range">
+          <input id="pmin" type="number" min="0" step="50" placeholder="od" inputmode="numeric" aria-label="Minimalna liczba klocków">
+          <span>–</span>
+          <input id="pmax" type="number" min="0" step="50" placeholder="do" inputmode="numeric" aria-label="Maksymalna liczba klocków">
+        </div>
+      </fieldset>
+
+      <label class="field">
+        <span>Seria</span>
+        <select id="theme"><option value="">Wszystkie</option></select>
+      </label>
+
+      <label class="check">
+        <input id="offers" type="checkbox"> Tylko z cenami
+      </label>
+
+      <button type="button" id="reset" class="link">Wyczyść filtry</button>
+      </div>
+      </details>
+    </aside>
+
+    <section class="results" aria-live="polite">
+      <div class="bar">
+        <span id="count">Ładowanie…</span>
+        <label>Sortuj
+          <select id="sort">
+            <option value="new">Najnowsze</option>
+            <option value="pieces-desc">Najwięcej klocków</option>
+            <option value="pieces-asc">Najmniej klocków</option>
+            <option value="price-asc">Najtańsze</option>
+            <option value="ppp-asc">Najtańszy klocek</option>
+          </select>
+        </label>
+      </div>
+      <ul id="list" class="grid"></ul>
+      <button type="button" id="more" class="more" hidden>Pokaż więcej</button>
+    </section>
+  </main>
+
+  <dialog id="detail"></dialog>
+
+  <footer class="wrap foot">
+    Dane o zestawach: <a href="https://rebrickable.com">Rebrickable</a> i <a href="https://brickset.com">Brickset</a>.
+    Kursy walut: NBP. LEGO® jest znakiem towarowym Grupy LEGO, która nie sponsoruje tej strony.
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

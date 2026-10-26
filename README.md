@@ -20,9 +20,22 @@ Add a row to `data/products.csv`:
 
 The shop must exist in `data/shops.json`. Set `shipping_to_pl` to the shipping cost to Poland in the shop's currency. While it is `null`, the site shows only the price, without a total.
 
-## Set catalog
+## Set catalog and ages
 
-`python -m lego_prices catalog` downloads all sets since 2020 from the free [Rebrickable](https://rebrickable.com/downloads/) dump into `data/sets.csv`.
+- `python -m lego_prices catalog` downloads all sets since 2020 (name, year, piece count, theme, image) from the free [Rebrickable](https://rebrickable.com/downloads/) dumps into `data/sets.csv`.
+- `python -m lego_prices ages` downloads recommended ages and the LEGO.com Germany list price from the [Brickset API](https://brickset.com/article/52664/api-version-3-documentation) into `data/brickset.csv`. It needs a free API key in `BRICKSET_API_KEY`; without one it is skipped and the age filter has no data.
+
+Both files are generated on every site build and are not committed.
+
+## Site
+
+`python -m lego_prices site` builds a static site into `site/`: the template from `lego_prices/site_template/` plus `site/data/sets.json`. Search and filters (piece count ranges, child's age, theme, sets with prices only) run in the browser, and the current filters are kept in the URL (e.g. `?wiek=6&od=500`), so filtered views can be shared.
+
+`.github/workflows/pages.yml` builds and deploys the site to GitHub Pages on every push to `main` and after each daily scrape.
+
+Setup, once:
+1. Settings → Pages → Build and deployment → Source: **GitHub Actions**.
+2. Settings → Secrets and variables → Actions → New repository secret: `BRICKSET_API_KEY`.
 
 ## Tests
 
@@ -45,4 +58,3 @@ Debugging: run the workflow manually with the `debug` option and the fetched pag
 
 - Fill in shipping costs to Poland in `data/shops.json`.
 - Get EU prices through affiliate APIs and product feeds (Amazon, Awin and similar).
-- Step 3: static site on GitHub Pages.

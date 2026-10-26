@@ -5,7 +5,8 @@ import os
 import tempfile
 import unittest
 
-from lego_prices.catalog import parse_sets
+from lego_prices import brickset, site
+from lego_prices.catalog import parse_sets, parse_themes
 from lego_prices.fx import parse_nbp, to_pln
 from lego_prices.price_parser import Offer, _parse_price, extract_offer, page_title
 from lego_prices.scrape import build_row, save_rows
@@ -60,6 +61,58 @@ class CatalogTest(unittest.TestCase):
                 "123-1,Gear,2022,1,0,\n")
         sets = parse_sets(gzip.compress(text.encode()), min_year=2020)
         self.assertEqual([s["set_num"] for s in sets], ["75313"])
+
+
+class ThemesTest(unittest.TestCase):
+    def test_subtheme_maps_to_root_and_variants_dedupe(self):
+        themes_csv = "id,name,parent_id\n158,Star Wars,\n171,Ultimate Collector Series,158\n"
+        themes = parse_themes(gzip.compress(themes_csv.encode()))
+        self.assertEqual(themes["171"], "Star Wars")
+        sets_csv = ("set_num,name,year,theme_id,num_parts,img_url\n"
+                    "75313-1,AT-AT,2021,171,6785,i\n75313-2,AT-AT,2021,171,6785,i\n")
+        sets = parse_sets(gzip.compress(sets_csv.encode()), themes)
+        self.assertEqual([(s["set_num"], s["theme"]) for s in sets], [("75313", "Star Wars")])
+
+
+class BricksetTest(unittest.TestCase):
+    def test_parse(self):
+        payload = json.dumps({"status": "success", "matches": 2, "sets": [
+            {"number": "60510", "numberVariant": 1, "ageRange": {"min": 5}, "LEGOCom": {"DE": {"retailPrice": 34.99}}},
+            {"number": "60510", "numberVariant": 2, "ageRange": {"min": 9}},
+        ]}).encode()
+        rows, matches = brickset.parse_sets(payload)
+        self.assertEqual(matches, 2)
+        self.assertEqual(rows, [{"set_num": "60510", "age_min": 5, "age_max": "", "lego_de_eur": 34.99}])
+
+    def test_error_raises(self):
+        with self.assertRaises(RuntimeError):
+            brickset.parse_sets(json.dumps({"status": "error", "message": "API limit exceeded"}).encode())
+
+
+class SiteTest(unittest.TestCase):
+    shops = {"a": {"name": "Shop A", "country": "PL", "ships_to_pl": True},
+             "b": {"name": "Shop B", "country": "DE", "ships_to_pl": True}}
+
+    def price(self, date, shop, pln, total=""):
+        return {"date": date, "set_num": "60510", "shop": shop, "price": str(pln), "currency": "PLN",
+                "in_stock": "1", "price_pln": str(pln), "shipping_pln": "", "total_pln": str(total), "url": "u"}
+
+    def test_latest_offer_per_shop_sorted(self):
+        prices = [self.price("2026-10-24", "a", 170), self.price("2026-10-25", "a", 165),
+                  self.price("2026-10-25", "b", 150, 160)]
+        offers = site.latest_offers(prices, self.shops)["60510"]
+        self.assertEqual([(o["shop"], o["pln"]) for o in offers], [("Shop B", 150.0), ("Shop A", 165.0)])
+
+    def test_history_is_daily_minimum(self):
+        prices = [self.price("2026-10-25", "a", 165), self.price("2026-10-25", "b", 150),
+                  self.price("2026-10-24", "a", 170)]
+        self.assertEqual(site.price_history(prices)["60510"], [["2026-10-24", 170.0], ["2026-10-25", 150.0]])
+
+    def test_build_sets_merges_ages(self):
+        sets = [{"set_num": "60510", "name": "Advent", "year": 2026, "num_parts": 252, "theme": "City", "img_url": ""}]
+        ages = {"60510": {"set_num": "60510", "age_min": "5", "age_max": "", "lego_de_eur": "34.99"}}
+        out = site.build_sets(sets, ages, {}, {})[0]
+        self.assertEqual((out["age_min"], out["age_max"], out["lego_de_eur"], out["offers"]), (5, None, 34.99, []))
 
 
 class ScrapeTest(unittest.TestCase):

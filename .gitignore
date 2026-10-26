@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .venv/
+site/
+data/sets.csv
+data/brickset.csv
