@@ -1,3 +1,4 @@
+import os
 import sys
 
 from . import brickset, catalog, scrape, site
@@ -14,7 +15,8 @@ if __name__ == "__main__":
         count = brickset.download("data/brickset.csv")
         print("BRICKSET_API_KEY not set, skipping ages" if count is None else f"Saved ages for {count} sets")
     elif cmd == "site":
-        print(f"Built site with {site.build()} sets")
+        summary = f"Built site: {site.build()}"
+        print(f"::notice::{summary}" if os.environ.get("GITHUB_ACTIONS") == "true" else summary)
     else:
         print(USAGE)
         sys.exit(2)

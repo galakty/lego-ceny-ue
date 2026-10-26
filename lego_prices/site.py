@@ -81,7 +81,13 @@ def build_sets(sets: list[dict], ages: dict[str, dict], offers, history) -> list
     return out
 
 
-def build(data_dir: str = "data", out_dir: str = "site") -> int:
+def stats(payload: list[dict]) -> str:
+    with_age = sum(s["age_min"] is not None for s in payload)
+    with_offers = sum(bool(s["offers"]) for s in payload)
+    return f"{len(payload)} sets, {with_age} with age, {with_offers} with prices"
+
+
+def build(data_dir: str = "data", out_dir: str = "site") -> str:
     sets = catalog.load_catalog(os.path.join(data_dir, "sets.csv"))
     ages = brickset.load(os.path.join(data_dir, "brickset.csv"))
     prices = load_prices(os.path.join(data_dir, "prices.csv"))
@@ -94,4 +100,4 @@ def build(data_dir: str = "data", out_dir: str = "site") -> int:
     os.makedirs(os.path.join(out_dir, "data"), exist_ok=True)
     with open(os.path.join(out_dir, "data", "sets.json"), "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
-    return len(payload)
+    return stats(payload)
