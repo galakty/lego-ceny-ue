@@ -5,6 +5,7 @@ import json
 import os
 import shutil
 from collections import defaultdict
+from urllib.parse import quote
 
 from . import affiliates, brickset, catalog, deals, fx, pages
 from .scrape import load_shops
@@ -21,6 +22,12 @@ def load_prices(path: str) -> list[dict]:
         return []
     with open(path, newline="", encoding="utf-8") as f:
         return list(csv.DictReader(f))
+
+
+def shop_link(url: str, shop: dict) -> str:
+    """Product URL wrapped in the shop's affiliate deeplink, when the shop has one."""
+    template = shop.get("affiliate_link")
+    return template.replace("{url}", quote(url, safe="")) if template else url
 
 
 def latest_offers(prices: list[dict], shops: dict[str, dict]) -> dict[str, list[dict]]:
@@ -43,7 +50,8 @@ def latest_offers(prices: list[dict], shops: dict[str, dict]) -> dict[str, list[
             "shipping": _num(row["shipping_pln"]),
             "total": _num(row["total_pln"]),
             "in_stock": None if row["in_stock"] == "" else row["in_stock"] == "1",
-            "url": row["url"],
+            "url": shop_link(row["url"], shop),
+            "sponsored": bool(shop.get("affiliate_link")),
             "date": row["date"],
         })
     for lst in offers.values():

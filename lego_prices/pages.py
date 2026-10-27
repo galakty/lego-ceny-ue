@@ -167,7 +167,7 @@ def set_page(s: dict, related: list[dict], site_url: str, affiliates: dict | Non
 
     if s["offers"]:
         rows = "".join(
-            f'<tr{" class=best" if i == 0 else ""}><td><a href="{e(o["url"])}" rel="nofollow noopener" target="_blank">{e(o["shop"])}</a></td>'
+            f'<tr{" class=best" if i == 0 else ""}><td><a href="{e(o["url"])}" rel="{"sponsored " if o.get("sponsored") else ""}nofollow noopener" target="_blank">{e(o["shop"])}</a></td>'
             f'<td>{e(o["country"])}</td><td class="num">{pln(o["pln"])}</td>'
             f'<td class="num">{pln(o["shipping"]) if o["shipping"] is not None else ("nie wysyła do PL" if o["ships_to_pl"] is False else "?")}</td>'
             f'<td class="num">{pln(o["total"]) if o["total"] is not None else "–"}</td></tr>'

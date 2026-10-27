@@ -20,6 +20,8 @@ Add a row to `data/products.csv`:
 
 The shop must exist in `data/shops.json`. Set `shipping_to_pl` to the shipping cost to Poland in the shop's currency. While it is `null`, the site shows only the price, without a total.
 
+To earn on clicks to a shop's offers, set `affiliate_link` on the shop to the deeplink template from its affiliate network, with `{url}` where the URL-encoded product URL goes (e.g. `"https://www.awin1.com/cread.php?awinmid=<mid>&awinaffid=3135303&ued={url}"`). Offer links on the site then go through the network and are marked `rel="sponsored"`.
+
 ## Set catalog and ages
 
 - `python -m lego_prices catalog` downloads all sets since 2020 (name, year, piece count, theme, image) from the free [Rebrickable](https://rebrickable.com/downloads/) dumps into `data/sets.csv`.

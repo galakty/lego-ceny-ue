@@ -145,5 +145,14 @@ class ScrapeTest(unittest.TestCase):
             self.assertEqual([r["price"] for r in rows], ["650.0"])
 
 
+class ShopLinkTest(unittest.TestCase):
+    def test_plain_and_affiliate_links(self):
+        url = "https://www.neonet.pl/zabawki/lego-60510.html?x=1"
+        self.assertEqual(site.shop_link(url, {}), url)
+        shop = {"affiliate_link": "https://net.example/click?id=7&url={url}"}
+        self.assertEqual(site.shop_link(url, shop),
+                         "https://net.example/click?id=7&url=https%3A%2F%2Fwww.neonet.pl%2Fzabawki%2Flego-60510.html%3Fx%3D1")
+
+
 if __name__ == "__main__":
     unittest.main()

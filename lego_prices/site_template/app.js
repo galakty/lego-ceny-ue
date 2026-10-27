@@ -139,7 +139,7 @@ function historyChart(history) {
 function offersTable(s) {
   if (!s.offers.length) return el("p", { class: "meta" }, "Nie mamy jeszcze cen dla tego zestawu.");
   const rows = s.offers.map((o, i) => el("tr", { class: i === 0 ? "best" : null },
-    el("td", {}, el("a", { href: o.url, target: "_blank", rel: "noopener nofollow" }, o.shop)),
+    el("td", {}, el("a", { href: o.url, target: "_blank", rel: o.sponsored ? "sponsored noopener nofollow" : "noopener nofollow" }, o.shop)),
     el("td", {}, o.country),
     el("td", { class: "num" }, o.currency === "PLN" ? pln.format(o.pln) : `${new Intl.NumberFormat("pl-PL", { style: "currency", currency: o.currency }).format(o.price)} (${pln.format(o.pln)})`),
     el("td", { class: "num" }, o.shipping != null ? pln.format(o.shipping) : (o.ships_to_pl === false ? "nie wysyła do PL" : "?")),

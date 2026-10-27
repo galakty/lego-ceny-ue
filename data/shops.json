@@ -1,5 +1,5 @@
 {
-  "_doc": "Shops. ships_to_pl: whether the shop ships to Poland (null = not checked yet). shipping_to_pl: shipping cost to Poland in the shop's currency (null = not checked). free_shipping_from: free-shipping threshold for Poland (null = none or not checked). discover: optional sitemap discovery (base_url, url_filter regex for product URLs).",
+  "_doc": "Shops. ships_to_pl: whether the shop ships to Poland (null = not checked yet). shipping_to_pl: shipping cost to Poland in the shop's currency (null = not checked). free_shipping_from: free-shipping threshold for Poland (null = none or not checked). discover: optional sitemap discovery (base_url, url_filter regex for product URLs). affiliate_link: optional deeplink template from an affiliate network, with {url} standing for the URL-encoded product URL.",
   "shops": [
     {
       "id": "lego-pl",
