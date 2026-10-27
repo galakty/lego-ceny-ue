@@ -109,6 +109,9 @@ class AffiliateTest(unittest.TestCase):
                 page = f.read()
             self.assertIn('href="https://www.amazon.pl/s?k=LEGO+60510&amp;tag=klockownik-21" rel="sponsored nofollow noopener"', page)
             self.assertIn("Jako partner Amazon", page)
+            self.assertIn("Sprawdź aktualną cenę:", page)
+            with open(os.path.join(out, "wiek/6/index.html"), encoding="utf-8") as f:
+                self.assertIn("Sprawdź cenę na Amazon.pl i Allegro →", f.read())
             with open(os.path.join(out, "index.html"), encoding="utf-8") as f:
                 self.assertIn("Jako partner Amazon", f.read())
         finally:

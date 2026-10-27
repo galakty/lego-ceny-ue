@@ -61,6 +61,7 @@ input[type=search], input[type=number], select {
 .meta { color: var(--muted); font-size: 0.85rem; }
 .price { margin-top: auto; font-weight: 700; font-size: 1.1rem; }
 .price.none { font-weight: 400; color: var(--muted); font-size: 0.9rem; }
+.price.check { font-weight: 600; font-size: 0.85rem; color: var(--red); }
 .more[hidden] { display: none; }
 .more { display: block; margin: 20px auto; padding: 10px 20px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); cursor: pointer; }
 dialog { border: 0; border-radius: 14px; padding: 0; width: min(720px, calc(100vw - 32px)); background: var(--card); color: var(--text); }

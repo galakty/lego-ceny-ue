@@ -92,6 +92,7 @@ def set_path(s: dict) -> str:
 
 
 DISCLOSURE = ""  # set by build() from data/affiliates.json
+NO_PRICE_LABEL = "Brak cen"  # build() points to the affiliate searches instead, when there are any
 
 
 def layout(root: str, title: str, description: str, canonical: str, body: str, jsonld: dict | None = None) -> str:
@@ -132,7 +133,7 @@ def card_list(root: str, sets: list[dict], notes: dict[str, tuple[float, str]] |
     for s in sets:
         cost, note = (notes or {}).get(s["num"], (best_cost(s), ""))
         meta = " · ".join(x for x in (s["num"], pieces_text(s["pieces"]), age_text(s)) if x)
-        price = f'<div class="price">od {pln(cost)}</div>' if cost is not None else '<div class="price none">Brak cen</div>'
+        price = f'<div class="price">od {pln(cost)}</div>' if cost is not None else f'<div class="price check">{e(NO_PRICE_LABEL)}</div>'
         if note:
             price = f'<div class="deal">{e(note)}</div>{price}'
         img = f'<img src="{e(s["img"])}" alt="" loading="lazy">' if s["img"] else ""
@@ -176,7 +177,8 @@ def set_page(s: dict, related: list[dict], site_url: str, affiliates: dict | Non
                   f'<th class="num">Dostawa do PL</th><th class="num">Razem</th></tr></thead><tbody>{rows}</tbody></table>'
                   f'<p class="meta">Ceny z {e(s["offers"][0]["date"])}. Aktualizujemy je codziennie.</p>')
     else:
-        offers = '<p class="meta">Nie mamy jeszcze cen dla tego zestawu. Dodajemy kolejne sklepy.</p>'
+        offers = ('<p class="meta">Nie mamy jeszcze ceny z porównywanych sklepów.'
+                  + (' Sprawdź aktualną cenę:</p>' if affiliates else ' Dodajemy kolejne sklepy.</p>'))
     ref = f'<p class="meta">Cena katalogowa LEGO w Niemczech: {s["lego_de_eur"]:.2f} EUR</p>'.replace(".", ",") if s["lego_de_eur"] else ""
 
     trail = [(s["theme"], f"seria/{slugify(s['theme'])}/")] if s["theme"] else []
@@ -279,9 +281,11 @@ def write(out_dir: str, rel: str, content: str) -> None:
 
 def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affiliates: dict | None = None,
           eur_rate: float | None = None) -> int:
-    global DISCLOSURE
+    global DISCLOSURE, NO_PRICE_LABEL
     affiliates = affiliates or {}
     DISCLOSURE = " ".join(a.get("disclosure", "") for a in affiliates.values()).strip()
+    names = [a["name"] for a in affiliates.values()]
+    NO_PRICE_LABEL = f"Sprawdź cenę na {' i '.join(names)} →" if names else "Brak cen"
     site_url = site_url.rstrip("/")
     urls = [""]
     by_theme: dict[str, list[dict]] = {}

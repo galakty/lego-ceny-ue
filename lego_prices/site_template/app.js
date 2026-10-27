@@ -111,7 +111,7 @@ function card(s) {
         el("div", { class: "meta" }, [s.theme, s.year].filter(Boolean).join(" · ")),
         cost != null
           ? el("div", { class: "price" }, `od ${pln.format(cost)}`)
-          : el("div", { class: "price none" }, "Brak cen"))));
+          : el("div", { class: "price check" }, noPriceLabel()))));
   const article = li.firstChild;
   article.addEventListener("click", () => openDetail(s));
   article.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openDetail(s); } });
@@ -136,8 +136,14 @@ function historyChart(history) {
   return wrap;
 }
 
+// sets without a price from the compared shops point to the affiliate searches instead
+function noPriceLabel() {
+  const names = (window.AFFILIATES || []).map((a) => a.name);
+  return names.length ? `Sprawdź cenę na ${names.join(" i ")} →` : "Brak cen";
+}
+
 function offersTable(s) {
-  if (!s.offers.length) return el("p", { class: "meta" }, "Nie mamy jeszcze cen dla tego zestawu.");
+  if (!s.offers.length) return el("p", { class: "meta" }, "Nie mamy jeszcze ceny z porównywanych sklepów. Sprawdź aktualną cenę:");
   const rows = s.offers.map((o, i) => el("tr", { class: i === 0 ? "best" : null },
     el("td", {}, el("a", { href: o.url, target: "_blank", rel: o.sponsored ? "sponsored noopener nofollow" : "noopener nofollow" }, o.shop)),
     el("td", {}, o.country),
