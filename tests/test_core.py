@@ -164,6 +164,8 @@ class ShopLinkTest(unittest.TestCase):
         shop = {"affiliate_link": "https://net.example/click?id=7&url={url}"}
         self.assertEqual(site.shop_link(url, shop),
                          "https://net.example/click?id=7&url=https%3A%2F%2Fwww.neonet.pl%2Fzabawki%2Flego-60510.html%3Fx%3D1")
+        self.assertEqual(site.shop_link("https://planetaklockow.pl/lego-10458-duplo", {"affiliate_link": "https://webep1.com/1/x?r={url_b64}"}),
+                         "https://webep1.com/1/x?r=aHR0cHM6Ly9wbGFuZXRha2xvY2tvdy5wbC9sZWdvLTEwNDU4LWR1cGxv")
 
 
 if __name__ == "__main__":

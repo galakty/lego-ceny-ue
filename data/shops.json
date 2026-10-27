@@ -1,5 +1,5 @@
 {
-  "_doc": "Shops. ships_to_pl: whether the shop ships to Poland (null = not checked yet). shipping_to_pl: shipping cost to Poland in the shop's currency (null = not checked). free_shipping_from: free-shipping threshold for Poland (null = none or not checked). discover: optional sitemap discovery (base_url, url_filter regex for product URLs). affiliate_link: optional deeplink template from an affiliate network, with {url} standing for the URL-encoded product URL.",
+  "_doc": "Shops. ships_to_pl: whether the shop ships to Poland (null = not checked yet). shipping_to_pl: shipping cost to Poland in the shop's currency (null = not checked). free_shipping_from: free-shipping threshold for Poland (null = none or not checked). discover: optional sitemap discovery (base_url, url_filter regex for product URLs). affiliate_link: optional deeplink template from an affiliate network, with {url} standing for the URL-encoded product URL, or {url_b64} for the Base64-encoded one (webePartners).",
   "shops": [
     {
       "id": "lego-pl",
@@ -147,7 +147,8 @@
       "discover": {
         "base_url": "https://planetaklockow.pl",
         "url_filter": "lego"
-      }
+      },
+      "affiliate_link": "https://webep1.com/12727/6ae0d697800db2fb66cf961b?r={url_b64}"
     }
   ]
 }

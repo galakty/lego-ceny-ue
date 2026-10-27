@@ -5,6 +5,7 @@ import json
 import os
 import shutil
 from collections import defaultdict
+import base64
 from urllib.parse import quote
 
 from . import affiliates, brickset, catalog, deals, fx, pages
@@ -25,9 +26,13 @@ def load_prices(path: str) -> list[dict]:
 
 
 def shop_link(url: str, shop: dict) -> str:
-    """Product URL wrapped in the shop's affiliate deeplink, when the shop has one."""
+    """Product URL wrapped in the shop's affiliate deeplink, when the shop has one.
+    {url} is the URL-encoded product URL, {url_b64} the Base64 one (webePartners)."""
     template = shop.get("affiliate_link")
-    return template.replace("{url}", quote(url, safe="")) if template else url
+    if not template:
+        return url
+    b64 = base64.b64encode(url.encode()).decode()
+    return template.replace("{url}", quote(url, safe="")).replace("{url_b64}", quote(b64, safe=""))
 
 
 def latest_offers(prices: list[dict], shops: dict[str, dict]) -> dict[str, list[dict]]:
