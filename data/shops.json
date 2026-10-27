@@ -135,6 +135,19 @@
       "shipping_to_pl": null,
       "free_shipping_from": null,
       "note": "Product pages return 403 to scrapers (2026-10-26); sitemap discovery disabled."
+    },
+    {
+      "id": "planetaklockow-pl",
+      "name": "Planeta Klocków",
+      "country": "PL",
+      "currency": "PLN",
+      "ships_to_pl": true,
+      "shipping_to_pl": null,
+      "free_shipping_from": null,
+      "discover": {
+        "base_url": "https://planetaklockow.pl",
+        "url_filter": "lego"
+      }
     }
   ]
 }
