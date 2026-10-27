@@ -12,8 +12,18 @@ a { color: inherit; }
 .top { background: var(--accent); color: var(--accent-ink); padding: 20px 0; }
 .brand { display: block; margin: 0; font-size: 1.8rem; font-weight: 700; letter-spacing: -0.02em; text-decoration: none; color: inherit; }
 .tagline { margin: 4px 0 0; }
-.top .wrap { position: relative; }
-.nav-link { position: absolute; right: 16px; top: 8px; color: inherit; font-weight: 600; }
+.top .wrap { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; column-gap: 24px; }
+.top .brand, .top .tagline { grid-column: 1; }
+.nav-link { grid-column: 2; grid-row: 1 / span 2; display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px;
+  border-radius: 999px; background: #d01012; color: #fff; font-size: 1.15rem; font-weight: 700; text-decoration: none;
+  white-space: nowrap; box-shadow: 0 4px 0 #8f0b0c, 0 6px 14px rgba(0, 0, 0, 0.25); transition: transform 0.1s, box-shadow 0.1s; }
+.nav-link::before { content: "🔥"; }
+.nav-link:hover, .nav-link:focus-visible { transform: translateY(-2px); box-shadow: 0 6px 0 #8f0b0c, 0 10px 18px rgba(0, 0, 0, 0.3); outline: none; }
+.nav-link:active { transform: translateY(3px); box-shadow: 0 1px 0 #8f0b0c; }
+@media (max-width: 760px) {
+  .top .wrap { grid-template-columns: 1fr; }
+  .nav-link { grid-column: 1; grid-row: 3; justify-self: center; margin-top: 14px; }
+}
 .deal { display: inline-block; align-self: flex-start; margin-top: auto; padding: 2px 6px; border-radius: 4px; background: #c62828; color: #fff; font-size: 0.8rem; font-weight: 700; }
 .deal + .price { margin-top: 4px; }
 .layout { display: grid; grid-template-columns: 260px 1fr; gap: 24px; padding-top: 24px; padding-bottom: 24px; }
