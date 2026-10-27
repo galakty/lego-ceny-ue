@@ -6,7 +6,7 @@ import os
 import shutil
 from collections import defaultdict
 
-from . import affiliates, brickset, catalog, pages
+from . import affiliates, brickset, catalog, deals, fx, pages
 from .scrape import load_shops
 
 TEMPLATE_DIR = os.path.join(os.path.dirname(__file__), "site_template")
@@ -105,5 +105,11 @@ def build(data_dir: str = "data", out_dir: str = "site") -> str:
         # the browser search builds the same affiliate links as the static pages
         config = [{k: a[k] for k in ("name", "search_url", "query_param", "params")} for a in programs.values()]
         f.write(f"window.AFFILIATES = {json.dumps(config, ensure_ascii=False)};\n")
-    page_count = pages.build(payload, out_dir, os.environ.get("SITE_URL", pages.DEFAULT_SITE_URL), programs)
-    return stats(payload, page_count)
+    try:
+        eur_rate = fx.load_rates()["EUR"]
+    except Exception as exc:  # the deals page then skips the list price comparison
+        print(f"No EUR rate from NBP: {exc}")
+        eur_rate = None
+    page_count = pages.build(payload, out_dir, os.environ.get("SITE_URL", pages.DEFAULT_SITE_URL), programs, eur_rate)
+    found = f"deals: {len(deals.below_list_price(payload, eur_rate))} below list price, {len(deals.price_drops(payload))} price drops"
+    return f"{stats(payload, page_count)}; {found}"

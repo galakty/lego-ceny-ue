@@ -12,6 +12,7 @@ import re
 import unicodedata
 from urllib.parse import urlencode
 
+from . import deals
 from .affiliates import search_links
 
 DEFAULT_SITE_URL = "https://galakty.github.io/lego-ceny-ue"
@@ -110,6 +111,7 @@ def layout(root: str, title: str, description: str, canonical: str, body: str, j
 <body>
   <header class="top"><div class="wrap">
     <a class="brand" href="{root}">{SITE_NAME}</a>
+    <a class="nav-link" href="{root}promocje/">Promocje dnia</a>
     <p class="tagline">Ceny LEGO w Polsce i UE. Szukaj po liczbie klocków, wieku dziecka i serii.</p>
   </div></header>
   <main class="wrap page">
@@ -124,12 +126,15 @@ def layout(root: str, title: str, description: str, canonical: str, body: str, j
 """
 
 
-def card_list(root: str, sets: list[dict]) -> str:
+def card_list(root: str, sets: list[dict], notes: dict[str, tuple[float, str]] | None = None) -> str:
+    """Set cards; notes maps a set number to (price to show, deal label)."""
     items = []
     for s in sets:
-        cost = best_cost(s)
+        cost, note = (notes or {}).get(s["num"], (best_cost(s), ""))
         meta = " · ".join(x for x in (s["num"], pieces_text(s["pieces"]), age_text(s)) if x)
         price = f'<div class="price">od {pln(cost)}</div>' if cost is not None else '<div class="price none">Brak cen</div>'
+        if note:
+            price = f'<div class="deal">{e(note)}</div>{price}'
         img = f'<img src="{e(s["img"])}" alt="" loading="lazy">' if s["img"] else ""
         items.append(
             f'<li><a class="card" href="{root}{set_path(s)}"><div class="img">{img}</div>'
@@ -228,8 +233,41 @@ def browse_nav(themes: list[tuple[str, str]]) -> str:
     pieces = " ".join(f'<a href="klocki/{slug}/">{e(t.replace("LEGO ", ""))}</a>' for slug, t, _, _ in PIECE_RANGES)
     series = " ".join(f'<a href="seria/{slug}/">{e(name)}</a>' for name, slug in themes)
     return (f'<nav class="browse wrap" aria-label="Przeglądaj"><h2>Przeglądaj</h2>'
+            f'<p><strong>Okazje:</strong> <a href="promocje/">Promocje dnia</a></p>'
             f'<p><strong>Wiek dziecka:</strong> {ages}</p><p><strong>Liczba klocków:</strong> {pieces}</p>'
             f'<p><strong>Serie:</strong> {series}</p></nav>')
+
+
+def percent(share: float) -> str:
+    return f"{round(share * 100)}%"
+
+
+def deals_page(sets: list[dict], site_url: str, eur_rate: float | None) -> str:
+    root = "../"
+    below = deals.below_list_price(sets, eur_rate)
+    drops = deals.price_drops(sets)
+    sections = []
+    if below:
+        notes = {s["num"]: (price, f"−{percent(d)} vs cena LEGO") for s, price, d in below}
+        sections.append(f"""<h2>Najtaniej względem ceny katalogowej</h2>
+    <p class="meta">Porównujemy najniższą cenę w dostępnych sklepach z ceną katalogową LEGO w Niemczech, przeliczoną po kursie NBP.</p>
+    {card_list(root, [s for s, _, _ in below], notes)}""")
+    if drops:
+        notes = {s["num"]: (price, f"−{percent(d)} w {deals.LOOKBACK_DAYS} dni") for s, price, d in drops}
+        sections.append(f"""<h2>Największe spadki cen</h2>
+    <p class="meta">Najniższa dzisiejsza cena w porównaniu z najwyższą ceną z ostatnich {deals.LOOKBACK_DAYS} dni.</p>
+    {card_list(root, [s for s, _, _ in drops], notes)}""")
+    if not sections:
+        sections.append('<p class="meta">Dziś nie znaleźliśmy wyraźnych promocji. Sprawdź jutro, ceny aktualizujemy codziennie.</p>')
+    dates = [o["date"] for s in sets for o in s["offers"]]
+    updated = f" Ceny z {max(dates)}." if dates else ""
+    intro = (f"Zestawy LEGO, które dziś kosztują wyraźnie mniej niż zwykle: co najmniej {percent(deals.MIN_DISCOUNT)} "
+             f"poniżej ceny katalogowej albo poniżej ceny z ostatnich tygodni.{updated}")
+    body = f"""{breadcrumbs(root, [("Promocje dnia", None)])}
+    <h1>Promocje LEGO dnia</h1>
+    <p class="lead">{e(intro)}</p>
+    {"".join(sections)}"""
+    return layout(root, f"Promocje LEGO – dzisiejsze okazje cenowe | {SITE_NAME}", intro, f"{site_url}/promocje/", body)
 
 
 def write(out_dir: str, rel: str, content: str) -> None:
@@ -239,7 +277,8 @@ def write(out_dir: str, rel: str, content: str) -> None:
         f.write(content)
 
 
-def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affiliates: dict | None = None) -> int:
+def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affiliates: dict | None = None,
+          eur_rate: float | None = None) -> int:
     global DISCLOSURE
     affiliates = affiliates or {}
     DISCLOSURE = " ".join(a.get("disclosure", "") for a in affiliates.values()).strip()
@@ -272,6 +311,9 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affi
         write(out_dir, rel, landing_page("../../", title, f"{title}: zestawy posortowane od tych z najlepszą ceną. Porównaj ceny w Polsce i UE.",
                                          [s for s in sets if in_range(s, lo, hi)], query, f"{site_url}/{rel}", title))
         urls.append(rel)
+
+    write(out_dir, "promocje/", deals_page(sets, site_url, eur_rate))
+    urls.append("promocje/")
 
     themes = sorted(((name, slugify(name)) for name in by_theme if name), key=lambda t: t[0].lower())
     for name, slug in themes:
