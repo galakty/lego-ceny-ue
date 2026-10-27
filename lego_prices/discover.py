@@ -26,6 +26,10 @@ def _text(data: bytes) -> str:
     return data.decode("utf-8", errors="replace")
 
 
+# where shops keep the sitemap when robots.txt does not say; Shoper shops use the long one
+DEFAULT_SITEMAPS = ["/sitemap.xml", "/sitemap_index.xml", "/console/integration/execute/name/GoogleSitemap"]
+
+
 def robots(base_url: str) -> tuple[urllib.robotparser.RobotFileParser, list[str]]:
     rp = urllib.robotparser.RobotFileParser()
     try:
@@ -34,7 +38,7 @@ def robots(base_url: str) -> tuple[urllib.robotparser.RobotFileParser, list[str]
         lines = []
     rp.parse(lines)
     sitemaps = [line.split(":", 1)[1].strip() for line in lines if line.lower().startswith("sitemap:")]
-    return rp, sitemaps or [urljoin(base_url, "/sitemap.xml")]
+    return rp, sitemaps or [urljoin(base_url, path) for path in DEFAULT_SITEMAPS]
 
 
 def lego_urls(sitemap_urls: list[str], url_filter: str = "lego") -> tuple[list[str], int]:
