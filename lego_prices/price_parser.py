@@ -2,7 +2,8 @@
 
 Most shops embed product data as JSON-LD (schema.org Product/Offer),
 so one parser works for many shops. As a fallback we read the
-product:price:amount / og:price:amount meta tags.
+product:price:amount / og:price:amount meta tags, then schema.org
+microdata (itemprop="price"), which Shoper shops use.
 """
 import json
 import re
@@ -24,6 +25,8 @@ class _Collector(HTMLParser):
         self.meta: dict[str, str] = {}
         self._in_jsonld = False
         self._buf: list[str] = []
+        self.microdata: dict[str, str] = {}
+        self._itemprop_text: str | None = None  # itemprop whose value is the element's text
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
@@ -33,10 +36,20 @@ class _Collector(HTMLParser):
             key = a.get("property") or a.get("name") or a.get("itemprop")
             if key and a.get("content"):
                 self.meta.setdefault(key.lower(), a["content"])
+        prop = (a.get("itemprop") or "").lower()
+        if prop in ("price", "pricecurrency", "availability") and prop not in self.microdata:
+            value = a.get("content") or a.get("href")
+            if value:
+                self.microdata[prop] = value
+            else:
+                self._itemprop_text = prop
 
     def handle_data(self, data):
         if self._in_jsonld:
             self._buf.append(data)
+        elif self._itemprop_text and data.strip():
+            self.microdata.setdefault(self._itemprop_text, data.strip())
+            self._itemprop_text = None
 
     def handle_endtag(self, tag):
         if tag == "script" and self._in_jsonld:
@@ -132,4 +145,10 @@ def extract_offer(html: str) -> Offer | None:
         currency = c.meta.get(f"{prefix}:currency")
         if price is not None and currency:
             return Offer(price, currency.upper(), None)
+    md = c.microdata
+    price = _parse_price(md.get("price"))
+    if price is not None and md.get("pricecurrency"):
+        availability = md.get("availability", "").lower()
+        in_stock = None if not availability else "instock" in availability or "limitedavailability" in availability
+        return Offer(price, md["pricecurrency"].upper(), in_stock)
     return None

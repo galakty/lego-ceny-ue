@@ -145,6 +145,18 @@ class ScrapeTest(unittest.TestCase):
             self.assertEqual([r["price"] for r in rows], ["650.0"])
 
 
+class MicrodataTest(unittest.TestCase):
+    def test_shoper_style_microdata(self):
+        html = """<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <em class="main-price">118,99 zł</em><span itemprop="price" content="118.99"></span>
+          <meta itemprop="priceCurrency" content="PLN"><link itemprop="availability" href="http://schema.org/InStock"></div>"""
+        self.assertEqual(extract_offer(html), Offer(118.99, "PLN", True))
+
+    def test_price_as_text(self):
+        html = '<span itemprop="price">1 299,00</span><span itemprop="priceCurrency">pln</span>'
+        self.assertEqual(extract_offer(html), Offer(1299.0, "PLN", None))
+
+
 class ShopLinkTest(unittest.TestCase):
     def test_plain_and_affiliate_links(self):
         url = "https://www.neonet.pl/zabawki/lego-60510.html?x=1"
