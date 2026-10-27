@@ -147,7 +147,8 @@
       "discover": {
         "base_url": "https://planetaklockow.pl",
         "url_filter": "lego"
-      }
+      },
+      "affiliate_link": "https://webep1.com/c/12727/6ae0d697800db2fb66cf961b?fid=6ae0e081800db2fb66cf961c&r={url_b64}"
     }
   ]
 }
