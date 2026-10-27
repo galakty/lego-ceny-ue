@@ -123,7 +123,6 @@ set_num,shop,url
 11217,neonet-pl,https://www.neonet.pl/p/1529715-klocki-lego-lego-bluey-11217-rodzina-blue-z-klockow.html
 11221,neonet-pl,https://www.neonet.pl/p/1529716-klocki-lego-lego-bluey-11221-szkola-z-ryzykiem-i-blue.html
 11372,neonet-pl,https://www.neonet.pl/p/1473408-klocki-lego-lego-icons-11372-jesienny-ogrod-z-chatka.html
-11373,neonet-pl,https://www.neonet.pl/p/1489542-klocki-lego-lego-icons-11373-wladca-pierscieni-helm-saurona.html
 11375,neonet-pl,https://www.neonet.pl/p/1489543-klocki-lego-lego-icons-11375-ferrari-f2004-i-michael-schumacher.html
 11376,neonet-pl,https://www.neonet.pl/p/1489544-klocki-lego-lego-icons-11376-ford-model-t.html
 11379,neonet-pl,https://www.neonet.pl/p/1596300-klocki-lego-lego-11379-icons-book-nook-ksiegarnia.html
@@ -131,6 +130,7 @@ set_num,shop,url
 11382,neonet-pl,https://www.neonet.pl/p/1547386-klocki-lego-lego-icons-11382-kosmiczny-teleskop-hubblea.html
 11383,neonet-pl,https://www.neonet.pl/p/1577944-klocki-lego-lego-icons-11383-rezydencja-burmistrzyni.html
 11384,neonet-pl,https://www.neonet.pl/p/1488997-klocki-lego-lego-icons-11384-szczeniak-golden-retriever.html
+11386,neonet-pl,https://www.neonet.pl/p/1596587-klocki-lego-lego-11386-icons-spongebob-kanciastoporty-bikini-dolne.html
 11501,neonet-pl,https://www.neonet.pl/p/1473409-klocki-lego-lego-botanicals-11501-bukiet-tulipanow.html
 11502,neonet-pl,https://www.neonet.pl/p/1489545-klocki-lego-lego-botanicals-11502-bukiet-slonecznikow.html
 11504,neonet-pl,https://www.neonet.pl/p/1473410-klocki-lego-lego-botanicals-11504-skrzydlokwiat.html
@@ -566,6 +566,7 @@ set_num,shop,url
 71045,neonet-pl,https://www.neonet.pl/p/1205204-klocki-lego-lego-minifigures-71045-seria-25-v111.html
 71047,neonet-pl,https://www.neonet.pl/p/1278988-klocki-lego-lego-minifigures-71047-dungeons-dragons.html
 71048,neonet-pl,https://www.neonet.pl/p/1308205-klocki-lego-lego-71048-minifigures-seria-27.html
+71051,neonet-pl,https://www.neonet.pl/p/1473524-klocki-lego-lego-minifigurki-71051-seria-28-zwierzeta-tajemnicze-pudelko.html
 71052,neonet-pl,https://www.neonet.pl/p/1517908-klocki-lego-lego-minifigures-71052-seria-29.html
 71053,neonet-pl,https://www.neonet.pl/p/1589635-klocki-lego-lego-71053-minifigures-seria-shrek-111.html
 71408,neonet-pl,https://www.neonet.pl/p/1056694-klocki-lego-lego-super-mario-71408-zamek-peach-zestaw-rozszerzajacy.html
@@ -603,7 +604,6 @@ set_num,shop,url
 71515,neonet-pl,https://www.neonet.pl/p/1473530-klocki-lego-lego-dreamzzz-71515-rekinoczolg-tygrysi.html
 71757,neonet-pl,https://www.neonet.pl/p/1032231-klocki-lego-lego-ninjago-71757-mech-ninja-lloyda.html
 71780,neonet-pl,https://www.neonet.pl/p/1090524-klocki-lego-lego-ninjago-71780-samochod-wyscigowy-ninja-kaia-evo.html
-71786,neonet-pl,https://www.neonet.pl/p/1564960-klocki-lego-lego-outlet-ninjago-71786-lodowy-smok-zanea.html
 71788,neonet-pl,https://www.neonet.pl/p/1090563-klocki-lego-lego-ninjago-71788-motocykl-ninja-lloyda.html
 71804,neonet-pl,https://www.neonet.pl/p/1202281-klocki-lego-lego-ninjago-71804-mech-bojowy-arina.html
 71805,neonet-pl,https://www.neonet.pl/p/1204124-klocki-lego-lego-ninjago-71805-zestaw-bitewny-z-mechem-jaya.html
@@ -682,7 +682,6 @@ set_num,shop,url
 75379,neonet-pl,https://www.neonet.pl/p/1220603-klocki-lego-lego-star-wars-75379-r2-d2.html
 75381,neonet-pl,https://www.neonet.pl/p/1558170-klocki-lego-lego-outlet-star-wars-75381-droideka.html
 75384,neonet-pl,https://www.neonet.pl/p/1202686-klocki-lego-lego-star-wars-75384-karmazynowy-jastrzab.html
-75386,neonet-pl,https://www.neonet.pl/p/1560663-klocki-lego-lego-outlet-star-wars-75386-pojedynek-paza-vizsli-i-moffa-gi.html
 75387,neonet-pl,https://www.neonet.pl/p/1558914-klocki-lego-lego-outlet-star-wars-75387-wejscie-na-poklad-statku-kosmicz.html
 75389,neonet-pl,https://www.neonet.pl/p/1266170-klocki-lego-lego-star-wars-75389-mroczny-sokol-millennium.html
 75390,neonet-pl,https://www.neonet.pl/p/1248540-klocki-lego-lego-star-wars-75390-mech-x-wing-lukea-skywalkera.html
@@ -693,7 +692,7 @@ set_num,shop,url
 75403,neonet-pl,https://www.neonet.pl/p/1284134-klocki-lego-lego-star-wars-75403-grogu-w-wozku.html
 75404,neonet-pl,https://www.neonet.pl/p/1284231-klocki-lego-lego-star-wars-75404-krazownik-szturmowy-typu-acclamator.html
 75407,neonet-pl,https://www.neonet.pl/p/1308215-klocki-lego-lego-star-wars-75407-logo-star-wars-zbudowane-z-klockow.html
-75408,neonet-pl,https://www.neonet.pl/p/1553927-klocki-lego-lego-outlet-star-wars-75408-helm-jango-fetta.html
+75408,neonet-pl,https://www.neonet.pl/p/1308216-klocki-lego-lego-star-wars-75408-helm-jango-fetta.html
 75410,neonet-pl,https://www.neonet.pl/p/1284138-klocki-lego-lego-star-wars-75410-mysliwiec-n-1-mando-i-grogu.html
 75411,neonet-pl,https://www.neonet.pl/p/1331661-klocki-lego-lego-star-wars-75411-mech-dartha-maula.html
 75412,neonet-pl,https://www.neonet.pl/p/1331662-klocki-lego-lego-star-wars-szturmowiec-smierci-i-nocny-szturmowiec-75412.html
@@ -706,7 +705,6 @@ set_num,shop,url
 75430,neonet-pl,https://www.neonet.pl/p/1349182-klocki-lego-lego-star-wars-75430-ewok-wicket.html
 75431,neonet-pl,https://www.neonet.pl/p/1331719-klocki-lego-lego-star-wars-75431-zolnierze-klony-z-327-korpusu-galaktycznego.html
 75432,neonet-pl,https://www.neonet.pl/p/1331720-klocki-lego-lego-star-wars-75432-mysliwiec-v-19-torrent.html
-75433,neonet-pl,https://www.neonet.pl/p/1331721-klocki-lego-lego-star-wars-75433-statek-kosmiczny-jango-fetta.html
 75434,neonet-pl,https://www.neonet.pl/p/1331722-klocki-lego-lego-star-wars-75434-droid-strazniczy-k-2so.html
 75435,neonet-pl,https://www.neonet.pl/p/1331723-klocki-lego-lego-star-wars-75435-transporter-mtt-z-bitwy-o-felucje.html
 75436,neonet-pl,https://www.neonet.pl/p/1473546-klocki-lego-lego-star-wars-75436-smigacz-mandalorianina-i-grogu.html
@@ -761,14 +759,15 @@ set_num,shop,url
 76277,neonet-pl,https://www.neonet.pl/p/1202187-klocki-lego-lego-marvel-76277-mechaniczna-zbroja-war-machine.html
 76278,neonet-pl,https://www.neonet.pl/p/1202223-klocki-lego-lego-marvel-76278-warbird-rocketa-vs-ronan.html
 76279,neonet-pl,https://www.neonet.pl/p/1202229-klocki-lego-lego-marvel-76279-wyscigowka-spider-mana-i-zielony-goblin.html
-76280,neonet-pl,https://www.neonet.pl/p/1554946-klocki-lego-lego-outlet-marvel-76280-spider-man-vs-sandman-ostateczna.html
 76284,neonet-pl,https://www.neonet.pl/p/1234469-klocki-lego-lego-marvel-76284-super-heroes-figurka-zielonego-goblina.html
 76287,neonet-pl,https://www.neonet.pl/p/1266180-klocki-lego-lego-super-heroes-marvel-76287-iron-man-z-motocyklem-i-hulk.html
+76288,neonet-pl,https://www.neonet.pl/p/1266181-klocki-lego-lego-marvel-76288-iron-man-i-iron-legion-kontra-zolnierz-hydry.html
 76303,neonet-pl,https://www.neonet.pl/p/1298094-klocki-lego-lego-dc-76303-tumbler-batmana-kontra-dwie-twarze-i-joker.html
 76304,neonet-pl,https://www.neonet.pl/p/1331724-klocki-lego-lego-dc-batmobil-batman-forever-76304.html
 76307,neonet-pl,https://www.neonet.pl/p/1284140-klocki-lego-lego-marvel-76307-mech-iron-mana-kontra-ultron.html
 76308,neonet-pl,https://www.neonet.pl/p/1284235-klocki-lego-lego-marvel-76308-mech-spider-mana-kontra-anti-venom.html
 76309,neonet-pl,https://www.neonet.pl/p/1284236-klocki-lego-lego-marvel-76309-spider-man-kontra-muscle-car-venoma.html
+76313,neonet-pl,https://www.neonet.pl/p/1284142-klocki-lego-lego-marvel-76313-logo-marvel-z-minifigurkami.html
 76315,neonet-pl,https://www.neonet.pl/p/1308222-klocki-lego-lego-marvel-76315-super-heroes-laboratorium-iron-mana-zbrojownia.html
 76316,neonet-pl,https://www.neonet.pl/p/1308223-klocki-lego-lego-marvel-76316-figurka-fantastycznej-czworki-kontra-galactus.html
 76319,neonet-pl,https://www.neonet.pl/p/1331725-klocki-lego-lego-marvel-kapitan-ameryka-kontra-thanos-76319.html
