@@ -40,5 +40,31 @@ class DealsTest(unittest.TestCase):
         self.assertIn("nie znaleźliśmy", pages.deals_page(sets, "https://example.org", None))
 
 
+class SeasonalTest(unittest.TestCase):
+    def test_gifts_within_budget_most_pieces_first(self):
+        small, big, pricey = make_set("small", [(40, True)]), make_set("big", [(95, True)]), make_set("pricey", [(150, True)])
+        big["pieces"] = 500
+        sold_out = make_set("gone", [(30, False)])
+        self.assertEqual([s["num"] for s, _ in deals.gifts([small, big, pricey, sold_out], 100)], ["big", "small"])
+
+    def test_advent_calendars(self):
+        cal = make_set("60510", [(85, True)])
+        cal["name"] = "City Advent Calendar 2026"
+        unpriced = make_set("76318")
+        unpriced["name"] = "Harry Potter Advent Calendar 2026"
+        old = make_set("60436", [(50, True)])
+        old["name"], old["year"] = "City Advent Calendar 2024", 2024
+        found = deals.advent_calendars([unpriced, old, cal, make_set("1")], 2026)
+        self.assertEqual([(s["num"], p) for s, p in found], [("60510", 85), ("76318", None)])
+
+    def test_seasonal_pages(self):
+        cal = make_set("60510", [(85, True)])
+        cal["name"] = "City Advent Calendar 2026"
+        out = pages.seasonal_pages([cal], "https://example.org", 2026)
+        self.assertIn("od 85,00 zł", out["kalendarz-adwentowy-2026/"])
+        self.assertIn("City Advent Calendar 2026", out["prezent/do-100-zl/"])
+        self.assertIn("Dziś nie mamy zestawów w tej cenie.", out["prezent/do-50-zl/"])
+
+
 if __name__ == "__main__":
     unittest.main()

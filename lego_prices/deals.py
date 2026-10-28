@@ -49,3 +49,20 @@ def price_drops(sets: list[dict]) -> list[tuple[dict, float, float]]:
             found.append((s, price, drop))
     found.sort(key=lambda t: (-t[2], t[0]["num"]))
     return found[:LIMIT]
+
+
+GIFT_BUDGETS = [50, 100, 200]  # PLN
+
+
+def gifts(sets: list[dict], budget: float) -> list[tuple[dict, float]]:
+    """(set, price) for sets in stock for at most the budget, most pieces for the money first."""
+    found = [(s, p) for s in sets if (p := best_in_stock(s)) is not None and p <= budget]
+    found.sort(key=lambda t: (-t[0]["pieces"], t[1], t[0]["num"]))
+    return found
+
+
+def advent_calendars(sets: list[dict], year: int) -> list[tuple[dict, float | None]]:
+    """(set, lowest price or None) for this year's LEGO advent calendars, cheapest first, unpriced last."""
+    found = [(s, best_in_stock(s)) for s in sets if s["year"] == year and "advent calendar" in s["name"].lower()]
+    found.sort(key=lambda t: (t[1] is None, t[1] or 0, t[0]["num"]))
+    return found

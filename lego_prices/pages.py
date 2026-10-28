@@ -243,7 +243,9 @@ def browse_nav(themes: list[tuple[str, str]]) -> str:
     pieces = " ".join(f'<a href="klocki/{slug}/">{e(t.replace("LEGO ", ""))}</a>' for slug, t, _, _ in PIECE_RANGES)
     series = " ".join(f'<a href="seria/{slug}/">{e(name)}</a>' for name, slug in themes)
     return (f'<nav class="browse wrap" aria-label="Przeglądaj"><h2>Przeglądaj</h2>'
-            f'<p><strong>Okazje:</strong> <a href="promocje/">Promocje dnia</a></p>'
+            f'<p><strong>Okazje:</strong> <a href="promocje/">Promocje dnia</a> '
+            f'<a href="kalendarz-adwentowy-{dt.date.today().year}/">Kalendarze adwentowe {dt.date.today().year}</a> '
+            + " ".join(f'<a href="prezent/do-{b}-zl/">Prezent do {b} zł</a>' for b in deals.GIFT_BUDGETS) + '</p>'
             f'<p><strong>Wiek dziecka:</strong> {ages}</p><p><strong>Liczba klocków:</strong> {pieces}</p>'
             f'<p><strong>Serie:</strong> {series}</p></nav>')
 
@@ -279,6 +281,38 @@ def deals_page(sets: list[dict], site_url: str, eur_rate: float | None) -> str:
     {"".join(sections)}"""
     image = next((s["img"] for s, _, _ in below + drops if s["img"]), "")
     return layout(root, f"Promocje LEGO – dzisiejsze okazje cenowe | {SITE_NAME}", intro, f"{site_url}/promocje/", body, image=image)
+
+
+def priced_list_page(title: str, intro: str, items: list[tuple[dict, float | None]], canonical: str, empty: str) -> str:
+    """A landing page whose cards show the given prices (the cheapest offer in stock) instead of the best cost."""
+    root = "../../"
+    notes = {s["num"]: (price, "") for s, price in items}
+    cards = card_list(root, [s for s, _ in items[:LIST_LIMIT]], notes) if items else f'<p class="meta">{e(empty)}</p>'
+    body = f"""{breadcrumbs(root, [(title, None)])}
+    <h1>{e(title)}</h1>
+    <p class="lead">{e(intro)}</p>
+    {cards}"""
+    image = next((s["img"] for s, _ in items if s["img"]), "")
+    return layout(root, f"{title} – ceny i porównanie | {SITE_NAME}", intro, canonical, body, image=image)
+
+
+def seasonal_pages(sets: list[dict], site_url: str, year: int) -> dict[str, str]:
+    """Pages for the gift season: advent calendars and gifts within a budget. Maps path to HTML."""
+    out = {}
+    rel = f"kalendarz-adwentowy-{year}/"
+    out[rel] = priced_list_page(
+        f"Kalendarze adwentowe LEGO {year}",
+        f"Wszystkie kalendarze adwentowe LEGO na {year} rok, od najtańszego. Ceny z polskich sklepów aktualizujemy codziennie, "
+        "więc łatwo złapiesz promocję przed grudniem.",
+        deals.advent_calendars(sets, year), f"{site_url}/{rel}", "Nie mamy jeszcze kalendarzy na ten rok.")
+    for budget in deals.GIFT_BUDGETS:
+        rel = f"prezent/do-{budget}-zl/"
+        out[rel] = priced_list_page(
+            f"LEGO na prezent do {budget} zł",
+            f"Zestawy LEGO dostępne dziś za {budget} zł lub mniej, od tych z największą liczbą klocków. "
+            "Ceny z polskich sklepów, aktualizowane codziennie. Wiek dziecka sprawdzisz na karcie zestawu.",
+            deals.gifts(sets, budget), f"{site_url}/{rel}", "Dziś nie mamy zestawów w tej cenie.")
+    return out
 
 
 def write(out_dir: str, rel: str, content: str) -> None:
@@ -327,6 +361,9 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affi
 
     write(out_dir, "promocje/", deals_page(sets, site_url, eur_rate))
     urls.append("promocje/")
+    for rel, content in seasonal_pages(sets, site_url, dt.date.today().year).items():
+        write(out_dir, rel, content)
+        urls.append(rel)
 
     themes = sorted(((name, slugify(name)) for name in by_theme if name), key=lambda t: t[0].lower())
     for name, slug in themes:
