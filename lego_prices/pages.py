@@ -15,7 +15,7 @@ from urllib.parse import urlencode
 from . import deals
 from .affiliates import search_links
 
-DEFAULT_SITE_URL = "https://galakty.github.io/lego-ceny-ue"
+DEFAULT_SITE_URL = "https://klockownik.pl"
 SITE_NAME = "Klockownik"
 LIST_LIMIT = 120  # sets per landing page; the full list is one click away in the search
 AGES = range(2, 15)
@@ -345,6 +345,7 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affi
 
     today = dt.date.today().isoformat()
     sitemap = "".join(f"<url><loc>{e(site_url)}/{u}</loc><lastmod>{today}</lastmod></url>" for u in urls)
+    write(out_dir, "robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {site_url}/sitemap.xml\n")
     write(out_dir, "sitemap.xml",
           f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sitemap}</urlset>\n')
     return len(urls)

@@ -85,6 +85,7 @@ class BuildTest(unittest.TestCase):
         sitemap = self.read("sitemap.xml")
         self.assertIn("<loc>https://example.org/x/zestaw/75313/</loc>", sitemap)
         self.assertEqual(sitemap.count("<url>"), self.count)
+        self.assertIn("Sitemap: https://example.org/x/sitemap.xml", self.read("robots.txt"))
 
 
 if __name__ == "__main__":
