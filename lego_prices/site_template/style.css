@@ -20,6 +20,11 @@ a { color: inherit; }
 .nav-link::before { content: "🔥"; }
 .nav-link:hover, .nav-link:focus-visible { transform: translateY(-2px); box-shadow: 0 6px 0 #8f0b0c, 0 10px 18px rgba(0, 0, 0, 0.3); outline: none; }
 .nav-link:active { transform: translateY(3px); box-shadow: 0 1px 0 #8f0b0c; }
+.quick { background: var(--text); padding: 10px 0; }
+.quick .wrap { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 10px; }
+.quick-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 999px; background: #fff; color: var(--text);
+  font-weight: 700; font-size: 0.95rem; text-decoration: none; white-space: nowrap; transition: background 0.1s, transform 0.1s; }
+.quick-btn:hover, .quick-btn:focus-visible { background: var(--accent); transform: translateY(-1px); outline: none; }
 @media (max-width: 760px) {
   .top .wrap { grid-template-columns: 1fr; }
   .nav-link { grid-column: 1; grid-row: 3; justify-self: center; margin-top: 14px; }

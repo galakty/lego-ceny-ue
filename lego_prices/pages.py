@@ -91,6 +91,16 @@ def set_path(s: dict) -> str:
     return f"zestaw/{s['num']}/"
 
 
+def quick_nav(root: str) -> str:
+    """Buttons to the seasonal pages right under the header, on every page."""
+    year = dt.date.today().year
+    links = [(f"kalendarz-adwentowy-{year}/", "🎄", f"Kalendarze adwentowe {year}")] + [
+        (f"prezent/do-{b}-zl/", "🎁", f"Prezent do {b} zł") for b in deals.GIFT_BUDGETS]
+    items = "".join(f'<a class="quick-btn" href="{root}{href}"><span aria-hidden="true">{icon}</span> {e(label)}</a>'
+                    for href, icon, label in links)
+    return f'<nav class="quick" aria-label="Na prezent"><div class="wrap">{items}</div></nav>'
+
+
 DISCLOSURE = ""  # set by build() from data/affiliates.json
 NO_PRICE_LABEL = "Brak cen"  # build() points to the affiliate searches instead, when there are any
 
@@ -121,6 +131,7 @@ def layout(root: str, title: str, description: str, canonical: str, body: str, j
     <a class="nav-link" href="{root}promocje/">Promocje dnia</a>
     <p class="tagline">Ceny LEGO w Polsce i UE. Szukaj po liczbie klocków, wieku dziecka i serii.</p>
   </div></header>
+  {quick_nav(root)}
   <main class="wrap page">
 {body}
   </main>
@@ -375,7 +386,7 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affi
     index_path = os.path.join(out_dir, "index.html")
     with open(index_path, encoding="utf-8") as f:
         index = f.read()
-    index = (index.replace("<!-- BROWSE -->", browse_nav(themes)).replace("{{SITE_URL}}", site_url)
+    index = (index.replace("<!-- BROWSE -->", browse_nav(themes)).replace("<!-- QUICKNAV -->", quick_nav("")).replace("{{SITE_URL}}", site_url)
              .replace("<!-- DISCLOSURE -->", e(DISCLOSURE)))
     with open(index_path, "w", encoding="utf-8") as f:
         f.write(index)
