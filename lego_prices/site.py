@@ -128,6 +128,9 @@ def build(data_dir: str = "data", out_dir: str = "site") -> str:
     except Exception as exc:  # the deals page then skips the list price comparison
         print(f"No EUR rate from NBP: {exc}")
         eur_rate = None
-    page_count = pages.build(payload, out_dir, os.environ.get("SITE_URL", pages.DEFAULT_SITE_URL), programs, eur_rate)
+    # shops that had a price in the history, named on the about page
+    priced_shops = sorted({shops[r["shop"]]["name"] for r in prices if r["shop"] in shops})
+    page_count = pages.build(payload, out_dir, os.environ.get("SITE_URL", pages.DEFAULT_SITE_URL), programs, eur_rate,
+                             priced_shops)
     found = f"deals: {len(deals.below_list_price(payload, eur_rate))} below list price, {len(deals.price_drops(payload))} price drops"
     return f"{stats(payload, page_count)}; {found}"

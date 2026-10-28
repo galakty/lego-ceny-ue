@@ -139,7 +139,8 @@ function historyChart(history) {
 // sets without a price from the compared shops point to the affiliate searches instead
 function noPriceLabel() {
   const names = (window.AFFILIATES || []).map((a) => a.name);
-  return names.length ? `Sprawdź cenę na ${names.join(" i ")} →` : "Brak cen";
+  const joined = names.length > 1 ? `${names.slice(0, -1).join(", ")} i ${names[names.length - 1]}` : names.join("");
+  return names.length ? `Sprawdź cenę na ${joined} →` : "Brak cen";
 }
 
 function offersTable(s) {

@@ -4,14 +4,29 @@
     "name": "Amazon.pl",
     "search_url": "https://www.amazon.pl/s",
     "query_param": "k",
-    "params": {"tag": "klockownik-21"},
+    "params": {
+      "tag": "klockownik-21"
+    },
     "disclosure": "Jako partner Amazon uzyskujemy przychody z kwalifikujących się zakupów."
+  },
+  "amazon_de": {
+    "name": "Amazon.de",
+    "search_url": "https://www.amazon.de/s",
+    "query_param": "k",
+    "params": {
+      "tag": "klockownik02-21"
+    },
+    "disclosure": ""
   },
   "allegro": {
     "name": "Allegro",
     "search_url": "https://allegro.pl/listing",
     "query_param": "string",
-    "params": {"utm_medium": "afiliacja", "utm_source": "ctr_2", "utm_campaign": "153defd3-168e-4320-9be6-072825cd5814"},
+    "params": {
+      "utm_medium": "afiliacja",
+      "utm_source": "ctr_2",
+      "utm_campaign": "153defd3-168e-4320-9be6-072825cd5814"
+    },
     "disclosure": "Linki do Allegro są linkami partnerskimi (Allegro Share)."
   }
 }

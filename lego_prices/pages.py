@@ -91,6 +91,11 @@ def set_path(s: dict) -> str:
     return f"zestaw/{s['num']}/"
 
 
+def join_names(names: list[str]) -> str:
+    """"A", "A i B", "A, B i C"."""
+    return " i ".join([", ".join(names[:-1]), names[-1]]) if len(names) > 1 else "".join(names)
+
+
 def quick_nav(root: str) -> str:
     """Buttons to the seasonal pages right under the header, on every page."""
     year = dt.date.today().year
@@ -139,6 +144,7 @@ def layout(root: str, title: str, description: str, canonical: str, body: str, j
   <footer class="wrap foot">
     Dane o zestawach: <a href="https://rebrickable.com">Rebrickable</a> i <a href="https://brickset.com">Brickset</a>.
     Kursy walut: NBP. LEGO® jest znakiem towarowym Grupy LEGO, która nie sponsoruje tej strony. {e(DISCLOSURE)}
+    <a href="{root}o-stronie/">O stronie, kontakt i prywatność</a>
   </footer>
   <script data-goatcounter="https://klockownik.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <script src="{root}analytics.js"></script>
@@ -327,6 +333,39 @@ def seasonal_pages(sets: list[dict], site_url: str, year: int) -> dict[str, str]
     return out
 
 
+CONTACT_EMAIL = "kontakt.klockownik@gmail.com"
+
+
+def about_page(site_url: str, shops: list[str], affiliates: dict) -> str:
+    root = "../"
+    programs = [a["name"] for a in affiliates.values()]
+    body = f"""{breadcrumbs(root, [("O stronie", None)])}
+    <article class="about">
+    <h1>O stronie Klockownik</h1>
+    <p class="lead">Klockownik to darmowa porównywarka cen zestawów LEGO. Codziennie sprawdzamy ceny w sklepach i pokazujemy,
+    gdzie dany zestaw jest najtańszy, razem z historią ceny.</p>
+    <h2>Skąd bierzemy ceny</h2>
+    <p>Ceny pobieramy automatycznie raz dziennie ze stron sklepów{": " + e(join_names(shops)) if shops else ""}.
+    Oferty niedostępne w sklepie nie są pokazywane. Ceny w sklepie mogą zmienić się w ciągu dnia, więc przed zakupem
+    zawsze sprawdź cenę na stronie sklepu. Dane o zestawach (liczba klocków, wiek, seria) pochodzą z
+    <a href="https://rebrickable.com">Rebrickable</a> i <a href="https://brickset.com">Brickset</a>.</p>
+    <h2>Jak zarabiamy</h2>
+    <p>Część linków do sklepów to linki partnerskie{" (" + e(join_names(programs + ["webePartners"])) + ")" if programs else ""}.
+    Jeśli po kliknięciu coś kupisz, sklep może zapłacić nam niewielką prowizję. Ty nie płacisz więcej, a kolejność ofert
+    zależy wyłącznie od ceny. {e(DISCLOSURE)}</p>
+    <h2>Prywatność i cookies</h2>
+    <p>Klockownik nie zbiera danych osobowych i nie używa własnych plików cookies. Odwiedziny liczymy anonimowo narzędziem
+    <a href="https://www.goatcounter.com">GoatCounter</a>, które nie używa cookies i nie śledzi użytkowników.
+    Po kliknięciu w link do sklepu lub partnera (np. Amazon, Allegro) obowiązuje polityka prywatności tego serwisu,
+    który może zapisać własne pliki cookies, aby przypisać zakup do naszego polecenia.</p>
+    <h2>Kontakt</h2>
+    <p>Pytania, błędy w cenach, propozycje współpracy: <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a></p>
+    <p class="meta">LEGO® jest znakiem towarowym Grupy LEGO, która nie sponsoruje, nie autoryzuje ani nie popiera tej strony.</p>
+    </article>"""
+    intro = "Czym jest Klockownik, skąd bierzemy ceny LEGO, jak zarabiamy, prywatność i kontakt."
+    return layout(root, f"O stronie, kontakt i prywatność | {SITE_NAME}", intro, f"{site_url}/o-stronie/", body)
+
+
 def write(out_dir: str, rel: str, content: str) -> None:
     path = os.path.join(out_dir, rel, "index.html") if rel.endswith("/") or rel == "" else os.path.join(out_dir, rel)
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -335,12 +374,12 @@ def write(out_dir: str, rel: str, content: str) -> None:
 
 
 def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affiliates: dict | None = None,
-          eur_rate: float | None = None) -> int:
+          eur_rate: float | None = None, shops: list[str] | None = None) -> int:
     global DISCLOSURE, NO_PRICE_LABEL
     affiliates = affiliates or {}
     DISCLOSURE = " ".join(a.get("disclosure", "") for a in affiliates.values()).strip()
     names = [a["name"] for a in affiliates.values()]
-    NO_PRICE_LABEL = f"Sprawdź cenę na {' i '.join(names)} →" if names else "Brak cen"
+    NO_PRICE_LABEL = f"Sprawdź cenę na {join_names(names)} →" if names else "Brak cen"
     site_url = site_url.rstrip("/")
     urls = [""]
     by_theme: dict[str, list[dict]] = {}
@@ -373,6 +412,8 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affi
 
     write(out_dir, "promocje/", deals_page(sets, site_url, eur_rate))
     urls.append("promocje/")
+    write(out_dir, "o-stronie/", about_page(site_url, shops or [], affiliates))
+    urls.append("o-stronie/")
     for rel, content in seasonal_pages(sets, site_url, dt.date.today().year).items():
         write(out_dir, rel, content)
         urls.append(rel)
