@@ -36,7 +36,8 @@ def shop_link(url: str, shop: dict) -> str:
 
 
 def latest_offers(prices: list[dict], shops: dict[str, dict]) -> dict[str, list[dict]]:
-    """Newest price per (set, shop), cheapest first by total cost (or price when shipping is unknown)."""
+    """Newest price per (set, shop), cheapest first by total cost (or price when shipping is unknown).
+    Shops whose newest offer is sold out are left out."""
     newest: dict[tuple[str, str], dict] = {}
     for row in prices:
         key = (row["set_num"], row["shop"])
@@ -44,6 +45,8 @@ def latest_offers(prices: list[dict], shops: dict[str, dict]) -> dict[str, list[
             newest[key] = row
     offers = defaultdict(list)
     for (set_num, shop_id), row in newest.items():
+        if row["in_stock"] == "0":  # a sold-out offer is no real price, so it never shows or counts as cheapest
+            continue
         shop = shops.get(shop_id, {})
         offers[set_num].append({
             "shop": shop.get("name", shop_id),
@@ -65,9 +68,11 @@ def latest_offers(prices: list[dict], shops: dict[str, dict]) -> dict[str, list[
 
 
 def price_history(prices: list[dict]) -> dict[str, list[list]]:
-    """Lowest PLN price per set and day, across shops."""
+    """Lowest PLN price per set and day, across shops, counting only offers not marked as sold out."""
     best: dict[str, dict[str, float]] = defaultdict(dict)
     for row in prices:
+        if row["in_stock"] == "0":
+            continue
         pln = float(row["price_pln"])
         day = best[row["set_num"]]
         day[row["date"]] = min(pln, day.get(row["date"], pln))

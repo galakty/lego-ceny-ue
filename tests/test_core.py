@@ -103,6 +103,14 @@ class SiteTest(unittest.TestCase):
         offers = site.latest_offers(prices, self.shops)["60510"]
         self.assertEqual([(o["shop"], o["pln"]) for o in offers], [("Shop B", 150.0), ("Shop A", 165.0)])
 
+    def test_sold_out_offers_are_hidden(self):
+        sold_out = self.price("2026-10-25", "b", 99)
+        sold_out["in_stock"] = "0"
+        prices = [self.price("2026-10-24", "b", 140), self.price("2026-10-25", "a", 165), sold_out]
+        offers = site.latest_offers(prices, self.shops)["60510"]
+        self.assertEqual([(o["shop"], o["pln"]) for o in offers], [("Shop A", 165.0)])  # not B's older in-stock price either
+        self.assertEqual(site.price_history(prices)["60510"], [["2026-10-24", 140.0], ["2026-10-25", 165.0]])
+
     def test_history_is_daily_minimum(self):
         prices = [self.price("2026-10-25", "a", 165), self.price("2026-10-25", "b", 150),
                   self.price("2026-10-24", "a", 170)]
