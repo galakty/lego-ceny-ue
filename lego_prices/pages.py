@@ -123,13 +123,14 @@ def layout(root: str, title: str, description: str, canonical: str, body: str, j
   <meta property="og:description" content="{e(description)}">
   <meta property="og:url" content="{e(canonical)}">
   <meta property="og:type" content="website">{og_image}
+  <link rel="icon" href="{root}brick.png">
   <link rel="stylesheet" href="{root}style.css">{ld}
 </head>
 <body>
   <header class="top"><div class="wrap">
-    <a class="brand" href="{root}">{SITE_NAME}</a>
+    <a class="brand" href="{root}"><img src="{root}brick.png" alt="" width="48" height="43">{SITE_NAME}</a>
     <a class="nav-link" href="{root}promocje/">Promocje dnia</a>
-    <p class="tagline">Ceny LEGO w Polsce i UE. Szukaj po liczbie klocków, wieku dziecka i serii.</p>
+    <p class="tagline"><strong>Najtańsze LEGO w jednym miejscu.</strong> Codziennie porównujemy ceny w sklepach. Szukaj po wieku dziecka, liczbie klocków i serii.</p>
   </div></header>
   {quick_nav(root)}
   <main class="wrap page">
