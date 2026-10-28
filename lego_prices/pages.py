@@ -128,6 +128,8 @@ def layout(root: str, title: str, description: str, canonical: str, body: str, j
     Dane o zestawach: <a href="https://rebrickable.com">Rebrickable</a> i <a href="https://brickset.com">Brickset</a>.
     Kursy walut: NBP. LEGO® jest znakiem towarowym Grupy LEGO, która nie sponsoruje tej strony. {e(DISCLOSURE)}
   </footer>
+  <script data-goatcounter="https://klockownik.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script src="{root}analytics.js"></script>
 </body>
 </html>
 """
