@@ -64,6 +64,12 @@ class BuildTest(unittest.TestCase):
         self.assertIn("<title>LEGO 60510 Set 60510 – cena od 165,82 zł, 252 klocki</title>", page)
         self.assertIn('<link rel="canonical" href="https://example.org/x/zestaw/60510/">', page)
         self.assertIn('"@type": "AggregateOffer"', page)
+        self.assertNotIn("og:image", page)  # the test set has no picture
+
+    def test_set_page_preview_image(self):
+        s = make_set("60510", 252)
+        s["img"] = "https://cdn.example/60510.jpg"
+        self.assertIn('<meta property="og:image" content="https://cdn.example/60510.jpg">', pages.set_page(s, [], "https://example.org"))
 
     def test_landing_pages(self):
         self.assertIn("Set 60510", self.read("wiek/6/index.html"))

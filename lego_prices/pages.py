@@ -95,8 +95,12 @@ DISCLOSURE = ""  # set by build() from data/affiliates.json
 NO_PRICE_LABEL = "Brak cen"  # build() points to the affiliate searches instead, when there are any
 
 
-def layout(root: str, title: str, description: str, canonical: str, body: str, jsonld: dict | None = None) -> str:
+def layout(root: str, title: str, description: str, canonical: str, body: str, jsonld: dict | None = None,
+           image: str = "") -> str:
     ld = f'\n  <script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>' if jsonld else ""
+    # the preview picture Facebook and messengers show when the link is shared
+    og_image = (f'\n  <meta property="og:image" content="{e(image)}">\n  <meta name="twitter:card" content="summary_large_image">'
+                if image else "")
     return f"""<!doctype html>
 <html lang="pl">
 <head>
@@ -107,6 +111,8 @@ def layout(root: str, title: str, description: str, canonical: str, body: str, j
   <link rel="canonical" href="{e(canonical)}">
   <meta property="og:title" content="{e(title)}">
   <meta property="og:description" content="{e(description)}">
+  <meta property="og:url" content="{e(canonical)}">
+  <meta property="og:type" content="website">{og_image}
   <link rel="stylesheet" href="{root}style.css">{ld}
 </head>
 <body>
@@ -206,7 +212,7 @@ def set_page(s: dict, related: list[dict], site_url: str, affiliates: dict | Non
         prices = [o["pln"] for o in s["offers"]]
         product["offers"] = {"@type": "AggregateOffer", "priceCurrency": "PLN", "lowPrice": min(prices),
                              "highPrice": max(prices), "offerCount": len(prices)}
-    return layout(root, title, description, url, body, product)
+    return layout(root, title, description, url, body, product, s["img"])
 
 
 def landing_page(root: str, title: str, intro: str, sets: list[dict], search_query: str, canonical: str, trail_label: str,
@@ -269,7 +275,8 @@ def deals_page(sets: list[dict], site_url: str, eur_rate: float | None) -> str:
     <h1>Promocje LEGO dnia</h1>
     <p class="lead">{e(intro)}</p>
     {"".join(sections)}"""
-    return layout(root, f"Promocje LEGO – dzisiejsze okazje cenowe | {SITE_NAME}", intro, f"{site_url}/promocje/", body)
+    image = next((s["img"] for s, _, _ in below + drops if s["img"]), "")
+    return layout(root, f"Promocje LEGO – dzisiejsze okazje cenowe | {SITE_NAME}", intro, f"{site_url}/promocje/", body, image=image)
 
 
 def write(out_dir: str, rel: str, content: str) -> None:
