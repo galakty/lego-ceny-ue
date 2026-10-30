@@ -28,14 +28,15 @@
 
   <main class="wrap layout">
     <aside class="filters" aria-label="Filtry">
+      <!-- outside the collapsible box, so the search stays visible on phones -->
+      <label class="field search">
+        <span>Szukaj</span>
+        <input id="q" type="search" placeholder="Nazwa lub numer, np. 75313" autocomplete="off" enterkeyhint="search">
+      </label>
+
       <details id="filters-box" open>
       <summary>Filtry</summary>
       <div class="filters-body">
-      <label class="field">
-        <span>Szukaj</span>
-        <input id="q" type="search" placeholder="Nazwa lub numer, np. 75313" autocomplete="off">
-      </label>
-
       <fieldset class="field">
         <legend>Wiek dziecka</legend>
         <select id="age">
