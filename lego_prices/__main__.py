@@ -38,7 +38,11 @@ if __name__ == "__main__":
             notice(summary)
     elif cmd == "probe":
         set_nums = catalog_set_nums()
-        results = [discover.probe(url, set_nums) for url in sys.argv[2:]]
+        # each argument is a base URL, optionally followed by "::" and a url_filter regex
+        results = []
+        for arg in sys.argv[2:]:
+            base_url, _, url_filter = arg.partition("::")
+            results.append(discover.probe(base_url, set_nums, url_filter or "lego"))
         with open("data/probe_report.csv", "w", newline="", encoding="utf-8") as f:
             w = csv.DictWriter(f, fieldnames=list(results[0]))
             w.writeheader()

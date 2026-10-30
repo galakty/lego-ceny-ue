@@ -83,12 +83,12 @@ def discover(shop: dict, set_nums: set[str]) -> tuple[list[dict], str]:
     return rows, f"{shop['id']}: {read} sitemaps, {len(urls)} LEGO URLs, {len(rows)} matched sets"
 
 
-def probe(base_url: str, set_nums: set[str]) -> dict:
+def probe(base_url: str, set_nums: set[str], url_filter: str = "lego") -> dict:
     """One-off check whether a shop can be used: sitemap reachable, LEGO URLs found, a product page parses."""
     result = {"shop": base_url, "sitemaps": 0, "lego_urls": 0, "matched": 0, "sample": "", "sample_result": ""}
     try:
         rp, sitemaps = robots(base_url)
-        urls, result["sitemaps"] = lego_urls(sitemaps)
+        urls, result["sitemaps"] = lego_urls(sitemaps, url_filter)
         result["lego_urls"] = len(urls)
         matches = match_sets(urls, set_nums)
         result["matched"] = len(matches)
