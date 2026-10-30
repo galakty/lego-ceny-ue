@@ -1,4 +1,5 @@
-"""Recommended ages and LEGO.com reference prices from the Brickset API v3.
+"""Recommended ages, LEGO.com reference prices and planned retirement dates
+from the Brickset API v3.
 
 Needs a free API key (https://brickset.com/tools/webservices/requestkey)
 in the BRICKSET_API_KEY environment variable. Only getSets calls count
@@ -15,7 +16,7 @@ from .net import fetch
 
 API_URL = "https://brickset.com/api/v3.asmx/getSets"
 PAGE_SIZE = 500
-FIELDS = ["set_num", "age_min", "age_max", "lego_de_eur"]
+FIELDS = ["set_num", "age_min", "age_max", "lego_de_eur", "exit_date"]
 
 
 def parse_sets(payload: bytes) -> tuple[list[dict], int]:
@@ -33,6 +34,7 @@ def parse_sets(payload: bytes) -> tuple[list[dict], int]:
             "age_min": age.get("min") or "",
             "age_max": age.get("max") or "",
             "lego_de_eur": lego_de.get("retailPrice") or "",
+            "exit_date": (s.get("exitDate") or "")[:10],  # when LEGO retires the set, as known or expected
         })
     return rows, int(data.get("matches", 0))
 

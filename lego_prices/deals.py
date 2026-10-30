@@ -1,5 +1,6 @@
 """Finds deals for the "Promocje" page: sets sold well below the LEGO list price,
-and sets whose lowest price dropped compared with the previous weeks."""
+and sets whose lowest price dropped compared with the previous weeks. Also the
+sets LEGO retires soon, for the "Wycofywane wkrótce" page."""
 import datetime as dt
 
 MIN_DISCOUNT = 0.10  # smaller differences are noise, not a deal
@@ -20,10 +21,8 @@ def below_list_price(sets: list[dict], eur_rate: float | None) -> list[tuple[dic
     found = []
     for s in sets:
         price = best_in_stock(s)
-        if price is None or not s["lego_de_eur"]:
-            continue
-        discount = 1 - price / (s["lego_de_eur"] * eur_rate)
-        if discount >= MIN_DISCOUNT:
+        discount = list_price_discount(s, price, eur_rate)
+        if discount is not None and discount >= MIN_DISCOUNT:
             found.append((s, price, discount))
     found.sort(key=lambda t: (-t[2], t[0]["num"]))
     return found[:LIMIT]
@@ -65,4 +64,23 @@ def advent_calendars(sets: list[dict], year: int) -> list[tuple[dict, float | No
     """(set, lowest price or None) for this year's LEGO advent calendars, cheapest first, unpriced last."""
     found = [(s, best_in_stock(s)) for s in sets if s["year"] == year and "advent calendar" in s["name"].lower()]
     found.sort(key=lambda t: (t[1] is None, t[1] or 0, t[0]["num"]))
+    return found
+
+
+RETIRING_DAYS = 365  # Brickset rarely knows exit dates further ahead
+
+
+def list_price_discount(s: dict, price: float | None, eur_rate: float | None) -> float | None:
+    """Share below the LEGO list price in Germany, negative when dearer; None when either price is missing."""
+    if price is None or not s["lego_de_eur"] or not eur_rate:
+        return None
+    return 1 - price / (s["lego_de_eur"] * eur_rate)
+
+
+def retiring(sets: list[dict], today: dt.date) -> list[tuple[dict, float | None]]:
+    """(set, lowest price or None) for sets LEGO retires within RETIRING_DAYS, soonest first,
+    priced before unpriced on the same date."""
+    until = (today + dt.timedelta(days=RETIRING_DAYS)).isoformat()
+    found = [(s, best_in_stock(s)) for s in sets if s.get("exit_date") and today.isoformat() <= s["exit_date"] <= until]
+    found.sort(key=lambda t: (t[0]["exit_date"], t[1] is None, t[0]["num"]))
     return found

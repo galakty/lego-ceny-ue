@@ -77,12 +77,14 @@ class ThemesTest(unittest.TestCase):
 class BricksetTest(unittest.TestCase):
     def test_parse(self):
         payload = json.dumps({"status": "success", "matches": 2, "sets": [
-            {"number": "60510", "numberVariant": 1, "ageRange": {"min": 5}, "LEGOCom": {"DE": {"retailPrice": 34.99}}},
+            {"number": "60510", "numberVariant": 1, "ageRange": {"min": 5}, "LEGOCom": {"DE": {"retailPrice": 34.99}},
+             "exitDate": "2026-12-31T00:00:00Z"},
             {"number": "60510", "numberVariant": 2, "ageRange": {"min": 9}},
         ]}).encode()
         rows, matches = brickset.parse_sets(payload)
         self.assertEqual(matches, 2)
-        self.assertEqual(rows, [{"set_num": "60510", "age_min": 5, "age_max": "", "lego_de_eur": 34.99}])
+        self.assertEqual(rows, [{"set_num": "60510", "age_min": 5, "age_max": "", "lego_de_eur": 34.99,
+                                 "exit_date": "2026-12-31"}])
 
     def test_error_raises(self):
         with self.assertRaises(RuntimeError):

@@ -1,6 +1,7 @@
 """Builds the static site: copies the template and writes site/data/sets.json
 from the catalog, Brickset ages and the price history."""
 import csv
+import datetime as dt
 import json
 import os
 import shutil
@@ -93,6 +94,7 @@ def build_sets(sets: list[dict], ages: dict[str, dict], offers, history) -> list
             "age_min": int(age["age_min"]) if age.get("age_min") else None,
             "age_max": int(age["age_max"]) if age.get("age_max") else None,
             "lego_de_eur": _num(age.get("lego_de_eur", "")),
+            "exit_date": age.get("exit_date") or None,
             "offers": offers.get(s["set_num"], []),
             "history": history.get(s["set_num"], []),
         })
@@ -132,5 +134,5 @@ def build(data_dir: str = "data", out_dir: str = "site") -> str:
     priced_shops = sorted({shops[r["shop"]]["name"] for r in prices if r["shop"] in shops})
     page_count = pages.build(payload, out_dir, os.environ.get("SITE_URL", pages.DEFAULT_SITE_URL), programs, eur_rate,
                              priced_shops)
-    found = f"deals: {len(deals.below_list_price(payload, eur_rate))} below list price, {len(deals.price_drops(payload))} price drops"
+    found = f"deals: {len(deals.below_list_price(payload, eur_rate))} below list price, {len(deals.price_drops(payload))} price drops, {len(deals.retiring(payload, dt.date.today()))} retiring"
     return f"{stats(payload, page_count)}; {found}"
