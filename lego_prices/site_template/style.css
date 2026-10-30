@@ -38,11 +38,13 @@ a { color: inherit; }
 .deal + .price { margin-top: 4px; }
 .layout { display: grid; grid-template-columns: 260px 1fr; gap: 24px; padding-top: 24px; padding-bottom: 24px; }
 @media (max-width: 760px) { .layout { grid-template-columns: 1fr; } }
-.filters { align-self: start; position: sticky; top: 16px; }
+.filters { align-self: start; position: sticky; top: 16px; display: flex; flex-direction: column; gap: 16px; }
 .filters-body { display: flex; flex-direction: column; gap: 16px; }
 .filters summary { display: none; }
 @media (max-width: 760px) {
-  .filters { position: static; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; }
+  .filters { position: static; gap: 12px; }
+  .search input { padding: 12px 14px; font-size: 1.05rem; }
+  .filters details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; }
   .filters summary { display: list-item; font-weight: 600; cursor: pointer; }
   .filters details[open] summary { margin-bottom: 12px; }
 }
