@@ -17,6 +17,9 @@ from .affiliates import search_links
 
 DEFAULT_SITE_URL = "https://klockownik.pl"
 SITE_NAME = "Klockownik"
+RETIRING_PATH = "wycofywane/"
+MONTHS = ["styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień",
+          "październik", "listopad", "grudzień"]
 LIST_LIMIT = 120  # sets per landing page; the full list is one click away in the search
 AGES = range(2, 15)
 PIECE_RANGES = [  # (slug, title, min, max)
@@ -57,6 +60,12 @@ def age_text(s: dict) -> str:
     if s["age_min"] is None:
         return ""
     return f"{s['age_min']}–{s['age_max']} lat" if s["age_max"] else f"{s['age_min']}+"
+
+
+def month_text(iso_date: str) -> str:
+    """"2026-12-31" -> "grudzień 2026"."""
+    d = dt.date.fromisoformat(iso_date)
+    return f"{MONTHS[d.month - 1]} {d.year}"
 
 
 def age_title(age: int) -> str:
@@ -100,10 +109,11 @@ def quick_nav(root: str) -> str:
     """Buttons to the seasonal pages right under the header, on every page."""
     year = dt.date.today().year
     links = [(f"kalendarz-adwentowy-{year}/", "🎄", f"Kalendarze adwentowe {year}")] + [
-        (f"prezent/do-{b}-zl/", "🎁", f"Prezent do {b} zł") for b in deals.GIFT_BUDGETS]
+        (f"prezent/do-{b}-zl/", "🎁", f"Prezent do {b} zł") for b in deals.GIFT_BUDGETS] + [
+        (RETIRING_PATH, "⏳", "Wycofywane wkrótce")]
     items = "".join(f'<a class="quick-btn" href="{root}{href}"><span aria-hidden="true">{icon}</span> {e(label)}</a>'
                     for href, icon, label in links)
-    return f'<nav class="quick" aria-label="Na prezent"><div class="wrap">{items}</div></nav>'
+    return f'<nav class="quick" aria-label="Na skróty"><div class="wrap">{items}</div></nav>'
 
 
 DISCLOSURE = ""  # set by build() from data/affiliates.json
@@ -206,6 +216,9 @@ def set_page(s: dict, related: list[dict], site_url: str, affiliates: dict | Non
         offers = ('<p class="meta">Nie mamy jeszcze ceny z porównywanych sklepów.'
                   + (' Sprawdź aktualną cenę:</p>' if affiliates else ' Dodajemy kolejne sklepy.</p>'))
     ref = f'<p class="meta">Cena katalogowa LEGO w Niemczech: {s["lego_de_eur"]:.2f} EUR</p>'.replace(".", ",") if s["lego_de_eur"] else ""
+    if s.get("exit_date") and s["exit_date"] >= dt.date.today().isoformat():
+        ref += (f'<p class="meta retiring">⏳ LEGO planuje wycofać ten zestaw: {month_text(s["exit_date"])}. '
+                f'<a href="{root}{RETIRING_PATH}">Inne wycofywane zestawy</a></p>')
 
     trail = [(s["theme"], f"seria/{slugify(s['theme'])}/")] if s["theme"] else []
     body = f"""{breadcrumbs(root, trail + [(s['name'], None)])}
@@ -263,7 +276,8 @@ def browse_nav(themes: list[tuple[str, str]]) -> str:
     return (f'<nav class="browse wrap" aria-label="Przeglądaj"><h2>Przeglądaj</h2>'
             f'<p><strong>Okazje:</strong> <a href="promocje/">Promocje dnia</a> '
             f'<a href="kalendarz-adwentowy-{dt.date.today().year}/">Kalendarze adwentowe {dt.date.today().year}</a> '
-            + " ".join(f'<a href="prezent/do-{b}-zl/">Prezent do {b} zł</a>' for b in deals.GIFT_BUDGETS) + '</p>'
+            + " ".join(f'<a href="prezent/do-{b}-zl/">Prezent do {b} zł</a>' for b in deals.GIFT_BUDGETS)
+            + f' <a href="{RETIRING_PATH}">Wycofywane wkrótce</a></p>'
             f'<p><strong>Wiek dziecka:</strong> {ages}</p><p><strong>Liczba klocków:</strong> {pieces}</p>'
             f'<p><strong>Serie:</strong> {series}</p></nav>')
 
@@ -331,6 +345,35 @@ def seasonal_pages(sets: list[dict], site_url: str, year: int) -> dict[str, str]
             "Ceny z polskich sklepów, aktualizowane codziennie. Wiek dziecka sprawdzisz na karcie zestawu.",
             deals.gifts(sets, budget), f"{site_url}/{rel}", "Dziś nie mamy zestawów w tej cenie.")
     return out
+
+
+def retiring_page(sets: list[dict], site_url: str, eur_rate: float | None, today: dt.date) -> str:
+    """Sets LEGO retires soon, grouped by the month they go, with the discount from the list price."""
+    root = "../"
+    found = deals.retiring(sets, today)[:LIST_LIMIT]
+    by_month: dict[str, list[tuple[dict, float | None]]] = {}
+    for s, price in found:
+        by_month.setdefault(month_text(s["exit_date"]), []).append((s, price))
+    sections = []
+    for month, items in by_month.items():
+        notes = {}
+        for s, price in items:
+            discount = deals.list_price_discount(s, price, eur_rate)
+            notes[s["num"]] = (price, f"−{percent(discount)} vs cena LEGO" if discount and discount >= deals.MIN_DISCOUNT else "")
+        sections.append(f'<h2>Wycofanie: {e(month)}</h2>{card_list(root, [s for s, _ in items], notes)}')
+    if not sections:
+        sections.append('<p class="meta">Nie znamy jeszcze zestawów wycofywanych w najbliższych miesiącach.</p>')
+    intro = ("Zestawy LEGO, które producent wkrótce przestanie sprzedawać, od najszybciej wycofywanych. "
+             "Po wycofaniu ceny popularnych zestawów często rosną, więc to ostatnia okazja, by kupić je w zwykłej cenie.")
+    body = f"""{breadcrumbs(root, [("Wycofywane wkrótce", None)])}
+    <h1>LEGO wycofywane wkrótce</h1>
+    <p class="lead">{e(intro)}</p>
+    <p class="meta">Planowane daty wycofania pochodzą z <a href="https://brickset.com">Brickset</a> i mogą się zmienić.
+    Ceny z polskich sklepów aktualizujemy codziennie. To nie jest porada inwestycyjna: nie gwarantujemy, że zestaw zyska na wartości.</p>
+    {"".join(sections)}"""
+    image = next((s["img"] for s, _ in found if s["img"]), "")
+    return layout(root, f"LEGO wycofywane w {today.year} i {today.year + 1} – ostatnia szansa | {SITE_NAME}", intro,
+                  f"{site_url}/{RETIRING_PATH}", body, image=image)
 
 
 CONTACT_EMAIL = "kontakt.klockownik@gmail.com"
@@ -412,6 +455,8 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affi
 
     write(out_dir, "promocje/", deals_page(sets, site_url, eur_rate))
     urls.append("promocje/")
+    write(out_dir, RETIRING_PATH, retiring_page(sets, site_url, eur_rate, dt.date.today()))
+    urls.append(RETIRING_PATH)
     write(out_dir, "o-stronie/", about_page(site_url, shops or [], affiliates))
     urls.append("o-stronie/")
     for rel, content in seasonal_pages(sets, site_url, dt.date.today().year).items():

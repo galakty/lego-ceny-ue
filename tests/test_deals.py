@@ -1,3 +1,4 @@
+import datetime as dt
 import unittest
 
 from lego_prices import deals, pages
@@ -64,6 +65,28 @@ class SeasonalTest(unittest.TestCase):
         self.assertIn("od 85,00 zł", out["kalendarz-adwentowy-2026/"])
         self.assertIn("City Advent Calendar 2026", out["prezent/do-100-zl/"])
         self.assertIn("Dziś nie mamy zestawów w tej cenie.", out["prezent/do-50-zl/"])
+
+
+class RetiringTest(unittest.TestCase):
+    today = dt.date(2026, 10, 30)
+
+    def test_retiring_soonest_first_priced_first(self):
+        dec_priced, dec_unpriced, jun = make_set("b", [(80, True)]), make_set("a"), make_set("c", [(50, True)])
+        dec_priced["exit_date"] = dec_unpriced["exit_date"] = "2026-12-31"
+        jun["exit_date"] = "2027-06-30"
+        gone, far, unknown = make_set("gone"), make_set("far"), make_set("unknown")
+        gone["exit_date"], far["exit_date"] = "2026-01-01", "2028-12-31"
+        found = deals.retiring([jun, gone, dec_unpriced, far, unknown, dec_priced], self.today)
+        self.assertEqual([(s["num"], p) for s, p in found], [("b", 80), ("a", None), ("c", 50)])
+
+    def test_retiring_page(self):
+        s = make_set("10305", [(60, True)], lego_de_eur=25)
+        s["exit_date"] = "2026-12-31"
+        page = pages.retiring_page([s], "https://example.org", 4.0, self.today)
+        self.assertIn("Wycofanie: grudzień 2026", page)
+        self.assertIn("−40% vs cena LEGO", page)
+        self.assertIn('href="https://example.org/wycofywane/"', page)
+        self.assertIn("Nie znamy jeszcze", pages.retiring_page([make_set("1")], "https://example.org", 4.0, self.today))
 
 
 if __name__ == "__main__":
