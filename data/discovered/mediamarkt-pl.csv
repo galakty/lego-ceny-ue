@@ -1,4 +1,5 @@
 set_num,shop,url
+10270,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-creator-expert-bookshop-10270-wielobarwny-136965632.html
 10274,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-creator-expert-ghostbusters-ecto-1-10274-wielobarwny-134190966.html
 10275,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-creator-expert-elf-club-house-10275-wielobarwny-136451819.html
 10277,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-creator-expert-crocodile-locomotive-10277-wielobarwny-139750297.html
@@ -9,7 +10,6 @@ set_num,shop,url
 10283,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-creator-expert-nasa-space-shuttle-discovery-10283-wielobarwny-146479350.html
 10290,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-creator-expert-pickup-truck-10290-wielobarwny-136451918.html
 10291,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-icons-queer-eye-the-fab-5-loft-10291-wielobarwny-146482866.html
-10293,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-creator-expert-santas-visit-10293-wielobarwny-146480476.html
 10295,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-creator-expert-porsche-911-10295-wielobarwny-146483221.html
 10297,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-creator-expert-boutique-hotel-10297-wielobarwny-146464814.html
 10298,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-icons-10298-vespa-125-134191131.html
@@ -20,10 +20,10 @@ set_num,shop,url
 10306,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-icons-atari-2600-10306-wielobarwny-139490720.html
 10307,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-icons-eiffel-tower-10307-szary-146219644.html
 10311,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-10311-icons-orchidea-wielokolorowy-123067470.html
-10312,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-creator-expert-10312-wielobarwny-146273049.html
 10313,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-10313-icons-bukiet-z-polnych-kwiatow-wielokolorowy-133780832.html
 10315,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-10315-wielobarwny-139490792.html
 10316,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-10316-wielobarwny-146364642.html
+10317,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-icons-land-rover-classic-defender-90-10317-wielobarwny-146298626.html
 10320,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-icons-eldorado-fortress-10320-wielobarwny-140714868.html
 10321,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-10321-wielobarwny-146464867.html
 10323,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-icons-pac-man-arcade-10323-wielobarwny-146364736.html
@@ -55,6 +55,7 @@ set_num,shop,url
 10431,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-10431-wielobarwny-143266502.html
 10432,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-10432-wielobarwny-143266443.html
 10434,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-10434-wielobarwny-146427870.html
+10442,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-duplo-town-10442-wielobarwny-151872766.html
 10444,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-duplo-town-10444-kreatywny-ogrod-i-kwiaty-152352762.html
 10446,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-duplo-town-10446-151872312.html
 10447,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-duplo-town-10447-152352512.html
@@ -76,7 +77,6 @@ set_num,shop,url
 10477,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-duplo-kreatywne-zwierzaki-3-w-1-10477-1502749.html
 10478,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-duplo-duplo-10478-kreatywne-rampy-3-w-1-z-pojazdami-178270940.html
 10480,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-duplo-duplo-10480-las-odkrywcow-z-dzikimi-zwierzetami-178270953.html
-10497,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-icons-galaxy-explorer-10497-wielobarwny-136965763.html
 10776,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-disney-remiza-i-woz-strazacki-myszki-miki-i-przyjaciol-10776-1458361.html
 10781,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-miles-morales-technotrojkolowiec-spider-mana-10781-1462155.html
 10782,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-spidr-man-hulk-kontra-rhino-starcie-pojazdow-10782-1462145.html
@@ -91,8 +91,9 @@ set_num,shop,url
 10931,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-10931-duplo-ciezarowka-i-koparka-gasienicowa-p4-wielokolorowe-107768088.html
 10935,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-duplo-10935-wielobarwny-146483307.html
 10938,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-duplo-dinozaurowa-szkolka-10938-1465960.html
-10941,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-duplo-urodzinowy-pociag-myszek-miki-i-minnie-10941-1439709.html
+10941,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-10941-duplo-disney-urodzinowy-pociag-myszek-miki-wielokolorowy-146486537.html
 10945,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-duplo-smieciarka-i-recykling-10945-1454825.html
+10947,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-duplo-town-race-cars-10947-wielobarwny-134190908.html
 10948,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-duplo-parking-pietrowy-i-myjnia-samochodowa-10948-1458355.html
 10949,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-duplo-zwierzeta-gospodarskie-10949-1439597.html
 10954,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-10954-duplo-town-pociag-z-cyferkami-wielokolorowy-108854586.html
@@ -142,7 +143,7 @@ set_num,shop,url
 11026,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klock-lego-classic-biala-plytka-konstrukcyjna-11026-1464121.html
 11027,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-11027-classic-kreatywna-zabawa-neonowymi-kolorami-wielokolorowy-107755821.html
 11028,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-classic-kreatywna-zabawa-pastelowymi-kolorami-11028-1473854.html
-11029,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-11029-classic-kreatywny-zestaw-imprezowy-wielokolorowy-107769382.html
+11029,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-classic-kreatywny-zestaw-imprezowy-11029-1473855.html
 11030,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-classic-sterta-klockow-11030-1473856.html
 11035,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-classic-kreatywne-domy-11035-1480866.html
 11039,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-11039-wielobarwny-151872750.html
@@ -165,8 +166,8 @@ set_num,shop,url
 11381,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zestaw-lego-lego-icons-11381-jaguar-e-type-11381-181039278.html
 11382,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-11382-icons-x-181039280.html
 11384,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-11384-icons-szczeniak-golden-retrievera-rdzawy-braz-174325439.html
-11389,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-11389-icons-project-hail-mary-ostatnia-misja-830-szt-18-lat-czarny-176051839.html
 11501,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-botanical-11501-bukiet-tulipanow-168282417.html
+11502,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-botanicals-11502-bukiet-slonecznikow-171983972.html
 11504,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-botanical-11504-skrzydlokwiat-w-doniczce-168282351.html
 11505,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-botanical-collection-11505-grzyby-lesne-177097554.html
 11506,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-11506-175904555.html
@@ -176,7 +177,7 @@ set_num,shop,url
 11510,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-botanical-collection-11510-galazki-magnolii-171983977.html
 11511,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-botanicals-11511-lilie-wodne-177097534.html
 11513,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zestaw-konstrukcyjny-lego-11513-185231468.html
-21057,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-21057-architecture-singapur-wielokolorowy-136491282.html
+21057,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-architecture-singapur-21057-1462116.html
 21060,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-architecture-21060-zamek-himeji-wielobarwny-139490685.html
 21061,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-architecture-21061-notre-dame-w-paryzu-wielobarwny-144553429.html
 21062,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-architecture-21062-fontanna-di-trevi-151872900.html
@@ -213,7 +214,7 @@ set_num,shop,url
 21250,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-minecraft-forteca-zelaznego-golema-21250-1478949.html
 21251,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-21251-pustynna-wyprawa-stevea-wielokolorowy-143861931.html
 21253,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-minecraft-rezerwat-zwierzat-21253-1480869.html
-21254,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-21254-minecraft-domek-na-plazy-zolwi-wielokolorowy-143862189.html
+21254,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-minecraft-domek-na-plazy-zolwi-21254-1480870.html
 21255,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-21255-zasadzka-w-portalu-do-netheru-wielokolorowy-143266539.html
 21256,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-21256-minecraft-zabi-domek-wielokolorowy-143861910.html
 21257,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-minecraft-decydujace-starcie-z-dewastatorem-21257-1484496.html
@@ -224,17 +225,15 @@ set_num,shop,url
 21270,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-minecraft-21270-dom-grzybowej-krowy-wielobarwny-151872569.html
 21272,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-tbd-21272-wielobarwny-151872132.html
 21273,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-tbd-21273-wielobarwny-151872572.html
-21279,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-minecraft-21279-the-enderman-tower-wielobarwny-155703103.html
 21321,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-international-space-station-21321-wielobarwny-146464821.html
 21323,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-grand-piano-21323-wielobarwny-123685758.html
 21324,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-123-sesame-street-21324-wielobarwny-136451746.html
 21325,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-ideas-medieval-blacksmith-21325-wielobarwny-123685759.html
 21326,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-ideas-winnie-the-pooh-21326-wielobarwny-134487331.html
-21328,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-seinfeld-21328-wielobarwny-139936159.html
 21330,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-home-alone-21330-wielobarwny-139490633.html
 21331,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-ideas-21331-wielobarwny-107753321.html
 21332,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-the-globe-21332-wielobarwny-146473336.html
-21333,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-vincent-van-gogh-the-starry-night-21333-wielobarwny-135717734.html
+21334,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-jazz-quartet-21334-wielobarwny-146479359.html
 21335,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-motorisierter-leuchtturm-21335-wielobarwny-139490722.html
 21336,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-the-office-21336-wielobarwny-146480480.html
 21338,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-21338-wielobarwny-146662693.html
@@ -242,12 +241,10 @@ set_num,shop,url
 21340,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-tales-of-the-space-age-21340-wielobarwny-146089257.html
 21341,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-disney-hocus-pocus-the-sanderson-sisters-cottage-21341-wielobarwny-134453957.html
 21342,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-21342-wielobarwny-146482990.html
-21343,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-21343-wielobarwny-139750375.html
 21344,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-the-orient-express-train-21344-wielobarwny-146178818.html
 21345,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-21345-ideas-polaroid-onestep-sx-70-wielokolorowy-143280298.html
 21346,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-21346-ideas-drzewo-genealogiczne-1040-szt-18-lat-wielokolorowy-171376441.html
 21347,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-red-london-telephone-box-21347-wielobarwny-146479957.html
-21348,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-21348-wielobarwny-146162626.html
 21349,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-21349-bialo-czarny-kot-wielobarwny-162089410.html
 21357,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ideas-disney-pixar-luxo-jr-21357-wielokolorowy-1499426.html
 21362,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-konstrukcyjne-lego-21362-ideas-kolekcja-mineralow-163230872.html
@@ -364,7 +361,6 @@ set_num,shop,url
 31139,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-creator-3-w-1-przytulny-dom-31139-1473861.html
 31140,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-31140-creator-magiczny-jednorozec-wielokolorowy-107769329.html
 31141,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-31141-wielobarwny-139490757.html
-31144,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-31144-wielobarwny-146652805.html
 31145,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-31145-creator-czerwony-smok-wielokolorowy-146427965.html
 31146,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-31146-creator-ciezarowka-z-platforma-i-helikop-wielokolorowy-143861598.html
 31147,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-31147-creator-aparat-w-stylu-retro-wielokolorowy-143861959.html
@@ -385,6 +381,7 @@ set_num,shop,url
 31174,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-creator-31174-telefon-w-stylu-retro-wielobarwny-159525373.html
 31197,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-art-andy-warhols-marilyn-monroe-31197-wielobarwny-107763126.html
 31198,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-art-the-beatles-31198-wielobarwny-146667565.html
+31199,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-31199-art-iron-man-marvel-studios-wielokolorowy-107755273.html
 31202,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-31202-art-disneys-mickey-mouse-wielokolorowy-134190980.html
 31204,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-art-elvis-presley-the-king-31204-wielobarwny-146662649.html
 31205,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-art-batman-jima-lee-kolekcja-31205-1464160.html
@@ -410,6 +407,7 @@ set_num,shop,url
 31386,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-creator-3w1-31386-dzikie-zwierzeta-dumny-lew-177097567.html
 31387,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-creator-3w1-31387-legendarny-statek-piracki-177097543.html
 31389,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-creator-3w1-31389-kultowy-diabelski-mlyn-177097529.html
+31390,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-creator-3-w-1-31390-dekoracyjny-obraz-z-kwiatam-czarny-177097557.html
 31391,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-31391-creator-3w1-modna-torebka-ze-schowkiem-czarny-177097571.html
 31392,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-creator-3w1-31392-dekoracyjny-fortepian-z-kotem-177097515.html
 31393,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-31393-creator-3w1-lesne-zwierzeta-wilk-szary-wielokolorowy-185224929.html
@@ -438,10 +436,9 @@ set_num,shop,url
 40516,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-classic-everyone-is-awesome-40516-wielobarwny-135941238.html
 40517,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-40517-creator-40517-118-szt-9-lat-wielokolorowy-162089710.html
 40521,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-40521-wielobarwny-136965628.html
-40524,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-40524-botanicals-sloneczniki-169671620.html
+40524,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-40524-sloneczniki-zolty-143862171.html
 40528,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-promocyjne-40528-174823015.html
 40529,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-40529-plac-zabaw-dla-dzieci-170-szt-6-lat-136451821.html
-40541,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-brickheadz-manchester-united-go-brick-me-40541-wielobarwny-160183850.html
 40548,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-40548-wielobarwny-136965718.html
 40553,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-40553-wielobarwny-140304719.html
 40554,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-40554-wielobarwny-136661424.html
@@ -467,7 +464,6 @@ set_num,shop,url
 40621,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-40621-wielobarwny-146661385.html
 40622,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-40622-wielobarwny-139850939.html
 40623,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-star-wars-battle-of-endor-heroes-40623-wielobarwny-137162325.html
-40630,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-40630-wielobarwny-146691133.html
 40638,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-icons-ozdoba-w-ksztalcie-serca-40638-wielokolorowy-1499393.html
 40640,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-40640-wielobarwny-146667697.html
 40644,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-40644-piniata-166890206.html
@@ -503,9 +499,11 @@ set_num,shop,url
 40799,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-40799-brickheadz-monkey-d-luffy-136-szt-6-lat-175976439.html
 40806,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-40806-star-wars-piernikowy-walker-at-at-697-szt-10-lat-173702501.html
 40809,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-40809-dom-z-piernika-498-szt-10-lat-174902471.html
+40811,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-40811-oltarz-zmarlych-231-el-od-9-lat-174823004.html
 40812,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-40812-ozdobne-balwanki-168-szt-od-6-lat-174823011.html
 40816,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-lego-dekoracyjne-jajko-wielkanocne-40816-czarny-168525579.html
 40820,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-40820-powiekszona-minifigurka-swietego-mikolaja-174823012.html
+40822,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-40822-halloweenowy-furgonetka-177-el-8-lat-171376476.html
 40824,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-iconic-40824-uroczy-kanarek-tweety-168282943.html
 40825,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-40825-wieniec-na-halloween-wieniec-617-el-12-lat-176052453.html
 40915,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-40915-taniec-lwa-lion-dance-480-szt-6-lat-171373379.html
@@ -544,7 +542,7 @@ set_num,shop,url
 41703,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-friends-domek-na-drzewie-przyjazni-41703-1462109.html
 41704,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-friends-budynki-przy-glownej-ulicy-41704-1462101.html
 41705,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-friends-pizzeria-w-heartlake-41705-1467894.html
-41706,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-41706-friends-kalendarz-adwentowy-wielokolorowy-133781289.html
+41706,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-friends-kalendarz-adwentowy-41706-1470163.html
 41707,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-41707-friends-furgonetka-do-sadzenia-drzew-wielokolorowy-139490951.html
 41708,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-friends-automat-w-dyskotece-41708-1467926.html
 41709,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-41709-friends-wakacyjny-domek-na-plazy-wielokolorowy-134191306.html
@@ -621,6 +619,7 @@ set_num,shop,url
 41964,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-41964-dots-mickey-mouse-and-minnie-mouse-back-to-wielokolorowy-108565193.html
 42103,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-42103-technic-dragster-wielokolorowy-107769077.html
 42107,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-technic-ducati-panigale-v4-r-42107-wielobarwny-133781708.html
+42108,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-technic-dzwig-samojezdny-42108-wielokolorowy-107754943.html
 42111,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-42111-technic-doms-dodge-charger-wielokolorowy-133781387.html
 42112,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-42112-technic-betoniarka-wielokolorowy-107770363.html
 42114,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-technic-6x6-volvo-articulated-hauler-42114-wielobarwny-107767695.html
@@ -692,7 +691,7 @@ set_num,shop,url
 42218,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-technic-42218-42218-kombajn-john-deere-1470h-168282502.html
 42219,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-technic-42219-monster-jam-grave-digger-fire-and-ice-168282332.html
 42220,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-technic-42220-monster-jam-sparkle-smash-168282167.html
-42221,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-technic-42221-rakieta-nasa-artemis-168282504.html
+42221,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-technic-rakieta-sls-nasa-artemis-42221-1502821.html
 42222,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-technic-42222-bugatti-chiron-pur-sport-hyper-car-168282230.html
 42223,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-technic-42223-1966-ford-gt40-mkii-race-car-168282161.html
 42224,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-technic-42224-porsche-911-gt3-r-ao-rexy-racing-car-168282310.html
@@ -729,9 +728,11 @@ set_num,shop,url
 42688,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-42688-friends-stajnia-i-akademia-jezdziecka-zestaw-z-3-minifigurkami-wielokolorowy-168288528.html
 42689,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-42689-friends-klub-friends-hlc-zestaw-konstrukcyjny-z-5-minifigurkami-wielokolorowy-168288449.html
 42692,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-42692-friends-wozek-z-lodami-i-balonami-107-el-od-6-lat-czarny-168288406.html
+42693,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-friends-42693-kreatywna-kwiaciarnia-czarny-177097550.html
 42695,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-friends-42695-przyczepa-do-przewozu-zrebakow-168288745.html
 42696,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-friends-42696-klinika-weterynaryjna-168288147.html
 42697,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-42697-177097533.html
+42698,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-friends-42698-kalendarz-adwentowy-na-2026-rok-wielokolorowy-1508426.html
 42699,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-friends-42699-domek-na-plazy-i-foki-168288477.html
 42700,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-friends-42700-cukierkowo-babeczkowy-diabelski-mlyn-177081037.html
 42702,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-friends-42702-wrozkowa-karuzela-z-kwiatami-177097540.html
@@ -796,7 +797,6 @@ set_num,shop,url
 43225,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-disney-the-little-mermaid-royal-clamshell-43225-wielobarwny-151872955.html
 43227,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-disney-43227-wielobarwny-113062043.html
 43229,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-43229-wielobarwny-144572625.html
-43230,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-disney-43230-kamera-h-waltowi-disneyowi-wielobarwny-108231246.html
 43231,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-disney-ashas-cottage-43231-wielobarwny-134453880.html
 43232,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-43232-wielobarwny-139794035.html
 43234,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-disney-kraina-lodu-mrozone-smakolyki-elzy-43234-1480856.html
@@ -814,7 +814,9 @@ set_num,shop,url
 43270,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-43270-disney-princess-tba-wielobarwny-151872370.html
 43271,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-disney-101-dalmatynczykow-szczeniaczki-szczesciarz-i-penny-43271-wielokolorowy-1499396.html
 43272,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-disney-heiheia-43272-wielokolorowy-1499374.html
+43280,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-disney-43280-zabawa-na-plazy-z-lilo-i-stitchem-wielokolorowy-178270948.html
 43281,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-disney-princess-43281-lodowy-zamek-i-kulig-elsy-168288403.html
+43283,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-disney-43283-zamek-kopciuszka-i-jej-zwierzecych-przyjaciol-czarny-177097527.html
 43284,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-43284-ksiezniczki-disney-mini-anna-i-elsa-65-el-5-lat-czarny-168288590.html
 43285,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-43285-disney-princess-mini-magiczny-palac-arielki-zamek-do-zbudowania-z-3-postaciami-wielokolorowy-168288218.html
 43286,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-disney-classic-43286-arystokoty-urocza-marie-168288215.html
@@ -860,7 +862,6 @@ set_num,shop,url
 60299,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-city-60299-konkurs-kaskaderski-wielokolorowy-134190988.html
 60300,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-quad-ratownikow-dzikich-zwierzat-60300-1454838.html
 60301,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-terenowka-ratownikow-dzikich-zwierzat-60301-1454805.html
-60302,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-city-wildlife-rescue-operation-60302-wielobarwny-134190924.html
 60304,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-city-city-town-road-plates-60304-wielobarwny-107768402.html
 60309,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-selfie-na-motocyklu-kaskaderskim-60309-1454842.html
 60310,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-motocykl-kaskaderski-z-kurczakiem-60310-1454843.html
@@ -883,6 +884,7 @@ set_num,shop,url
 60332,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-motocykl-kaskaderski-brawurowego-skorpiona-60332-1467889.html
 60333,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-bathtub-stunt-bike-60333-wielobarwny-134190714.html
 60335,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-train-station-60335-wielobarwny-146061153.html
+60336,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-freight-train-60336-wielobarwny-146480646.html
 60337,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-express-passenger-train-60337-wielobarwny-134191512.html
 60338,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-60338-city-miazdzaca-petla-kaskaderska-wielokolorowy-133780899.html
 60339,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-60339-city-arena-kaskaderska-z-podwojna-petla-wielokolorowy-108565188.html
@@ -944,12 +946,13 @@ set_num,shop,url
 60452,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-mobilna-paczkarnia-60452-wielokolorowy-1491018.html
 60455,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-poscig-na-motocyklu-policyjnym-60455-wielokolorowy-1499397.html
 60456,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-poscig-lodzia-policyjna-60456-wielokolorowy-1499354.html
-60458,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-zestaw-wyscigowek-pizza-kontra-woz-strazacki-60458-wielokolorowy-1499398.html
 60463,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-woz-strazacki-z-drabina-60463-wielokolorowy-1499400.html
 60464,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-leg-tbd-city-alicia-60464-wielobarwny-151872735.html
+60469,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-60469-trains-central-train-station-wielobarwny-155703137.html
 60470,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-60470-trains-explorers-arctic-polar-express-train-wielobarwny-155703139.html
 60478,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-60478-betoniarka-168282468.html
 60479,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-60479-policyjna-furgonetka-do-transportu-wiezniow-168282455.html
+60480,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-60480-zolta-koparko-ladowarka-czarny-177097522.html
 60481,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-60481-wyscigowki-ciezarowka-policyjna-168282055.html
 60482,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-60482-wyscigowki-ciezarowka-strazacka-168282050.html
 60483,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-city-60483-wyscigowki-ladowarka-budowlana-168282402.html
@@ -981,7 +984,7 @@ set_num,shop,url
 70430,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-hidden-side-70430-wielobarwny-136451825.html
 70689,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-szkolenie-wojownika-spinjitzu-lloyda-70689-1464128.html
 70690,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-szkolenie-wojownika-spinjitzu-jaya-70690-1464129.html
-71029,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-minifigures-seria-21-71029-1439574.html
+71029,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-minifigures-seria-21-71029-1439576.html
 71032,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-minifigurki-seria-22-71032-1462171.html
 71033,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-minifigures-muppety-71033-1465959.html
 71045,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-minifigures-seria-25-71045-1480592.html
@@ -1081,12 +1084,13 @@ set_num,shop,url
 71805,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-71805-ninjago-zestaw-bitewny-z-mechem-jaya-wielokolorowy-146428248.html
 71813,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-71813-dojo-cienia-wilczej-maski-168282948.html
 71816,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-71816-lodowy-motocykl-zanea-144553433.html
-71819,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-71819-star-wars-c-onyx-cinder-wielokolorowy-146427998.html
+71819,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-71819-ninjago-swiatynia-smoczego-kamienia-wielokolorowy-143266243.html
 71826,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-smocze-spinjitzu-zestaw-bitewny-71826-wielokolorowy-1499381.html
 71827,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-mech-w-zbroi-bojowej-zanea-71827-wielokolorowy-1499404.html
 71828,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-samochod-wyscigowy-lloyda-z-napedem-typu-pull-back-71828-wielokolorowy-1491024.html
 71829,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-zielony-lesny-smok-lloyda-71829-wielokolorowy-1491025.html
 71831,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-71831-swiatynia-spinjitzu-ninja-151872798.html
+71834,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-71834-151872321.html
 71844,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-71844-ninja-combat-vehicle-wielobarwny-155703262.html
 71846,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-71846-the-fire-knight-mech-wielobarwny-155703019.html
 71847,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-71847-the-guardian-dragon-wielobarwny-155703136.html
@@ -1096,10 +1100,12 @@ set_num,shop,url
 71854,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-71854-coles-mission-mech-and-dragon-zane-168288783.html
 71856,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-71856-wielofunkcyjny-samochod-jaya-168288039.html
 71857,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-71857-ninja-vehicle-battle-at-the-tree-house-168288045.html
+71858,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-71858-ninjagor-kuznia-czterech-broni-zestaw-konstrukcyjny-na-15-rocznice-wielokolorowy-168603921.html
 71859,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-71859-the-dragon-of-life-168288664.html
 71860,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-71860-ninjagor-tytaniczny-mech-lloyda-15-rocznica-ruchomy-mech-wielokolorowy-171678909.html
 71862,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-71862-ninjago-bitewny-mech-smoka-lloyda-81-el-wielokolorowy-178933845.html
 71863,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-71863-ninjago-zilvar-i-bestia-smok-grimtak-232-el-7-lat-178037930.html
+71864,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-71864-ninjago-czarny-177097553.html
 71866,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-71866-ninjagor-podstawka-ekspozycyjna-15-lecia-postaci-ninja-wielokolorowy-168288335.html
 71867,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-71867-ninjascigacz-x-1-15-lecie-177097520.html
 71868,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-ninjago-71868-transformujacy-smoczy-mech-wyldfyre-177081038.html
@@ -1111,13 +1117,13 @@ set_num,shop,url
 72035,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-72035-wielobarwny-151872854.html
 72036,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-72036-wielobarwny-151872804.html
 72037,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-mario-kart-mario-i-standard-kart-72037-wielokolorowy-1499460.html
-72043,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-super-mario-mario-kart-interaktywna-figurka-lego-mario-i-standard-kart-72043-wielokolorowy-1499526.html
+72043,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-super-mariotm-mario-karttm-interaktywna-zabawka-mariotm-i-standardowy-gokart-7-lat-72043-wielokolorowy-159553012.html
 72050,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-super-mario-72050-mario-kart-luigi-i-mach-8-177097564.html
-72051,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-72051a-super-mario-181039275.html
 72150,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-72150-pokemon-munchlax-181039273.html
 72151,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-72151-pokemon-eevee-pomaranczowy-174599280.html
 72152,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-72152-pokemon-pikachu-i-poke-ball-zolty-174599292.html
 72160,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-72160-pokemon-arcanine-181039286.html
+72168,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zestaw-konstrukcyjny-lego-lego-72168-x-181039284.html
 72423,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-icons-72423-shrek-osiol-i-kot-w-butach-180980246.html
 72537,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-72537-kpop-demon-hunters-181039274.html
 75265,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-t-16-skyhopper-kontra-mikromysliwce-bantha-lego-75265-1419398.html
@@ -1128,10 +1134,8 @@ set_num,shop,url
 75295,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-mikromysliwiec-sokol-millennium-75295-1439612.html
 75300,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-imperialny-mysliwiec-tie-75300-1439663.html
 75301,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-mysliwiec-x-wing-lukea-skywalkera-75301-1439712.html
-75308,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-star-wars-r2-d2-75308-wielobarwny-96436365.html
 75309,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-republic-gunship-75309-wielobarwny-131738622.html
 75312,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-statek-kosmiczny-boby-fetta-75312-1458363.html
-75313,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-at-at-75313-wielobarwny-133684825.html
 75317,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-mandalorianin-i-dziecko-75317-1427900.html
 75320,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-zestaw-bitewny-ze-szturmowcem-snieznym-75320-1462179.html
 75322,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-at-st-z-hoth-75322-1462118.html
@@ -1171,7 +1175,7 @@ set_num,shop,url
 75366,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-75366-wielobarwny-143280343.html
 75368,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-mech-dartha-vadera-75368-1478997.html
 75369,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-mech-boby-fetta-75369-1478998.html
-75370,mediamarkt-pl,https://mediamarkt.pl/pl/product/_outlet-klocki-lego-star-wars-mech-szturmowca-75370-1487801.html
+75370,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-75370-star-wars-mech-szturmowca-wielokolorowy-139490595.html
 75371,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-75371-wielobarwny-138309636.html
 75372,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-75372-star-wars-clones-vs-droid-battle-pack-wielokolorowy-143861820.html
 75374,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-c-3po-75374-1487340.html
@@ -1181,7 +1185,6 @@ set_num,shop,url
 75379,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-75379-wielobarwny-143861883.html
 75380,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-75380-wielobarwny-144553431.html
 75381,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-75381-wielobarwny-144553504.html
-75382,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-75382-wielobarwny-146178169.html
 75383,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-75383-wielobarwny-150423799.html
 75385,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-75385-wielobarwny-160173304.html
 75387,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-75387-wielobarwny-143861978.html
@@ -1195,6 +1198,7 @@ set_num,shop,url
 75408,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-tbd-75408-wielobarwny-156757108.html
 75410,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-mysliwiec-n-1-mando-i-grogu-75410-wielokolorowy-1499383.html
 75411,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-mech-dartha-maula-75411-wielokolorowy-1499384.html
+75413,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-75413-czolg-republiki-juggernaut-wielobarwny-159404324.html
 75414,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-75414-plomienny-smigacz-sniezny-wielobarwny-159404319.html
 75416,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-75416-droid-astromechaniczny-chopper-c1-10p-wielobarwny-157108130.html
 75417,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-75417-maszyna-kroczaca-at-st-szary-159404322.html
@@ -1216,11 +1220,13 @@ set_num,shop,url
 75447,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-75447-star-wars-the-razor-crest-statek-kosmiczny-zabawka-5-minifigurek-wielokolorowy-174325440.html
 75448,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-konstrukcyjne-lego-75448-168288036.html
 75449,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-75449-star-wars-oblezenie-mandalore-zestaw-z-figurkami-akcji-wielokolorowy-168288143.html
+75451,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-75451-starcie-z-droidem-wartowniczym-w-palacu-huttow-178410953.html
 75452,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-star-wars-75452-bb-8-168288591.html
 75453,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zestaw-lego-star-wars-75453-offworld-sandkrawler-und-schlammhorn-75453-x-181039281.html
 75454,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zestaw-lego-star-wars-75454-at-at-resztek-imperium-z-int-4-75454-x-181039272.html
 75455,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-75455-star-wars-boba-fett-181039277.html
 75456,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-75456-star-wars-kalendarz-adwentowy-2026-293-el-6-lat-178337536.html
+75459,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zestaw-klockow-lego-star-wars-75459-imperialny-prom-typu-lambda-wielokolorowy-187412027.html
 75573,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-avatar-floating-mountains-site-26-and-rda-samson-75573-wielobarwny-108565165.html
 75575,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-avatar-odkrycie-ilu-75575-1472763.html
 75576,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-avatar-przygoda-ze-skimwingiem-75576-1472775.html
@@ -1228,6 +1234,7 @@ set_num,shop,url
 75579,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-avatar-payakan-the-tulkun-i-mech-krab-75579-1472811.html
 75583,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-75583-wielobarwny-146427829.html
 75640,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-one-piece-plywajaca-restauracja-baratie-75640-wielokolorowy-1499485.html
+75641,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zestaw-klockow-lego-75641-kryjowka-dra-hillka-wielokolorowy-181920698.html
 75642,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-75642-one-piece-starcie-z-kapitanem-smokerem-547-el-9-lat-178410949.html
 75643,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-75643-one-piece-tony-tony-chopper-577-el-9-lat-178410978.html
 75644,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-75644-one-piece-dorry-kontra-brogy-giganci-z-little-garden-178410972.html
@@ -1241,7 +1248,6 @@ set_num,shop,url
 75968,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-harry-potter-privet-drive-4-75968-1425989.html
 75969,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-harry-pottertm-75969-wieza-astronomiczna-w-hogwarcietm-kolor-107755559.html
 75978,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-harry-potter-diagon-alley-75978-wielobarwny-146178067.html
-75979,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-75979-harry-potter-hedwiga-wielokolorowy-134191016.html
 75980,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-harry-potter-attack-on-the-burrow-75980-wielobarwny-123687332.html
 76143,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-avengers-avengers-truck-take-down-76143-wielobarwny-123687949.html
 76154,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-super-heroes-76154-zasadzka-dewiantow-wielokolorowy-134190982.html
@@ -1280,7 +1286,7 @@ set_num,shop,url
 76241,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-mechaniczna-zbroja-hulka-76241-1472741.html
 76242,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-mechaniczna-zbroja-thanosa-76242-1472742.html
 76243,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-mechaniczna-zbroja-rocketa-76243-1472743.html
-76244,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-miles-morales-kontra-morbius-76244-1472766.html
+76244,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-76244-super-heroes-miles-morales-kontra-morbius-wielokolorowy-107756145.html
 76245,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-76245-super-heroes-upiorny-jezdziec-mech-i-motor-wielokolorowy-107756553.html
 76247,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-hulkbuster-bitwa-o-wakande-76247-1472792.html
 76248,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-quinjet-avengersow-76248-1472812.html
@@ -1293,7 +1299,7 @@ set_num,shop,url
 76260,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-motocykle-czarnej-wdowy-i-kapitana-ameryki-76260-1478976.html
 76263,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-76263-super-heroes-hulkbuster-iron-mana-vs-thanos-wielokolorowy-129146448.html
 76264,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-batman-batmobil-pogon-batman-kontra-joker-76264-1478978.html
-76265,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-figurka-kapitana-ameryki-do-zbudowania-76265-1478974.html
+76265,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-dc-batwing-batman-kontra-joker-76265-1478979.html
 76266,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-76266-wielobarwny-135396273.html
 76267,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-76267-wielobarwny-143280319.html
 76271,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-batman-76271-wielobarwny-146249638.html
@@ -1308,10 +1314,11 @@ set_num,shop,url
 76316,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-tbd-76316-wielobarwny-155703068.html
 76319,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-super-heroes-76319-kapitan-ameryka-kontra-thanos-wielobarwny-159523780.html
 76320,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-iron-man-i-war-machine-kontra-drony-hammera-76320-wielokolorowy-1499387.html
+76321,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-super-heroes-76321-spider-man-kontra-doc-ock-wielobarwny-159525066.html
+76327,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-tbd-76327-wielobarwny-155703253.html
 76330,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-76330-super-heroes-dc-batmantm-logo-batmana-dekoracyjna-zabawka-konstrukcyjna-wielokolorowy-171678796.html
 76331,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-76331-batman-vs-superman-batmobil-czarny-171678798.html
 76332,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-76332-super-heroes-dc-batmantm-batmobil-z-filmu-the-batmantm-wielokolorowy-171678799.html
-76333,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-konstrukcyjne-lego-dc-super-heroes-76333-batmobil-batman-forever-czarny-ze-zlotymi-detalami-186480615.html
 76334,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-epicka-bitwa-spider-man-kontra-sandman-76334-1502799.html
 76336,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-76336-spider-man-w-samochodzie-kontra-zvenomowany-wolverine-168288212.html
 76337,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-konstrukcyjne-lego-76337-marvel-mech-milesa-moralesa-kontra-spider-man-2099-135-el-czarny-168288349.html
@@ -1321,6 +1328,7 @@ set_num,shop,url
 76341,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-super-heroes-76341-168288123.html
 76342,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-super-heroes-76342-168288135.html
 76343,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-super-heroes-76343-168288252.html
+76345,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zestaw-konstrukcyjny-lego-76345-182837645.html
 76346,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-super-heroes-76346-figurka-spider-mana-177097541.html
 76349,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-super-heroes-76349-poscig-spider-mana-z-wiezniarka-177081052.html
 76350,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-marvel-super-heroes-76350-epickie-starcie-spider-man-kontra-hulk-177097545.html
@@ -1354,6 +1362,7 @@ set_num,shop,url
 76424,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-harry-potter-latajacy-ford-anglia-76424-1485775.html
 76425,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-harry-potter-76425-hedwiga-z-wizyta-wielobarwny-143861569.html
 76433,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-harry-potter-76433-mandragora-wielobarwny-146427475.html
+76437,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-76437-wielobarwny-146178264.html
 76438,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-harry-potter-kalendarz-adwentowy-2024-76438-1487002.html
 76440,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-harry-potter-76440-turniej-trojmagiczny-przybycie-wielobarwny-170349049.html
 76442,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-harry-potter-zamek-hogwart-zajecia-z-zaklec-i-urokow-76442-wielokolorowy-1491021.html
@@ -1390,7 +1399,7 @@ set_num,shop,url
 76915,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-speed-champions-pagani-utopia-76915-1473884.html
 76916,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-speed-champions-porsche-963-76916-1473885.html
 76917,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-76917-speed-champions-nissan-skyline-wielokolorowy-107754284.html
-76918,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-speed-champions-mclaren-solus-gt-i-mclaren-f1-lm-76918-1473886.html
+76918,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-76918-speed-champions-mclaren-solus-gt-wielokolorowy-133780984.html
 76920,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-76920-wielobarwny-143862116.html
 76921,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-speed-champions-76921-audi-s1-e-tron-quattro-wielobarwny-146427471.html
 76922,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-76922-wielobarwny-143861977.html
@@ -1427,7 +1436,7 @@ set_num,shop,url
 77003,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-77003-wielobarwny-151872767.html
 77005,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-sonic-the-hedgehog-knuckles-kontra-dr-eggman-w-mechu-egg-crusher-77005-wielokolorowy-1499504.html
 77006,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-sonic-i-pojazd-do-zadan-specjalnych-77006-wielobarwny-159523907.html
-77012,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-indiana-jones-poscig-mysliwcem-77012-1478926.html
+77012,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-77012-indiana-jones-poscig-mysliwcem-wielokolorowy-107755443.html
 77013,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-indiana-jones-ucieczka-z-zaginionego-grobowca-77013-1478927.html
 77037,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-horizon-77037-aloy-i-varl-kontra-krabolaz-i-pilozab-wielobarwny-151872905.html
 77046,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-77046-kon-julian-i-jego-przyjecie-urodzinowe-wielokolorowy-143861708.html
@@ -1436,7 +1445,6 @@ set_num,shop,url
 77049,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-77049-wielobarwny-142647350.html
 77050,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-77050-wielobarwny-143862153.html
 77051,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-77051-lot-z-dodo-airlines-wielokolorowy-146428015.html
-77052,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-animal-crossing-koncert-kk-na-placu-77052-wielokolorowy-1499515.html
 77055,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-77055-wielobarwny-151873104.html
 77056,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-animal-crossing-77056-blathers-i-kolekcja-muzealna-wielobarwny-159523736.html
 77058,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-animal-crossing-77058-wielobarwny-159523803.html
@@ -1444,7 +1452,7 @@ set_num,shop,url
 77070,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-77070-wielobarwny-151872180.html
 77071,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-fortnite-77071-lama-zaopatrzeniowa-wielobarwny-146178606.html
 77072,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zabawki-do-budowania-lego-77072-wielobarwny-146178189.html
-77073,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-fortnite-bus-bojowy-77073-wielokolorowy-1495030.html
+77073,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-fortnite-77073-bus-bojowy-wielobarwny-146178193.html
 77075,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-fortnite-skorek-i-iskra-oraz-oboz-77075-wielokolorowy-1499390.html
 77077,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-fortnite-77077-klombo-wielobarwny-155703073.html
 77078,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-fortnite-dowodca-druzyny-mechow-77078-wielobarwny-159526875.html
@@ -1477,6 +1485,7 @@ set_num,shop,url
 77259,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-77259-speed-champions-samochod-wyscigowy-audi-revolut-f1r-team-r26-zestaw-do-zbudowania-czerwony-171983975.html
 77261,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-77261-speed-champions-ferrari-499p-329-el-czarny-178383089.html
 77262,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-77262-ken-blocks-1965-ford-mustanghoonicorn-v1-wielokolorowy-178383122.html
+77263,mediamarkt-pl,https://mediamarkt.pl/pl/product/_zestaw-klockow-lego-company-speed-champions-bmw-m3-77263-181275853.html
 77264,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-77264-speed-champions-jaguar-project-7-i-land-rover-defender-178410937.html
 77977,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-77977-jurassic-world-pteranodon-373-el-od-7-lat-178410943.html
 77978,mediamarkt-pl,https://mediamarkt.pl/pl/product/_klocki-lego-77978-jurassic-world-ciezarowka-do-transportu-mlodego-t-rexa-178410957.html
