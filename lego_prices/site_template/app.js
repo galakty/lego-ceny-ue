@@ -202,7 +202,7 @@ function syncUrl(f) {
   if (f.pmin != null) p.set(PARAMS.pmin, f.pmin);
   if (f.pmax != null) p.set(PARAMS.pmax, f.pmax);
   if (f.theme) p.set(PARAMS.theme, f.theme);
-  if (f.offers) p.set(PARAMS.offers, "1");
+  if (!f.offers) p.set(PARAMS.offers, "0");  // on by default, so only the opt-out goes in the URL
   if (f.sort !== "new") p.set(PARAMS.sort, f.sort);
   const qs = p.toString();
   history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
@@ -215,7 +215,7 @@ function readUrl() {
   els.pmin.value = p.get(PARAMS.pmin) || "";
   els.pmax.value = p.get(PARAMS.pmax) || "";
   els.theme.value = p.get(PARAMS.theme) || "";
-  els.offers.checked = p.get(PARAMS.offers) === "1";
+  els.offers.checked = p.get(PARAMS.offers) !== "0";
   els.sort.value = p.get(PARAMS.sort) || "new";
 }
 
@@ -243,7 +243,7 @@ for (const input of [els.age, els.theme, els.offers, els.sort]) input.addEventLi
 els.more.addEventListener("click", showMore);
 els.reset.addEventListener("click", () => {
   els.q.value = els.age.value = els.pmin.value = els.pmax.value = els.theme.value = "";
-  els.offers.checked = false;
+  els.offers.checked = true;
   els.sort.value = "new";
   apply();
 });
