@@ -94,6 +94,22 @@ if __name__ == "__main__":
     unittest.main()
 
 
+class PriceChartTest(unittest.TestCase):
+    def test_chart_places_days_by_date(self):
+        svg = pages.price_chart([["2026-10-01", 200.0], ["2026-10-02", 100.0], ["2026-10-11", 150.0]])
+        self.assertIn("<svg", svg)
+        self.assertIn("01.10.2026", svg)
+        self.assertIn("11.10.2026", svg)
+        self.assertIn("200,00 zł", svg)
+        self.assertIn("100,00 zł", svg)
+        # step line: 6 + 1 day of 10 * 588 px = 64.8 px
+        self.assertIn("64.8,6.0 64.8,134.0", svg)
+
+    def test_no_chart_for_a_single_day(self):
+        self.assertEqual(pages.price_chart([["2026-10-01", 200.0]]), "")
+        self.assertEqual(pages.price_chart([]), "")
+
+
 class AffiliateTest(unittest.TestCase):
     programs = {"amazon": {"name": "Amazon.pl", "search_url": "https://www.amazon.pl/s", "query_param": "k",
                            "params": {"tag": "klockownik-21"},
