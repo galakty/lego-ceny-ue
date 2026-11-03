@@ -124,6 +124,11 @@ class SiteTest(unittest.TestCase):
         out = site.build_sets(sets, ages, {}, {})[0]
         self.assertEqual((out["age_min"], out["age_max"], out["lego_de_eur"], out["offers"]), (5, None, 34.99, []))
 
+    def test_build_sets_adds_30_day_low(self):
+        sets = [{"set_num": "60510", "name": "Advent", "year": 2026, "num_parts": 252, "theme": "City", "img_url": ""}]
+        history = {"60510": [["2026-09-01", 100.0], ["2026-10-24", 150.0], ["2026-10-25", 160.0]]}
+        self.assertEqual(site.build_sets(sets, {}, {}, history)[0]["low_30d"], 150.0)
+
 
 class ScrapeTest(unittest.TestCase):
     rates = {"EUR": 4.0, "PLN": 1.0}

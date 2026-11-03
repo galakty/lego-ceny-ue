@@ -111,11 +111,34 @@ function card(s) {
         el("div", { class: "meta" }, [s.theme, s.year].filter(Boolean).join(" · ")),
         cost != null
           ? el("div", { class: "price" }, `od ${pln.format(cost)}`)
-          : el("div", { class: "price check" }, noPriceLabel()))));
+          : el("div", { class: "price check" }, noPriceLabel()),
+        ...priceNotes(s, cost))));
   const article = li.firstChild;
   article.addEventListener("click", () => openDetail(s));
   article.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openDetail(s); } });
   return li;
+}
+
+// keep in sync with pages.price_notes / pages.price_summary
+const isLow30 = (cost, low) => low != null && cost <= low + 0.005;
+
+function priceNotes(s, cost) {
+  if (cost == null) return [];
+  const notes = [];
+  if (s.pieces) notes.push(el("div", { class: "meta" }, `${pln.format(cost / s.pieces)} za klocek`));
+  if (isLow30(cost, s.low_30d)) notes.push(el("div", { class: "low30 best" }, "Najtaniej od 30 dni"));
+  else if (s.low_30d != null) notes.push(el("div", { class: "low30" }, `Najniżej w 30 dni: ${pln.format(s.low_30d)}`));
+  return notes;
+}
+
+function priceSummary(s) {
+  const cost = bestCost(s);
+  if (cost == null) return null;
+  const item = (label, value) => el("div", {}, el("span", { class: "meta" }, label), el("strong", {}, pln.format(value)));
+  const box = el("div", { class: "price-summary" }, item("Najniższa cena teraz", cost));
+  if (s.pieces) box.append(item("Cena za klocek", cost / s.pieces));
+  if (s.low_30d != null) box.append(item(`Najniższa cena z 30 dni${isLow30(cost, s.low_30d) ? " (to teraz)" : ""}`, s.low_30d));
+  return box;
 }
 
 function historyChart(history) {
@@ -181,6 +204,7 @@ function openDetail(s) {
       el("div", {}, el("h2", {}, s.name), el("div", { class: "meta" }, facts), refPrice,
         el("p", {}, el("a", { href: `zestaw/${s.num}/` }, "Strona zestawu →"))),
       close),
+    priceSummary(s),
     offersTable(s),
     affiliateLinks(s),
     historyChart(s.history)));

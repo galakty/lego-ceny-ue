@@ -16,6 +16,12 @@ class DealsTest(unittest.TestCase):
         self.assertEqual(deals.best_in_stock(make_set("1", [(50, False), (80, None), (90, True)])), 80)
         self.assertIsNone(deals.best_in_stock(make_set("1", [(50, False)])))
 
+    def test_lowest_recent_keeps_only_last_30_days(self):
+        history = [["2026-09-20", 50.0], ["2026-10-10", 90.0], ["2026-10-25", 80.0], ["2026-11-02", 100.0]]
+        self.assertEqual(deals.lowest_recent(history, "2026-11-02"), 80.0)
+        self.assertIsNone(deals.lowest_recent(history[:1], "2026-11-02"))
+        self.assertIsNone(deals.lowest_recent(history, None))
+
     def test_below_list_price(self):
         sets = [make_set("cheap", [(60, True)], lego_de_eur=25),   # list price 100 zł, 40% off
                 make_set("small", [(95, True)], lego_de_eur=25),   # 5% off: not a deal
@@ -91,3 +97,13 @@ class RetiringTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class PriceNotesTest(unittest.TestCase):
+    def test_per_piece_and_30_day_low(self):
+        s = make_set("1")  # 100 pieces
+        s["low_30d"] = 80.0
+        self.assertIn("0,90 zł za klocek", pages.price_notes(s, 90.0))
+        self.assertIn("Najniżej w 30 dni: 80,00 zł", pages.price_notes(s, 90.0))
+        self.assertIn("Najtaniej od 30 dni", pages.price_notes(s, 80.0))
+        self.assertEqual(pages.price_notes(s, None), "")

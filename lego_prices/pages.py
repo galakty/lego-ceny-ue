@@ -163,6 +163,30 @@ def layout(root: str, title: str, description: str, canonical: str, body: str, j
 """
 
 
+def per_piece(cost: float | None, pieces: int) -> str:
+    """Price per piece, e.g. "0,31 zł za klocek"; empty when either is unknown."""
+    return f"{pln(cost / pieces)} za klocek" if cost is not None and pieces else ""
+
+
+def is_30d_low(cost: float, low: float | None) -> bool:
+    return low is not None and cost <= low + 0.005
+
+
+def price_notes(s: dict, cost: float | None) -> str:
+    """Small lines under a card's price: price per piece and how it compares with the 30-day low."""
+    if cost is None:
+        return ""
+    notes = []
+    if per_piece(cost, s["pieces"]):
+        notes.append(f'<div class="meta">{per_piece(cost, s["pieces"])}</div>')
+    low = s.get("low_30d")
+    if is_30d_low(cost, low):
+        notes.append('<div class="low30 best">Najtaniej od 30 dni</div>')
+    elif low is not None:
+        notes.append(f'<div class="low30">Najniżej w 30 dni: {pln(low)}</div>')
+    return "".join(notes)
+
+
 def card_list(root: str, sets: list[dict], notes: dict[str, tuple[float, str]] | None = None) -> str:
     """Set cards; notes maps a set number to (price to show, deal label)."""
     items = []
@@ -172,6 +196,7 @@ def card_list(root: str, sets: list[dict], notes: dict[str, tuple[float, str]] |
         price = f'<div class="price">od {pln(cost)}</div>' if cost is not None else f'<div class="price check">{e(NO_PRICE_LABEL)}</div>'
         if note:
             price = f'<div class="deal">{e(note)}</div>{price}'
+        price += price_notes(s, cost)
         img = f'<img src="{e(s["img"])}" alt="" loading="lazy">' if s["img"] else ""
         items.append(
             f'<li><a class="card" href="{root}{set_path(s)}"><div class="img">{img}</div>'
@@ -190,6 +215,22 @@ def affiliate_buttons(s: dict, affiliates: dict) -> str:
     links = "".join(f'<a class="shop-btn" href="{e(url)}" rel="sponsored nofollow noopener" target="_blank">Sprawdź na {e(name)}</a>'
                     for name, url in search_links(s["num"], affiliates))
     return f'<p class="shop-links">{links}</p>' if links else ""
+
+
+def price_summary(s: dict, cost: float) -> str:
+    """Box above the offers table: cheapest price now, per piece, and the 30-day low."""
+    items = [f'<div><span class="meta">Najniższa cena teraz</span><strong>{pln(cost)}</strong></div>']
+    if s["pieces"]:
+        items.append(f'<div><span class="meta">Cena za klocek</span><strong>{pln(cost / s["pieces"])}</strong></div>')
+    low = s.get("low_30d")
+    if low is not None:
+        label = " (to teraz)" if is_30d_low(cost, low) else ""
+        items.append(f'<div><span class="meta">Najniższa cena z 30 dni{label}</span><strong>{pln(low)}</strong></div>')
+    since = (dt.date.today() - dt.timedelta(days=deals.LOOKBACK_DAYS)).isoformat()
+    first = s["history"][0][0] if s["history"] else None
+    note = (f'<p class="meta">Ceny tego zestawu śledzimy od {dt.date.fromisoformat(first):%d.%m.%Y}, więc najniższa cena obejmuje krótszy okres.</p>'
+            if low is not None and first and first > since else "")
+    return f'<div class="price-summary">{"".join(items)}</div>{note}'
 
 
 def set_page(s: dict, related: list[dict], site_url: str, affiliates: dict | None = None) -> str:
@@ -212,6 +253,7 @@ def set_page(s: dict, related: list[dict], site_url: str, affiliates: dict | Non
         offers = ('<table><thead><tr><th>Sklep</th><th>Kraj</th><th class="num">Cena</th>'
                   f'<th class="num">Dostawa do PL</th><th class="num">Razem</th></tr></thead><tbody>{rows}</tbody></table>'
                   f'<p class="meta">Ceny z {e(s["offers"][0]["date"])}. Aktualizujemy je codziennie.</p>')
+        offers = price_summary(s, cost) + offers
     else:
         offers = ('<p class="meta">Nie mamy jeszcze ceny z porównywanych sklepów.'
                   + (' Sprawdź aktualną cenę:</p>' if affiliates else ' Dodajemy kolejne sklepy.</p>'))
