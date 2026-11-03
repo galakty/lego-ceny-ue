@@ -123,3 +123,17 @@ a.card { text-decoration: none; color: inherit; }
 .price-chart .y-axis { display: flex; flex-direction: column; justify-content: space-between; text-align: right; font-size: 0.75rem; color: var(--muted); }
 .price-chart .x-axis { grid-column: 2; display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
 .about { max-width: 70ch; margin: 16px 0 0; color: var(--text); line-height: 1.6; }
+.gift-form { display: flex; flex-direction: column; gap: 16px; margin: 16px 0; padding: 16px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+.gift-form .field { display: flex; flex-direction: column; gap: 8px; }
+.gift-form select { max-width: 280px; }
+.gift-form .chips button { padding: 8px 12px; font-size: 0.95rem; }
+.gift-list { list-style: none; padding: 0; margin: 12px 0; display: flex; flex-direction: column; gap: 12px; counter-reset: gift; }
+.gift { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; counter-increment: gift; position: relative; }
+.gift::before { content: counter(gift); position: absolute; top: -8px; left: -8px; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-weight: 700; display: grid; place-items: center; }
+.gift .img { display: grid; place-items: center; background: #fff; border-radius: 8px; aspect-ratio: 1; overflow: hidden; }
+.gift .img img { width: 100%; height: 100%; object-fit: contain; }
+.gift .body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.gift h2 { font-size: 1.05rem; margin: 0; }
+.gift h2 a { color: inherit; text-decoration: none; }
+.gift .shop-btn { align-self: flex-start; margin-top: 6px; padding: 8px 12px; font-size: 0.9rem; }
+@media (max-width: 560px) { .gift { grid-template-columns: 96px 1fr; gap: 12px; } }

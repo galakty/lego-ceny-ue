@@ -108,7 +108,7 @@ def join_names(names: list[str]) -> str:
 def quick_nav(root: str) -> str:
     """Buttons to the seasonal pages right under the header, on every page."""
     year = dt.date.today().year
-    links = [(f"kalendarz-adwentowy-{year}/", "🎄", f"Kalendarze adwentowe {year}")] + [
+    links = [(GIFT_FINDER_PATH, "✨", "Kreator prezentu"), (f"kalendarz-adwentowy-{year}/", "🎄", f"Kalendarze adwentowe {year}")] + [
         (f"prezent/do-{b}-zl/", "🎁", f"Prezent do {b} zł") for b in deals.GIFT_BUDGETS] + [
         (RETIRING_PATH, "⏳", "Wycofywane wkrótce")]
     items = "".join(f'<a class="quick-btn" href="{root}{href}"><span aria-hidden="true">{icon}</span> {e(label)}</a>'
@@ -409,7 +409,7 @@ def browse_nav(themes: list[tuple[str, str]]) -> str:
     pieces = " ".join(f'<a href="klocki/{slug}/">{e(t.replace("LEGO ", ""))}</a>' for slug, t, _, _ in PIECE_RANGES)
     series = " ".join(f'<a href="seria/{slug}/">{e(name)}</a>' for name, slug in themes)
     return (f'<nav class="browse wrap" aria-label="Przeglądaj"><h2>Przeglądaj</h2>'
-            f'<p><strong>Okazje:</strong> <a href="promocje/">Promocje dnia</a> '
+            f'<p><strong>Okazje:</strong> <a href="promocje/">Promocje dnia</a> <a href="{GIFT_FINDER_PATH}">Kreator prezentu</a> '
             f'<a href="kalendarz-adwentowy-{dt.date.today().year}/">Kalendarze adwentowe {dt.date.today().year}</a> '
             + " ".join(f'<a href="prezent/do-{b}-zl/">Prezent do {b} zł</a>' for b in deals.GIFT_BUDGETS)
             + f' <a href="{RETIRING_PATH}">Wycofywane wkrótce</a></p>'
@@ -450,6 +450,45 @@ def deals_page(sets: list[dict], site_url: str, eur_rate: float | None) -> str:
     {"".join(sections)}"""
     image = next((s["img"] for s, _, _ in below + drops if s["img"]), "")
     return layout(root, f"Promocje LEGO – dzisiejsze okazje cenowe | {SITE_NAME}", intro, f"{site_url}/promocje/", body, image=image)
+
+
+GIFT_FINDER_PATH = "prezent/kreator/"
+GIFT_AGES = [(str(a), f"{a} {plural(a, 'rok', 'lata', 'lat')}") for a in range(2, 15)] + [("18", "Nastolatek lub dorosły")]
+GIFT_FINDER_BUDGETS = [50, 100, 150, 200, 300, 500]
+GIFT_INTERESTS = [  # (value used by gift.js, label)
+    ("auta", "🚗 Auta"), ("zwierzeta", "🐶 Zwierzęta"), ("minecraft", "⛏️ Minecraft"), ("kosmos", "🚀 Kosmos i Star Wars"),
+    ("superbohaterowie", "🦸 Superbohaterowie"), ("disney", "👑 Disney i księżniczki"), ("dinozaury", "🦖 Dinozaury"),
+    ("miasto", "🏙️ Miasto i budowle"), ("harrypotter", "🪄 Harry Potter"), ("ninjago", "🥷 Ninjago"),
+    ("gry", "🎮 Mario i gry"), ("technika", "⚙️ Technika i roboty"), ("kwiaty", "🌷 Kwiaty"),
+]
+
+
+def gift_finder_page(site_url: str) -> str:
+    """Form for the gift finder; gift.js picks the sets in the browser from data/sets.json."""
+    root = "../../"
+    title = "Kreator prezentu LEGO"
+    intro = ("Wybierz wiek dziecka, budżet i to, co lubi. Pokażemy 5 zestawów LEGO z największą liczbą klocków "
+             "w tej cenie, z najtańszym sklepem i ceną sprawdzaną codziennie.")
+    ages = "".join(f'<option value="{v}">{e(label)}</option>' for v, label in GIFT_AGES)
+    budgets = "".join(f'<button type="button" data-value="{b}" aria-pressed="{str(b == 200).lower()}">do {b} zł</button>'
+                      for b in GIFT_FINDER_BUDGETS) + '<button type="button" data-value="" aria-pressed="false">bez limitu</button>'
+    interests = "".join(f'<button type="button" data-value="{v}" aria-pressed="false">{e(label)}</button>' for v, label in GIFT_INTERESTS)
+    body = f"""{breadcrumbs(root, [(title, None)])}
+    <h1>🎁 {e(title)}</h1>
+    <p class="lead">{e(intro)}</p>
+    <form class="gift-form" onsubmit="return false">
+      <label class="field"><strong>Wiek</strong>
+        <select id="g-age"><option value="">Dowolny</option>{ages}</select></label>
+      <div class="field"><strong>Budżet</strong><div class="chips" id="g-budget">{budgets}</div></div>
+      <div class="field"><strong>Co lubi?</strong> <span class="meta">Możesz zaznaczyć kilka albo nic.</span>
+        <div class="chips" id="g-interests">{interests}</div></div>
+    </form>
+    <p class="meta" id="g-count" aria-live="polite">Wczytuję zestawy…</p>
+    <ol class="gift-list" id="g-list"></ol>
+    <button type="button" class="more" id="g-more" hidden>Pokaż kolejne 5</button>
+    <noscript><p>Kreator działa z włączonym JavaScriptem. Bez niego zobacz <a href="{root}prezent/do-100-zl/">LEGO do 100 zł</a>.</p></noscript>
+    <script src="{root}gift.js" defer></script>"""
+    return layout(root, f"{title}: wiek, budżet i zainteresowania | {SITE_NAME}", intro, f"{site_url}/{GIFT_FINDER_PATH}", body)
 
 
 def priced_list_page(title: str, intro: str, items: list[tuple[dict, float | None]], canonical: str, empty: str) -> str:
@@ -599,6 +638,8 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affi
     urls.append(RETIRING_PATH)
     write(out_dir, "o-stronie/", about_page(site_url, shops or [], affiliates))
     urls.append("o-stronie/")
+    write(out_dir, GIFT_FINDER_PATH, gift_finder_page(site_url))
+    urls.append(GIFT_FINDER_PATH)
     for rel, content in seasonal_pages(sets, site_url, dt.date.today().year).items():
         write(out_dir, rel, content)
         urls.append(rel)
