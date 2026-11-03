@@ -122,3 +122,4 @@ a.card { text-decoration: none; color: inherit; }
 .price-chart .area { fill: var(--good); opacity: 0.12; }
 .price-chart .y-axis { display: flex; flex-direction: column; justify-content: space-between; text-align: right; font-size: 0.75rem; color: var(--muted); }
 .price-chart .x-axis { grid-column: 2; display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
+.about { max-width: 70ch; margin: 16px 0 0; color: var(--text); line-height: 1.6; }
