@@ -80,6 +80,14 @@ class BuildTest(unittest.TestCase):
         self.assertIn("Set 75313", self.read("klocki/ponad-3000/index.html"))
         self.assertIn("?seria=Star+Wars", self.read("seria/star-wars/index.html"))
 
+    def test_gift_finder_page(self):
+        page = self.read("prezent/kreator/index.html")
+        self.assertIn('<script src="../../gift.js" defer></script>', page)
+        self.assertIn('data-value="minecraft"', page)
+        self.assertIn('data-value="200" aria-pressed="true"', page)  # default budget
+        self.assertIn("prezent/kreator/</loc>", self.read("sitemap.xml"))
+        self.assertIn('href="../../prezent/kreator/"', self.read("zestaw/60510/index.html"))  # quick nav button
+
     def test_flowers_page_exists_and_is_in_sitemap(self):
         page = self.read("kwiaty-lego/index.html")
         self.assertIn("<h1>Kwiaty LEGO: bukiety, orchidee i bonsai</h1>", page)
