@@ -28,5 +28,14 @@
       "utm_campaign": "153defd3-168e-4320-9be6-072825cd5814"
     },
     "disclosure": "Linki do Allegro są linkami partnerskimi (Allegro Share)."
+  },
+  "xkom": {
+    "name": "x-kom",
+    "search_url": "https://www.x-kom.pl/szukaj",
+    "query_param": "q",
+    "params": {
+      "sm": "tgTQ1oBn"
+    },
+    "disclosure": "Linki do x-kom są linkami partnerskimi (SalesMasters)."
   }
 }
