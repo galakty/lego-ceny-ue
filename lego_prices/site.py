@@ -81,6 +81,7 @@ def price_history(prices: list[dict]) -> dict[str, list[list]]:
 
 
 def build_sets(sets: list[dict], ages: dict[str, dict], offers, history) -> list[dict]:
+    latest = max((h[-1][0] for h in history.values() if h), default=None)
     out = []
     for s in sets:
         age = ages.get(s["set_num"], {})
@@ -97,6 +98,7 @@ def build_sets(sets: list[dict], ages: dict[str, dict], offers, history) -> list
             "exit_date": age.get("exit_date") or None,
             "offers": offers.get(s["set_num"], []),
             "history": history.get(s["set_num"], []),
+            "low_30d": deals.lowest_recent(history.get(s["set_num"], []), latest),
         })
     return out
 

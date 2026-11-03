@@ -28,6 +28,15 @@ def below_list_price(sets: list[dict], eur_rate: float | None) -> list[tuple[dic
     return found[:LIMIT]
 
 
+def lowest_recent(history: list[list], latest: str | None, days: int = LOOKBACK_DAYS) -> float | None:
+    """Lowest daily price in the `days` days up to and including `latest` (the newest scrape date), or None."""
+    if not latest:
+        return None
+    since = (dt.date.fromisoformat(latest) - dt.timedelta(days=days)).isoformat()
+    recent = [p for d, p in history if since < d <= latest]
+    return min(recent) if recent else None
+
+
 def price_drops(sets: list[dict]) -> list[tuple[dict, float, float]]:
     """(set, price, drop) for sets whose lowest price on the latest day is below the
     highest daily lowest price of the previous LOOKBACK_DAYS, biggest drop first."""

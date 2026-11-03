@@ -65,6 +65,8 @@ class BuildTest(unittest.TestCase):
         self.assertIn('<link rel="canonical" href="https://example.org/x/zestaw/60510/">', page)
         self.assertIn('"@type": "AggregateOffer"', page)
         self.assertNotIn("og:image", page)  # the test set has no picture
+        self.assertIn("Cena za klocek</span><strong>0,66 zł", page)
+        self.assertNotIn("Najniższa cena z 30 dni", page)  # the test set has no history
 
     def test_set_page_preview_image(self):
         s = make_set("60510", 252)
