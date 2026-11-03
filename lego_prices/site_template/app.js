@@ -174,11 +174,11 @@ function offersTable(s) {
     el("td", { class: "num" }, o.currency === "PLN" ? pln.format(o.pln) : `${new Intl.NumberFormat("pl-PL", { style: "currency", currency: o.currency }).format(o.price)} (${pln.format(o.pln)})`),
     el("td", { class: "num" }, o.shipping != null ? pln.format(o.shipping) : (o.ships_to_pl === false ? "nie wysyła do PL" : "?")),
     el("td", { class: "num" }, o.total != null ? pln.format(o.total) : "–")));
-  return el("table", {},
+  return el("div", { class: "table-scroll" }, el("table", {},
     el("thead", {}, el("tr", {},
       el("th", {}, "Sklep"), el("th", {}, "Kraj"), el("th", { class: "num" }, "Cena"),
       el("th", { class: "num" }, "Dostawa do PL"), el("th", { class: "num" }, "Razem"))),
-    el("tbody", {}, ...rows));
+    el("tbody", {}, ...rows)));
 }
 
 function affiliateLinks(s) {

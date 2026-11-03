@@ -228,9 +228,58 @@ def price_summary(s: dict, cost: float) -> str:
         items.append(f'<div><span class="meta">Najniższa cena z 30 dni{label}</span><strong>{pln(low)}</strong></div>')
     since = (dt.date.today() - dt.timedelta(days=deals.LOOKBACK_DAYS)).isoformat()
     first = s["history"][0][0] if s["history"] else None
-    note = (f'<p class="meta">Ceny tego zestawu śledzimy od {dt.date.fromisoformat(first):%d.%m.%Y}, więc najniższa cena obejmuje krótszy okres.</p>'
+    note = (f'<p class="meta">Ceny tego zestawu śledzimy od {date_text(first)}, więc najniższa cena obejmuje krótszy okres.</p>'
             if low is not None and first and first > since else "")
     return f'<div class="price-summary">{"".join(items)}</div>{note}'
+
+
+CHART_DAYS = 180  # older prices make the line too dense on a phone
+
+
+def date_text(iso_date: str) -> str:
+    return f"{dt.date.fromisoformat(iso_date):%d.%m.%Y}"
+
+
+def price_chart(history: list[list]) -> str:
+    """Static SVG line of the lowest daily price, so the chart works without JavaScript and is crawlable.
+    Days are placed by date, so days without a price leave a straight segment instead of squeezing the line."""
+    if not history:
+        return ""
+    since = (dt.date.fromisoformat(history[-1][0]) - dt.timedelta(days=CHART_DAYS)).isoformat()
+    points = [(dt.date.fromisoformat(d), p) for d, p in history if d >= since]
+    if len(points) < 2:
+        return ""
+    w, h, pad = 600, 140, 6
+    first, last = points[0][0], points[-1][0]
+    days = (last - first).days or 1
+    low, high = min(p for _, p in points), max(p for _, p in points)
+    span = high - low or 1
+
+    def xy(day, price):
+        return pad + (day - first).days * (w - 2 * pad) / days, h - pad - (price - low) * (h - 2 * pad) / span
+
+    # a step line: a price holds until the next scrape changes it
+    coords = []
+    for i, (day, price) in enumerate(points):
+        x, y = xy(day, price)
+        if i:
+            coords.append((x, coords[-1][1]))
+        coords.append((x, y))
+    line = " ".join(f"{x:.1f},{y:.1f}" for x, y in coords)
+    area = f"{coords[0][0]:.1f},{h} {line} {coords[-1][0]:.1f},{h}"
+    flat = " (bez zmian)" if high == low else ""
+    label = f"Wykres najniższej ceny od {date_text(first.isoformat())} do {date_text(last.isoformat())}: od {pln(low)} do {pln(high)}"
+    return f"""<figure class="price-chart">
+        <figcaption>Najniższa cena w czasie{flat}</figcaption>
+        <div class="plot">
+          <div class="y-axis"><span>{pln(high)}</span><span>{pln(low)}</span></div>
+          <svg viewBox="0 0 {w} {h}" preserveAspectRatio="none" role="img" aria-label="{e(label)}">
+            <polygon points="{area}" class="area"/>
+            <polyline points="{line}" class="line" vector-effect="non-scaling-stroke"/>
+          </svg>
+          <div class="x-axis"><span>{date_text(first.isoformat())}</span><span>{date_text(last.isoformat())}</span></div>
+        </div>
+      </figure>"""
 
 
 def set_page(s: dict, related: list[dict], site_url: str, affiliates: dict | None = None) -> str:
@@ -250,8 +299,8 @@ def set_page(s: dict, related: list[dict], site_url: str, affiliates: dict | Non
             f'<td class="num">{pln(o["shipping"]) if o["shipping"] is not None else ("nie wysyła do PL" if o["ships_to_pl"] is False else "?")}</td>'
             f'<td class="num">{pln(o["total"]) if o["total"] is not None else "–"}</td></tr>'
             for i, o in enumerate(s["offers"]))
-        offers = ('<table><thead><tr><th>Sklep</th><th>Kraj</th><th class="num">Cena</th>'
-                  f'<th class="num">Dostawa do PL</th><th class="num">Razem</th></tr></thead><tbody>{rows}</tbody></table>'
+        offers = ('<div class="table-scroll"><table><thead><tr><th>Sklep</th><th>Kraj</th><th class="num">Cena</th>'
+                  f'<th class="num">Dostawa do PL</th><th class="num">Razem</th></tr></thead><tbody>{rows}</tbody></table></div>'
                   f'<p class="meta">Ceny z {e(s["offers"][0]["date"])}. Aktualizujemy je codziennie.</p>')
         offers = price_summary(s, cost) + offers
     else:
@@ -276,6 +325,7 @@ def set_page(s: dict, related: list[dict], site_url: str, affiliates: dict | Non
       <h2>Ceny</h2>
       {offers}
       {affiliate_buttons(s, affiliates or {})}
+      {price_chart(s["history"])}
     </article>
     {f'<h2>Podobne zestawy</h2>{card_list(root, related)}' if related else ""}"""
 
