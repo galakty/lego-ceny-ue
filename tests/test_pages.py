@@ -80,6 +80,12 @@ class BuildTest(unittest.TestCase):
         self.assertIn("Set 75313", self.read("klocki/ponad-3000/index.html"))
         self.assertIn("?seria=Star+Wars", self.read("seria/star-wars/index.html"))
 
+    def test_flowers_page_exists_and_is_in_sitemap(self):
+        page = self.read("kwiaty-lego/index.html")
+        self.assertIn("<h1>Kwiaty LEGO: bukiety, orchidee i bonsai</h1>", page)
+        self.assertIn("Nie mamy jeszcze takich zestawów", page)  # the test sets are no flowers
+        self.assertIn("kwiaty-lego/</loc>", self.read("sitemap.xml"))
+
     def test_index_and_sitemap(self):
         index = self.read("index.html")
         self.assertIn('href="https://example.org/x/"', index)
@@ -92,6 +98,19 @@ class BuildTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class FlowerTest(unittest.TestCase):
+    def test_is_flower(self):
+        def named(name, theme="Icons"):
+            return {"name": name, "theme": theme}
+        for name in ("Flower Bouquet", "Orchid", "Mini Orchid", "Bonsai Tree", "Bouquet of Roses", "Tulip Bouquet",
+                     "Cherry Blossoms", "Wildflower Bouquet", "Pretty Pink Flower Bouquet"):
+            self.assertTrue(pages.is_flower(named(name)), name)
+        self.assertTrue(pages.is_flower(named("Japanese Red Maple", "Botanicals")))
+        for name, theme in (("Piranha Plant", "Super Mario"), ("Lotus Evija", "Speed Champions"),
+                            ("Glinda, Elphaba & Nessarose at Shiz University", "Wicked"), ("Millennium Falcon", "Star Wars")):
+            self.assertFalse(pages.is_flower(named(name, theme)), name)
 
 
 class PriceChartTest(unittest.TestCase):

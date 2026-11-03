@@ -341,7 +341,8 @@ def set_page(s: dict, related: list[dict], site_url: str, affiliates: dict | Non
 
 
 def landing_page(root: str, title: str, intro: str, sets: list[dict], search_query: str, canonical: str, trail_label: str,
-                 age: int | None = None) -> str:
+                 age: int | None = None, about: tuple[str, ...] = ()) -> str:
+    """List page; `about` paragraphs go under the list, so the sets stay at the top and search engines get the text."""
     shown = ranked(sets, age)[:LIST_LIMIT]
     more = (f'<p><a class="more-link" href="{root}?{search_query}">Zobacz wszystkie ({len(sets)}) '
             f'w wyszukiwarce z filtrami</a></p>') if search_query else ""
@@ -349,9 +350,51 @@ def landing_page(root: str, title: str, intro: str, sets: list[dict], search_que
     <h1>{e(title)}</h1>
     <p class="lead">{e(intro)}</p>
     {more}
-    {card_list(root, shown)}
-    {more if len(sets) > LIST_LIMIT else ""}"""
+    {card_list(root, shown) if shown else '<p class="meta">Nie mamy jeszcze takich zestawów w katalogu.</p>'}
+    {more if len(sets) > LIST_LIMIT else ""}
+    {"".join(f'<p class="about">{e(p)}</p>' for p in about)}"""
     return layout(root, f"{title} – ceny i porównanie | {SITE_NAME}", intro, canonical, body)
+
+
+# Pages for popular searches that no single theme or filter covers (e.g. "lego kwiaty").
+# Set names come from Rebrickable, so the words are English.
+FLOWER_WORDS = re.compile(
+    r"\b(flowers?|bouquets?|orchids?|roses?|tulips?|bonsai|succulents?|blossoms?|sunflowers?|wildflowers?|"
+    r"poinsettias?|chrysanthemums?|lil(y|ies)|dais(y|ies)|peon(y|ies)|lavender|snake plant|bird of paradise|lotus flowers?)\b", re.I)
+NOT_FLOWER_THEMES = {"Super Mario", "Speed Champions"}  # Piranha Plant, Lotus cars
+
+
+def is_flower(s: dict) -> bool:
+    return "botanical" in s["theme"].lower() or (s["theme"] not in NOT_FLOWER_THEMES and bool(FLOWER_WORDS.search(s["name"])))
+
+
+FLOWERS_PATH = "kwiaty-lego/"
+FLOWERS_TITLE = "Kwiaty LEGO: bukiety, orchidee i bonsai"
+FLOWERS_INTRO = ("Kwiaty z klocków LEGO: bukiety, orchidee, tulipany, róże i drzewka bonsai z serii LEGO Botanicals i Icons. "
+                 "Porównaj ceny w sklepach i kup kwiaty, które nigdy nie zwiędną.")
+FLOWERS_ABOUT = (
+    "Kwiaty LEGO to jeden z najpopularniejszych prezentów z klocków dla dorosłych: na Dzień Kobiet, Dzień Matki, walentynki "
+    "albo zamiast zwykłego bukietu. Po złożeniu stoją w wazonie jak prawdziwe, a składanie zajmuje od jednego wieczoru do kilku dni.",
+    "Najmniejsze zestawy, jak pojedyncze kwiatki czy mała orchidea, kosztują kilkadziesiąt złotych. Duże bukiety i bonsai "
+    "to zwykle 150–300 zł, ale w promocjach bywają dużo tańsze. Ceny sprawdzamy codziennie, więc łatwo złapiesz najniższą.",
+)
+ARCHITECTURE_INTRO = ("LEGO Architecture: panoramy miast i słynne budowle z klocków, od Paryża i Nowego Jorku po Tadż Mahal. "
+                      "Wszystkie zestawy z cenami z polskich sklepów, aktualizowanymi codziennie.")
+ARCHITECTURE_ABOUT = (
+    "Seria LEGO Architecture jest dla dorosłych i starszych dzieci, zwykle od 12 lub 18 lat. Zestawy Skyline to panoramy miast "
+    "z najbardziej znanymi budynkami, a większe modele odwzorowują pojedyncze zabytki z dużą liczbą detali.",
+    "To dobry prezent dla miłośników podróży: model miasta, w którym ktoś był, wygląda świetnie na półce lub biurku. "
+    "Na stronie każdego zestawu znajdziesz liczbę klocków, cenę za klocek i historię najniższej ceny.",
+)
+ADULTS_INTRO = ("LEGO dla dorosłych: zestawy 16+ i 18+, czyli duże modele kolekcjonerskie z serii Icons, Architecture, Technic, "
+                "Botanicals i Star Wars. Porównaj ceny i sprawdź, gdzie kupisz najtaniej.")
+ADULTS_ABOUT = (
+    "Zestawy LEGO dla dorosłych mają zwykle więcej klocków, bardziej złożoną budowę i projekt, który ma dobrze wyglądać "
+    "na półce: samochody, budynki, kwiaty, statki kosmiczne i modele z filmów.",
+    "To popularny prezent na urodziny i święta dla osób, które wracają do klocków po latach. Duże zestawy często tanieją "
+    "w promocjach, dlatego przy każdym pokazujemy najniższą cenę z ostatnich 30 dni.",
+)
+THEME_COPY = {"Architecture": (ARCHITECTURE_INTRO, ARCHITECTURE_ABOUT)}  # theme -> (intro, about) for popular searches
 
 
 def related_sets(s: dict, by_theme: dict[str, list[dict]], limit: int = 8) -> list[dict]:
@@ -370,6 +413,8 @@ def browse_nav(themes: list[tuple[str, str]]) -> str:
             f'<a href="kalendarz-adwentowy-{dt.date.today().year}/">Kalendarze adwentowe {dt.date.today().year}</a> '
             + " ".join(f'<a href="prezent/do-{b}-zl/">Prezent do {b} zł</a>' for b in deals.GIFT_BUDGETS)
             + f' <a href="{RETIRING_PATH}">Wycofywane wkrótce</a></p>'
+            f'<p><strong>Popularne:</strong> <a href="{FLOWERS_PATH}">Kwiaty LEGO</a> <a href="seria/architecture/">LEGO Architecture</a> '
+            f'<a href="wiek/dorosli/">LEGO dla dorosłych</a></p>'
             f'<p><strong>Wiek dziecka:</strong> {ages}</p><p><strong>Liczba klocków:</strong> {pieces}</p>'
             f'<p><strong>Serie:</strong> {series}</p></nav>')
 
@@ -534,9 +579,12 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affi
         urls.append(rel)
     adults = [s for s in sets if s["age_min"] is not None and s["age_min"] >= 16]
     write(out_dir, "wiek/dorosli/", landing_page(
-        "../../", "LEGO dla dorosłych", "Zestawy LEGO dla dorosłych (16+ i 18+): duże modele kolekcjonerskie, Icons, Architecture i Technic.",
-        adults, urlencode({"wiek": 18}), f"{site_url}/wiek/dorosli/", "Dla dorosłych"))
+        "../../", "LEGO dla dorosłych", ADULTS_INTRO, adults, urlencode({"wiek": 18}), f"{site_url}/wiek/dorosli/", "Dla dorosłych",
+        about=ADULTS_ABOUT))
     urls.append("wiek/dorosli/")
+    write(out_dir, FLOWERS_PATH, landing_page("../", FLOWERS_TITLE, FLOWERS_INTRO, [s for s in sets if is_flower(s)], "",
+                                              f"{site_url}/{FLOWERS_PATH}", "Kwiaty LEGO", about=FLOWERS_ABOUT))
+    urls.append(FLOWERS_PATH)
 
     for slug, title, lo, hi in PIECE_RANGES:
         rel = f"klocki/{slug}/"
@@ -558,8 +606,9 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affi
     themes = sorted(((name, slugify(name)) for name in by_theme if name), key=lambda t: t[0].lower())
     for name, slug in themes:
         rel = f"seria/{slug}/"
-        write(out_dir, rel, landing_page("../../", f"LEGO {name}", f"Wszystkie zestawy LEGO {name} od 2020 roku z cenami, liczbą klocków i wiekiem.",
-                                         by_theme[name], urlencode({"seria": name}), f"{site_url}/{rel}", name))
+        intro, about = THEME_COPY.get(name, (f"Wszystkie zestawy LEGO {name} od 2020 roku z cenami, liczbą klocków i wiekiem.", ()))
+        write(out_dir, rel, landing_page("../../", f"LEGO {name}", intro, by_theme[name], urlencode({"seria": name}),
+                                         f"{site_url}/{rel}", name, about=about))
         urls.append(rel)
 
     index_path = os.path.join(out_dir, "index.html")
