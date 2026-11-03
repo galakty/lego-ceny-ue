@@ -299,8 +299,8 @@ def set_page(s: dict, related: list[dict], site_url: str, affiliates: dict | Non
             f'<td class="num">{pln(o["shipping"]) if o["shipping"] is not None else ("nie wysyła do PL" if o["ships_to_pl"] is False else "?")}</td>'
             f'<td class="num">{pln(o["total"]) if o["total"] is not None else "–"}</td></tr>'
             for i, o in enumerate(s["offers"]))
-        offers = ('<table><thead><tr><th>Sklep</th><th>Kraj</th><th class="num">Cena</th>'
-                  f'<th class="num">Dostawa do PL</th><th class="num">Razem</th></tr></thead><tbody>{rows}</tbody></table>'
+        offers = ('<div class="table-scroll"><table><thead><tr><th>Sklep</th><th>Kraj</th><th class="num">Cena</th>'
+                  f'<th class="num">Dostawa do PL</th><th class="num">Razem</th></tr></thead><tbody>{rows}</tbody></table></div>'
                   f'<p class="meta">Ceny z {e(s["offers"][0]["date"])}. Aktualizujemy je codziennie.</p>')
         offers = price_summary(s, cost) + offers
     else:
