@@ -31,6 +31,16 @@ a { color: inherit; }
 .quick-btn:hover, .quick-btn:focus-visible { background: #ffcf00; color: #1d1d1b; box-shadow: 0 3px 0 #b39100; transform: translateY(-2px); outline: none; }
 .quick-btn:active { transform: translateY(2px); box-shadow: 0 1px 0 #00467a; }
 @media (max-width: 760px) {
+  /* phones: one row that scrolls sideways instead of a tall stack; the auto margins center it when it fits */
+  .quick { padding: 8px 0; }
+  .quick .wrap { flex-wrap: nowrap; justify-content: flex-start; gap: 8px; overflow-x: auto; padding-top: 4px; padding-bottom: 6px;
+    scrollbar-width: none; scroll-snap-type: x proximity; scroll-padding: 0 16px; -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); }
+  .quick .wrap::-webkit-scrollbar { display: none; }
+  .quick .wrap::after { content: ""; flex: 0 0 20px; }  /* keeps the last button clear of the edge fade */
+  .quick-btn { flex: 0 0 auto; scroll-snap-align: start; padding: 8px 14px; font-size: 0.9rem; gap: 6px; }
+  .quick-btn:first-child { margin-left: auto; }
+  .quick-btn:last-of-type { margin-right: auto; }
   .top .wrap { grid-template-columns: 1fr; }
   .nav-link { grid-column: 1; grid-row: 3; justify-self: center; margin-top: 14px; }
 }
