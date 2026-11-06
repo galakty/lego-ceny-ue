@@ -88,6 +88,14 @@ class BuildTest(unittest.TestCase):
         self.assertIn("prezent/kreator/</loc>", self.read("sitemap.xml"))
         self.assertIn('href="../../prezent/kreator/"', self.read("zestaw/60510/index.html"))  # quick nav button
 
+    def test_gift_finder_page_has_text_for_search_engines(self):
+        page = self.read("prezent/kreator/index.html")
+        self.assertIn("<title>Kreator prezentu LEGO – dobierz zestaw do wieku i budżetu | Klockownik</title>", page)
+        self.assertIn('<meta name="description" content="Kreator prezentu LEGO:', page)
+        self.assertIn('"@type": "FAQPage"', page)
+        self.assertIn('href="../../wiek/6/">LEGO dla 6-latka</a>', page)
+        self.assertIn('href="../../prezent/do-100-zl/">LEGO na prezent do 100 zł</a>', page)
+
     def test_flowers_page_exists_and_is_in_sitemap(self):
         page = self.read("kwiaty-lego/index.html")
         self.assertIn("<h1>Kwiaty LEGO: bukiety, orchidee i bonsai</h1>", page)
