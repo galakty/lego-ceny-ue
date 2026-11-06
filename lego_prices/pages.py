@@ -463,16 +463,40 @@ GIFT_INTERESTS = [  # (value used by gift.js, label)
 ]
 
 
+GIFT_FAQ = [  # (question, answer); shown on the page and as FAQPage structured data for search engines
+    ("Jak działa kreator prezentu LEGO?",
+     "Wybierasz wiek dziecka, budżet i zainteresowania, a kreator od razu pokazuje 5 pasujących zestawów LEGO. "
+     "Najpierw te z największą liczbą klocków w Twoim budżecie, każdy z najtańszym sklepem, w którym jest dostępny."),
+    ("Skąd są ceny?",
+     "Ceny zestawów sprawdzamy codziennie w sklepach w Polsce i w innych krajach UE i przeliczamy na złote. "
+     "Pokazujemy tylko oferty dostępne w sprzedaży."),
+    ("Jaki zestaw LEGO wybrać na prezent dla dziecka?",
+     "Zacznij od wieku podanego na pudełku: dla 2–5 lat najlepsze są duże klocki DUPLO, od 4–5 lat proste zestawy "
+     "LEGO City, Friends i Disney, a od 7–9 lat Technic, Star Wars, Ninjago czy Minecraft. Potem wybierz to, co dziecko lubi."),
+    ("Jaki prezent LEGO dla dorosłego?",
+     "Dorośli najczęściej wybierają zestawy 18+: kwiaty LEGO, budowle z serii Architecture, samochody Technic i Icons. "
+     "W kreatorze wybierz wiek „Nastolatek lub dorosły”."),
+]
+
+
 def gift_finder_page(site_url: str) -> str:
-    """Form for the gift finder; gift.js picks the sets in the browser from data/sets.json."""
+    """Form for the gift finder; gift.js picks the sets in the browser from data/sets.json.
+
+    The picks need JavaScript, so the page also carries plain text, links and an FAQ that search engines can read.
+    """
     root = "../../"
     title = "Kreator prezentu LEGO"
     intro = ("Wybierz wiek dziecka, budżet i to, co lubi. Pokażemy 5 zestawów LEGO z największą liczbą klocków "
              "w tej cenie, z najtańszym sklepem i ceną sprawdzaną codziennie.")
+    description = ("Kreator prezentu LEGO: podaj wiek, budżet i zainteresowania, a dobierzemy 5 zestawów z najlepszą ceną. "
+                   "Pomysł na prezent na urodziny, Mikołajki i święta.")
     ages = "".join(f'<option value="{v}">{e(label)}</option>' for v, label in GIFT_AGES)
     budgets = "".join(f'<button type="button" data-value="{b}" aria-pressed="{str(b == 200).lower()}">do {b} zł</button>'
                       for b in GIFT_FINDER_BUDGETS) + '<button type="button" data-value="" aria-pressed="false">bez limitu</button>'
     interests = "".join(f'<button type="button" data-value="{v}" aria-pressed="false">{e(label)}</button>' for v, label in GIFT_INTERESTS)
+    age_links = " · ".join(f'<a href="{root}wiek/{a}/">{e(age_title(a))}</a>' for a in AGES)
+    budget_links = " · ".join(f'<a href="{root}prezent/do-{b}-zl/">LEGO na prezent do {b} zł</a>' for b in deals.GIFT_BUDGETS)
+    faq = "".join(f"<h3>{e(q)}</h3><p>{e(a)}</p>" for q, a in GIFT_FAQ)
     body = f"""{breadcrumbs(root, [(title, None)])}
     <h1>🎁 {e(title)}</h1>
     <p class="lead">{e(intro)}</p>
@@ -487,8 +511,23 @@ def gift_finder_page(site_url: str) -> str:
     <ol class="gift-list" id="g-list"></ol>
     <button type="button" class="more" id="g-more" hidden>Pokaż kolejne 5</button>
     <noscript><p>Kreator działa z włączonym JavaScriptem. Bez niego zobacz <a href="{root}prezent/do-100-zl/">LEGO do 100 zł</a>.</p></noscript>
+    <section class="about">
+      <h2>Pomysł na prezent z LEGO w minutę</h2>
+      <p>Nie wiesz, jaki zestaw LEGO kupić na urodziny, Mikołajki albo pod choinkę? Kreator prezentu LEGO dobiera zestawy
+        do wieku dziecka, budżetu i tego, co lubi: aut, dinozaurów, Minecrafta, Star Wars, księżniczek Disneya czy Harry'ego Pottera.
+        Wszystkie ceny porównujemy codziennie w sklepach, więc od razu widzisz, gdzie kupisz najtaniej.</p>
+      <p><strong>Prezent według wieku:</strong> {age_links} · <a href="{root}wiek/dorosli/">LEGO dla dorosłych</a></p>
+      <p><strong>Prezent według budżetu:</strong> {budget_links}</p>
+      <p><strong>Na święta:</strong> <a href="{root}kalendarz-adwentowy-{dt.date.today().year}/">Kalendarze adwentowe LEGO</a> ·
+        <a href="{root}kwiaty-lego/">Kwiaty LEGO</a> · <a href="{root}promocje/">Promocje dnia</a></p>
+      <h2>Najczęstsze pytania</h2>
+      {faq}
+    </section>
     <script src="{root}gift.js" defer></script>"""
-    return layout(root, f"{title}: wiek, budżet i zainteresowania | {SITE_NAME}", intro, f"{site_url}/{GIFT_FINDER_PATH}", body)
+    jsonld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in GIFT_FAQ]}
+    return layout(root, f"{title} – dobierz zestaw do wieku i budżetu | {SITE_NAME}", description,
+                  f"{site_url}/{GIFT_FINDER_PATH}", body, jsonld=jsonld)
 
 
 def priced_list_page(title: str, intro: str, items: list[tuple[dict, float | None]], canonical: str, empty: str) -> str:
