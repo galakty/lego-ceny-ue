@@ -4,9 +4,9 @@ import sys
 import csv
 import json
 
-from . import brickset, catalog, discover, scrape, site
+from . import brickset, catalog, discover, reels, scrape, site
 
-USAGE = "Usage: python -m lego_prices [scrape | catalog | ages | site | discover | probe URL...]"
+USAGE = "Usage: python -m lego_prices [scrape | catalog | ages | site | reels | discover | probe URL...]"
 
 
 def notice(msg: str) -> None:
@@ -27,6 +27,8 @@ if __name__ == "__main__":
         print("BRICKSET_API_KEY not set, skipping ages" if count is None else f"Saved ages for {count} sets")
     elif cmd == "site":
         notice(f"Built site: {site.build()}")
+    elif cmd == "reels":
+        notice(reels.build())
     elif cmd == "discover":
         set_nums = catalog_set_nums()
         with open("data/shops.json", encoding="utf-8") as f:

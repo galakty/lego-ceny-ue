@@ -35,6 +35,13 @@ jobs:
           BRICKSET_API_KEY: ${{ secrets.BRICKSET_API_KEY }}
       - name: Build site
         run: python -m lego_prices site
+      - name: Make reels
+        continue-on-error: true   # the site still deploys when a video fails
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-inter
+          pip install --quiet pillow
+          python -m lego_prices reels
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
