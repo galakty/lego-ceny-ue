@@ -96,6 +96,20 @@ def ranked(sets: list[dict], age: int | None = None) -> list[dict]:
     return sorted(sets, key=lambda s: (best_cost(s) is None, age - s["age_min"] if age is not None else 0, -s["year"], s["num"]))
 
 
+def has_price(s: dict) -> bool:
+    """A set page is worth indexing once we have shown a price for it (now or in the history)."""
+    return bool(s["offers"] or s["history"])
+
+
+def last_price_change(s: dict, default: str) -> str:
+    """Day the lowest price last changed, so the sitemap lastmod moves only when the page content does."""
+    history = s["history"]
+    for i in range(len(history) - 1, 0, -1):
+        if history[i][1] != history[i - 1][1]:
+            return history[i][0]
+    return history[0][0] if history else default
+
+
 def set_path(s: dict) -> str:
     return f"zestaw/{s['num']}/"
 
@@ -116,12 +130,15 @@ def quick_nav(root: str) -> str:
     return f'<nav class="quick" aria-label="Na skróty"><div class="wrap">{items}</div></nav>'
 
 
+NOINDEX_META = '<meta name="robots" content="noindex, follow">'
 DISCLOSURE = ""  # set by build() from data/affiliates.json
 NO_PRICE_LABEL = "Brak cen"  # build() points to the affiliate searches instead, when there are any
 
 
 def layout(root: str, title: str, description: str, canonical: str, body: str, jsonld: dict | None = None,
-           image: str = "") -> str:
+           image: str = "", noindex: bool = False) -> str:
+    # thin pages (no prices yet) stay reachable for visitors but out of Google until they have content
+    robots = f"\n  {NOINDEX_META}" if noindex else ""
     ld = f'\n  <script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>' if jsonld else ""
     # the preview picture Facebook and messengers show when the link is shared
     og_image = (f'\n  <meta property="og:image" content="{e(image)}">\n  <meta name="twitter:card" content="summary_large_image">'
@@ -133,7 +150,7 @@ def layout(root: str, title: str, description: str, canonical: str, body: str, j
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{e(title)}</title>
   <meta name="description" content="{e(description)}">
-  <link rel="canonical" href="{e(canonical)}">
+  <link rel="canonical" href="{e(canonical)}">{robots}
   <meta property="og:title" content="{e(title)}">
   <meta property="og:description" content="{e(description)}">
   <meta property="og:url" content="{e(canonical)}">
@@ -337,7 +354,7 @@ def set_page(s: dict, related: list[dict], site_url: str, affiliates: dict | Non
         prices = [o["pln"] for o in s["offers"]]
         product["offers"] = {"@type": "AggregateOffer", "priceCurrency": "PLN", "lowPrice": min(prices),
                              "highPrice": max(prices), "offerCount": len(prices)}
-    return layout(root, title, description, url, body, product, s["img"])
+    return layout(root, title, description, url, body, product, s["img"], noindex=not has_price(s))
 
 
 def landing_page(root: str, title: str, intro: str, sets: list[dict], search_query: str, canonical: str, trail_label: str,
@@ -353,7 +370,8 @@ def landing_page(root: str, title: str, intro: str, sets: list[dict], search_que
     {card_list(root, shown) if shown else '<p class="meta">Nie mamy jeszcze takich zestawów w katalogu.</p>'}
     {more if len(sets) > LIST_LIMIT else ""}
     {"".join(f'<p class="about">{e(p)}</p>' for p in about)}"""
-    return layout(root, f"{title} – ceny i porównanie | {SITE_NAME}", intro, canonical, body)
+    return layout(root, f"{title} – ceny i porównanie | {SITE_NAME}", intro, canonical, body,
+                  noindex=not any(has_price(s) for s in shown))
 
 
 # Pages for popular searches that no single theme or filter covers (e.g. "lego kwiaty").
@@ -639,57 +657,55 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affi
     names = [a["name"] for a in affiliates.values()]
     NO_PRICE_LABEL = f"Sprawdź cenę na {join_names(names)} →" if names else "Brak cen"
     site_url = site_url.rstrip("/")
-    urls = [""]
+    today = dt.date.today().isoformat()
+    urls: list[tuple[str, str]] = [("", today)]  # (path, lastmod) of the pages we want in Google, hubs first
+    set_urls: list[tuple[str, str]] = []
+
+    def publish(rel: str, content: str, lastmod: str = today, into: list | None = None) -> None:
+        """Writes the page; it goes into the sitemap unless it is marked noindex."""
+        write(out_dir, rel, content)
+        if NOINDEX_META not in content:
+            (urls if into is None else into).append((rel, lastmod))
+
     by_theme: dict[str, list[dict]] = {}
     for s in sets:
         by_theme.setdefault(s["theme"], []).append(s)
 
     for s in sets:
-        write(out_dir, set_path(s), set_page(s, related_sets(s, by_theme), site_url, affiliates))
-        urls.append(set_path(s))
+        publish(set_path(s), set_page(s, related_sets(s, by_theme), site_url, affiliates), last_price_change(s, today), set_urls)
 
     for age in AGES:
         rel = f"wiek/{age}/"
         matching = [s for s in sets if fits_age(s, age)]
         intro = (f"Zestawy LEGO odpowiednie dla dziecka w wieku {age} {plural(age, 'roku', 'lat', 'lat')} według zaleceń producenta. "
                  f"Porównaj ceny w Polsce i UE i wybierz prezent dla {age}-latka.")
-        write(out_dir, rel, landing_page("../../", age_title(age), intro, matching, urlencode({"wiek": age}), f"{site_url}/{rel}", f"Wiek {age} {plural(age, 'rok', 'lata', 'lat')}", age))
-        urls.append(rel)
+        publish(rel, landing_page("../../", age_title(age), intro, matching, urlencode({"wiek": age}), f"{site_url}/{rel}", f"Wiek {age} {plural(age, 'rok', 'lata', 'lat')}", age))
     adults = [s for s in sets if s["age_min"] is not None and s["age_min"] >= 16]
-    write(out_dir, "wiek/dorosli/", landing_page(
+    publish("wiek/dorosli/", landing_page(
         "../../", "LEGO dla dorosłych", ADULTS_INTRO, adults, urlencode({"wiek": 18}), f"{site_url}/wiek/dorosli/", "Dla dorosłych",
         about=ADULTS_ABOUT))
-    urls.append("wiek/dorosli/")
-    write(out_dir, FLOWERS_PATH, landing_page("../", FLOWERS_TITLE, FLOWERS_INTRO, [s for s in sets if is_flower(s)], "",
-                                              f"{site_url}/{FLOWERS_PATH}", "Kwiaty LEGO", about=FLOWERS_ABOUT))
-    urls.append(FLOWERS_PATH)
+    publish(FLOWERS_PATH, landing_page("../", FLOWERS_TITLE, FLOWERS_INTRO, [s for s in sets if is_flower(s)], "",
+                                       f"{site_url}/{FLOWERS_PATH}", "Kwiaty LEGO", about=FLOWERS_ABOUT))
 
     for slug, title, lo, hi in PIECE_RANGES:
         rel = f"klocki/{slug}/"
         query = urlencode({k: v for k, v in (("od", lo), ("do", hi)) if v is not None})
-        write(out_dir, rel, landing_page("../../", title, f"{title}: zestawy posortowane od tych z najlepszą ceną. Porównaj ceny w Polsce i UE.",
-                                         [s for s in sets if in_range(s, lo, hi)], query, f"{site_url}/{rel}", title))
-        urls.append(rel)
+        publish(rel, landing_page("../../", title, f"{title}: zestawy posortowane od tych z najlepszą ceną. Porównaj ceny w Polsce i UE.",
+                                  [s for s in sets if in_range(s, lo, hi)], query, f"{site_url}/{rel}", title))
 
-    write(out_dir, "promocje/", deals_page(sets, site_url, eur_rate))
-    urls.append("promocje/")
-    write(out_dir, RETIRING_PATH, retiring_page(sets, site_url, eur_rate, dt.date.today()))
-    urls.append(RETIRING_PATH)
-    write(out_dir, "o-stronie/", about_page(site_url, shops or [], affiliates))
-    urls.append("o-stronie/")
-    write(out_dir, GIFT_FINDER_PATH, gift_finder_page(site_url))
-    urls.append(GIFT_FINDER_PATH)
+    publish("promocje/", deals_page(sets, site_url, eur_rate))
+    publish(RETIRING_PATH, retiring_page(sets, site_url, eur_rate, dt.date.today()))
+    publish("o-stronie/", about_page(site_url, shops or [], affiliates))
+    publish(GIFT_FINDER_PATH, gift_finder_page(site_url))
     for rel, content in seasonal_pages(sets, site_url, dt.date.today().year).items():
-        write(out_dir, rel, content)
-        urls.append(rel)
+        publish(rel, content)
 
     themes = sorted(((name, slugify(name)) for name in by_theme if name), key=lambda t: t[0].lower())
     for name, slug in themes:
         rel = f"seria/{slug}/"
         intro, about = THEME_COPY.get(name, (f"Wszystkie zestawy LEGO {name} od 2020 roku z cenami, liczbą klocków i wiekiem.", ()))
-        write(out_dir, rel, landing_page("../../", f"LEGO {name}", intro, by_theme[name], urlencode({"seria": name}),
-                                         f"{site_url}/{rel}", name, about=about))
-        urls.append(rel)
+        publish(rel, landing_page("../../", f"LEGO {name}", intro, by_theme[name], urlencode({"seria": name}),
+                                  f"{site_url}/{rel}", name, about=about))
 
     index_path = os.path.join(out_dir, "index.html")
     with open(index_path, encoding="utf-8") as f:
@@ -699,8 +715,8 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affi
     with open(index_path, "w", encoding="utf-8") as f:
         f.write(index)
 
-    today = dt.date.today().isoformat()
-    sitemap = "".join(f"<url><loc>{e(site_url)}/{u}</loc><lastmod>{today}</lastmod></url>" for u in urls)
+    urls += set_urls
+    sitemap = "".join(f"<url><loc>{e(site_url)}/{u}</loc><lastmod>{m}</lastmod></url>" for u, m in urls)
     write(out_dir, "robots.txt", f"User-agent: *\nAllow: /\nDisallow: /rolki/\n\nSitemap: {site_url}/sitemap.xml\n")
     write(out_dir, "sitemap.xml",
           f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sitemap}</urlset>\n')
