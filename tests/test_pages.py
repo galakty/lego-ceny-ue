@@ -100,16 +100,37 @@ class BuildTest(unittest.TestCase):
         page = self.read("kwiaty-lego/index.html")
         self.assertIn("<h1>Kwiaty LEGO: bukiety, orchidee i bonsai</h1>", page)
         self.assertIn("Nie mamy jeszcze takich zestawów", page)  # the test sets are no flowers
-        self.assertIn("kwiaty-lego/</loc>", self.read("sitemap.xml"))
+        self.assertIn(pages.NOINDEX_META, page)  # an empty list is not worth indexing
 
     def test_index_and_sitemap(self):
         index = self.read("index.html")
         self.assertIn('href="https://example.org/x/"', index)
         self.assertIn('href="seria/star-wars/"', index)
         sitemap = self.read("sitemap.xml")
-        self.assertIn("<loc>https://example.org/x/zestaw/75313/</loc>", sitemap)
+        self.assertIn("<loc>https://example.org/x/zestaw/60510/</loc>", sitemap)
         self.assertEqual(sitemap.count("<url>"), self.count)
         self.assertIn("Sitemap: https://example.org/x/sitemap.xml", self.read("robots.txt"))
+
+    def test_pages_without_prices_stay_out_of_google(self):
+        self.assertIn(pages.NOINDEX_META, self.read("zestaw/75313/index.html"))
+        self.assertNotIn(pages.NOINDEX_META, self.read("zestaw/60510/index.html"))
+        self.assertIn(pages.NOINDEX_META, self.read("seria/star-wars/index.html"))  # no set of the theme has a price
+        self.assertNotIn(pages.NOINDEX_META, self.read("seria/city/index.html"))
+        sitemap = self.read("sitemap.xml")
+        self.assertNotIn("zestaw/75313/", sitemap)
+        self.assertNotIn("seria/star-wars/", sitemap)
+        self.assertNotIn("kwiaty-lego/", sitemap)  # empty list
+        self.assertIn("seria/city/", sitemap)
+
+
+class LastmodTest(unittest.TestCase):
+    def test_last_price_change(self):
+        s = make_set("1", 10)
+        self.assertEqual(pages.last_price_change(s, "2026-11-09"), "2026-11-09")
+        s["history"] = [["2026-11-01", 100.0], ["2026-11-03", 90.0], ["2026-11-05", 90.0]]
+        self.assertEqual(pages.last_price_change(s, "2026-11-09"), "2026-11-03")
+        s["history"] = [["2026-11-01", 100.0], ["2026-11-02", 100.0]]
+        self.assertEqual(pages.last_price_change(s, "2026-11-09"), "2026-11-01")
 
 
 if __name__ == "__main__":
