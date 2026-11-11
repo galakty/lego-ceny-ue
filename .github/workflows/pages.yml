@@ -38,18 +38,11 @@ jobs:
       - name: Make reels
         id: reels
         continue-on-error: true   # the site still deploys when a video fails
-        timeout-minutes: 15       # a hung package mirror once held this step for an hour
+        timeout-minutes: 15       # unreachable apt mirrors once held this step for an hour
         run: |
-          missing=""
-          command -v ffmpeg >/dev/null || missing="ffmpeg"
-          [ -f /usr/share/fonts/opentype/inter/Inter-Bold.otf ] || missing="$missing fonts-inter"
-          if [ -n "$missing" ]; then
-            apt_opts="-o Acquire::http::Timeout=30 -o Acquire::Retries=3 -o DPkg::Lock::Timeout=120"
-            sudo apt-get $apt_opts update -qq
-            sudo apt-get $apt_opts install -y -qq --no-install-recommends $missing
-          fi
-          pip install --quiet pillow
-          python -m lego_prices reels
+          # pip only: apt mirrors were unreachable on the runner (2026-11-11), and fonts ship in the repo
+          timeout 300 pip install --quiet --disable-pip-version-check pillow imageio-ffmpeg==0.8.1
+          timeout 600 python -u -m lego_prices reels
       - name: Reels fallback page
         if: steps.reels.outcome != 'success'
         run: |
