@@ -1,7 +1,9 @@
 """Renders a vertical (1080x1920) price-comparison reel: hook, set photo, shop prices,
 saving and a klockownik.pl call to action. Frames are drawn with Pillow and piped to ffmpeg.
-Needs Pillow, ffmpeg and the Inter font (Ubuntu package fonts-inter); DejaVu Sans is the fallback."""
+Needs Pillow and ffmpeg (on PATH, or the binary from the imageio-ffmpeg package). The Inter font is
+bundled in lego_prices/fonts (SIL Open Font License); DejaVu Sans is the fallback."""
 import os
+import shutil
 import subprocess
 
 from PIL import Image, ImageDraw, ImageFont
@@ -16,7 +18,7 @@ MUTED = (163, 163, 157)
 RED = (208, 16, 18)
 GREEN = (74, 194, 107)
 
-FONT_DIR = "/usr/share/fonts/opentype/inter/"
+FONT_DIR = os.path.join(os.path.dirname(__file__), "fonts")
 FALLBACK_FONTS = {"Medium": "DejaVuSans.ttf", "SemiBold": "DejaVuSans-Bold.ttf", "Bold": "DejaVuSans-Bold.ttf",
                   "ExtraBold": "DejaVuSans-Bold.ttf", "Black": "DejaVuSans-Bold.ttf"}
 _fonts: dict = {}
@@ -30,6 +32,14 @@ def font(weight, size):
             path = "/usr/share/fonts/truetype/dejavu/" + FALLBACK_FONTS[weight]
         _fonts[key] = ImageFont.truetype(path, size)
     return _fonts[key]
+
+
+def ffmpeg_exe() -> str:
+    path = shutil.which("ffmpeg")
+    if path:
+        return path
+    import imageio_ffmpeg  # pip package with a static ffmpeg build, so CI needs no apt
+    return imageio_ffmpeg.get_ffmpeg_exe()
 
 
 def ease(t):
@@ -207,7 +217,7 @@ def render(deal: dict, logo_path: str, out_path: str, photo_path: str | None = N
         (3.5, lambda t: scene_cta(t, deal, logo)),
     ]
     total = sum(s[0] for s in scenes)
-    cmd = ["ffmpeg", "-y", "-loglevel", "error",
+    cmd = [ffmpeg_exe(), "-y", "-loglevel", "error",
            "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
            "-f", "lavfi", "-t", f"{total}", "-i", "anullsrc=r=44100:cl=stereo",
            "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "medium", "-crf", "20",
