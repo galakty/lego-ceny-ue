@@ -36,12 +36,31 @@ jobs:
       - name: Build site
         run: python -m lego_prices site
       - name: Make reels
+        id: reels
         continue-on-error: true   # the site still deploys when a video fails
+        timeout-minutes: 15       # a hung package mirror once held this step for an hour
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq ffmpeg fonts-inter
+          missing=""
+          command -v ffmpeg >/dev/null || missing="ffmpeg"
+          [ -f /usr/share/fonts/opentype/inter/Inter-Bold.otf ] || missing="$missing fonts-inter"
+          if [ -n "$missing" ]; then
+            apt_opts="-o Acquire::http::Timeout=30 -o Acquire::Retries=3 -o DPkg::Lock::Timeout=120"
+            sudo apt-get $apt_opts update -qq
+            sudo apt-get $apt_opts install -y -qq --no-install-recommends $missing
+          fi
           pip install --quiet pillow
           python -m lego_prices reels
+      - name: Reels fallback page
+        if: steps.reels.outcome != 'success'
+        run: |
+          mkdir -p site/rolki
+          [ -f site/rolki/index.html ] || cat > site/rolki/index.html <<'HTML'
+          <!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow">
+          <meta name="viewport" content="width=device-width, initial-scale=1"><title>Rolki na dziś</title></head>
+          <body style="font-family:system-ui,sans-serif;max-width:640px;margin:0 auto;padding:16px">
+          <h1>Rolki na dziś</h1><p>Dzisiejsze rolki nie powstały (błąd generatora). Spróbuj po następnej aktualizacji strony.</p>
+          </body></html>
+          HTML
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
