@@ -28,6 +28,11 @@ class ReelsTest(unittest.TestCase):
         prices.append(row("2026-11-04", "x", "a", 1200))  # 50% jump overnight
         self.assertEqual(reels.daily_picks(prices, count=5)["2026-11-04"], [])
 
+    def test_suspiciously_low_price_is_ignored(self):
+        prices = [row("2026-11-01", "x", "a", 408.65), row("2026-11-01", "x", "b", 269), row("2026-11-01", "x", "c", 106.94)]
+        picks = reels.daily_picks(prices)["2026-11-01"]
+        self.assertEqual(picks[0]["offers"], [("a", 408.65), ("b", 269.0)])
+
     def test_set_is_not_repeated_within_two_weeks(self):
         prices = []
         for d in ("2026-11-01", "2026-11-02", "2026-11-20"):

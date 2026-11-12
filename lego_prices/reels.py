@@ -8,7 +8,7 @@ import statistics
 import tempfile
 from collections import defaultdict
 
-from . import catalog, pages
+from . import catalog, deals, pages
 from .net import fetch
 from .scrape import load_shops
 
@@ -45,9 +45,12 @@ def day_candidates(days: dict, day: str) -> list[dict]:
         offers = [(shop, price) for shop, price in shops.items()
                   if not is_spike(price, [days[d][set_num][shop] for d in earlier_days
                                           if shop in days[d].get(set_num, {})])]
+        offers.sort(key=lambda o: (-o[1], o[0]))
+        # a price far below the next cheapest shop is usually a wrong price in the shop's data
+        while len(offers) > 1 and offers[-1][1] < deals.SUSPICIOUS_SHARE * offers[-2][1]:
+            offers.pop()
         if len(offers) < 2:
             continue
-        offers.sort(key=lambda o: (-o[1], o[0]))
         diff = offers[0][1] - offers[-1][1]
         share = diff / offers[0][1]
         if share >= MIN_SHARE:

@@ -114,12 +114,14 @@ def scrape_product(p: dict, shop: dict, today: str, rates: dict) -> tuple[dict |
 def scrape_shop(products: list[dict], shop: dict, today: str, rates: dict, delay: float) -> tuple[list, list]:
     rows, report = [], []
     for p in products:
+        started = time.monotonic()
         row, rep = scrape_product(p, shop, today, rates)
         report.append(rep)
         if row:
             rows.append(row)
         print(f"{p['set_num']} @ {p['shop']}: {rep['status']} {rep['detail']}")
-        time.sleep(delay)
+        # `delay` is the gap between the starts of two requests to the shop, so slow pages do not add to it
+        time.sleep(max(0.0, delay - (time.monotonic() - started)))
     ok = len(rows)
     errors = [r["detail"] for r in report if r["status"] != "ok"]
     msg = f"{shop['id']}: {ok}/{len(products)} prices" + (f", e.g. {errors[0][:120]}" if errors else "")
