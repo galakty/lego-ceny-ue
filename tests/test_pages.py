@@ -1,3 +1,4 @@
+import datetime as dt
 import os
 import shutil
 import tempfile
@@ -96,6 +97,13 @@ class BuildTest(unittest.TestCase):
         self.assertIn('href="../../wiek/6/">LEGO dla 6-latka</a>', page)
         self.assertIn('href="../../prezent/do-100-zl/">LEGO na prezent do 100 zł</a>', page)
 
+    def test_black_friday_page(self):
+        page = self.read("black-friday/index.html")
+        self.assertIn(f"<h1>🖤 Black Friday LEGO {dt.date.today().year}</h1>", page)
+        self.assertIn('"@type": "FAQPage"', page)
+        self.assertNotIn(pages.NOINDEX_META, page)  # the FAQ is worth indexing even on a day without deals
+        self.assertIn("black-friday/</loc>", self.read("sitemap.xml"))
+
     def test_flowers_page_exists_and_is_in_sitemap(self):
         page = self.read("kwiaty-lego/index.html")
         self.assertIn("<h1>Kwiaty LEGO: bukiety, orchidee i bonsai</h1>", page)
@@ -121,6 +129,28 @@ class BuildTest(unittest.TestCase):
         self.assertNotIn("seria/star-wars/", sitemap)
         self.assertNotIn("kwiaty-lego/", sitemap)  # empty list
         self.assertIn("seria/city/", sitemap)
+
+
+class BlackFridayTextTest(unittest.TestCase):
+    def test_status_before_during_after(self):
+        self.assertIn("Do Black Friday zostało 15 dni.", pages.black_friday_status(dt.date(2026, 11, 12)))
+        self.assertIn("został 1 dzień", pages.black_friday_status(dt.date(2026, 11, 26)))
+        self.assertIn("zostały 2 dni", pages.black_friday_status(dt.date(2026, 11, 25)))
+        self.assertIn("Trwa Black Friday 2026", pages.black_friday_status(dt.date(2026, 11, 30)))
+        self.assertIn("już za nami", pages.black_friday_status(dt.date(2026, 12, 1)))
+
+    def test_season_for_the_button(self):
+        self.assertTrue(pages.black_friday_season(dt.date(2026, 11, 1)))
+        self.assertTrue(pages.black_friday_season(dt.date(2026, 12, 1)))
+        self.assertFalse(pages.black_friday_season(dt.date(2026, 12, 2)))
+        self.assertFalse(pages.black_friday_season(dt.date(2026, 10, 31)))
+
+    def test_recently_cheaper_label(self):
+        s = make_set("1", 100, offers=[dict(OFFER, pln=130.0)])
+        s["history"] = [[f"2026-11-0{d}", p] for d, p in zip(range(1, 7), (110, 100, 120, 120, 125, 130))]
+        page = pages.black_friday_page([s], "https://example.org", None, dt.date(2026, 11, 12), ["MediaMarkt.pl"])
+        self.assertIn("02.11 było 100,00 zł", page)
+        self.assertIn("w sklepach: MediaMarkt.pl", page)
 
 
 class LastmodTest(unittest.TestCase):

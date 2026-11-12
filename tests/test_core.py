@@ -185,3 +185,15 @@ class ShopLinkTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class DecodeBodyTest(unittest.TestCase):
+    def test_gzip_deflate_and_plain(self):
+        import gzip, zlib
+        from lego_prices.net import decode_body
+        body = "<html>cena 99,99 zł</html>".encode()
+        self.assertEqual(decode_body(gzip.compress(body), "gzip"), body)
+        self.assertEqual(decode_body(zlib.compress(body), "deflate"), body)
+        raw = zlib.compressobj(wbits=-zlib.MAX_WBITS)
+        self.assertEqual(decode_body(raw.compress(body) + raw.flush(), "deflate"), body)
+        self.assertEqual(decode_body(body, None), body)

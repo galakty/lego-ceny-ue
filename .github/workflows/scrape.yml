@@ -1,8 +1,15 @@
 name: Daily price scrape
 
 on:
+  # GitHub starts scheduled runs late, often by hours, so the morning scrape has three chances;
+  # the first one that runs does the work and the later ones stop at the "Already scraped today" step.
+  # Off-the-hour minutes, because runs at full hours are delayed the most.
   schedule:
-    - cron: "0 5 * * *"   # daily at 05:00 UTC (06:00/07:00 in Poland)
+    - cron: "23 3 * * *"       # 04:23 Polish winter time
+    - cron: "41 4 * * *"
+    - cron: "17 6 * * *"
+    - cron: "13 13 24-30 11 *" # Black Friday week: a second, afternoon scrape every day
+    - cron: "13 13 1 12 *"
   workflow_dispatch:       # manual run from the Actions tab
     inputs:
       debug:
@@ -13,17 +20,35 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: scrape          # a late morning run waits for the previous one, then sees today's prices and stops
+  cancel-in-progress: false
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main        # a queued run must see the prices a previous run just pushed
+      - name: Already scraped today
+        id: guard
+        run: |
+          # only the morning schedules skip; the afternoon run and manual runs always scrape
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ github.event.schedule }}" != "13 13 24-30 11 *" ] \
+             && [ "${{ github.event.schedule }}" != "13 13 1 12 *" ] && grep -q "^$(date -u +%F)," data/prices.csv; then
+            echo "::notice::Prices for $(date -u +%F) are already saved, skipping"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/setup-python@v5
+        if: steps.guard.outputs.skip != 'true'
         with:
           python-version: "3.12"
       - name: Tests
+        if: steps.guard.outputs.skip != 'true'
         run: python -m unittest discover -s tests -v
       - name: Scrape prices
+        if: steps.guard.outputs.skip != 'true'
         run: python -m lego_prices scrape
         env:
           DEBUG_HTML_DIR: ${{ inputs.debug && '/tmp/debug-html' || '' }}
@@ -39,6 +64,7 @@ jobs:
           git add -A && git commit -qm "Pages from $(date -u +%FT%H:%M)"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" debug-html
       - name: Commit price history
+        if: steps.guard.outputs.skip != 'true'
         run: |
           git config user.name "lego-prices-bot"
           git config user.email "lego-prices-bot@users.noreply.github.com"

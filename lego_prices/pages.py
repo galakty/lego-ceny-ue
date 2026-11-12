@@ -121,8 +121,10 @@ def join_names(names: list[str]) -> str:
 
 def quick_nav(root: str) -> str:
     """Buttons to the seasonal pages right under the header, on every page."""
-    year = dt.date.today().year
-    links = [(GIFT_FINDER_PATH, "✨", "Kreator prezentu"), (f"kalendarz-adwentowy-{year}/", "🎄", f"Kalendarze adwentowe {year}")] + [
+    today = dt.date.today()
+    year = today.year
+    bf = [(BLACK_FRIDAY_PATH, "🖤", f"Black Friday {year}")] if black_friday_season(today) else []
+    links = bf + [(GIFT_FINDER_PATH, "✨", "Kreator prezentu"), (f"kalendarz-adwentowy-{year}/", "🎄", f"Kalendarze adwentowe {year}")] + [
         (f"prezent/do-{b}-zl/", "🎁", f"Prezent do {b} zł") for b in deals.GIFT_BUDGETS] + [
         (RETIRING_PATH, "⏳", "Wycofywane wkrótce")]
     items = "".join(f'<a class="quick-btn" href="{root}{href}"><span aria-hidden="true">{icon}</span> {e(label)}</a>'
@@ -427,7 +429,8 @@ def browse_nav(themes: list[tuple[str, str]]) -> str:
     pieces = " ".join(f'<a href="klocki/{slug}/">{e(t.replace("LEGO ", ""))}</a>' for slug, t, _, _ in PIECE_RANGES)
     series = " ".join(f'<a href="seria/{slug}/">{e(name)}</a>' for name, slug in themes)
     return (f'<nav class="browse wrap" aria-label="Przeglądaj"><h2>Przeglądaj</h2>'
-            f'<p><strong>Okazje:</strong> <a href="promocje/">Promocje dnia</a> <a href="{GIFT_FINDER_PATH}">Kreator prezentu</a> '
+            f'<p><strong>Okazje:</strong> <a href="promocje/">Promocje dnia</a> <a href="{BLACK_FRIDAY_PATH}">Black Friday LEGO</a> '
+            f'<a href="{GIFT_FINDER_PATH}">Kreator prezentu</a> '
             f'<a href="kalendarz-adwentowy-{dt.date.today().year}/">Kalendarze adwentowe {dt.date.today().year}</a> '
             + " ".join(f'<a href="prezent/do-{b}-zl/">Prezent do {b} zł</a>' for b in deals.GIFT_BUDGETS)
             + f' <a href="{RETIRING_PATH}">Wycofywane wkrótce</a></p>'
@@ -468,6 +471,95 @@ def deals_page(sets: list[dict], site_url: str, eur_rate: float | None) -> str:
     {"".join(sections)}"""
     image = next((s["img"] for s, _, _ in below + drops if s["img"]), "")
     return layout(root, f"Promocje LEGO – dzisiejsze okazje cenowe | {SITE_NAME}", intro, f"{site_url}/promocje/", body, image=image)
+
+
+BLACK_FRIDAY_PATH = "black-friday/"
+
+
+def black_friday_season(today: dt.date) -> bool:
+    """The Black Friday button shows from November 1 until the day after Cyber Monday."""
+    return dt.date(today.year, 11, 1) <= today <= deals.black_friday_date(today.year) + dt.timedelta(days=4)
+
+
+def black_friday_status(today: dt.date) -> str:
+    bf = deals.black_friday_date(today.year)
+    cyber = bf + dt.timedelta(days=3)
+    days = (bf - today).days
+    if days > 0:
+        return (f"Black Friday {today.year} wypada w piątek {bf.day} listopada, a Cyber Monday w poniedziałek {cyber.day} listopada. "
+                f"Do Black Friday {plural(days, 'został', 'zostały', 'zostało')} {days} {plural(days, 'dzień', 'dni', 'dni')}.")
+    if today <= cyber:
+        return f"Trwa Black Friday {today.year}: promocje potrwają do Cyber Monday, {cyber.day} listopada."
+    return (f"Black Friday {today.year} już za nami ({bf.day} listopada). Ceny nadal sprawdzamy codziennie, "
+            "więc lista poniżej pokazuje dzisiejsze okazje.")
+
+
+def black_friday_faq(year: int, shops: list[str]) -> list[tuple[str, str]]:
+    bf = deals.black_friday_date(year)
+    cyber = bf + dt.timedelta(days=3)
+    where = f" w sklepach: {join_names(shops)}" if shops else " w sklepach"
+    return [
+        (f"Kiedy jest Black Friday {year}?",
+         f"Black Friday {year} wypada w piątek {bf.day} listopada. Wiele sklepów zaczyna promocje wcześniej, w ramach Black Week, "
+         f"a kończy je w Cyber Monday, {cyber.day} listopada."),
+        ("Jak sprawdzić, czy promocja na LEGO jest prawdziwa?",
+         "Porównaj cenę z najniższą ceną z 30 dni przed obniżką. Sklep musi ją podać przy każdej promocji (dyrektywa Omnibus). "
+         "Na Klockowniku przy każdym zestawie widać najniższą cenę z 30 dni i wykres ceny, więc od razu zobaczysz, czy obniżka jest realna."),
+        ("Czy LEGO jest najtańsze na Black Friday?",
+         "Nie zawsze. Ceny LEGO zmieniają się przez cały rok, a część zestawów była tańsza kilka tygodni temu niż w dniu promocji. "
+         "Dlatego pokazujemy osobno zestawy, które są dziś najtańsze od 30 dni, i te, które niedawno kosztowały wyraźnie mniej."),
+        ("Gdzie kupić LEGO najtaniej na Black Friday?",
+         f"Ceny porównujemy codziennie{where}. Od 24 listopada do 1 grudnia sprawdzamy je dwa razy dziennie, rano i po południu. "
+         "Przed zakupem sprawdź cenę na stronie sklepu, bo w czasie promocji potrafi zmienić się w ciągu kilku godzin."),
+    ]
+
+
+def black_friday_page(sets: list[dict], site_url: str, eur_rate: float | None, today: dt.date, shops: list[str]) -> str:
+    """Black Friday deals judged against the price history: real 30-day lows, and sets that were recently cheaper."""
+    root = "../"
+    year = today.year
+    real, higher = deals.black_friday(sets, eur_rate)
+    sections = []
+    if real:
+        notes = {s["num"]: (price, label) for s, price, label in real}
+        sections.append(f"""<h2>Prawdziwe promocje: najtaniej od {deals.LOOKBACK_DAYS} dni</h2>
+    <p class="meta">Dzisiejsza najniższa cena jest najniższa od {deals.LOOKBACK_DAYS} dni i co najmniej {percent(deals.BF_REAL_MIN)}
+    poniżej najwyższej ceny z tego okresu albo ceny katalogowej LEGO w Niemczech (po kursie NBP).</p>
+    {card_list(root, [s for s, _, _ in real], notes)}""")
+    if higher:
+        notes = {s["num"]: (price, f"{date_text(day)[:5]} było {pln(low)}") for s, price, low, day in higher}
+        sections.append(f"""<h2>Uwaga: niedawno było taniej</h2>
+    <p class="meta">Te zestawy kosztują dziś co najmniej {percent(deals.BF_HIGHER)} więcej niż w ostatnich {deals.LOOKBACK_DAYS} dniach.
+    Nawet jeśli sklep pokazuje „promocję”, warto poczekać albo poszukać w innym sklepie.</p>
+    {card_list(root, [s for s, _, _, _ in higher], notes)}""")
+    if not sections:
+        sections.append('<p class="meta">Dziś nie znaleźliśmy wyraźnych okazji. Sprawdź jutro, ceny aktualizujemy codziennie.</p>')
+    dates = [o["date"] for s in sets for o in s["offers"]]
+    updated = f" Ceny z {date_text(max(dates))}." if dates else ""
+    intro = (f"Black Friday LEGO {year}: sprawdzamy, które promocje są prawdziwe. Porównujemy dzisiejsze ceny w sklepach "
+             f"z cenami z ostatnich {deals.LOOKBACK_DAYS} dni.{updated}")
+    faq = black_friday_faq(year, shops)
+    faq_html = "".join(f"<h3>{e(q)}</h3><p>{e(a)}</p>" for q, a in faq)
+    body = f"""{breadcrumbs(root, [(f"Black Friday {year}", None)])}
+    <h1>🖤 Black Friday LEGO {year}</h1>
+    <p class="lead">{e(intro)}</p>
+    <p><strong>{e(black_friday_status(today))}</strong></p>
+    {"".join(sections)}
+    <section class="about">
+      <h2>Więcej okazji</h2>
+      <p><a href="{root}promocje/">Promocje dnia</a> · <a href="{root}{GIFT_FINDER_PATH}">Kreator prezentu</a> ·
+        {" · ".join(f'<a href="{root}prezent/do-{b}-zl/">Prezent do {b} zł</a>' for b in deals.GIFT_BUDGETS)} ·
+        <a href="{root}{RETIRING_PATH}">Wycofywane wkrótce</a></p>
+      <h2>Najczęstsze pytania</h2>
+      {faq_html}
+    </section>"""
+    jsonld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}
+    image = next((s["img"] for s, *_ in real + higher if s["img"]), "")
+    description = (f"Black Friday LEGO {year}: prawdziwe promocje na zestawy LEGO, najniższe ceny od 30 dni "
+                   "i lista zestawów, które niedawno były tańsze. Ceny sprawdzane codziennie.")
+    return layout(root, f"Black Friday LEGO {year} – prawdziwe promocje i ceny | {SITE_NAME}", description,
+                  f"{site_url}/{BLACK_FRIDAY_PATH}", body, jsonld=jsonld, image=image)
 
 
 GIFT_FINDER_PATH = "prezent/kreator/"
@@ -694,6 +786,7 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affi
                                   [s for s in sets if in_range(s, lo, hi)], query, f"{site_url}/{rel}", title))
 
     publish("promocje/", deals_page(sets, site_url, eur_rate))
+    publish(BLACK_FRIDAY_PATH, black_friday_page(sets, site_url, eur_rate, dt.date.today(), shops or []))
     publish(RETIRING_PATH, retiring_page(sets, site_url, eur_rate, dt.date.today()))
     publish("o-stronie/", about_page(site_url, shops or [], affiliates))
     publish(GIFT_FINDER_PATH, gift_finder_page(site_url))
