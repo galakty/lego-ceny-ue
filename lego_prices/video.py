@@ -68,17 +68,69 @@ def brick_icon(logo):
     return logo.crop((190, 190, 610, 560))
 
 
-def scene_hook(t, deal):
-    img = Image.new("RGB", (W, H), YELLOW)
+def badge(text, f, fill, ink, pad=(36, 18), angle=0):
+    """Rounded label as an RGBA image, optionally tilted."""
+    probe = ImageDraw.Draw(Image.new("RGB", (1, 1)))
+    l, t_, r, b = probe.textbbox((0, 0), text, font=f)
+    w, h = r - l + 2 * pad[0], b - t_ + 2 * pad[1]
+    img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    a1 = ease(t / 0.4)
-    center_text(d, 560 + 40 * (1 - a1), deal.get("hook", "Ten sam zestaw LEGO."), font("ExtraBold", 84), INK, a1, YELLOW)
-    a2 = ease((t - 0.6) / 0.4)
-    center_text(d, 700 + 40 * (1 - a2), "Różnica w cenie:", font("Bold", 72), INK, a2, YELLOW)
-    a3 = ease((t - 1.2) / 0.5)
-    if a3 > 0:
-        size = int(150 + 60 * a3)
-        center_text(d, 900 - (size - 150) / 2, f"{deal['diff']:.0f} zł", font("Black", size), RED, a3, YELLOW)
+    d.rounded_rectangle((0, 0, w - 1, h - 1), radius=h // 3, fill=fill)
+    d.text((pad[0] - l, pad[1] - t_), text, font=f, fill=ink)
+    return img.rotate(angle, expand=True, resample=Image.BICUBIC) if angle else img
+
+
+def cover_art(deal, brick, photo):
+    """Static parts of the opening frame: hook, photo card, name and prices. It is the first frame,
+    which Facebook and Instagram show as the preview, so everything is visible at t=0."""
+    img = Image.new("RGB", (W, H), DARK)
+    d = ImageDraw.Draw(img)
+    d.rectangle((0, 0, W, 150), fill=YELLOW)
+    center_text(d, 38, deal.get("hook", "Ten sam zestaw LEGO.").upper(), font("Black", 64), INK)
+    if photo is not None:
+        card, mask = photo
+    else:  # no photo: the logo brick on a yellow card
+        card = Image.new("RGB", (1000, 1000), YELLOW)
+        b = brick.resize((int(brick.width * 1.7), int(brick.height * 1.7)))
+        card.paste(b, ((1000 - b.width) // 2, (1000 - b.height) // 2))
+        mask = Image.new("L", card.size, 0)
+        ImageDraw.Draw(mask).rounded_rectangle((0, 0, *card.size), radius=60, fill=255)
+    return img, card, mask
+
+
+def scene_cover(t, deal, art):
+    base, card, mask = art
+    img = base.copy()
+    # slow zoom on the photo keeps the frame moving without hiding anything
+    z = 1 + 0.05 * min(t / 3.5, 1)
+    cw, ch = int(card.width * z), int(card.height * z)
+    c = card.resize((cw, ch), Image.BILINEAR).crop(((cw - card.width) // 2, (ch - card.height) // 2,
+                                                    (cw - card.width) // 2 + card.width, (ch - card.height) // 2 + card.height))
+    cx, cy = (W - card.width) // 2, 190
+    img.paste(c, (cx, cy), mask)
+    d = ImageDraw.Draw(img)
+    pulse = 1 + 0.06 * abs(((t * 1.6) % 2) - 1)  # gentle beat on the discount
+    b = badge(f"-{deal['pct']:.0f}%", font("Black", int(110 * pulse)), RED, (255, 255, 255), angle=8)
+    img.paste(b, (min(W - b.width - 20, cx + card.width - b.width + 60), cy - 40), b)
+    y = cy + card.height + 40
+    d = ImageDraw.Draw(img)
+    f, lines = fit_lines(d, f"{deal['theme']} {deal['name']}", "ExtraBold", 66, W - 120, 2)
+    for line in lines:
+        center_text(d, y, line, f, WHITE)
+        y += int(f.size * 1.15)
+    y += 20
+    old = f"{pln(deal['offers'][0][1])}"
+    fo = font("SemiBold", 58)
+    ow = d.textlength(old, font=fo)
+    ox = (W - ow) / 2
+    d.text((ox, y), old, font=fo, fill=MUTED)
+    d.line((ox - 6, y + 38, ox + ow + 6, y + 38), fill=RED, width=6)
+    y += 80
+    center_text(d, y, pln(deal["offers"][-1][1]), font("Black", 120), GREEN)
+    y += 160
+    tag = badge(f"Taniej o {deal['diff']:.0f} zł w innym sklepie", font("ExtraBold", 50), YELLOW, INK)
+    if y + tag.height < H - 40:
+        img.paste(tag, ((W - tag.width) // 2, y), tag)
     return img
 
 
@@ -117,34 +169,6 @@ def photo_card(photo, box_w, box_h, full=False):
     mask = Image.new("L", (box_w, box_h), 0)
     ImageDraw.Draw(mask).rounded_rectangle((0, 0, box_w, box_h), radius=60, fill=255)
     return card, mask
-
-
-def scene_set(t, deal, brick, photo=None):
-    img = Image.new("RGB", (W, H), DARK)
-    d = ImageDraw.Draw(img)
-    a = ease(t / 0.5)
-    if photo is not None:
-        card, mask = photo
-        bx, by = (W - card.width) // 2, int(260 + 60 * (1 - a))
-        img.paste(card, (bx, by), mask)
-        text_top = by + card.height + 70
-    else:
-        b = brick.resize((int(brick.width * 1.4), int(brick.height * 1.4)))
-        bx, by = int((W - b.width) / 2), int(400 + 60 * (1 - a))
-        d.rounded_rectangle((bx - 60, by - 60, bx + b.width + 60, by + b.height + 60), radius=60, fill=YELLOW)
-        img.paste(b, (bx, by))
-        text_top = 1110
-    d = ImageDraw.Draw(img)
-    a2 = ease((t - 0.4) / 0.5)
-    center_text(d, text_top + 30 * (1 - a2), deal["theme"], font("SemiBold", 64), YELLOW, a2, DARK)
-    f, lines = fit_lines(d, deal["name"], "Black", 100, W - 140, 3)
-    y = text_top + 90
-    for line in lines:
-        center_text(d, y + 30 * (1 - a2), line, f, WHITE, a2, DARK)
-        y += int(f.size * 1.15)
-    a3 = ease((t - 0.9) / 0.5)
-    center_text(d, y + 30, f"nr zestawu {deal['set_num']}", font("Medium", 52), MUTED, a3, DARK)
-    return img
 
 
 def scene_prices(t, deal):
@@ -189,11 +213,19 @@ def scene_saving(t, deal):
     return img
 
 
-def scene_cta(t, deal, logo):
+def scene_cta(t, deal, logo, art=None):
     img = Image.new("RGB", (W, H), YELLOW)
     a = ease(t / 0.5)
-    lg = logo.resize((620, 620))
-    img.paste(lg, (int((W - 620) / 2), int(380 + 40 * (1 - a))))
+    if art is not None:  # the set again, smaller, so the last frame still shows what the video is about
+        _, card, mask = art
+        small = card.resize((560, int(card.height * 560 / card.width)))
+        m = mask.resize(small.size)
+        img.paste(small, ((W - 560) // 2, int(300 + 40 * (1 - a))), m)
+        lg = logo.resize((220, 220))
+        img.paste(lg, ((W - 220) // 2, 60))
+    else:
+        lg = logo.resize((620, 620))
+        img.paste(lg, (int((W - 620) / 2), int(380 + 40 * (1 - a))))
     d = ImageDraw.Draw(img)
     a2 = ease((t - 0.4) / 0.5)
     center_text(d, 1100, "Sprawdź cenę, zanim kupisz:", font("Bold", 64), INK, a2, YELLOW)
@@ -207,14 +239,14 @@ def render(deal: dict, logo_path: str, out_path: str, photo_path: str | None = N
     and photo_full (photo is box art on a dark background). Returns the length in seconds."""
     logo = Image.open(logo_path).convert("RGB")
     brick = brick_icon(logo)
-    photo = photo_card(Image.open(photo_path).convert("RGBA"), 920, 900, deal.get("photo_full", False)) if photo_path else None
+    photo = photo_card(Image.open(photo_path).convert("RGBA"), 1000, 1000, deal.get("photo_full", False)) if photo_path else None
     n_offers = len(deal["offers"])
+    art = cover_art(deal, brick, photo)
     scenes = [
-        (3.2, lambda t: scene_hook(t, deal)),
-        (3.0, lambda t: scene_set(t, deal, brick, photo)),
+        (3.5, lambda t: scene_cover(t, deal, art)),
         (0.8 + n_offers * 1.1 + 1.6, lambda t: scene_prices(t, deal)),
         (2.8, lambda t: scene_saving(t, deal)),
-        (3.5, lambda t: scene_cta(t, deal, logo)),
+        (3.5, lambda t: scene_cta(t, deal, logo, art)),
     ]
     total = sum(s[0] for s in scenes)
     cmd = [ffmpeg_exe(), "-y", "-loglevel", "error",
