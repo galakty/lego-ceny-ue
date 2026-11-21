@@ -128,7 +128,7 @@ def build(data_dir: str = "data", out_dir: str = "site") -> str:
         config = [{k: a[k] for k in ("name", "search_url", "query_param", "params")} for a in programs.values()]
         f.write(f"window.AFFILIATES = {json.dumps(config, ensure_ascii=False)};\n")
     try:
-        eur_rate = fx.load_rates()["EUR"]
+        eur_rate = fx.load_rates(os.path.join(data_dir, "fx_rates.json"), attempts=2)["EUR"]
     except Exception as exc:  # the deals page then skips the list price comparison
         print(f"No EUR rate from NBP: {exc}")
         eur_rate = None
