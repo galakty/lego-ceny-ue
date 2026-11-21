@@ -107,8 +107,11 @@ def scrape_product(p: dict, shop: dict, today: str, rates: dict) -> tuple[dict |
     if offer is None:
         return None, {**_key(p), "status": "no_price",
                       "detail": f"price not found (page: {page_title(html)!r}, {len(html)} chars)"}
-    return build_row(today, p["set_num"], shop, p["url"], offer, rates), \
-        {**_key(p), "status": "ok", "detail": f"{offer.price} {offer.currency}"}
+    try:
+        row = build_row(today, p["set_num"], shop, p["url"], offer, rates)
+    except KeyError as e:  # currency missing from the exchange rates (e.g. NBP was down)
+        return None, {**_key(p), "status": "error", "detail": f"no exchange rate for {e}"}
+    return row, {**_key(p), "status": "ok", "detail": f"{offer.price} {offer.currency}"}
 
 
 def scrape_shop(products: list[dict], shop: dict, today: str, rates: dict, delay: float) -> tuple[list, list]:
@@ -135,7 +138,7 @@ def notice(msg: str) -> None:
 
 def main(data_dir: str = "data", delay: float = 2.0) -> int:
     shops = load_shops(os.path.join(data_dir, "shops.json"))
-    rates = load_rates()
+    rates = load_rates(os.path.join(data_dir, "fx_rates.json"))
     today = dt.date.today().isoformat()
     by_shop: dict[str, list[dict]] = {}
     report = []

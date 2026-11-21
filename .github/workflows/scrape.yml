@@ -68,7 +68,7 @@ jobs:
         run: |
           git config user.name "lego-prices-bot"
           git config user.email "lego-prices-bot@users.noreply.github.com"
-          if ! out=$(git add data/prices.csv data/last_run.csv 2>&1); then
+          if ! out=$(git add data/prices.csv data/last_run.csv data/fx_rates.json 2>&1); then
             echo "::error::git add: $(echo "$out" | tr '\n' ' ')"
             exit 1
           fi
