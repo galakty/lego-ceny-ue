@@ -145,6 +145,12 @@ class BlackFridayTextTest(unittest.TestCase):
         self.assertFalse(pages.black_friday_season(dt.date(2026, 12, 2)))
         self.assertFalse(pages.black_friday_season(dt.date(2026, 10, 31)))
 
+    def test_banner_only_in_season(self):
+        banner = pages.black_friday_banner("../", dt.date(2026, 11, 22))
+        self.assertIn('href="../black-friday/"', banner)
+        self.assertIn("Do Black Friday zostało 5 dni.", banner)
+        self.assertEqual(pages.black_friday_banner("../", dt.date(2026, 12, 10)), "")
+
     def test_recently_cheaper_label(self):
         s = make_set("1", 100, offers=[dict(OFFER, pln=130.0)])
         s["history"] = [[f"2026-11-0{d}", p] for d, p in zip(range(1, 7), (110, 100, 120, 120, 125, 130))]

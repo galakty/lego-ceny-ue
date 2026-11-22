@@ -127,8 +127,8 @@ def quick_nav(root: str) -> str:
     links = bf + [(GIFT_FINDER_PATH, "✨", "Kreator prezentu"), (f"kalendarz-adwentowy-{year}/", "🎄", f"Kalendarze adwentowe {year}")] + [
         (f"prezent/do-{b}-zl/", "🎁", f"Prezent do {b} zł") for b in deals.GIFT_BUDGETS] + [
         (RETIRING_PATH, "⏳", "Wycofywane wkrótce")]
-    items = "".join(f'<a class="quick-btn" href="{root}{href}"><span aria-hidden="true">{icon}</span> {e(label)}</a>'
-                    for href, icon, label in links)
+    items = "".join(f'<a class="quick-btn{" quick-hot" if href == BLACK_FRIDAY_PATH else ""}" href="{root}{href}">'
+                    f'<span aria-hidden="true">{icon}</span> {e(label)}</a>' for href, icon, label in links)
     return f'<nav class="quick" aria-label="Na skróty"><div class="wrap">{items}</div></nav>'
 
 
@@ -466,6 +466,7 @@ def deals_page(sets: list[dict], site_url: str, eur_rate: float | None) -> str:
     intro = (f"Zestawy LEGO, które dziś kosztują wyraźnie mniej niż zwykle: co najmniej {percent(deals.MIN_DISCOUNT)} "
              f"poniżej ceny katalogowej albo poniżej ceny z ostatnich tygodni.{updated}")
     body = f"""{breadcrumbs(root, [("Promocje dnia", None)])}
+    {black_friday_banner(root, dt.date.today())}
     <h1>Promocje LEGO dnia</h1>
     <p class="lead">{e(intro)}</p>
     {"".join(sections)}"""
@@ -492,6 +493,14 @@ def black_friday_status(today: dt.date) -> str:
         return f"Trwa Black Friday {today.year}: promocje potrwają do Cyber Monday, {cyber.day} listopada."
     return (f"Black Friday {today.year} już za nami ({bf.day} listopada). Ceny nadal sprawdzamy codziennie, "
             "więc lista poniżej pokazuje dzisiejsze okazje.")
+
+
+def black_friday_banner(root: str, today: dt.date) -> str:
+    """Wide link to the Black Friday page for the home and deals pages, only in the Black Friday season."""
+    if not black_friday_season(today):
+        return ""
+    return (f'<a class="bf-banner" href="{root}{BLACK_FRIDAY_PATH}"><strong>🖤 Black Friday LEGO {today.year}</strong> '
+            f'<span>{e(black_friday_status(today))} Zobacz, które promocje są prawdziwe →</span></a>')
 
 
 def black_friday_faq(year: int, shops: list[str]) -> list[tuple[str, str]]:
@@ -803,7 +812,8 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affi
     index_path = os.path.join(out_dir, "index.html")
     with open(index_path, encoding="utf-8") as f:
         index = f.read()
-    index = (index.replace("<!-- BROWSE -->", browse_nav(themes)).replace("<!-- QUICKNAV -->", quick_nav("")).replace("{{SITE_URL}}", site_url)
+    index = (index.replace("<!-- BROWSE -->", browse_nav(themes)).replace("<!-- QUICKNAV -->", quick_nav(""))
+             .replace("<!-- BFBANNER -->", black_friday_banner("", dt.date.today())).replace("{{SITE_URL}}", site_url)
              .replace("<!-- DISCLOSURE -->", e(DISCLOSURE)))
     with open(index_path, "w", encoding="utf-8") as f:
         f.write(index)

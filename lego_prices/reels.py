@@ -20,6 +20,9 @@ REPEAT_DAYS = 14       # a set featured in a video is skipped for this many days
 OUT_PATH = "rolki/"
 HOOKS = ["Ten sam zestaw LEGO.", "Przepłacasz za LEGO?", "Zanim kupisz ten zestaw…"]
 BASE_TAGS = ["#lego", "#klocki", "#promocje", "#legopolska"]
+BF_HOOKS = ["Black Friday czy ściema?", "Promocja na Black Friday?", "Black Friday: sprawdź to!"]
+BF_TAGS = ["#blackfriday", "#blackweek"]
+BF_LINK = "klockownik.pl/black-friday"
 
 
 def daily_offers(prices: list[dict]) -> dict[str, dict[str, dict[str, float]]]:
@@ -75,8 +78,13 @@ def theme_label(theme: str) -> str:
     return f"LEGO {theme}" if theme else "LEGO"
 
 
-def hashtags(theme: str) -> str:
-    tags = list(BASE_TAGS)
+def is_black_friday(day: str) -> bool:
+    """Reels from the Black Friday season send viewers to the Black Friday page instead of the home page."""
+    return pages.black_friday_season(dt.date.fromisoformat(day))
+
+
+def hashtags(theme: str, black_friday: bool = False) -> str:
+    tags = list(BASE_TAGS) + (BF_TAGS if black_friday else [])
     slug = pages.slugify(theme).replace("-", "")
     if slug:
         tags.insert(1, f"#lego{slug}")
@@ -90,7 +98,10 @@ def date_note(day: str) -> str:
 
 def video_deal(pick: dict, s: dict, shop_names: dict[str, str], index: int) -> dict:
     """The dict video.render() takes."""
+    bf = is_black_friday(pick["date"])
     return {
+        "black_friday": bf,
+        "cta_url": BF_LINK if bf else "klockownik.pl",
         "set_num": pick["set_num"],
         "theme": theme_label(s.get("theme", "")),
         "name": s.get("name", pick["set_num"]),
@@ -98,20 +109,27 @@ def video_deal(pick: dict, s: dict, shop_names: dict[str, str], index: int) -> d
         "diff": pick["diff"],
         "pct": pick["pct"],
         "note": date_note(pick["date"]),
-        "hook": HOOKS[index % len(HOOKS)],
+        "hook": (BF_HOOKS if bf else HOOKS)[index % len(HOOKS)],
     }
 
 
 def caption(deal: dict, s: dict) -> str:
-    lines = [f"{deal['theme']} {deal['name']} ({deal['set_num']}): "
+    bf = deal.get("black_friday", False)
+    lines = [f"{'🖤 Black Friday: ' if bf else ''}{deal['theme']} {deal['name']} ({deal['set_num']}): "
              f"różnica w cenie aż {deal['diff']:.0f} zł 😳"]
     lines += [f"{shop}: {pages.pln(price)}" for shop, price in deal["offers"]]
-    lines += ["Zanim kupisz, sprawdź ceny na klockownik.pl (link w bio)", deal["note"], "", hashtags(s.get("theme", ""))]
+    if bf:
+        lines += [f"Które promocje na Black Friday są prawdziwe? Sprawdzamy ceny z 30 dni: {BF_LINK} (link w bio)"]
+    else:
+        lines += ["Zanim kupisz, sprawdź ceny na klockownik.pl (link w bio)"]
+    lines += [deal["note"], "", hashtags(s.get("theme", ""), bf)]
     return "\n".join(lines)
 
 
 def reels_page(day: str, items: list[tuple[str, str, str]]) -> str:
     """items: (video file name, title, caption)."""
+    bio = (f'<p class="tip">🖤 Black Friday: ustaw link w bio na <strong>https://{BF_LINK}/</strong>, '
+           f'bo filmy i opisy kierują teraz na tę stronę.</p>') if is_black_friday(day) else ""
     cards = "".join(
         f'<section class="reel"><h2>{html.escape(title)}</h2>'
         f'<video src="{name}" controls playsinline preload="metadata" width="270"></video>'
@@ -128,10 +146,12 @@ body{{font-family:system-ui,sans-serif;margin:0 auto;max-width:640px;padding:16p
 .reel{{background:#fff;border:1px solid #e3e3de;border-radius:12px;padding:16px;margin:16px 0}}
 video{{display:block;max-width:100%;border-radius:8px;background:#000}}
 textarea{{width:100%;box-sizing:border-box;font:inherit;font-size:14px}}
+.tip{{background:#1d1d1b;color:#fff;border-left:6px solid #ffcf00;border-radius:8px;padding:12px}}
 .btn{{display:inline-block;background:#ffcf00;color:#1d1d1b;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none}}
 </style></head><body>
 <h1>Rolki na dziś</h1>
 <p>Okazje z cen z dnia {html.escape(day)}. Pobierz film, dodaj muzykę w aplikacji i skopiuj opis.</p>
+{bio}
 {cards}
 </body></html>
 """

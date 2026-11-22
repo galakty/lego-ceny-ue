@@ -53,6 +53,25 @@ class ReelsTest(unittest.TestCase):
         self.assertIn("Ceny z 4.11.2026", text)
         self.assertIn("#legotechnic", text)
 
+    def test_black_friday_reels_point_to_the_black_friday_page(self):
+        s = {"name": "Volvo EC500 Hybrid Excavator", "theme": "Technic"}
+        pick = {"set_num": "42215", "date": "2026-11-24", "offers": [("mm", 1979.16), ("neo", 1309.9)], "diff": 669.26, "pct": 33.8}
+        deal = reels.video_deal(pick, s, {}, 0)
+        self.assertEqual(deal["cta_url"], "klockownik.pl/black-friday")
+        self.assertEqual(deal["hook"], reels.BF_HOOKS[0])
+        text = reels.caption(deal, s)
+        self.assertTrue(text.startswith("🖤 Black Friday: LEGO Technic"))
+        self.assertIn("klockownik.pl/black-friday (link w bio)", text)
+        self.assertIn("#blackfriday", text)
+        self.assertIn("https://klockownik.pl/black-friday/", reels.reels_page("2026-11-24", []))
+        pick["date"] = "2026-12-10"
+        deal = reels.video_deal(pick, s, {}, 0)
+        self.assertEqual(deal["cta_url"], "klockownik.pl")
+        text = reels.caption(deal, s)
+        self.assertNotIn("Black Friday", text)
+        self.assertIn("Zanim kupisz, sprawdź ceny na klockownik.pl", text)
+        self.assertNotIn("black-friday", reels.reels_page("2026-12-10", []))
+
 
 if __name__ == "__main__":
     unittest.main()
