@@ -72,6 +72,29 @@ def age_title(age: int) -> str:
     return f"LEGO dla {age}-latka"
 
 
+def age_about(age: int) -> tuple[str, ...]:
+    """Text under the list on an age page, for searches like "lego dla 13 latka" or "klocki dla 2 latki"."""
+    if age <= 3:
+        tip = ("W tym wieku najlepsze są duże klocki LEGO DUPLO: łatwo je złapać, nie da się ich połknąć, a zestawy "
+               "z pojazdami, zwierzętami i domkami uczą prostych zabaw w odgrywanie ról.")
+    elif age <= 6:
+        tip = ("To czas pierwszych zestawów z małymi klockami: LEGO City, Friends, Disney, Gabby's Dollhouse czy Bluey. "
+               "Zestawy oznaczone 4+ mają większe elementy startowe i proste instrukcje, więc dziecko zbuduje je samo.")
+    elif age <= 9:
+        tip = ("Dzieci w tym wieku budują już samodzielnie zestawy po kilkaset klocków. Najczęściej wybierane serie to "
+               "Ninjago, Star Wars, Minecraft, Harry Potter, City, Friends i Technic dla miłośników aut.")
+    elif age <= 12:
+        tip = ("Starsze dzieci chętnie składają większe modele: Technic z mechanizmami, statki Star Wars, zamki Harry Potter, "
+               "Speed Champions czy Icons. Zestawy po 500–1000 klocków starczają na kilka wieczorów budowania.")
+    else:
+        tip = ("Nastolatki często sięgają już po zestawy dla dorosłych (18+): samochody Technic, budowle Architecture, "
+               "kwiaty LEGO i duże modele z filmów. To dobry prezent dla chłopaka i dla dziewczyny, bo liczy się temat, nie płeć.")
+    return (tip,
+            f"Szukasz prezentu dla {age}-latka albo {age}-latki? Lista zawiera zestawy, które LEGO poleca dla dziecka w wieku "
+            f"{age} {plural(age, 'roku', 'lat', 'lat')}, od tych z najlepszą ceną. Ceny w polskich sklepach sprawdzamy codziennie, "
+            "a przy każdym zestawie widać najniższą cenę z 30 dni, więc łatwo trafisz na promocję.")
+
+
 def best_cost(s: dict) -> float | None:
     if not s["offers"]:
         return None
@@ -97,8 +120,22 @@ def ranked(sets: list[dict], age: int | None = None) -> list[dict]:
 
 
 def has_price(s: dict) -> bool:
-    """A set page is worth indexing once we have shown a price for it (now or in the history)."""
+    """A list page is worth indexing once one of its sets has a price (now or in the history)."""
     return bool(s["offers"] or s["history"])
+
+
+NEW_SET_YEARS = 2  # sets from this year and the previous one are searched by number even before we have a price
+REGULAR_SET_NUM = re.compile(r"\d{4,5}")  # skips gear, books, keychains and promo codes in the catalog
+
+
+def is_new_set(s: dict, today: dt.date) -> bool:
+    return bool(REGULAR_SET_NUM.fullmatch(s["num"])) and s["year"] > today.year - NEW_SET_YEARS
+
+
+def set_worth_indexing(s: dict, today: dt.date) -> bool:
+    """A set page goes to Google when it has a price, or when the set is new: people search new sets by number,
+    and the page then points to the shop searches."""
+    return has_price(s) or is_new_set(s, today)
 
 
 def last_price_change(s: dict, default: str) -> str:
@@ -127,8 +164,8 @@ def quick_nav(root: str) -> str:
     links = bf + [(GIFT_FINDER_PATH, "✨", "Kreator prezentu"), (f"kalendarz-adwentowy-{year}/", "🎄", f"Kalendarze adwentowe {year}")] + [
         (f"prezent/do-{b}-zl/", "🎁", f"Prezent do {b} zł") for b in deals.GIFT_BUDGETS] + [
         (RETIRING_PATH, "⏳", "Wycofywane wkrótce")]
-    items = "".join(f'<a class="quick-btn" href="{root}{href}"><span aria-hidden="true">{icon}</span> {e(label)}</a>'
-                    for href, icon, label in links)
+    items = "".join(f'<a class="quick-btn{" quick-hot" if href == BLACK_FRIDAY_PATH else ""}" href="{root}{href}">'
+                    f'<span aria-hidden="true">{icon}</span> {e(label)}</a>' for href, icon, label in links)
     return f'<nav class="quick" aria-label="Na skróty"><div class="wrap">{items}</div></nav>'
 
 
@@ -356,11 +393,11 @@ def set_page(s: dict, related: list[dict], site_url: str, affiliates: dict | Non
         prices = [o["pln"] for o in s["offers"]]
         product["offers"] = {"@type": "AggregateOffer", "priceCurrency": "PLN", "lowPrice": min(prices),
                              "highPrice": max(prices), "offerCount": len(prices)}
-    return layout(root, title, description, url, body, product, s["img"], noindex=not has_price(s))
+    return layout(root, title, description, url, body, product, s["img"], noindex=not set_worth_indexing(s, dt.date.today()))
 
 
 def landing_page(root: str, title: str, intro: str, sets: list[dict], search_query: str, canonical: str, trail_label: str,
-                 age: int | None = None, about: tuple[str, ...] = ()) -> str:
+                 age: int | None = None, about: tuple[str, ...] = (), page_title: str | None = None) -> str:
     """List page; `about` paragraphs go under the list, so the sets stay at the top and search engines get the text."""
     shown = ranked(sets, age)[:LIST_LIMIT]
     more = (f'<p><a class="more-link" href="{root}?{search_query}">Zobacz wszystkie ({len(sets)}) '
@@ -372,7 +409,7 @@ def landing_page(root: str, title: str, intro: str, sets: list[dict], search_que
     {card_list(root, shown) if shown else '<p class="meta">Nie mamy jeszcze takich zestawów w katalogu.</p>'}
     {more if len(sets) > LIST_LIMIT else ""}
     {"".join(f'<p class="about">{e(p)}</p>' for p in about)}"""
-    return layout(root, f"{title} – ceny i porównanie | {SITE_NAME}", intro, canonical, body,
+    return layout(root, page_title or f"{title} – ceny i porównanie | {SITE_NAME}", intro, canonical, body,
                   noindex=not any(has_price(s) for s in shown))
 
 
@@ -466,6 +503,7 @@ def deals_page(sets: list[dict], site_url: str, eur_rate: float | None) -> str:
     intro = (f"Zestawy LEGO, które dziś kosztują wyraźnie mniej niż zwykle: co najmniej {percent(deals.MIN_DISCOUNT)} "
              f"poniżej ceny katalogowej albo poniżej ceny z ostatnich tygodni.{updated}")
     body = f"""{breadcrumbs(root, [("Promocje dnia", None)])}
+    {black_friday_banner(root, dt.date.today())}
     <h1>Promocje LEGO dnia</h1>
     <p class="lead">{e(intro)}</p>
     {"".join(sections)}"""
@@ -492,6 +530,14 @@ def black_friday_status(today: dt.date) -> str:
         return f"Trwa Black Friday {today.year}: promocje potrwają do Cyber Monday, {cyber.day} listopada."
     return (f"Black Friday {today.year} już za nami ({bf.day} listopada). Ceny nadal sprawdzamy codziennie, "
             "więc lista poniżej pokazuje dzisiejsze okazje.")
+
+
+def black_friday_banner(root: str, today: dt.date) -> str:
+    """Wide link to the Black Friday page for the home and deals pages, only in the Black Friday season."""
+    if not black_friday_season(today):
+        return ""
+    return (f'<a class="bf-banner" href="{root}{BLACK_FRIDAY_PATH}"><strong>🖤 Black Friday LEGO {today.year}</strong> '
+            f'<span>{e(black_friday_status(today))} Zobacz, które promocje są prawdziwe →</span></a>')
 
 
 def black_friday_faq(year: int, shops: list[str]) -> list[tuple[str, str]]:
@@ -640,7 +686,8 @@ def gift_finder_page(site_url: str) -> str:
                   f"{site_url}/{GIFT_FINDER_PATH}", body, jsonld=jsonld)
 
 
-def priced_list_page(title: str, intro: str, items: list[tuple[dict, float | None]], canonical: str, empty: str) -> str:
+def priced_list_page(title: str, intro: str, items: list[tuple[dict, float | None]], canonical: str, empty: str,
+                     about: tuple[str, ...] = (), page_title: str | None = None) -> str:
     """A landing page whose cards show the given prices (the cheapest offer in stock) instead of the best cost."""
     root = "../../"
     notes = {s["num"]: (price, "") for s, price in items}
@@ -648,20 +695,28 @@ def priced_list_page(title: str, intro: str, items: list[tuple[dict, float | Non
     body = f"""{breadcrumbs(root, [(title, None)])}
     <h1>{e(title)}</h1>
     <p class="lead">{e(intro)}</p>
-    {cards}"""
+    {cards}
+    {"".join(f'<p class="about">{e(p)}</p>' for p in about)}"""
     image = next((s["img"] for s, _ in items if s["img"]), "")
-    return layout(root, f"{title} – ceny i porównanie | {SITE_NAME}", intro, canonical, body, image=image)
+    return layout(root, page_title or f"{title} – ceny i porównanie | {SITE_NAME}", intro, canonical, body, image=image)
 
 
 def seasonal_pages(sets: list[dict], site_url: str, year: int) -> dict[str, str]:
     """Pages for the gift season: advent calendars and gifts within a budget. Maps path to HTML."""
     out = {}
     rel = f"kalendarz-adwentowy-{year}/"
+    calendars = deals.advent_calendars(sets, year)
+    themes = sorted({s["theme"] for s, _ in calendars})
+    about = (f"Kalendarz adwentowy LEGO (po angielsku LEGO Advent Calendar {year}) ma 24 okienka: w każdym jest mała "
+             "figurka albo model do zbudowania, od 1 do 24 grudnia. To popularny prezent na Mikołajki i odliczanie do świąt.",
+             (f"W {year} roku LEGO wydało kalendarze z serii: {join_names(themes)}. " if themes else "")
+             + "Kalendarze najczęściej tanieją w listopadzie, w czasie Black Friday, a po 1 grudnia szybko znikają ze sklepów.")
     out[rel] = priced_list_page(
         f"Kalendarze adwentowe LEGO {year}",
-        f"Wszystkie kalendarze adwentowe LEGO na {year} rok, od najtańszego. Ceny z polskich sklepów aktualizujemy codziennie, "
-        "więc łatwo złapiesz promocję przed grudniem.",
-        deals.advent_calendars(sets, year), f"{site_url}/{rel}", "Nie mamy jeszcze kalendarzy na ten rok.")
+        f"Wszystkie kalendarze adwentowe LEGO na {year} rok (LEGO Advent Calendar {year}), od najtańszego. "
+        "Ceny z polskich sklepów aktualizujemy codziennie, więc łatwo złapiesz promocję przed grudniem.",
+        calendars, f"{site_url}/{rel}", "Nie mamy jeszcze kalendarzy na ten rok.", about,
+        f"Kalendarz adwentowy LEGO {year} (Advent Calendar) – ceny | {SITE_NAME}")
     for budget in deals.GIFT_BUDGETS:
         rel = f"prezent/do-{budget}-zl/"
         out[rel] = priced_list_page(
@@ -764,14 +819,17 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affi
         by_theme.setdefault(s["theme"], []).append(s)
 
     for s in sets:
-        publish(set_path(s), set_page(s, related_sets(s, by_theme), site_url, affiliates), last_price_change(s, today), set_urls)
+        lastmod = last_price_change(s, today) if has_price(s) else f"{s['year']}-01-01"  # a fixed day, so the sitemap does not claim daily changes
+        publish(set_path(s), set_page(s, related_sets(s, by_theme), site_url, affiliates), lastmod, set_urls)
 
     for age in AGES:
         rel = f"wiek/{age}/"
         matching = [s for s in sets if fits_age(s, age)]
         intro = (f"Zestawy LEGO odpowiednie dla dziecka w wieku {age} {plural(age, 'roku', 'lat', 'lat')} według zaleceń producenta. "
-                 f"Porównaj ceny w Polsce i UE i wybierz prezent dla {age}-latka.")
-        publish(rel, landing_page("../../", age_title(age), intro, matching, urlencode({"wiek": age}), f"{site_url}/{rel}", f"Wiek {age} {plural(age, 'rok', 'lata', 'lat')}", age))
+                 f"Porównaj ceny i wybierz prezent dla {age}-latka lub {age}-latki.")
+        publish(rel, landing_page("../../", age_title(age), intro, matching, urlencode({"wiek": age}), f"{site_url}/{rel}",
+                                  f"Wiek {age} {plural(age, 'rok', 'lata', 'lat')}", age, about=age_about(age),
+                                  page_title=f"LEGO dla {age}-latka i {age}-latki – prezent, ceny | {SITE_NAME}"))
     adults = [s for s in sets if s["age_min"] is not None and s["age_min"] >= 16]
     publish("wiek/dorosli/", landing_page(
         "../../", "LEGO dla dorosłych", ADULTS_INTRO, adults, urlencode({"wiek": 18}), f"{site_url}/wiek/dorosli/", "Dla dorosłych",
@@ -803,7 +861,8 @@ def build(sets: list[dict], out_dir: str, site_url: str = DEFAULT_SITE_URL, affi
     index_path = os.path.join(out_dir, "index.html")
     with open(index_path, encoding="utf-8") as f:
         index = f.read()
-    index = (index.replace("<!-- BROWSE -->", browse_nav(themes)).replace("<!-- QUICKNAV -->", quick_nav("")).replace("{{SITE_URL}}", site_url)
+    index = (index.replace("<!-- BROWSE -->", browse_nav(themes)).replace("<!-- QUICKNAV -->", quick_nav(""))
+             .replace("<!-- BFBANNER -->", black_friday_banner("", dt.date.today())).replace("{{SITE_URL}}", site_url)
              .replace("<!-- DISCLOSURE -->", e(DISCLOSURE)))
     with open(index_path, "w", encoding="utf-8") as f:
         f.write(index)

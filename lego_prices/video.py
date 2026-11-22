@@ -229,7 +229,11 @@ def scene_cta(t, deal, logo, art=None):
     d = ImageDraw.Draw(img)
     a2 = ease((t - 0.4) / 0.5)
     center_text(d, 1100, "Sprawdź cenę, zanim kupisz:", font("Bold", 64), INK, a2, YELLOW)
-    center_text(d, 1200, "klockownik.pl", font("Black", 120), INK, a2, YELLOW)
+    url = deal.get("cta_url", "klockownik.pl")
+    size = 120  # longer addresses (the Black Friday page) shrink to fit the frame
+    while size > 50 and d.textlength(url, font=font("Black", size)) > W - 80:
+        size -= 6
+    center_text(d, 1200, url, font("Black", size), INK, a2, YELLOW)
     center_text(d, 1700, deal["note"], font("Medium", 36), (90, 75, 0), a2, YELLOW)
     return img
 

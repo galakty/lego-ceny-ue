@@ -50,7 +50,8 @@ class BuildTest(unittest.TestCase):
         self.out = tempfile.mkdtemp()
         with open(os.path.join(self.out, "index.html"), "w") as f:
             f.write('<link rel="canonical" href="{{SITE_URL}}/"><!-- BROWSE -->')
-        self.sets = [make_set("60510", 252, 5, offers=[OFFER]), make_set("75313", 6785, 18, theme="Star Wars")]
+        self.sets = [make_set("60510", 252, 5, offers=[OFFER]), make_set("75313", 6785, 18, theme="Star Wars", year=2021),
+                     make_set("77120", 374, 8, theme="Sonic", year=dt.date.today().year), make_set("L0002261", 10, year=dt.date.today().year)]
         self.count = pages.build(self.sets, self.out, "https://example.org/x/")
 
     def tearDown(self):
@@ -130,6 +131,19 @@ class BuildTest(unittest.TestCase):
         self.assertNotIn("kwiaty-lego/", sitemap)  # empty list
         self.assertIn("seria/city/", sitemap)
 
+    def test_new_sets_are_indexed_without_prices(self):
+        self.assertNotIn(pages.NOINDEX_META, self.read("zestaw/77120/index.html"))  # searched by number before shops list it
+        self.assertIn(pages.NOINDEX_META, self.read("zestaw/L0002261/index.html"))  # gear and books are not
+        sitemap = self.read("sitemap.xml")
+        self.assertIn(f"zestaw/77120/</loc><lastmod>{dt.date.today().year}-01-01", sitemap)
+        self.assertIn(pages.NOINDEX_META, self.read("seria/sonic/index.html"))  # list pages still need a price
+
+    def test_age_page_text(self):
+        page = self.read("wiek/13/index.html")
+        self.assertIn("<title>LEGO dla 13-latka i 13-latki", page)
+        self.assertIn("prezentu dla 13-latka albo 13-latki", page)
+        self.assertIn("DUPLO", self.read("wiek/2/index.html"))
+
 
 class BlackFridayTextTest(unittest.TestCase):
     def test_status_before_during_after(self):
@@ -144,6 +158,12 @@ class BlackFridayTextTest(unittest.TestCase):
         self.assertTrue(pages.black_friday_season(dt.date(2026, 12, 1)))
         self.assertFalse(pages.black_friday_season(dt.date(2026, 12, 2)))
         self.assertFalse(pages.black_friday_season(dt.date(2026, 10, 31)))
+
+    def test_banner_only_in_season(self):
+        banner = pages.black_friday_banner("../", dt.date(2026, 11, 22))
+        self.assertIn('href="../black-friday/"', banner)
+        self.assertIn("Do Black Friday zostało 5 dni.", banner)
+        self.assertEqual(pages.black_friday_banner("../", dt.date(2026, 12, 10)), "")
 
     def test_recently_cheaper_label(self):
         s = make_set("1", 100, offers=[dict(OFFER, pln=130.0)])

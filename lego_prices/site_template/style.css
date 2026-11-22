@@ -30,6 +30,13 @@ a { color: inherit; }
   box-shadow: 0 3px 0 #00467a; transition: transform 0.1s, box-shadow 0.1s, background 0.1s; }
 .quick-btn:hover, .quick-btn:focus-visible { background: #ffcf00; color: #1d1d1b; box-shadow: 0 3px 0 #b39100; transform: translateY(-2px); outline: none; }
 .quick-btn:active { transform: translateY(2px); box-shadow: 0 1px 0 #00467a; }
+.quick-btn.quick-hot { background: #ffcf00; color: #1d1d1b; box-shadow: 0 3px 0 #b39100; }
+.bf-banner { display: block; margin: 16px 0 0; padding: 14px 18px; border-radius: 12px; background: #1d1d1b; color: #fff;
+  border-left: 8px solid #ffcf00; text-decoration: none; line-height: 1.4; }
+.bf-banner strong { display: block; font-size: 1.2rem; color: #ffcf00; }
+.bf-banner span { font-size: 0.95rem; }
+.bf-banner:hover, .bf-banner:focus-visible { background: #000; outline: none; }
+.bf-banner:hover span, .bf-banner:focus-visible span { text-decoration: underline; }
 @media (max-width: 760px) {
   /* phones: one row that scrolls sideways instead of a tall stack; the auto margins center it when it fits */
   .quick { padding: 8px 0; }
