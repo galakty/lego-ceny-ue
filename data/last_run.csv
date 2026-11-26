@@ -12,7 +12,7 @@ set_num,shop,status,detail
 10291,mediamarkt-pl,ok,428.13 PLN
 10295,mediamarkt-pl,ok,635.0 PLN
 10297,mediamarkt-pl,ok,1409.38 PLN
-10298,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Creator Expert 10298 | Vespa 125 - sprawdź cenę i opinie w MediaMark', 1293619 chars)"
+10298,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Creator Expert 10298 | Vespa 125 - sprawdź cenę i opinie w MediaMark', 1293210 chars)"
 10302,mediamarkt-pl,ok,918.75 PLN
 10304,mediamarkt-pl,ok,1262.19 PLN
 10305,mediamarkt-pl,ok,2734.05 PLN
@@ -51,7 +51,7 @@ set_num,shop,status,detail
 10418,mediamarkt-pl,ok,197.54 PLN
 10428,mediamarkt-pl,ok,513.99 PLN
 10431,mediamarkt-pl,ok,98.08 PLN
-10432,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Peppa Pig Boat Trip Wielobarwny | sprawdź cenę i opinie w MediaMarkt', 1303843 chars)"
+10432,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Peppa Pig Boat Trip Wielobarwny | sprawdź cenę i opinie w MediaMarkt', 1303434 chars)"
 10434,mediamarkt-pl,ok,379.07 PLN
 10442,mediamarkt-pl,ok,35.59 PLN
 10444,mediamarkt-pl,ok,80.0 PLN
@@ -159,7 +159,7 @@ set_num,shop,status,detail
 11373,mediamarkt-pl,ok,271.99 PLN
 11375,mediamarkt-pl,ok,322.99 PLN
 11376,mediamarkt-pl,ok,487.99 PLN
-11377,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 11377 Icons | Władca Pierścieni: Minas Tirith - sprawdź cenę i opini', 1310601 chars)"
+11377,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 11377 Icons | Władca Pierścieni: Minas Tirith - sprawdź cenę i opini', 1310192 chars)"
 11378,mediamarkt-pl,ok,1164.06 PLN
 11379,mediamarkt-pl,ok,558.99 PLN
 11381,mediamarkt-pl,ok,524.0 PLN
@@ -249,7 +249,7 @@ set_num,shop,status,detail
 21367,mediamarkt-pl,ok,539.0 PLN
 21368,mediamarkt-pl,ok,269.0 PLN
 21370,mediamarkt-pl,ok,489.99 PLN
-21372,mediamarkt-pl,ok,533.99 PLN
+21372,mediamarkt-pl,ok,535.99 PLN
 21376,mediamarkt-pl,ok,484.0 PLN
 21582,mediamarkt-pl,ok,108.99 PLN
 21583,mediamarkt-pl,ok,27.57 PLN
@@ -338,7 +338,7 @@ set_num,shop,status,detail
 30728,mediamarkt-pl,ok,14.9 PLN
 30731,mediamarkt-pl,ok,14.9 PLN
 30732,mediamarkt-pl,ok,23.99 PLN
-30734,mediamarkt-pl,ok,22.19 PLN
+30734,mediamarkt-pl,ok,22.79 PLN
 30735,mediamarkt-pl,ok,16.99 PLN
 30736,mediamarkt-pl,ok,14.9 PLN
 31102,mediamarkt-pl,ok,74.99 PLN
@@ -346,7 +346,7 @@ set_num,shop,status,detail
 31109,mediamarkt-pl,ok,673.44 PLN
 31111,mediamarkt-pl,ok,29.99 PLN
 31114,mediamarkt-pl,ok,74.99 PLN
-31120,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Creator Medieval Castle Wielobarwny | sprawdź cenę i opinie w MediaM', 1290453 chars)"
+31120,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Creator Medieval Castle Wielobarwny | sprawdź cenę i opinie w MediaM', 1290045 chars)"
 31125,mediamarkt-pl,ok,49.99 PLN
 31126,mediamarkt-pl,ok,150.0 PLN
 31127,mediamarkt-pl,ok,74.99 PLN
@@ -391,13 +391,13 @@ set_num,shop,status,detail
 31213,mediamarkt-pl,ok,575.32 PLN
 31214,mediamarkt-pl,ok,290.99 PLN
 31215,mediamarkt-pl,ok,755.99 PLN
-31216,mediamarkt-pl,ok,519.99 PLN
+31216,mediamarkt-pl,ok,520.99 PLN
 31217,mediamarkt-pl,error,HTTP Error 410: Gone
 31218,mediamarkt-pl,ok,454.0 PLN
-31220,mediamarkt-pl,ok,866.99 PLN
+31220,mediamarkt-pl,ok,868.99 PLN
 31376,mediamarkt-pl,ok,27.08 PLN
 31377,mediamarkt-pl,ok,32.99 PLN
-31378,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 31378 | Creator 3 w 1, Teleskop do badań kosmicznych, 278 el., od 8 ', 1297805 chars)"
+31378,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 31378 | Creator 3 w 1, Teleskop do badań kosmicznych, 278 el., od 8 ', 1297396 chars)"
 31379,mediamarkt-pl,ok,108.99 PLN
 31380,mediamarkt-pl,ok,52.89 PLN
 31381,mediamarkt-pl,ok,125.99 PLN
@@ -499,7 +499,7 @@ set_num,shop,status,detail
 40811,mediamarkt-pl,ok,57.99 PLN
 40812,mediamarkt-pl,ok,61.0 PLN
 40816,mediamarkt-pl,ok,83.29 PLN
-40820,mediamarkt-pl,ok,209.0 PLN
+40820,mediamarkt-pl,ok,210.0 PLN
 40822,mediamarkt-pl,ok,57.99 PLN
 40824,mediamarkt-pl,ok,141.99 PLN
 40825,mediamarkt-pl,ok,120.0 PLN
@@ -624,11 +624,11 @@ set_num,shop,status,detail
 42117,mediamarkt-pl,ok,39.99 PLN
 42122,mediamarkt-pl,ok,209.99 PLN
 42123,mediamarkt-pl,ok,197.99 PLN
-42125,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Technic 42125 Ferrari 488 GTE “AF Corse #51” Wielobarwny | sprawdź c', 1295669 chars)"
-42126,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Technic Ford F-150 Raptor Wielobarwny | sprawdź cenę i opinie w Medi', 1299821 chars)"
+42125,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Technic 42125 Ferrari 488 GTE “AF Corse #51” Wielobarwny | sprawdź c', 1295260 chars)"
+42126,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Technic Ford F-150 Raptor Wielobarwny | sprawdź cenę i opinie w Medi', 1299412 chars)"
 42129,mediamarkt-pl,ok,1654.69 PLN
 42130,mediamarkt-pl,ok,1168.99 PLN
-42131,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Technic App-Controlled Cat D11 Bulldozer Wielobarwny | sprawdź cenę ', 1306625 chars)"
+42131,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Technic App-Controlled Cat D11 Bulldozer Wielobarwny | sprawdź cenę ', 1306216 chars)"
 42132,mediamarkt-pl,ok,30.99 PLN
 42133,mediamarkt-pl,ok,39.99 PLN
 42134,mediamarkt-pl,ok,74.99 PLN
@@ -725,7 +725,7 @@ set_num,shop,status,detail
 42688,mediamarkt-pl,ok,239.99 PLN
 42689,mediamarkt-pl,ok,412.99 PLN
 42692,mediamarkt-pl,ok,28.99 PLN
-42693,mediamarkt-pl,ok,126.99 PLN
+42693,mediamarkt-pl,ok,124.99 PLN
 42695,mediamarkt-pl,ok,129.99 PLN
 42696,mediamarkt-pl,ok,111.99 PLN
 42697,mediamarkt-pl,ok,208.99 PLN
@@ -733,7 +733,7 @@ set_num,shop,status,detail
 42699,mediamarkt-pl,error,HTTP Error 410: Gone
 42700,mediamarkt-pl,ok,210.99 PLN
 42702,mediamarkt-pl,ok,149.99 PLN
-42703,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Friends 42703 | Syrenkowa Kolejka Górska - sprawdź cenę i opinie w M', 1298024 chars)"
+42703,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Friends 42703 | Syrenkowa Kolejka Górska - sprawdź cenę i opinie w M', 1297615 chars)"
 42704,mediamarkt-pl,ok,591.99 PLN
 42705,mediamarkt-pl,ok,447.99 PLN
 43011,mediamarkt-pl,ok,99.99 PLN
@@ -822,7 +822,7 @@ set_num,shop,status,detail
 43291,mediamarkt-pl,ok,117.99 PLN
 43292,mediamarkt-pl,ok,252.99 PLN
 43293,mediamarkt-pl,ok,151.99 PLN
-43295,mediamarkt-pl,ok,182.99 PLN
+43295,mediamarkt-pl,ok,208.99 PLN
 43296,mediamarkt-pl,ok,274.99 PLN
 43297,mediamarkt-pl,ok,353.99 PLN
 43298,mediamarkt-pl,ok,117.99 PLN
@@ -878,7 +878,7 @@ set_num,shop,status,detail
 60331,mediamarkt-pl,ok,24.99 PLN
 60332,mediamarkt-pl,ok,9.99 PLN
 60333,mediamarkt-pl,ok,39.21 PLN
-60336,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO City Freight Train Wielobarwny | sprawdź cenę i opinie w MediaMarkt', 1296955 chars)"
+60336,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO City Freight Train Wielobarwny | sprawdź cenę i opinie w MediaMarkt', 1296545 chars)"
 60337,mediamarkt-pl,ok,519.99 PLN
 60338,mediamarkt-pl,ok,207.35 PLN
 60339,mediamarkt-pl,ok,526.26 PLN
@@ -939,7 +939,7 @@ set_num,shop,status,detail
 60451,mediamarkt-pl,ok,80.0 PLN
 60452,mediamarkt-pl,ok,98.08 PLN
 60455,mediamarkt-pl,ok,27.99 PLN
-60456,mediamarkt-pl,ok,130.99 PLN
+60456,mediamarkt-pl,ok,129.99 PLN
 60463,mediamarkt-pl,ok,53.0 PLN
 60464,mediamarkt-pl,ok,69.99 PLN
 60469,mediamarkt-pl,ok,314.0 PLN
@@ -961,7 +961,7 @@ set_num,shop,status,detail
 60492,mediamarkt-pl,ok,124.99 PLN
 60493,mediamarkt-pl,ok,192.99 PLN
 60494,mediamarkt-pl,ok,449.99 PLN
-60495,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 60495 | City, Śmieciarka do recyklingu, 434 szt., 7 lat - sprawdź ce', 1300558 chars)"
+60495,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 60495 | City, Śmieciarka do recyklingu, 434 szt., 7 lat - sprawdź ce', 1300148 chars)"
 60496,mediamarkt-pl,ok,216.99 PLN
 60497,mediamarkt-pl,ok,198.99 PLN
 60498,mediamarkt-pl,ok,85.69 PLN
@@ -1081,9 +1081,9 @@ set_num,shop,status,detail
 71831,mediamarkt-pl,ok,211.99 PLN
 71833,mediamarkt-pl,ok,227.99 PLN
 71834,mediamarkt-pl,ok,454.99 PLN
-71844,mediamarkt-pl,ok,475.99 PLN
+71844,mediamarkt-pl,ok,476.99 PLN
 71846,mediamarkt-pl,ok,572.99 PLN
-71847,mediamarkt-pl,ok,703.99 PLN
+71847,mediamarkt-pl,ok,771.57 PLN
 71849,mediamarkt-pl,ok,29.99 PLN
 71850,mediamarkt-pl,ok,29.99 PLN
 71853,mediamarkt-pl,ok,81.0 PLN
@@ -2362,7 +2362,7 @@ set_num,shop,status,detail
 10281,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10291,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10295,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10302,planetaklockow-pl,error,HTTP Error 403: Forbidden
+10302,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10311,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10313,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10315,planetaklockow-pl,error,HTTP Error 403: Forbidden
@@ -2370,20 +2370,20 @@ set_num,shop,status,detail
 10329,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10330,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10331,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10337,planetaklockow-pl,error,HTTP Error 403: Forbidden
+10337,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10342,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10343,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10344,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10347,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10348,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10349,planetaklockow-pl,error,HTTP Error 403: Forbidden
+10349,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10353,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10357,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10358,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10359,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10362,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10363,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10365,planetaklockow-pl,error,HTTP Error 403: Forbidden
+10365,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10367,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10368,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10369,planetaklockow-pl,error,HTTP Error 403: Forbidden
@@ -2391,19 +2391,19 @@ set_num,shop,status,detail
 10412,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10413,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10414,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10415,planetaklockow-pl,error,HTTP Error 403: Forbidden
+10415,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10416,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10418,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10419,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10421,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10422,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10423,planetaklockow-pl,error,HTTP Error 403: Forbidden
+10423,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10425,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10426,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10427,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10428,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10432,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10433,planetaklockow-pl,error,HTTP Error 403: Forbidden
+10433,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10434,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10435,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10440,planetaklockow-pl,error,HTTP Error 403: Forbidden
@@ -2411,24 +2411,24 @@ set_num,shop,status,detail
 10442,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10443,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10444,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10445,planetaklockow-pl,error,HTTP Error 403: Forbidden
+10445,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10446,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10447,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10448,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10450,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10451,planetaklockow-pl,error,HTTP Error 403: Forbidden
+10451,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10452,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10453,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10456,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10457,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10458,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10459,planetaklockow-pl,error,HTTP Error 403: Forbidden
+10459,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10460,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10462,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10463,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10464,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10465,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10467,planetaklockow-pl,error,HTTP Error 403: Forbidden
+10467,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10468,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10469,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10470,planetaklockow-pl,error,HTTP Error 403: Forbidden
@@ -2436,117 +2436,117 @@ set_num,shop,status,detail
 10472,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10473,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10474,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10475,planetaklockow-pl,error,HTTP Error 403: Forbidden
+10475,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10476,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10477,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10478,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10479,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10480,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10776,planetaklockow-pl,error,HTTP Error 403: Forbidden
+10776,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10788,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10913,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10914,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10941,planetaklockow-pl,error,HTTP Error 403: Forbidden
 10954,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10966,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10967,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10969,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10977,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10983,planetaklockow-pl,error,HTTP Error 403: Forbidden
-10989,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11023,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11024,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11025,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11026,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11034,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11036,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11039,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11040,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11041,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11045,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11198,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11199,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11200,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11201,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11202,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11203,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11205,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11206,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11207,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11208,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11209,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11211,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11212,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11215,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11216,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11217,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11221,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11372,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11373,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11374,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11375,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11376,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11378,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11379,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11380,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11381,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11382,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11383,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11384,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11385,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11386,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11387,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11501,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11502,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11503,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11504,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11505,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11506,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11507,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11508,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11509,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11510,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11511,planetaklockow-pl,error,HTTP Error 403: Forbidden
-11514,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21060,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21061,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21062,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21063,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21064,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21065,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21066,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21067,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21256,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21260,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21266,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21267,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21268,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21269,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21270,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21272,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21273,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21274,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21275,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21276,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21277,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21278,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21279,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21339,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21345,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21357,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21362,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21366,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21367,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21368,planetaklockow-pl,error,HTTP Error 403: Forbidden
-21370,planetaklockow-pl,error,HTTP Error 403: Forbidden
+10966,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+10967,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+10969,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+10977,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+10983,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+10989,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11023,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11024,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11025,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11026,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11034,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11036,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11039,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11040,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+11041,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11045,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11198,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11199,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11200,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+11201,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11202,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11203,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11205,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11206,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11207,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11208,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11209,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11211,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11212,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11215,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11216,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+11217,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11221,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11372,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11373,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11374,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11375,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+11376,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11378,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11379,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11380,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11381,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11382,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+11383,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11384,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11385,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11386,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11387,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11501,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11502,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11503,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11504,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11505,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11506,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11507,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11508,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+11509,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11510,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11511,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+11514,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21060,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21061,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+21062,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21063,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21064,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21065,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21066,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21067,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21256,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+21260,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21266,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21267,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21268,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21269,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21270,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+21272,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21273,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21274,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21275,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21276,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21277,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21278,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21279,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21339,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21345,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+21357,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21362,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21366,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21367,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21368,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21370,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 21372,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 21582,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-21583,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21583,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 21584,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 21585,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 21586,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 21587,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-21588,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+21588,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 21589,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 21590,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 21592,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2559,14 +2559,14 @@ set_num,shop,status,detail
 30560,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30645,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30653,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-30660,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+30660,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 30661,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30670,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30672,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30673,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30675,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-30685,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-30686,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+30685,planetaklockow-pl,error,HTTP Error 429: Too Many Requests
+30686,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 30687,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30689,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30690,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2575,44 +2575,44 @@ set_num,shop,status,detail
 30695,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30696,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30697,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-30698,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+30698,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 30699,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30700,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30701,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30702,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30703,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-30704,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+30704,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 30705,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30708,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30709,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30710,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30711,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-30712,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+30712,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 30713,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30715,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30717,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30718,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30719,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-30720,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+30720,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 30721,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30722,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30723,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30727,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30728,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30729,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-30730,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+30730,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 30731,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30733,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30734,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30735,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 30736,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-31109,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+31109,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 31129,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31134,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31136,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31140,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31141,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-31146,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+31146,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 31147,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31148,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31149,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2624,13 +2624,13 @@ set_num,shop,status,detail
 31162,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31163,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31164,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-31165,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+31165,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 31166,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31167,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31168,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31169,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31170,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-31173,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+31173,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 31174,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31209,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31212,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2646,14 +2646,14 @@ set_num,shop,status,detail
 31377,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31379,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31380,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-31381,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+31381,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 31382,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31383,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31384,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31385,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31386,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31387,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-31388,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+31388,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 31389,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31390,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 31391,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2671,7 +2671,7 @@ set_num,shop,status,detail
 40721,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 40725,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 40743,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-40744,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+40744,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 40746,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 40747,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 40806,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2687,18 +2687,18 @@ set_num,shop,status,detail
 40820,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 40822,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 40824,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-40825,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+40825,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 40863,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 40864,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 40867,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 40871,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 40872,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-40873,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+40873,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 40883,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 40920,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 41447,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 41688,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-41705,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+41705,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 41713,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 41715,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 41716,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2706,13 +2706,13 @@ set_num,shop,status,detail
 41724,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 41726,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 41728,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-41729,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+41729,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 41734,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 41739,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 41744,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 41751,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 41752,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-41754,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+41754,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 41758,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 41760,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 41806,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2723,14 +2723,14 @@ set_num,shop,status,detail
 41932,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 41946,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 41954,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-41957,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+41957,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 41958,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 41963,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 41964,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42129,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42137,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42141,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-42143,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+42143,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42151,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42154,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42156,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2742,27 +2742,27 @@ set_num,shop,status,detail
 42167,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42169,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42170,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-42171,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+42171,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42172,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42173,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42174,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42175,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42176,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-42177,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+42177,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42179,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42197,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42198,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42199,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42200,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42201,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-42202,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+42202,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42203,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42204,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42205,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42206,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42207,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42208,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-42209,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+42209,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42210,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42211,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42212,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2772,7 +2772,7 @@ set_num,shop,status,detail
 42217,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42218,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42219,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-42220,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+42220,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42221,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42222,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42223,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2780,13 +2780,13 @@ set_num,shop,status,detail
 42225,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42226,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42227,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-42228,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+42228,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42229,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42231,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42232,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42233,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42234,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-42235,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+42235,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42236,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42238,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42239,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2806,38 +2806,38 @@ set_num,shop,status,detail
 42642,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42644,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42646,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-42648,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+42648,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42649,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42650,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42652,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42653,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-42654,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+42654,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42659,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42661,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42662,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42663,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42664,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-42665,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+42665,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42666,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42668,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42669,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42671,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42673,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42675,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-42676,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+42676,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42677,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42678,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42679,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42680,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42681,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-42682,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+42682,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42684,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42685,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42686,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42687,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42688,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42689,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-42690,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+42690,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42691,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42692,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42693,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2845,19 +2845,19 @@ set_num,shop,status,detail
 42695,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42696,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42697,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-42698,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+42698,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42699,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42700,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42702,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42703,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 42704,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-42705,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+42705,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43011,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43012,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43013,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43014,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43015,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-43016,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+43016,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43017,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43018,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43019,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2865,36 +2865,36 @@ set_num,shop,status,detail
 43022,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43023,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43024,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-43027,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+43027,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43028,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43029,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43030,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43031,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-43102,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+43102,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43103,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43104,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43105,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43106,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43107,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-43113,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+43113,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43114,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43185,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43204,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43206,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43212,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-43216,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+43216,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43217,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43219,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43220,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43221,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43224,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-43231,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+43231,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43235,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43239,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43240,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43245,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43246,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-43247,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+43247,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43248,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43249,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43257,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2908,7 +2908,7 @@ set_num,shop,status,detail
 43268,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43269,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43270,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-43271,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+43271,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43272,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43273,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43276,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2916,7 +2916,7 @@ set_num,shop,status,detail
 43280,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43281,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43282,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-43283,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+43283,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43284,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43285,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43286,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2929,12 +2929,12 @@ set_num,shop,status,detail
 43293,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43294,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43295,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-43296,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+43296,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43297,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43298,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43299,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43300,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-43301,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+43301,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43303,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43304,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 43306,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2943,7 +2943,7 @@ set_num,shop,status,detail
 53705,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 53707,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 53708,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-60293,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+60293,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60294,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60295,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60304,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2957,7 +2957,7 @@ set_num,shop,status,detail
 60357,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60360,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60361,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-60367,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+60367,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60368,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60373,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60397,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -2976,60 +2976,60 @@ set_num,shop,status,detail
 60436,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60442,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60443,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-60444,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+60444,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60445,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60447,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60451,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60452,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60453,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-60454,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+60454,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60455,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60456,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60458,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60459,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-60462,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+60462,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60463,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60464,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60465,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60466,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-60469,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+60469,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60470,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60475,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60478,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60479,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60480,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60481,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-60482,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+60482,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60483,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60484,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60485,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60486,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60487,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-60488,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+60488,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60489,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60490,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60491,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60492,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60493,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60494,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-60496,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+60496,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60497,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60498,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60499,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60500,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60502,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-60503,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+60503,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60504,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60505,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60506,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60508,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 60510,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-60511,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+60511,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71031,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71046,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71051,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71052,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-71053,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+71053,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71388,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71390,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71404,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3040,7 +3040,7 @@ set_num,shop,status,detail
 71409,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71414,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71417,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-71418,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+71418,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71420,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71421,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71422,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3049,30 +3049,30 @@ set_num,shop,status,detail
 71426,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71438,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71440,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-71441,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+71441,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71453,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71455,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71457,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71458,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71459,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-71460,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+71460,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71476,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71479,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71481,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71483,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71484,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-71485,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+71485,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71489,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71490,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71491,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71492,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-71495,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+71495,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71497,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71499,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71500,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71508,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71512,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-71513,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+71513,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71514,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71515,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71759,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3081,23 +3081,23 @@ set_num,shop,status,detail
 71804,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71807,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71808,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-71811,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+71811,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71818,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71820,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71823,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71824,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-71826,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+71826,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71827,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71828,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71829,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71830,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-71831,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+71831,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71834,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71836,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71838,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71839,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71842,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-71843,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+71843,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71844,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71845,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71846,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3106,7 +3106,7 @@ set_num,shop,status,detail
 71850,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71851,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71853,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-71854,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+71854,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71856,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71857,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71858,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3118,7 +3118,7 @@ set_num,shop,status,detail
 71866,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71867,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71868,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-71869,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+71869,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71870,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71871,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 71872,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3126,7 +3126,7 @@ set_num,shop,status,detail
 72034,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 72035,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 72036,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-72037,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+72037,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 72038,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 72039,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 72040,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3138,14 +3138,14 @@ set_num,shop,status,detail
 72150,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 72151,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 72152,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-72153,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+72153,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 72154,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 72155,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 72156,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 72157,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 72158,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 72159,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-72160,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+72160,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 72161,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 72162,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 72163,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3154,7 +3154,7 @@ set_num,shop,status,detail
 72166,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 72167,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 72306,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-72423,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+72423,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 72537,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75328,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75333,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3167,14 +3167,14 @@ set_num,shop,status,detail
 75376,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75379,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75380,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-75384,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+75384,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75388,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75389,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75393,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75398,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75399,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75400,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-75401,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+75401,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75402,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75403,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75404,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3183,14 +3183,14 @@ set_num,shop,status,detail
 75408,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75410,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75411,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-75412,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+75412,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75413,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75414,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75416,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75417,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75418,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75420,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-75424,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+75424,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75425,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75427,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75431,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3200,24 +3200,24 @@ set_num,shop,status,detail
 75436,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75437,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75438,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-75439,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+75439,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75440,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75443,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75444,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75445,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75446,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-75447,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+75447,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75448,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75449,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75451,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75452,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-75453,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+75453,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75454,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75455,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75456,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75457,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75461,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-75573,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+75573,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75579,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75636,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75637,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3229,13 +3229,13 @@ set_num,shop,status,detail
 75643,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75644,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75645,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-75646,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+75646,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75647,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75681,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75682,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75683,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75684,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-75685,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+75685,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75687,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75688,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 75689,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3248,13 +3248,13 @@ set_num,shop,status,detail
 76240,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76253,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76254,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-76255,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+76255,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76257,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76258,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76262,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76263,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76273,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-76278,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+76278,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76279,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76281,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76282,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3265,7 +3265,7 @@ set_num,shop,status,detail
 76301,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76303,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76304,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-76307,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+76307,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76308,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76309,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76311,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3279,7 +3279,7 @@ set_num,shop,status,detail
 76321,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76322,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76323,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-76324,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+76324,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76325,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76326,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76327,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3290,7 +3290,7 @@ set_num,shop,status,detail
 76335,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76336,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76337,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-76338,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+76338,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76339,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76340,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76341,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3299,36 +3299,36 @@ set_num,shop,status,detail
 76344,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76345,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76347,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-76348,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+76348,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76350,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76352,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76354,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76355,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-76403,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+76403,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76404,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76416,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76418,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76419,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76424,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-76425,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+76425,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76429,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76433,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76440,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76441,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76442,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76443,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-76444,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+76444,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76445,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76446,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76448,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76449,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76450,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-76451,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+76451,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76452,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76454,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76456,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76459,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-76460,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+76460,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76461,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76462,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76463,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3346,36 +3346,36 @@ set_num,shop,status,detail
 76784,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76785,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76787,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-76788,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+76788,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76831,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76900,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76901,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76906,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-76907,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+76907,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76917,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76919,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76923,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76924,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76925,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-76934,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+76934,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76935,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76967,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76969,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76970,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-76972,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+76972,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76973,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76975,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76976,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76992,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76997,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 76998,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-76999,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+76999,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 77001,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77002,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77003,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77005,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77006,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-77037,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+77037,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 77046,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77047,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77048,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3393,7 +3393,7 @@ set_num,shop,status,detail
 77071,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77073,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77075,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-77076,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+77076,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 77077,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77078,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77079,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3401,7 +3401,7 @@ set_num,shop,status,detail
 77081,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77082,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77093,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-77117,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+77117,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 77118,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77119,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77237,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3410,7 +3410,7 @@ set_num,shop,status,detail
 77240,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77241,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77242,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-77243,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+77243,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 77244,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77245,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77246,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3422,7 +3422,7 @@ set_num,shop,status,detail
 77253,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77254,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77255,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-77256,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+77256,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 77257,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77258,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77259,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
@@ -3430,7 +3430,7 @@ set_num,shop,status,detail
 77262,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77263,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77977,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
-77978,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
+77978,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 77981,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77982,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
 77983,planetaklockow-pl,no_price,"price not found (page: '', 73 chars)"
