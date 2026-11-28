@@ -1,37 +1,37 @@
 set_num,shop,status,detail
-60510,mediamarkt-pl,ok,168.85 PLN
-10270,mediamarkt-pl,ok,1267.75 PLN
+60510,mediamarkt-pl,ok,168.35 PLN
+10270,mediamarkt-pl,ok,1264.02 PLN
 10274,mediamarkt-pl,ok,1100.0 PLN
 10275,mediamarkt-pl,ok,774.97 PLN
-10277,mediamarkt-pl,ok,1266.23 PLN
-10278,mediamarkt-pl,ok,1610.76 PLN
+10277,mediamarkt-pl,ok,1267.75 PLN
+10278,mediamarkt-pl,ok,1612.7 PLN
 10280,mediamarkt-pl,ok,155.97 PLN
 10281,mediamarkt-pl,ok,149.99 PLN
 10283,mediamarkt-pl,ok,1049.0 PLN
 10290,mediamarkt-pl,ok,922.8 PLN
-10291,mediamarkt-pl,ok,429.5 PLN
+10291,mediamarkt-pl,ok,430.02 PLN
 10295,mediamarkt-pl,ok,635.0 PLN
 10297,mediamarkt-pl,ok,1415.59 PLN
-10298,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Creator Expert 10298 | Vespa 125 - sprawdź cenę i opinie w MediaMark', 1294370 chars)"
+10298,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Creator Expert 10298 | Vespa 125 - sprawdź cenę i opinie w MediaMark', 1294414 chars)"
 10302,mediamarkt-pl,ok,922.8 PLN
-10304,mediamarkt-pl,ok,1266.23 PLN
+10304,mediamarkt-pl,ok,1267.75 PLN
 10305,mediamarkt-pl,ok,2746.1 PLN
-10306,mediamarkt-pl,ok,1266.23 PLN
+10306,mediamarkt-pl,ok,1267.75 PLN
 10311,mediamarkt-pl,ok,149.99 PLN
 10312,mediamarkt-pl,ok,1760.54 PLN
 10313,mediamarkt-pl,ok,189.99 PLN
 10315,mediamarkt-pl,ok,373.0 PLN
 10316,mediamarkt-pl,ok,2018.0 PLN
 10317,mediamarkt-pl,ok,1514.14 PLN
-10320,mediamarkt-pl,ok,1512.32 PLN
-10321,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Corvette Wielobarwny | sprawdź cenę i opinie w MediaMarkt', 1300260 chars)"
+10320,mediamarkt-pl,ok,1514.14 PLN
+10321,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Corvette Wielobarwny | sprawdź cenę i opinie w MediaMarkt', 1300303 chars)"
 10323,mediamarkt-pl,ok,1514.14 PLN
-10325,mediamarkt-pl,ok,1021.36 PLN
-10326,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Natural History Museum Wielobarwny | sprawdź cenę i opinie w MediaMa', 1299573 chars)"
+10325,mediamarkt-pl,ok,1018.36 PLN
+10326,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Natural History Museum Wielobarwny | sprawdź cenę i opinie w MediaMa', 1299617 chars)"
 10328,mediamarkt-pl,ok,149.99 PLN
 10329,mediamarkt-pl,ok,149.99 PLN
 10330,mediamarkt-pl,ok,239.99 PLN
-10332,mediamarkt-pl,ok,1512.32 PLN
+10332,mediamarkt-pl,ok,1514.14 PLN
 10333,mediamarkt-pl,ok,2320.0 PLN
 10334,mediamarkt-pl,ok,774.97 PLN
 10341,mediamarkt-pl,ok,1311.0 PLN
@@ -44,15 +44,15 @@ set_num,shop,status,detail
 10359,mediamarkt-pl,ok,291.97 PLN
 10362,mediamarkt-pl,ok,264.99 PLN
 10363,mediamarkt-pl,ok,215.0 PLN
-10367,mediamarkt-pl,ok,522.99 PLN
+10367,mediamarkt-pl,ok,522.11 PLN
 10368,mediamarkt-pl,ok,82.99 PLN
 10369,mediamarkt-pl,ok,82.97 PLN
-10411,mediamarkt-pl,ok,429.5 PLN
+10411,mediamarkt-pl,ok,430.02 PLN
 10418,mediamarkt-pl,ok,197.99 PLN
 10428,mediamarkt-pl,ok,513.99 PLN
-10431,mediamarkt-pl,ok,98.39 PLN
-10432,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Peppa Pig Boat Trip Wielobarwny | sprawdź cenę i opinie w MediaMarkt', 1304593 chars)"
-10434,mediamarkt-pl,ok,380.74 PLN
+10431,mediamarkt-pl,ok,98.51 PLN
+10432,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Peppa Pig Boat Trip Wielobarwny | sprawdź cenę i opinie w MediaMarkt', 1304637 chars)"
+10434,mediamarkt-pl,ok,379.62 PLN
 10442,mediamarkt-pl,ok,35.29 PLN
 10444,mediamarkt-pl,ok,80.0 PLN
 10446,mediamarkt-pl,ok,430.02 PLN
@@ -63,9 +63,9 @@ set_num,shop,status,detail
 10464,mediamarkt-pl,ok,219.99 PLN
 10465,mediamarkt-pl,ok,228.99 PLN
 10467,mediamarkt-pl,ok,298.99 PLN
-10468,mediamarkt-pl,ok,83.59 PLN
+10468,mediamarkt-pl,ok,83.69 PLN
 10469,mediamarkt-pl,ok,151.99 PLN
-10470,mediamarkt-pl,error,HTTP Error 410: Gone
+10470,mediamarkt-pl,ok,343.99 PLN
 10471,mediamarkt-pl,ok,27.08 PLN
 10472,mediamarkt-pl,ok,208.99 PLN
 10473,mediamarkt-pl,ok,81.97 PLN
@@ -86,17 +86,17 @@ set_num,shop,status,detail
 10913,mediamarkt-pl,ok,110.99 PLN
 10914,mediamarkt-pl,ok,216.99 PLN
 10930,mediamarkt-pl,ok,39.99 PLN
-10931,mediamarkt-pl,ok,158.99 PLN
+10931,mediamarkt-pl,ok,158.52 PLN
 10935,mediamarkt-pl,ok,331.46 PLN
 10938,mediamarkt-pl,ok,69.99 PLN
 10941,mediamarkt-pl,ok,150.99 PLN
 10945,mediamarkt-pl,ok,69.99 PLN
-10947,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO DUPLO Town Race Cars Wielobarwny | sprawdź cenę i opinie w MediaMark', 1305620 chars)"
+10947,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO DUPLO Town Race Cars Wielobarwny | sprawdź cenę i opinie w MediaMark', 1305664 chars)"
 10948,mediamarkt-pl,ok,399.0 PLN
 10949,mediamarkt-pl,ok,39.99 PLN
 10954,mediamarkt-pl,ok,80.0 PLN
 10955,mediamarkt-pl,ok,64.99 PLN
-10956,mediamarkt-pl,ok,676.41 PLN
+10956,mediamarkt-pl,ok,674.42 PLN
 10959,mediamarkt-pl,ok,167.99 PLN
 10960,mediamarkt-pl,ok,74.99 PLN
 10961,mediamarkt-pl,ok,107.99 PLN
@@ -114,7 +114,7 @@ set_num,shop,status,detail
 10974,mediamarkt-pl,ok,157.99 PLN
 10975,mediamarkt-pl,ok,439.99 PLN
 10976,mediamarkt-pl,ok,129.99 PLN
-10977,mediamarkt-pl,ok,257.24 PLN
+10977,mediamarkt-pl,ok,257.55 PLN
 10980,mediamarkt-pl,ok,54.99 PLN
 10981,mediamarkt-pl,ok,24.99 PLN
 10982,mediamarkt-pl,ok,57.99 PLN
@@ -124,7 +124,7 @@ set_num,shop,status,detail
 10986,mediamarkt-pl,ok,69.99 PLN
 10987,mediamarkt-pl,ok,59.99 PLN
 10988,mediamarkt-pl,ok,64.99 PLN
-10989,mediamarkt-pl,ok,247.39 PLN
+10989,mediamarkt-pl,ok,247.69 PLN
 10990,mediamarkt-pl,ok,99.99 PLN
 10991,mediamarkt-pl,ok,157.99 PLN
 10995,mediamarkt-pl,ok,87.99 PLN
@@ -137,7 +137,7 @@ set_num,shop,status,detail
 11019,mediamarkt-pl,ok,49.99 PLN
 11023,mediamarkt-pl,ok,38.59 PLN
 11024,mediamarkt-pl,ok,58.99 PLN
-11025,mediamarkt-pl,ok,44.31 PLN
+11025,mediamarkt-pl,ok,44.18 PLN
 11026,mediamarkt-pl,ok,38.59 PLN
 11027,mediamarkt-pl,ok,98.51 PLN
 11028,mediamarkt-pl,ok,74.99 PLN
@@ -148,8 +148,8 @@ set_num,shop,status,detail
 11041,mediamarkt-pl,ok,126.99 PLN
 11045,mediamarkt-pl,ok,208.99 PLN
 11205,mediamarkt-pl,ok,266.99 PLN
-11206,mediamarkt-pl,error,HTTP Error 410: Gone
-11207,mediamarkt-pl,error,HTTP Error 410: Gone
+11206,mediamarkt-pl,ok,44.18 PLN
+11207,mediamarkt-pl,ok,148.99 PLN
 11208,mediamarkt-pl,ok,224.99 PLN
 11211,mediamarkt-pl,ok,224.99 PLN
 11212,mediamarkt-pl,ok,63.89 PLN
@@ -159,8 +159,8 @@ set_num,shop,status,detail
 11373,mediamarkt-pl,ok,271.99 PLN
 11375,mediamarkt-pl,ok,322.99 PLN
 11376,mediamarkt-pl,ok,487.99 PLN
-11377,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 11377 Icons | Władca Pierścieni: Minas Tirith - sprawdź cenę i opini', 1311352 chars)"
-11378,mediamarkt-pl,ok,1167.79 PLN
+11377,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 11377 Icons | Władca Pierścieni: Minas Tirith - sprawdź cenę i opini', 1311396 chars)"
+11378,mediamarkt-pl,ok,1169.2 PLN
 11379,mediamarkt-pl,ok,558.99 PLN
 11381,mediamarkt-pl,ok,524.0 PLN
 11382,mediamarkt-pl,ok,439.0 PLN
@@ -180,7 +180,7 @@ set_num,shop,status,detail
 21054,mediamarkt-pl,ok,824.25 PLN
 21057,mediamarkt-pl,ok,260.0 PLN
 21061,mediamarkt-pl,ok,886.99 PLN
-21062,mediamarkt-pl,ok,684.99 PLN
+21062,mediamarkt-pl,ok,685.99 PLN
 21063,mediamarkt-pl,ok,1008.99 PLN
 21064,mediamarkt-pl,ok,291.99 PLN
 21066,mediamarkt-pl,ok,598.99 PLN
@@ -204,56 +204,56 @@ set_num,shop,status,detail
 21188,mediamarkt-pl,ok,549.0 PLN
 21189,mediamarkt-pl,ok,129.99 PLN
 21190,mediamarkt-pl,ok,209.0 PLN
-21226,mediamarkt-pl,ok,675.6 PLN
+21226,mediamarkt-pl,ok,676.41 PLN
 21242,mediamarkt-pl,ok,99.99 PLN
 21243,mediamarkt-pl,ok,49.99 PLN
 21245,mediamarkt-pl,ok,197.99 PLN
 21247,mediamarkt-pl,ok,49.99 PLN
-21248,mediamarkt-pl,ok,223.05 PLN
+21248,mediamarkt-pl,ok,222.4 PLN
 21249,mediamarkt-pl,ok,405.38 PLN
 21250,mediamarkt-pl,ok,399.99 PLN
-21251,mediamarkt-pl,ok,49.23 PLN
+21251,mediamarkt-pl,ok,49.09 PLN
 21253,mediamarkt-pl,ok,74.99 PLN
 21254,mediamarkt-pl,ok,80.99 PLN
 21255,mediamarkt-pl,ok,223.05 PLN
-21256,mediamarkt-pl,ok,306.82 PLN
+21256,mediamarkt-pl,ok,305.92 PLN
 21257,mediamarkt-pl,ok,169.99 PLN
-21260,mediamarkt-pl,ok,173.56 PLN
-21263,mediamarkt-pl,ok,331.46 PLN
+21260,mediamarkt-pl,ok,173.77 PLN
+21263,mediamarkt-pl,ok,330.49 PLN
 21267,mediamarkt-pl,ok,66.0 PLN
 21268,mediamarkt-pl,ok,82.0 PLN
 21270,mediamarkt-pl,ok,282.19 PLN
-21271,mediamarkt-pl,ok,282.19 PLN
+21271,mediamarkt-pl,ok,281.36 PLN
 21272,mediamarkt-pl,ok,219.99 PLN
 21273,mediamarkt-pl,ok,254.99 PLN
 21279,mediamarkt-pl,ok,471.99 PLN
-21321,mediamarkt-pl,ok,873.53 PLN
+21321,mediamarkt-pl,ok,870.96 PLN
 21322,mediamarkt-pl,ok,2253.32 PLN
-21323,mediamarkt-pl,ok,2499.71 PLN
-21324,mediamarkt-pl,ok,1069.35 PLN
-21325,mediamarkt-pl,ok,1266.23 PLN
-21326,mediamarkt-pl,ok,921.7 PLN
+21323,mediamarkt-pl,ok,2492.36 PLN
+21324,mediamarkt-pl,ok,1067.49 PLN
+21325,mediamarkt-pl,ok,1264.02 PLN
+21326,mediamarkt-pl,ok,922.8 PLN
 21330,mediamarkt-pl,ok,1365.0 PLN
-21331,mediamarkt-pl,ok,430.02 PLN
+21331,mediamarkt-pl,ok,428.76 PLN
 21336,mediamarkt-pl,ok,1267.75 PLN
-21338,mediamarkt-pl,ok,1266.23 PLN
-21340,mediamarkt-pl,ok,527.94 PLN
-21342,mediamarkt-pl,ok,528.58 PLN
+21338,mediamarkt-pl,ok,1267.75 PLN
+21340,mediamarkt-pl,ok,528.58 PLN
+21342,mediamarkt-pl,ok,527.02 PLN
 21344,mediamarkt-pl,ok,2156.0 PLN
 21345,mediamarkt-pl,ok,281.99 PLN
-21346,mediamarkt-pl,ok,626.38 PLN
-21347,mediamarkt-pl,ok,774.97 PLN
+21346,mediamarkt-pl,ok,627.13 PLN
+21347,mediamarkt-pl,ok,772.69 PLN
 21357,mediamarkt-pl,ok,208.97 PLN
 21362,mediamarkt-pl,ok,284.99 PLN
 21366,mediamarkt-pl,ok,498.99 PLN
 21367,mediamarkt-pl,ok,539.0 PLN
 21368,mediamarkt-pl,ok,269.0 PLN
 21370,mediamarkt-pl,ok,489.99 PLN
-21372,mediamarkt-pl,ok,536.99 PLN
+21372,mediamarkt-pl,ok,537.99 PLN
 21376,mediamarkt-pl,ok,484.0 PLN
 21582,mediamarkt-pl,ok,108.99 PLN
 21583,mediamarkt-pl,ok,27.57 PLN
-21584,mediamarkt-pl,error,HTTP Error 410: Gone
+21584,mediamarkt-pl,ok,66.19 PLN
 21585,mediamarkt-pl,ok,81.0 PLN
 21586,mediamarkt-pl,ok,82.0 PLN
 21587,mediamarkt-pl,ok,79.0 PLN
@@ -264,74 +264,74 @@ set_num,shop,status,detail
 21595,mediamarkt-pl,ok,248.99 PLN
 21596,mediamarkt-pl,ok,299.0 PLN
 21597,mediamarkt-pl,ok,339.0 PLN
-30333,mediamarkt-pl,ok,24.59 PLN
-30389,mediamarkt-pl,ok,24.56 PLN
+30333,mediamarkt-pl,ok,24.52 PLN
+30389,mediamarkt-pl,ok,24.59 PLN
 30390,mediamarkt-pl,ok,24.59 PLN
-30413,mediamarkt-pl,ok,24.56 PLN
-30414,mediamarkt-pl,ok,24.56 PLN
-30416,mediamarkt-pl,ok,24.56 PLN
-30417,mediamarkt-pl,ok,24.56 PLN
+30413,mediamarkt-pl,ok,24.59 PLN
+30414,mediamarkt-pl,ok,24.59 PLN
+30416,mediamarkt-pl,ok,24.59 PLN
+30417,mediamarkt-pl,ok,24.59 PLN
 30435,mediamarkt-pl,ok,24.59 PLN
-30455,mediamarkt-pl,ok,24.59 PLN
+30455,mediamarkt-pl,ok,24.52 PLN
 30463,mediamarkt-pl,ok,24.59 PLN
-30503,mediamarkt-pl,ok,24.59 PLN
-30548,mediamarkt-pl,ok,24.59 PLN
-30556,mediamarkt-pl,ok,24.56 PLN
-30560,mediamarkt-pl,ok,24.56 PLN
-30563,mediamarkt-pl,ok,24.56 PLN
-30567,mediamarkt-pl,ok,24.56 PLN
-30570,mediamarkt-pl,ok,24.56 PLN
-30582,mediamarkt-pl,ok,24.59 PLN
-30588,mediamarkt-pl,ok,24.56 PLN
+30503,mediamarkt-pl,ok,24.52 PLN
+30548,mediamarkt-pl,ok,24.52 PLN
+30556,mediamarkt-pl,ok,24.59 PLN
+30560,mediamarkt-pl,ok,24.59 PLN
+30563,mediamarkt-pl,ok,24.59 PLN
+30567,mediamarkt-pl,ok,24.59 PLN
+30570,mediamarkt-pl,ok,24.59 PLN
+30582,mediamarkt-pl,ok,24.52 PLN
+30588,mediamarkt-pl,ok,24.59 PLN
 30589,mediamarkt-pl,ok,24.59 PLN
-30591,mediamarkt-pl,ok,24.56 PLN
+30591,mediamarkt-pl,ok,24.59 PLN
 30592,mediamarkt-pl,ok,23.89 PLN
-30593,mediamarkt-pl,ok,24.56 PLN
-30594,mediamarkt-pl,ok,24.56 PLN
+30593,mediamarkt-pl,ok,24.59 PLN
+30594,mediamarkt-pl,ok,24.59 PLN
 30635,mediamarkt-pl,ok,20.19 PLN
-30636,mediamarkt-pl,ok,24.56 PLN
-30638,mediamarkt-pl,ok,24.56 PLN
+30636,mediamarkt-pl,ok,24.59 PLN
+30638,mediamarkt-pl,ok,24.59 PLN
 30640,mediamarkt-pl,ok,24.59 PLN
-30641,mediamarkt-pl,ok,24.56 PLN
-30644,mediamarkt-pl,ok,24.56 PLN
+30641,mediamarkt-pl,ok,24.59 PLN
+30644,mediamarkt-pl,ok,24.59 PLN
 30648,mediamarkt-pl,ok,24.59 PLN
 30650,mediamarkt-pl,ok,0.99 PLN
 30652,mediamarkt-pl,ok,24.59 PLN
 30657,mediamarkt-pl,ok,24.59 PLN
-30658,mediamarkt-pl,ok,24.56 PLN
+30658,mediamarkt-pl,ok,24.59 PLN
 30659,mediamarkt-pl,ok,23.09 PLN
 30660,mediamarkt-pl,ok,20.19 PLN
-30661,mediamarkt-pl,ok,24.56 PLN
-30662,mediamarkt-pl,ok,24.56 PLN
-30663,mediamarkt-pl,ok,24.59 PLN
-30664,mediamarkt-pl,ok,24.59 PLN
+30661,mediamarkt-pl,ok,24.59 PLN
+30662,mediamarkt-pl,ok,24.59 PLN
+30663,mediamarkt-pl,ok,24.52 PLN
+30664,mediamarkt-pl,ok,24.52 PLN
 30665,mediamarkt-pl,ok,23.19 PLN
-30670,mediamarkt-pl,ok,24.59 PLN
-30671,mediamarkt-pl,ok,24.56 PLN
-30672,mediamarkt-pl,ok,24.56 PLN
-30674,mediamarkt-pl,ok,24.56 PLN
+30670,mediamarkt-pl,ok,24.52 PLN
+30671,mediamarkt-pl,ok,24.59 PLN
+30672,mediamarkt-pl,ok,24.59 PLN
+30674,mediamarkt-pl,ok,24.59 PLN
 30675,mediamarkt-pl,ok,23.79 PLN
 30676,mediamarkt-pl,ok,24.59 PLN
 30677,mediamarkt-pl,ok,24.59 PLN
-30679,mediamarkt-pl,ok,24.56 PLN
-30680,mediamarkt-pl,ok,24.56 PLN
+30679,mediamarkt-pl,ok,24.59 PLN
+30680,mediamarkt-pl,ok,24.59 PLN
 30682,mediamarkt-pl,ok,24.59 PLN
 30685,mediamarkt-pl,ok,24.59 PLN
-30686,mediamarkt-pl,ok,24.56 PLN
+30686,mediamarkt-pl,ok,24.59 PLN
 30690,mediamarkt-pl,ok,22.79 PLN
 30691,mediamarkt-pl,ok,24.59 PLN
 30693,mediamarkt-pl,ok,22.49 PLN
-30695,mediamarkt-pl,ok,24.56 PLN
-30698,mediamarkt-pl,ok,24.56 PLN
-30699,mediamarkt-pl,ok,24.56 PLN
+30695,mediamarkt-pl,ok,24.59 PLN
+30698,mediamarkt-pl,ok,24.59 PLN
+30699,mediamarkt-pl,ok,24.59 PLN
 30702,mediamarkt-pl,ok,24.59 PLN
 30704,mediamarkt-pl,ok,24.59 PLN
 30705,mediamarkt-pl,ok,24.59 PLN
-30706,mediamarkt-pl,ok,24.59 PLN
-30708,mediamarkt-pl,ok,24.59 PLN
-30709,mediamarkt-pl,ok,24.56 PLN
-30710,mediamarkt-pl,ok,24.56 PLN
-30711,mediamarkt-pl,ok,24.56 PLN
+30706,mediamarkt-pl,ok,24.52 PLN
+30708,mediamarkt-pl,ok,24.52 PLN
+30709,mediamarkt-pl,ok,24.59 PLN
+30710,mediamarkt-pl,ok,24.59 PLN
+30711,mediamarkt-pl,ok,24.59 PLN
 30723,mediamarkt-pl,ok,21.99 PLN
 30724,mediamarkt-pl,ok,22.49 PLN
 30726,mediamarkt-pl,ok,22.49 PLN
@@ -342,11 +342,11 @@ set_num,shop,status,detail
 30735,mediamarkt-pl,ok,16.99 PLN
 30736,mediamarkt-pl,ok,14.9 PLN
 31102,mediamarkt-pl,ok,74.99 PLN
-31103,mediamarkt-pl,ok,98.39 PLN
-31109,mediamarkt-pl,ok,675.6 PLN
+31103,mediamarkt-pl,ok,98.51 PLN
+31109,mediamarkt-pl,ok,676.41 PLN
 31111,mediamarkt-pl,ok,29.99 PLN
 31114,mediamarkt-pl,ok,74.99 PLN
-31120,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Creator Medieval Castle Wielobarwny | sprawdź cenę i opinie w MediaM', 1291204 chars)"
+31120,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Creator Medieval Castle Wielobarwny | sprawdź cenę i opinie w MediaM', 1291248 chars)"
 31125,mediamarkt-pl,ok,49.99 PLN
 31126,mediamarkt-pl,ok,150.0 PLN
 31127,mediamarkt-pl,ok,74.99 PLN
@@ -360,7 +360,7 @@ set_num,shop,status,detail
 31137,mediamarkt-pl,ok,183.63 PLN
 31139,mediamarkt-pl,ok,187.99 PLN
 31140,mediamarkt-pl,ok,42.29 PLN
-31141,mediamarkt-pl,ok,725.69 PLN
+31141,mediamarkt-pl,ok,723.56 PLN
 31144,mediamarkt-pl,ok,232.91 PLN
 31145,mediamarkt-pl,ok,49.0 PLN
 31146,mediamarkt-pl,ok,80.0 PLN
@@ -380,24 +380,24 @@ set_num,shop,status,detail
 31171,mediamarkt-pl,ok,298.0 PLN
 31173,mediamarkt-pl,ok,58.99 PLN
 31174,mediamarkt-pl,ok,81.99 PLN
-31197,mediamarkt-pl,ok,774.04 PLN
-31198,mediamarkt-pl,ok,1364.67 PLN
-31199,mediamarkt-pl,ok,1118.57 PLN
-31202,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 31202 ART | Disney&#x27;S Mickey Mouse Wielokolorowy - sprawdź cenę ', 1286191 chars)"
-31204,mediamarkt-pl,ok,1020.13 PLN
+31197,mediamarkt-pl,ok,774.97 PLN
+31198,mediamarkt-pl,ok,1366.31 PLN
+31199,mediamarkt-pl,ok,1119.92 PLN
+31202,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 31202 ART | Disney&#x27;S Mickey Mouse Wielokolorowy - sprawdź cenę ', 1286235 chars)"
+31204,mediamarkt-pl,ok,1021.36 PLN
 31205,mediamarkt-pl,ok,499.0 PLN
 31206,mediamarkt-pl,ok,639.0 PLN
 31212,mediamarkt-pl,ok,668.94 PLN
 31213,mediamarkt-pl,ok,577.86 PLN
 31214,mediamarkt-pl,ok,290.99 PLN
 31215,mediamarkt-pl,ok,755.99 PLN
-31216,mediamarkt-pl,ok,522.99 PLN
-31217,mediamarkt-pl,error,HTTP Error 410: Gone
+31216,mediamarkt-pl,ok,522.11 PLN
+31217,mediamarkt-pl,ok,298.99 PLN
 31218,mediamarkt-pl,ok,454.0 PLN
 31220,mediamarkt-pl,ok,872.99 PLN
 31376,mediamarkt-pl,ok,27.08 PLN
 31377,mediamarkt-pl,ok,32.99 PLN
-31378,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 31378 | Creator 3 w 1, Teleskop do badań kosmicznych, 278 el., od 8 ', 1298556 chars)"
+31378,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 31378 | Creator 3 w 1, Teleskop do badań kosmicznych, 278 el., od 8 ', 1298601 chars)"
 31379,mediamarkt-pl,ok,107.99 PLN
 31380,mediamarkt-pl,ok,52.89 PLN
 31381,mediamarkt-pl,ok,125.99 PLN
@@ -412,152 +412,152 @@ set_num,shop,status,detail
 31391,mediamarkt-pl,ok,113.99 PLN
 31392,mediamarkt-pl,ok,136.99 PLN
 40373,mediamarkt-pl,ok,73.87 PLN
-40377,mediamarkt-pl,ok,98.39 PLN
+40377,mediamarkt-pl,ok,98.51 PLN
 40378,mediamarkt-pl,ok,158.99 PLN
-40391,mediamarkt-pl,ok,158.8 PLN
-40409,mediamarkt-pl,ok,208.02 PLN
+40391,mediamarkt-pl,ok,158.99 PLN
+40409,mediamarkt-pl,ok,208.27 PLN
 40411,mediamarkt-pl,ok,158.99 PLN
-40416,mediamarkt-pl,ok,232.91 PLN
-40421,mediamarkt-pl,ok,183.41 PLN
-40443,mediamarkt-pl,ok,158.8 PLN
-40448,mediamarkt-pl,ok,208.27 PLN
+40416,mediamarkt-pl,ok,232.22 PLN
+40421,mediamarkt-pl,ok,183.63 PLN
+40443,mediamarkt-pl,ok,158.99 PLN
+40448,mediamarkt-pl,ok,207.66 PLN
 40460,mediamarkt-pl,ok,39.99 PLN
-40466,mediamarkt-pl,ok,183.41 PLN
-40476,mediamarkt-pl,ok,98.39 PLN
+40466,mediamarkt-pl,ok,183.63 PLN
+40476,mediamarkt-pl,ok,98.51 PLN
 40483,mediamarkt-pl,ok,622.0 PLN
-40486,mediamarkt-pl,ok,281.85 PLN
-40487,mediamarkt-pl,ok,281.85 PLN
-40491,mediamarkt-pl,ok,98.39 PLN
-40492,mediamarkt-pl,ok,158.8 PLN
+40486,mediamarkt-pl,ok,282.19 PLN
+40487,mediamarkt-pl,ok,282.19 PLN
+40491,mediamarkt-pl,ok,98.51 PLN
+40492,mediamarkt-pl,ok,158.99 PLN
 40496,mediamarkt-pl,ok,208.27 PLN
-40497,mediamarkt-pl,ok,158.8 PLN
+40497,mediamarkt-pl,ok,158.99 PLN
 40499,mediamarkt-pl,error,HTTP Error 410: Gone
-40517,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 40517 | Creator, 40517, 118 szt., 9 lat Wielokolorowy - sprawdź cenę', 1308341 chars)"
-40521,mediamarkt-pl,ok,306.46 PLN
-40524,mediamarkt-pl,ok,58.99 PLN
+40517,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 40517 | Creator, 40517, 118 szt., 9 lat Wielokolorowy - sprawdź cenę', 1308384 chars)"
+40521,mediamarkt-pl,ok,306.82 PLN
+40524,mediamarkt-pl,ok,59.09 PLN
 40528,mediamarkt-pl,ok,197.0 PLN
 40529,mediamarkt-pl,ok,183.63 PLN
-40548,mediamarkt-pl,ok,380.28 PLN
+40548,mediamarkt-pl,ok,380.74 PLN
 40553,mediamarkt-pl,ok,183.63 PLN
 40554,mediamarkt-pl,ok,158.99 PLN
-40569,mediamarkt-pl,ok,158.8 PLN
-40571,mediamarkt-pl,ok,148.95 PLN
+40569,mediamarkt-pl,ok,158.99 PLN
+40571,mediamarkt-pl,ok,149.13 PLN
 40573,mediamarkt-pl,error,HTTP Error 410: Gone
-40575,mediamarkt-pl,ok,98.39 PLN
-40578,mediamarkt-pl,ok,183.41 PLN
-40580,mediamarkt-pl,ok,380.28 PLN
-40588,mediamarkt-pl,ok,331.07 PLN
-40589,mediamarkt-pl,ok,208.02 PLN
+40575,mediamarkt-pl,ok,98.51 PLN
+40578,mediamarkt-pl,ok,183.63 PLN
+40580,mediamarkt-pl,ok,380.74 PLN
+40588,mediamarkt-pl,ok,331.46 PLN
+40589,mediamarkt-pl,ok,208.27 PLN
 40593,mediamarkt-pl,ok,158.99 PLN
 40595,mediamarkt-pl,ok,252.0 PLN
 40597,mediamarkt-pl,ok,177.0 PLN
-40601,mediamarkt-pl,ok,281.85 PLN
-40602,mediamarkt-pl,ok,208.27 PLN
+40601,mediamarkt-pl,ok,282.19 PLN
+40602,mediamarkt-pl,ok,207.66 PLN
 40603,mediamarkt-pl,ok,177.0 PLN
-40613,mediamarkt-pl,ok,281.85 PLN
-40616,mediamarkt-pl,ok,183.41 PLN
+40613,mediamarkt-pl,ok,282.19 PLN
+40616,mediamarkt-pl,ok,183.09 PLN
 40617,mediamarkt-pl,ok,183.63 PLN
-40618,mediamarkt-pl,ok,183.41 PLN
+40618,mediamarkt-pl,ok,183.63 PLN
 40620,mediamarkt-pl,ok,158.99 PLN
 40621,mediamarkt-pl,ok,183.63 PLN
-40622,mediamarkt-pl,ok,281.85 PLN
-40623,mediamarkt-pl,ok,380.28 PLN
-40634,mediamarkt-pl,ok,528.58 PLN
+40622,mediamarkt-pl,ok,282.19 PLN
+40623,mediamarkt-pl,ok,380.74 PLN
+40634,mediamarkt-pl,ok,527.02 PLN
 40638,mediamarkt-pl,ok,54.09 PLN
-40640,mediamarkt-pl,ok,148.95 PLN
-40644,mediamarkt-pl,ok,73.87 PLN
+40640,mediamarkt-pl,ok,149.13 PLN
+40644,mediamarkt-pl,ok,73.66 PLN
 40647,mediamarkt-pl,ok,39.99 PLN
 40650,mediamarkt-pl,ok,158.99 PLN
 40668,mediamarkt-pl,ok,183.63 PLN
-40669,mediamarkt-pl,ok,98.51 PLN
-40673,mediamarkt-pl,ok,98.39 PLN
-40675,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 40675 Wielobarwny | sprawdź cenę i opinie w MediaMarkt', 1289215 chars)"
-40678,mediamarkt-pl,ok,183.41 PLN
-40682,mediamarkt-pl,ok,183.41 PLN
-40683,mediamarkt-pl,ok,232.63 PLN
-40689,mediamarkt-pl,ok,158.8 PLN
-40701,mediamarkt-pl,ok,232.63 PLN
+40669,mediamarkt-pl,ok,98.22 PLN
+40673,mediamarkt-pl,ok,98.51 PLN
+40675,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 40675 Wielobarwny | sprawdź cenę i opinie w MediaMarkt', 1289259 chars)"
+40678,mediamarkt-pl,ok,183.63 PLN
+40682,mediamarkt-pl,ok,183.63 PLN
+40683,mediamarkt-pl,ok,232.91 PLN
+40689,mediamarkt-pl,ok,158.99 PLN
+40701,mediamarkt-pl,ok,232.91 PLN
 40712,mediamarkt-pl,ok,200.0 PLN
-40716,mediamarkt-pl,ok,158.8 PLN
+40716,mediamarkt-pl,ok,158.99 PLN
 40725,mediamarkt-pl,ok,39.99 PLN
 40743,mediamarkt-pl,ok,138.99 PLN
 40747,mediamarkt-pl,ok,67.99 PLN
-40757,mediamarkt-pl,ok,331.46 PLN
+40757,mediamarkt-pl,ok,330.49 PLN
 40760,mediamarkt-pl,ok,208.27 PLN
-40763,mediamarkt-pl,ok,183.41 PLN
+40763,mediamarkt-pl,ok,183.63 PLN
 40772,mediamarkt-pl,ok,158.99 PLN
 40775,mediamarkt-pl,ok,185.0 PLN
-40779,mediamarkt-pl,ok,98.39 PLN
-40783,mediamarkt-pl,ok,232.63 PLN
-40785,mediamarkt-pl,ok,208.02 PLN
-40788,mediamarkt-pl,ok,331.07 PLN
-40796,mediamarkt-pl,ok,380.28 PLN
-40798,mediamarkt-pl,ok,98.39 PLN
-40799,mediamarkt-pl,ok,282.19 PLN
+40779,mediamarkt-pl,ok,98.51 PLN
+40783,mediamarkt-pl,ok,232.91 PLN
+40785,mediamarkt-pl,ok,208.27 PLN
+40788,mediamarkt-pl,ok,331.46 PLN
+40796,mediamarkt-pl,ok,380.74 PLN
+40798,mediamarkt-pl,ok,98.51 PLN
+40799,mediamarkt-pl,ok,281.36 PLN
 40806,mediamarkt-pl,ok,213.99 PLN
 40809,mediamarkt-pl,ok,169.0 PLN
 40811,mediamarkt-pl,ok,57.99 PLN
 40812,mediamarkt-pl,ok,61.0 PLN
-40816,mediamarkt-pl,ok,83.59 PLN
+40816,mediamarkt-pl,ok,83.69 PLN
 40820,mediamarkt-pl,ok,265.99 PLN
 40822,mediamarkt-pl,ok,57.99 PLN
 40824,mediamarkt-pl,ok,141.99 PLN
 40825,mediamarkt-pl,ok,121.0 PLN
-40915,mediamarkt-pl,ok,232.63 PLN
+40915,mediamarkt-pl,ok,232.91 PLN
 41250,mediamarkt-pl,ok,88.66 PLN
 41400,mediamarkt-pl,ok,64.02 PLN
-41405,mediamarkt-pl,ok,49.23 PLN
-41406,mediamarkt-pl,ok,49.23 PLN
-41408,mediamarkt-pl,ok,49.17 PLN
-41409,mediamarkt-pl,ok,49.17 PLN
-41410,mediamarkt-pl,ok,49.17 PLN
-41411,mediamarkt-pl,ok,49.17 PLN
-41413,mediamarkt-pl,ok,49.17 PLN
-41433,mediamarkt-pl,ok,311.75 PLN
+41405,mediamarkt-pl,ok,49.09 PLN
+41406,mediamarkt-pl,ok,49.09 PLN
+41408,mediamarkt-pl,ok,49.23 PLN
+41409,mediamarkt-pl,ok,49.09 PLN
+41410,mediamarkt-pl,ok,49.23 PLN
+41411,mediamarkt-pl,ok,49.23 PLN
+41413,mediamarkt-pl,ok,49.23 PLN
+41433,mediamarkt-pl,ok,310.84 PLN
 41439,mediamarkt-pl,ok,45.99 PLN
 41443,mediamarkt-pl,ok,59.99 PLN
-41447,mediamarkt-pl,ok,173.56 PLN
+41447,mediamarkt-pl,ok,173.77 PLN
 41448,mediamarkt-pl,ok,229.99 PLN
 41449,mediamarkt-pl,ok,279.99 PLN
-41667,mediamarkt-pl,ok,49.17 PLN
-41668,mediamarkt-pl,ok,49.17 PLN
+41667,mediamarkt-pl,ok,49.23 PLN
+41668,mediamarkt-pl,ok,49.23 PLN
 41671,mediamarkt-pl,ok,49.23 PLN
-41677,mediamarkt-pl,ok,49.23 PLN
+41677,mediamarkt-pl,ok,49.09 PLN
 41679,mediamarkt-pl,ok,107.99 PLN
 41682,mediamarkt-pl,ok,239.99 PLN
 41683,mediamarkt-pl,ok,329.99 PLN
 41684,mediamarkt-pl,ok,399.99 PLN
 41689,mediamarkt-pl,ok,229.99 PLN
 41694,mediamarkt-pl,ok,45.99 PLN
-41695,mediamarkt-pl,ok,98.39 PLN
+41695,mediamarkt-pl,ok,98.51 PLN
 41696,mediamarkt-pl,ok,18.99 PLN
-41697,mediamarkt-pl,ok,49.17 PLN
+41697,mediamarkt-pl,ok,49.23 PLN
 41699,mediamarkt-pl,ok,109.99 PLN
 41700,mediamarkt-pl,ok,59.99 PLN
-41701,mediamarkt-pl,ok,281.85 PLN
+41701,mediamarkt-pl,ok,282.19 PLN
 41702,mediamarkt-pl,ok,299.99 PLN
 41703,mediamarkt-pl,ok,319.99 PLN
 41704,mediamarkt-pl,ok,259.99 PLN
 41705,mediamarkt-pl,ok,39.99 PLN
 41706,mediamarkt-pl,ok,77.99 PLN
-41707,mediamarkt-pl,ok,183.41 PLN
+41707,mediamarkt-pl,ok,183.63 PLN
 41708,mediamarkt-pl,ok,219.99 PLN
-41709,mediamarkt-pl,ok,380.74 PLN
-41710,mediamarkt-pl,ok,183.41 PLN
+41709,mediamarkt-pl,ok,379.62 PLN
+41710,mediamarkt-pl,ok,183.63 PLN
 41711,mediamarkt-pl,ok,279.0 PLN
 41712,mediamarkt-pl,ok,49.99 PLN
 41713,mediamarkt-pl,ok,249.99 PLN
 41714,mediamarkt-pl,ok,399.99 PLN
 41715,mediamarkt-pl,ok,29.99 PLN
-41716,mediamarkt-pl,ok,257.24 PLN
+41716,mediamarkt-pl,ok,257.55 PLN
 41717,mediamarkt-pl,ok,207.99 PLN
 41718,mediamarkt-pl,ok,259.0 PLN
 41719,mediamarkt-pl,ok,39.99 PLN
-41721,mediamarkt-pl,ok,577.16 PLN
+41721,mediamarkt-pl,ok,577.86 PLN
 41723,mediamarkt-pl,ok,39.99 PLN
 41724,mediamarkt-pl,ok,194.99 PLN
 41725,mediamarkt-pl,ok,42.99 PLN
-41726,mediamarkt-pl,ok,125.99 PLN
+41726,mediamarkt-pl,ok,132.99 PLN
 41727,mediamarkt-pl,ok,229.0 PLN
 41728,mediamarkt-pl,ok,183.63 PLN
 41729,mediamarkt-pl,ok,479.3 PLN
@@ -578,10 +578,10 @@ set_num,shop,status,detail
 41745,mediamarkt-pl,ok,229.99 PLN
 41746,mediamarkt-pl,ok,87.99 PLN
 41749,mediamarkt-pl,ok,81.99 PLN
-41751,mediamarkt-pl,ok,282.19 PLN
+41751,mediamarkt-pl,ok,281.36 PLN
 41752,mediamarkt-pl,ok,84.99 PLN
 41753,mediamarkt-pl,ok,34.99 PLN
-41754,mediamarkt-pl,ok,98.39 PLN
+41754,mediamarkt-pl,ok,41.99 PLN
 41755,mediamarkt-pl,ok,61.99 PLN
 41756,mediamarkt-pl,ok,269.99 PLN
 41758,mediamarkt-pl,ok,168.85 PLN
@@ -593,42 +593,42 @@ set_num,shop,status,detail
 41806,mediamarkt-pl,ok,79.99 PLN
 41807,mediamarkt-pl,ok,117.99 PLN
 41809,mediamarkt-pl,ok,74.99 PLN
-41811,mediamarkt-pl,ok,257.24 PLN
-41921,mediamarkt-pl,ok,19.64 PLN
-41931,mediamarkt-pl,ok,19.64 PLN
-41932,mediamarkt-pl,ok,19.64 PLN
+41811,mediamarkt-pl,ok,257.55 PLN
+41921,mediamarkt-pl,ok,19.67 PLN
+41931,mediamarkt-pl,ok,19.67 PLN
+41932,mediamarkt-pl,ok,19.67 PLN
 41935,mediamarkt-pl,ok,74.99 PLN
-41936,mediamarkt-pl,ok,98.39 PLN
+41936,mediamarkt-pl,ok,98.51 PLN
 41942,mediamarkt-pl,ok,24.99 PLN
-41943,mediamarkt-pl,ok,34.41 PLN
-41946,mediamarkt-pl,ok,19.64 PLN
+41943,mediamarkt-pl,ok,34.45 PLN
+41946,mediamarkt-pl,ok,19.67 PLN
 41947,mediamarkt-pl,ok,54.99 PLN
-41949,mediamarkt-pl,ok,139.28 PLN
+41949,mediamarkt-pl,ok,138.87 PLN
 41950,mediamarkt-pl,ok,39.99 PLN
 41951,mediamarkt-pl,ok,74.99 PLN
 41952,mediamarkt-pl,ok,147.99 PLN
 41954,mediamarkt-pl,ok,34.45 PLN
-41955,mediamarkt-pl,ok,34.41 PLN
+41955,mediamarkt-pl,ok,34.45 PLN
 41957,mediamarkt-pl,ok,89.99 PLN
-41960,mediamarkt-pl,ok,158.8 PLN
-41962,mediamarkt-pl,ok,281.85 PLN
-41963,mediamarkt-pl,ok,34.41 PLN
-41964,mediamarkt-pl,ok,257.24 PLN
-42103,mediamarkt-pl,ok,148.95 PLN
-42107,mediamarkt-pl,ok,627.13 PLN
+41960,mediamarkt-pl,ok,158.99 PLN
+41962,mediamarkt-pl,ok,282.19 PLN
+41963,mediamarkt-pl,ok,34.45 PLN
+41964,mediamarkt-pl,ok,257.55 PLN
+42103,mediamarkt-pl,ok,149.13 PLN
+42107,mediamarkt-pl,ok,625.29 PLN
 42111,mediamarkt-pl,ok,1267.75 PLN
-42112,mediamarkt-pl,ok,922.8 PLN
+42112,mediamarkt-pl,ok,920.09 PLN
 42114,mediamarkt-pl,ok,2088.0 PLN
 42115,mediamarkt-pl,ok,2253.32 PLN
 42116,mediamarkt-pl,ok,45.99 PLN
 42117,mediamarkt-pl,ok,39.99 PLN
 42122,mediamarkt-pl,ok,209.99 PLN
 42123,mediamarkt-pl,ok,197.99 PLN
-42125,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Technic 42125 Ferrari 488 GTE “AF Corse #51” Wielobarwny | sprawdź c', 1296420 chars)"
-42126,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Technic Ford F-150 Raptor Wielobarwny | sprawdź cenę i opinie w Medi', 1300572 chars)"
-42129,mediamarkt-pl,ok,1659.98 PLN
-42130,mediamarkt-pl,ok,1401.99 PLN
-42131,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Technic App-Controlled Cat D11 Bulldozer Wielobarwny | sprawdź cenę ', 1307376 chars)"
+42125,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Technic 42125 Ferrari 488 GTE “AF Corse #51” Wielobarwny | sprawdź c', 1296464 chars)"
+42126,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Technic Ford F-150 Raptor Wielobarwny | sprawdź cenę i opinie w Medi', 1300617 chars)"
+42129,mediamarkt-pl,ok,1661.98 PLN
+42130,mediamarkt-pl,ok,1168.99 PLN
+42131,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Technic App-Controlled Cat D11 Bulldozer Wielobarwny | sprawdź cenę ', 1307420 chars)"
 42132,mediamarkt-pl,ok,30.99 PLN
 42133,mediamarkt-pl,ok,39.99 PLN
 42134,mediamarkt-pl,ok,74.99 PLN
@@ -646,18 +646,18 @@ set_num,shop,status,detail
 42148,mediamarkt-pl,ok,39.99 PLN
 42149,mediamarkt-pl,ok,79.99 PLN
 42151,mediamarkt-pl,ok,282.19 PLN
-42153,mediamarkt-pl,ok,282.19 PLN
+42153,mediamarkt-pl,ok,281.36 PLN
 42154,mediamarkt-pl,ok,454.0 PLN
-42155,mediamarkt-pl,ok,306.46 PLN
+42155,mediamarkt-pl,ok,306.82 PLN
 42156,mediamarkt-pl,ok,1021.36 PLN
 42157,mediamarkt-pl,ok,1169.2 PLN
-42159,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Yamaha MT-10 SP Wielobarwny | sprawdź cenę i opinie w MediaMarkt', 1306657 chars)"
-42160,mediamarkt-pl,ok,873.53 PLN
+42159,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Yamaha MT-10 SP Wielobarwny | sprawdź cenę i opinie w MediaMarkt', 1306701 chars)"
+42160,mediamarkt-pl,ok,870.96 PLN
 42161,mediamarkt-pl,ok,227.99 PLN
-42166,mediamarkt-pl,ok,168.85 PLN
-42167,mediamarkt-pl,ok,208.27 PLN
+42166,mediamarkt-pl,ok,168.35 PLN
+42167,mediamarkt-pl,ok,207.66 PLN
 42168,mediamarkt-pl,ok,247.69 PLN
-42169,mediamarkt-pl,ok,296.61 PLN
+42169,mediamarkt-pl,ok,296.97 PLN
 42170,mediamarkt-pl,ok,365.99 PLN
 42171,mediamarkt-pl,ok,1057.99 PLN
 42172,mediamarkt-pl,ok,1695.0 PLN
@@ -665,7 +665,7 @@ set_num,shop,status,detail
 42174,mediamarkt-pl,ok,627.13 PLN
 42175,mediamarkt-pl,ok,1021.36 PLN
 42179,mediamarkt-pl,ok,363.99 PLN
-42180,mediamarkt-pl,ok,774.97 PLN
+42180,mediamarkt-pl,ok,772.69 PLN
 42196,mediamarkt-pl,ok,261.0 PLN
 42198,mediamarkt-pl,ok,81.99 PLN
 42199,mediamarkt-pl,ok,75.58 PLN
@@ -679,18 +679,18 @@ set_num,shop,status,detail
 42207,mediamarkt-pl,ok,870.99 PLN
 42208,mediamarkt-pl,ok,139.99 PLN
 42210,mediamarkt-pl,ok,429.99 PLN
-42211,mediamarkt-pl,error,HTTP Error 410: Gone
+42211,mediamarkt-pl,ok,462.99 PLN
 42212,mediamarkt-pl,ok,197.99 PLN
 42213,mediamarkt-pl,ok,173.97 PLN
 42214,mediamarkt-pl,ok,677.99 PLN
 42215,mediamarkt-pl,ok,1909.99 PLN
-42218,mediamarkt-pl,ok,44.19 PLN
+42218,mediamarkt-pl,ok,44.29 PLN
 42219,mediamarkt-pl,ok,134.99 PLN
 42220,mediamarkt-pl,ok,113.99 PLN
 42221,mediamarkt-pl,ok,173.97 PLN
 42222,mediamarkt-pl,ok,233.99 PLN
 42223,mediamarkt-pl,ok,219.97 PLN
-42224,mediamarkt-pl,error,HTTP Error 410: Gone
+42224,mediamarkt-pl,ok,621.99 PLN
 42226,mediamarkt-pl,ok,234.99 PLN
 42227,mediamarkt-pl,ok,237.99 PLN
 42231,mediamarkt-pl,ok,565.99 PLN
@@ -706,7 +706,7 @@ set_num,shop,status,detail
 42610,mediamarkt-pl,ok,98.51 PLN
 42612,mediamarkt-pl,ok,29.99 PLN
 42614,mediamarkt-pl,ok,231.99 PLN
-42615,mediamarkt-pl,ok,306.82 PLN
+42615,mediamarkt-pl,ok,305.92 PLN
 42616,mediamarkt-pl,ok,356.1 PLN
 42649,mediamarkt-pl,ok,112.99 PLN
 42662,mediamarkt-pl,ok,247.99 PLN
@@ -714,26 +714,26 @@ set_num,shop,status,detail
 42676,mediamarkt-pl,ok,130.99 PLN
 42677,mediamarkt-pl,ok,113.99 PLN
 42678,mediamarkt-pl,ok,80.0 PLN
-42679,mediamarkt-pl,error,HTTP Error 410: Gone
+42679,mediamarkt-pl,ok,99.99 PLN
 42680,mediamarkt-pl,ok,98.51 PLN
 42681,mediamarkt-pl,ok,51.0 PLN
 42682,mediamarkt-pl,ok,103.99 PLN
 42684,mediamarkt-pl,ok,171.99 PLN
 42685,mediamarkt-pl,ok,180.99 PLN
 42686,mediamarkt-pl,ok,210.99 PLN
-42687,mediamarkt-pl,error,HTTP Error 410: Gone
+42687,mediamarkt-pl,ok,331.46 PLN
 42688,mediamarkt-pl,ok,239.99 PLN
-42689,mediamarkt-pl,ok,413.99 PLN
+42689,mediamarkt-pl,ok,414.99 PLN
 42692,mediamarkt-pl,ok,27.0 PLN
 42693,mediamarkt-pl,ok,126.99 PLN
 42695,mediamarkt-pl,ok,129.99 PLN
-42696,mediamarkt-pl,ok,126.99 PLN
+42696,mediamarkt-pl,ok,127.99 PLN
 42697,mediamarkt-pl,ok,208.99 PLN
 42698,mediamarkt-pl,ok,91.99 PLN
-42699,mediamarkt-pl,error,HTTP Error 410: Gone
+42699,mediamarkt-pl,ok,180.99 PLN
 42700,mediamarkt-pl,ok,210.99 PLN
 42702,mediamarkt-pl,ok,149.99 PLN
-42703,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Friends 42703 | Syrenkowa Kolejka Górska - sprawdź cenę i opinie w M', 1298775 chars)"
+42703,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Friends 42703 | Syrenkowa Kolejka Górska - sprawdź cenę i opinie w M', 1298819 chars)"
 42704,mediamarkt-pl,ok,591.99 PLN
 42705,mediamarkt-pl,ok,447.99 PLN
 43011,mediamarkt-pl,ok,94.99 PLN
@@ -749,7 +749,7 @@ set_num,shop,status,detail
 43022,mediamarkt-pl,ok,322.99 PLN
 43023,mediamarkt-pl,ok,323.0 PLN
 43024,mediamarkt-pl,ok,322.99 PLN
-43025,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Nike 43025 | Zestaw Nike Air Max 95 - sprawdź cenę i opinie w MediaM', 1291948 chars)"
+43025,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Nike 43025 | Zestaw Nike Air Max 95 - sprawdź cenę i opinie w MediaM', 1291992 chars)"
 43027,mediamarkt-pl,ok,82.97 PLN
 43028,mediamarkt-pl,ok,114.0 PLN
 43029,mediamarkt-pl,ok,182.99 PLN
@@ -786,19 +786,19 @@ set_num,shop,status,detail
 43216,mediamarkt-pl,ok,219.99 PLN
 43217,mediamarkt-pl,ok,306.82 PLN
 43219,mediamarkt-pl,ok,49.99 PLN
-43220,mediamarkt-pl,ok,78.69 PLN
+43220,mediamarkt-pl,ok,73.79 PLN
 43221,mediamarkt-pl,ok,234.99 PLN
-43223,mediamarkt-pl,ok,139.28 PLN
+43223,mediamarkt-pl,ok,138.87 PLN
 43224,mediamarkt-pl,ok,418.99 PLN
 43225,mediamarkt-pl,ok,1267.75 PLN
 43227,mediamarkt-pl,ok,1169.2 PLN
 43229,mediamarkt-pl,ok,272.33 PLN
 43231,mediamarkt-pl,ok,296.97 PLN
-43232,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Peter Pan &amp; Wendy&#x27;s Flight over London Wielobarwny | sprawd', 1285888 chars)"
+43232,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Peter Pan &amp; Wendy&#x27;s Flight over London Wielobarwny | sprawd', 1285932 chars)"
 43234,mediamarkt-pl,ok,48.99 PLN
 43239,mediamarkt-pl,ok,149.13 PLN
-43242,mediamarkt-pl,ok,1760.54 PLN
-43247,mediamarkt-pl,ok,676.41 PLN
+43242,mediamarkt-pl,ok,1755.36 PLN
+43247,mediamarkt-pl,ok,674.42 PLN
 43248,mediamarkt-pl,ok,208.27 PLN
 43249,mediamarkt-pl,ok,234.99 PLN
 43257,mediamarkt-pl,ok,247.99 PLN
@@ -829,7 +829,7 @@ set_num,shop,status,detail
 43299,mediamarkt-pl,ok,235.0 PLN
 43300,mediamarkt-pl,ok,564.99 PLN
 43301,mediamarkt-pl,ok,564.99 PLN
-43303,mediamarkt-pl,error,HTTP Error 410: Gone
+43303,mediamarkt-pl,ok,51.0 PLN
 43304,mediamarkt-pl,ok,184.99 PLN
 45345,mediamarkt-pl,ok,2253.32 PLN
 60241,mediamarkt-pl,ok,39.99 PLN
@@ -850,26 +850,26 @@ set_num,shop,status,detail
 60282,mediamarkt-pl,ok,229.99 PLN
 60283,mediamarkt-pl,ok,64.99 PLN
 60287,mediamarkt-pl,ok,79.99 PLN
-60293,mediamarkt-pl,ok,183.63 PLN
+60293,mediamarkt-pl,ok,183.09 PLN
 60294,mediamarkt-pl,ok,331.46 PLN
 60296,mediamarkt-pl,ok,29.99 PLN
 60297,mediamarkt-pl,ok,29.99 PLN
 60299,mediamarkt-pl,ok,158.99 PLN
 60300,mediamarkt-pl,ok,45.99 PLN
 60301,mediamarkt-pl,ok,207.0 PLN
-60304,mediamarkt-pl,ok,78.69 PLN
+60304,mediamarkt-pl,ok,78.79 PLN
 60309,mediamarkt-pl,ok,29.99 PLN
 60310,mediamarkt-pl,ok,29.99 PLN
 60311,mediamarkt-pl,ok,29.99 PLN
 60312,mediamarkt-pl,ok,49.23 PLN
 60314,mediamarkt-pl,ok,109.99 PLN
 60315,mediamarkt-pl,ok,147.99 PLN
-60316,mediamarkt-pl,error,HTTP Error 410: Gone
+60316,mediamarkt-pl,ok,288.99 PLN
 60317,mediamarkt-pl,ok,399.99 PLN
 60319,mediamarkt-pl,ok,86.99 PLN
 60320,mediamarkt-pl,ok,219.99 PLN
 60321,mediamarkt-pl,ok,399.99 PLN
-60322,mediamarkt-pl,ok,49.23 PLN
+60322,mediamarkt-pl,ok,49.09 PLN
 60323,mediamarkt-pl,ok,23.99 PLN
 60324,mediamarkt-pl,ok,157.99 PLN
 60325,mediamarkt-pl,ok,38.99 PLN
@@ -878,12 +878,12 @@ set_num,shop,status,detail
 60331,mediamarkt-pl,ok,24.99 PLN
 60332,mediamarkt-pl,ok,9.99 PLN
 60333,mediamarkt-pl,ok,39.38 PLN
-60336,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO City Freight Train Wielobarwny | sprawdź cenę i opinie w MediaMarkt', 1297705 chars)"
+60336,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO City Freight Train Wielobarwny | sprawdź cenę i opinie w MediaMarkt', 1297749 chars)"
 60337,mediamarkt-pl,ok,591.99 PLN
 60338,mediamarkt-pl,ok,208.27 PLN
 60339,mediamarkt-pl,ok,528.58 PLN
 60340,mediamarkt-pl,ok,158.99 PLN
-60341,mediamarkt-pl,ok,98.51 PLN
+60341,mediamarkt-pl,ok,98.22 PLN
 60342,mediamarkt-pl,ok,98.51 PLN
 60343,mediamarkt-pl,ok,107.99 PLN
 60344,mediamarkt-pl,ok,45.99 PLN
@@ -899,7 +899,7 @@ set_num,shop,status,detail
 60358,mediamarkt-pl,ok,12.99 PLN
 60359,mediamarkt-pl,ok,98.51 PLN
 60360,mediamarkt-pl,ok,114.99 PLN
-60361,mediamarkt-pl,ok,346.25 PLN
+60361,mediamarkt-pl,ok,345.23 PLN
 60363,mediamarkt-pl,ok,79.99 PLN
 60366,mediamarkt-pl,ok,349.99 PLN
 60367,mediamarkt-pl,ok,353.0 PLN
@@ -920,24 +920,24 @@ set_num,shop,status,detail
 60389,mediamarkt-pl,ok,189.99 PLN
 60390,mediamarkt-pl,ok,39.99 PLN
 60391,mediamarkt-pl,ok,69.99 PLN
-60392,mediamarkt-pl,ok,49.23 PLN
+60392,mediamarkt-pl,ok,49.09 PLN
 60393,mediamarkt-pl,ok,39.99 PLN
 60396,mediamarkt-pl,ok,232.91 PLN
 60402,mediamarkt-pl,ok,73.87 PLN
 60411,mediamarkt-pl,ok,34.99 PLN
 60413,mediamarkt-pl,ok,187.99 PLN
-60414,mediamarkt-pl,ok,341.32 PLN
+60414,mediamarkt-pl,ok,504.99 PLN
 60415,mediamarkt-pl,ok,49.99 PLN
 60434,mediamarkt-pl,ok,725.69 PLN
 60436,mediamarkt-pl,ok,109.99 PLN
-60441,mediamarkt-pl,ok,232.91 PLN
+60441,mediamarkt-pl,ok,232.22 PLN
 60442,mediamarkt-pl,ok,34.97 PLN
 60443,mediamarkt-pl,ok,110.99 PLN
-60444,mediamarkt-pl,ok,430.02 PLN
+60444,mediamarkt-pl,ok,428.76 PLN
 60445,mediamarkt-pl,ok,350.99 PLN
-60446,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO City 60446 | Modułowy galaktyczny statek kosmiczny Wielobarwny - spr', 1304634 chars)"
+60446,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO City 60446 | Modułowy galaktyczny statek kosmiczny Wielobarwny - spr', 1304677 chars)"
 60451,mediamarkt-pl,ok,80.0 PLN
-60452,mediamarkt-pl,ok,98.51 PLN
+60452,mediamarkt-pl,ok,98.22 PLN
 60455,mediamarkt-pl,ok,26.97 PLN
 60456,mediamarkt-pl,ok,81.99 PLN
 60463,mediamarkt-pl,ok,53.0 PLN
@@ -952,16 +952,16 @@ set_num,shop,status,detail
 60483,mediamarkt-pl,ok,42.49 PLN
 60484,mediamarkt-pl,ok,43.69 PLN
 60485,mediamarkt-pl,ok,42.49 PLN
-60486,mediamarkt-pl,ok,44.19 PLN
+60486,mediamarkt-pl,ok,44.29 PLN
 60487,mediamarkt-pl,ok,65.0 PLN
 60488,mediamarkt-pl,ok,81.0 PLN
 60489,mediamarkt-pl,ok,110.99 PLN
 60490,mediamarkt-pl,ok,158.99 PLN
-60491,mediamarkt-pl,ok,98.49 PLN
+60491,mediamarkt-pl,ok,98.19 PLN
 60492,mediamarkt-pl,ok,124.99 PLN
 60493,mediamarkt-pl,ok,192.99 PLN
 60494,mediamarkt-pl,ok,449.99 PLN
-60495,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 60495 | City, Śmieciarka do recyklingu, 434 szt., 7 lat - sprawdź ce', 1301308 chars)"
+60495,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 60495 | City, Śmieciarka do recyklingu, 434 szt., 7 lat - sprawdź ce', 1301352 chars)"
 60496,mediamarkt-pl,ok,208.99 PLN
 60497,mediamarkt-pl,ok,198.99 PLN
 60498,mediamarkt-pl,ok,82.69 PLN
@@ -972,9 +972,9 @@ set_num,shop,status,detail
 60504,mediamarkt-pl,ok,400.0 PLN
 60505,mediamarkt-pl,ok,209.99 PLN
 60506,mediamarkt-pl,ok,251.99 PLN
-60508,mediamarkt-pl,ok,871.99 PLN
+60508,mediamarkt-pl,ok,872.99 PLN
 60511,mediamarkt-pl,ok,317.99 PLN
-70428,mediamarkt-pl,ok,68.94 PLN
+70428,mediamarkt-pl,ok,68.74 PLN
 70430,mediamarkt-pl,ok,139.28 PLN
 70689,mediamarkt-pl,ok,45.99 PLN
 70690,mediamarkt-pl,ok,45.99 PLN
@@ -989,7 +989,7 @@ set_num,shop,status,detail
 71365,mediamarkt-pl,ok,183.63 PLN
 71366,mediamarkt-pl,ok,217.76 PLN
 71368,mediamarkt-pl,ok,306.82 PLN
-71369,mediamarkt-pl,ok,774.97 PLN
+71369,mediamarkt-pl,ok,772.69 PLN
 71372,mediamarkt-pl,ok,39.99 PLN
 71374,mediamarkt-pl,ok,2253.32 PLN
 71376,mediamarkt-pl,ok,232.91 PLN
@@ -1009,7 +1009,7 @@ set_num,shop,status,detail
 71403,mediamarkt-pl,ok,331.46 PLN
 71404,mediamarkt-pl,ok,31.99 PLN
 71405,mediamarkt-pl,ok,84.99 PLN
-71406,mediamarkt-pl,ok,208.27 PLN
+71406,mediamarkt-pl,ok,207.66 PLN
 71407,mediamarkt-pl,ok,99.99 PLN
 71408,mediamarkt-pl,ok,749.21 PLN
 71409,mediamarkt-pl,ok,329.99 PLN
@@ -1022,7 +1022,7 @@ set_num,shop,status,detail
 71421,mediamarkt-pl,ok,168.85 PLN
 71422,mediamarkt-pl,ok,169.99 PLN
 71426,mediamarkt-pl,ok,356.1 PLN
-71433,mediamarkt-pl,ok,73.87 PLN
+71433,mediamarkt-pl,ok,73.66 PLN
 71453,mediamarkt-pl,ok,139.28 PLN
 71454,mediamarkt-pl,ok,74.99 PLN
 71455,mediamarkt-pl,ok,117.99 PLN
@@ -1038,9 +1038,9 @@ set_num,shop,status,detail
 71513,mediamarkt-pl,ok,220.99 PLN
 71514,mediamarkt-pl,ok,430.99 PLN
 71700,mediamarkt-pl,ok,45.99 PLN
-71730,mediamarkt-pl,ok,49.23 PLN
+71730,mediamarkt-pl,ok,49.09 PLN
 71740,mediamarkt-pl,ok,89.99 PLN
-71741,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO NINJAGO 71741 Ogrody miasta Wielobarwny | sprawdź cenę i opinie w Me', 1303329 chars)"
+71741,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO NINJAGO 71741 Ogrody miasta Wielobarwny | sprawdź cenę i opinie w Me', 1303373 chars)"
 71749,mediamarkt-pl,ok,177.99 PLN
 71754,mediamarkt-pl,ok,299.0 PLN
 71757,mediamarkt-pl,ok,39.99 PLN
@@ -1071,8 +1071,8 @@ set_num,shop,status,detail
 71796,mediamarkt-pl,ok,359.99 PLN
 71798,mediamarkt-pl,ok,242.76 PLN
 71799,mediamarkt-pl,ok,2499.71 PLN
-71804,mediamarkt-pl,ok,73.87 PLN
-71805,mediamarkt-pl,ok,49.23 PLN
+71804,mediamarkt-pl,ok,73.66 PLN
+71805,mediamarkt-pl,ok,49.09 PLN
 71813,mediamarkt-pl,ok,725.69 PLN
 71816,mediamarkt-pl,ok,49.23 PLN
 71819,mediamarkt-pl,ok,725.69 PLN
@@ -1081,7 +1081,7 @@ set_num,shop,status,detail
 71831,mediamarkt-pl,ok,211.99 PLN
 71833,mediamarkt-pl,ok,227.99 PLN
 71834,mediamarkt-pl,ok,454.99 PLN
-71844,mediamarkt-pl,ok,477.99 PLN
+71844,mediamarkt-pl,ok,478.99 PLN
 71846,mediamarkt-pl,ok,572.99 PLN
 71847,mediamarkt-pl,ok,703.99 PLN
 71849,mediamarkt-pl,ok,29.99 PLN
@@ -1099,16 +1099,16 @@ set_num,shop,status,detail
 71866,mediamarkt-pl,ok,174.99 PLN
 71867,mediamarkt-pl,ok,265.0 PLN
 71868,mediamarkt-pl,ok,388.99 PLN
-71869,mediamarkt-pl,ok,581.99 PLN
+71869,mediamarkt-pl,ok,580.99 PLN
 71870,mediamarkt-pl,ok,513.99 PLN
 71871,mediamarkt-pl,ok,388.99 PLN
 71872,mediamarkt-pl,ok,738.99 PLN
-72032,mediamarkt-pl,ok,98.51 PLN
-72035,mediamarkt-pl,ok,232.91 PLN
+72032,mediamarkt-pl,ok,98.22 PLN
+72035,mediamarkt-pl,ok,232.22 PLN
 72036,mediamarkt-pl,ok,355.99 PLN
 72037,mediamarkt-pl,ok,539.0 PLN
-72043,mediamarkt-pl,error,HTTP Error 410: Gone
-72050,mediamarkt-pl,ok,787.99 PLN
+72043,mediamarkt-pl,ok,331.21 PLN
+72050,mediamarkt-pl,ok,788.99 PLN
 72150,mediamarkt-pl,ok,255.99 PLN
 72151,mediamarkt-pl,ok,187.99 PLN
 72152,mediamarkt-pl,ok,499.0 PLN
@@ -1121,19 +1121,19 @@ set_num,shop,status,detail
 75277,mediamarkt-pl,ok,279.99 PLN
 75286,mediamarkt-pl,ok,279.99 PLN
 75288,mediamarkt-pl,ok,1514.14 PLN
-75290,mediamarkt-pl,ok,2401.15 PLN
+75290,mediamarkt-pl,ok,2394.09 PLN
 75295,mediamarkt-pl,ok,45.99 PLN
 75300,mediamarkt-pl,ok,177.99 PLN
 75301,mediamarkt-pl,ok,209.0 PLN
-75309,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Star Wars Kanonierka Republiki 75309 Wielobarwny | sprawdź cenę i op', 1302747 chars)"
+75309,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Star Wars Kanonierka Republiki 75309 Wielobarwny | sprawdź cenę i op', 1302791 chars)"
 75312,mediamarkt-pl,ok,209.99 PLN
 75317,mediamarkt-pl,ok,71.99 PLN
 75320,mediamarkt-pl,ok,89.99 PLN
 75322,mediamarkt-pl,ok,239.99 PLN
 75323,mediamarkt-pl,ok,873.53 PLN
 75324,mediamarkt-pl,ok,137.99 PLN
-75325,mediamarkt-pl,ok,356.1 PLN
-75327,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 75327 Star Wars Hełm Luke’a Skywalkera — Czerwony Pięć | sprawdź cen', 1295469 chars)"
+75325,mediamarkt-pl,ok,355.06 PLN
+75327,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO 75327 Star Wars Hełm Luke’a Skywalkera — Czerwony Pięć | sprawdź cen', 1295514 chars)"
 75328,mediamarkt-pl,ok,312.99 PLN
 75329,mediamarkt-pl,ok,209.99 PLN
 75330,mediamarkt-pl,ok,369.99 PLN
@@ -1143,7 +1143,7 @@ set_num,shop,status,detail
 75336,mediamarkt-pl,ok,419.0 PLN
 75337,mediamarkt-pl,ok,824.25 PLN
 75340,mediamarkt-pl,ok,157.99 PLN
-75342,mediamarkt-pl,ok,380.74 PLN
+75342,mediamarkt-pl,ok,379.62 PLN
 75343,mediamarkt-pl,ok,774.97 PLN
 75344,mediamarkt-pl,ok,39.99 PLN
 75345,mediamarkt-pl,ok,98.51 PLN
@@ -1152,7 +1152,7 @@ set_num,shop,status,detail
 75348,mediamarkt-pl,ok,528.58 PLN
 75349,mediamarkt-pl,ok,380.74 PLN
 75350,mediamarkt-pl,ok,239.99 PLN
-75351,mediamarkt-pl,ok,430.02 PLN
+75351,mediamarkt-pl,ok,428.76 PLN
 75353,mediamarkt-pl,ok,349.99 PLN
 75356,mediamarkt-pl,ok,479.3 PLN
 75358,mediamarkt-pl,ok,182.99 PLN
@@ -1169,10 +1169,10 @@ set_num,shop,status,detail
 75374,mediamarkt-pl,ok,523.0 PLN
 75375,mediamarkt-pl,ok,402.99 PLN
 75376,mediamarkt-pl,ok,430.02 PLN
-75378,mediamarkt-pl,ok,183.63 PLN
+75378,mediamarkt-pl,ok,183.09 PLN
 75379,mediamarkt-pl,ok,425.09 PLN
 75380,mediamarkt-pl,ok,430.02 PLN
-75381,mediamarkt-pl,ok,356.1 PLN
+75381,mediamarkt-pl,ok,355.06 PLN
 75382,mediamarkt-pl,ok,1086.0 PLN
 75383,mediamarkt-pl,ok,430.02 PLN
 75385,mediamarkt-pl,ok,380.74 PLN
@@ -1183,7 +1183,7 @@ set_num,shop,status,detail
 75403,mediamarkt-pl,ok,362.99 PLN
 75405,mediamarkt-pl,ok,175.97 PLN
 75407,mediamarkt-pl,ok,261.99 PLN
-75408,mediamarkt-pl,ok,349.99 PLN
+75408,mediamarkt-pl,ok,350.99 PLN
 75410,mediamarkt-pl,ok,109.99 PLN
 75411,mediamarkt-pl,ok,40.99 PLN
 75413,mediamarkt-pl,ok,726.99 PLN
@@ -1214,7 +1214,7 @@ set_num,shop,status,detail
 75453,mediamarkt-pl,ok,766.0 PLN
 75454,mediamarkt-pl,ok,643.99 PLN
 75455,mediamarkt-pl,ok,654.99 PLN
-75456,mediamarkt-pl,ok,183.63 PLN
+75456,mediamarkt-pl,ok,183.09 PLN
 75460,mediamarkt-pl,ok,346.0 PLN
 75573,mediamarkt-pl,ok,478.99 PLN
 75575,mediamarkt-pl,ok,99.99 PLN
@@ -1237,7 +1237,7 @@ set_num,shop,status,detail
 75968,mediamarkt-pl,ok,329.0 PLN
 75978,mediamarkt-pl,ok,3238.88 PLN
 76143,mediamarkt-pl,ok,331.46 PLN
-76154,mediamarkt-pl,ok,98.51 PLN
+76154,mediamarkt-pl,ok,98.22 PLN
 76155,mediamarkt-pl,ok,329.99 PLN
 76156,mediamarkt-pl,ok,282.19 PLN
 76157,mediamarkt-pl,ok,232.91 PLN
@@ -1278,7 +1278,7 @@ set_num,shop,status,detail
 76245,mediamarkt-pl,ok,208.27 PLN
 76247,mediamarkt-pl,ok,199.99 PLN
 76248,mediamarkt-pl,ok,419.99 PLN
-76249,mediamarkt-pl,ok,380.74 PLN
+76249,mediamarkt-pl,ok,379.62 PLN
 76253,mediamarkt-pl,ok,34.99 PLN
 76254,mediamarkt-pl,ok,149.99 PLN
 76255,mediamarkt-pl,ok,479.99 PLN
@@ -1288,7 +1288,7 @@ set_num,shop,status,detail
 76263,mediamarkt-pl,ok,98.51 PLN
 76264,mediamarkt-pl,ok,49.99 PLN
 76265,mediamarkt-pl,ok,127.99 PLN
-76267,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Avengers Advent Calendar Wielobarwny | sprawdź cenę i opinie w Media', 1309389 chars)"
+76267,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Avengers Advent Calendar Wielobarwny | sprawdź cenę i opinie w Media', 1309433 chars)"
 76277,mediamarkt-pl,error,HTTP Error 410: Gone
 76284,mediamarkt-pl,ok,181.99 PLN
 76293,mediamarkt-pl,ok,139.99 PLN
@@ -1298,8 +1298,8 @@ set_num,shop,status,detail
 76316,mediamarkt-pl,ok,298.99 PLN
 76319,mediamarkt-pl,ok,158.99 PLN
 76320,mediamarkt-pl,ok,64.97 PLN
-76321,mediamarkt-pl,ok,282.19 PLN
-76324,mediamarkt-pl,ok,774.97 PLN
+76321,mediamarkt-pl,ok,281.36 PLN
+76324,mediamarkt-pl,ok,772.69 PLN
 76327,mediamarkt-pl,ok,233.99 PLN
 76330,mediamarkt-pl,ok,289.99 PLN
 76331,mediamarkt-pl,ok,135.99 PLN
@@ -1308,7 +1308,7 @@ set_num,shop,status,detail
 76335,mediamarkt-pl,ok,44.69 PLN
 76336,mediamarkt-pl,ok,86.79 PLN
 76337,mediamarkt-pl,ok,40.75 PLN
-76338,mediamarkt-pl,error,HTTP Error 410: Gone
+76338,mediamarkt-pl,ok,134.99 PLN
 76339,mediamarkt-pl,ok,239.0 PLN
 76340,mediamarkt-pl,error,HTTP Error 410: Gone
 76341,mediamarkt-pl,ok,216.99 PLN
@@ -1335,9 +1335,9 @@ set_num,shop,status,detail
 76401,mediamarkt-pl,ok,209.99 PLN
 76402,mediamarkt-pl,ok,369.0 PLN
 76403,mediamarkt-pl,ok,399.99 PLN
-76404,mediamarkt-pl,ok,208.27 PLN
-76405,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Harry Potter 76405 Ekspres do Hogwartu (S) Wielobarwny | sprawdź cen', 1301932 chars)"
-76407,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Harry Potter The Shrieking Shack &amp; Whomping Willow Wielobarwny |', 1301417 chars)"
+76404,mediamarkt-pl,ok,207.66 PLN
+76405,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Harry Potter 76405 Ekspres do Hogwartu (S) Wielobarwny | sprawdź cen', 1301976 chars)"
+76407,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Harry Potter The Shrieking Shack &amp; Whomping Willow Wielobarwny |', 1301461 chars)"
 76409,mediamarkt-pl,ok,129.99 PLN
 76410,mediamarkt-pl,ok,129.99 PLN
 76411,mediamarkt-pl,ok,59.99 PLN
@@ -1360,12 +1360,12 @@ set_num,shop,status,detail
 76459,mediamarkt-pl,ok,54.99 PLN
 76461,mediamarkt-pl,ok,82.99 PLN
 76462,mediamarkt-pl,ok,186.99 PLN
-76463,mediamarkt-pl,error,HTTP Error 410: Gone
+76463,mediamarkt-pl,ok,358.0 PLN
 76464,mediamarkt-pl,ok,213.99 PLN
 76466,mediamarkt-pl,ok,594.99 PLN
 76467,mediamarkt-pl,ok,299.99 PLN
 76469,mediamarkt-pl,ok,148.99 PLN
-76470,mediamarkt-pl,error,HTTP Error 410: Gone
+76470,mediamarkt-pl,ok,288.0 PLN
 76471,mediamarkt-pl,ok,358.99 PLN
 76474,mediamarkt-pl,ok,325.0 PLN
 76475,mediamarkt-pl,ok,106.99 PLN
@@ -1373,7 +1373,7 @@ set_num,shop,status,detail
 76787,mediamarkt-pl,ok,174.99 PLN
 76788,mediamarkt-pl,ok,298.99 PLN
 76830,mediamarkt-pl,ok,62.99 PLN
-76831,mediamarkt-pl,ok,183.63 PLN
+76831,mediamarkt-pl,ok,183.09 PLN
 76832,mediamarkt-pl,ok,177.99 PLN
 76899,mediamarkt-pl,ok,239.99 PLN
 76900,mediamarkt-pl,ok,69.99 PLN
@@ -1389,15 +1389,15 @@ set_num,shop,status,detail
 76916,mediamarkt-pl,ok,84.99 PLN
 76917,mediamarkt-pl,ok,158.99 PLN
 76918,mediamarkt-pl,ok,331.21 PLN
-76920,mediamarkt-pl,ok,168.85 PLN
+76920,mediamarkt-pl,ok,168.35 PLN
 76921,mediamarkt-pl,ok,168.85 PLN
-76922,mediamarkt-pl,ok,282.19 PLN
+76922,mediamarkt-pl,ok,281.36 PLN
 76924,mediamarkt-pl,ok,149.99 PLN
 76925,mediamarkt-pl,ok,331.46 PLN
 76935,mediamarkt-pl,ok,167.99 PLN
 76939,mediamarkt-pl,ok,257.55 PLN
 76941,mediamarkt-pl,ok,239.99 PLN
-76943,mediamarkt-pl,ok,149.13 PLN
+76943,mediamarkt-pl,ok,148.7 PLN
 76944,mediamarkt-pl,ok,177.99 PLN
 76945,mediamarkt-pl,ok,59.99 PLN
 76946,mediamarkt-pl,ok,107.99 PLN
@@ -1413,12 +1413,12 @@ set_num,shop,status,detail
 76970,mediamarkt-pl,ok,118.99 PLN
 76972,mediamarkt-pl,ok,208.27 PLN
 76973,mediamarkt-pl,ok,528.58 PLN
-76975,mediamarkt-pl,ok,232.91 PLN
+76975,mediamarkt-pl,ok,232.22 PLN
 76976,mediamarkt-pl,ok,645.99 PLN
 76989,mediamarkt-pl,ok,369.0 PLN
 76992,mediamarkt-pl,ok,247.69 PLN
 76997,mediamarkt-pl,ok,381.42 PLN
-77000,mediamarkt-pl,ok,430.02 PLN
+77000,mediamarkt-pl,ok,428.76 PLN
 77001,mediamarkt-pl,ok,90.69 PLN
 77002,mediamarkt-pl,ok,141.99 PLN
 77005,mediamarkt-pl,ok,124.99 PLN
@@ -1432,12 +1432,12 @@ set_num,shop,status,detail
 77049,mediamarkt-pl,ok,164.89 PLN
 77050,mediamarkt-pl,ok,293.99 PLN
 77051,mediamarkt-pl,ok,86.97 PLN
-77053,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Stargazing with Celeste Wielobarwny | sprawdź cenę i opinie w MediaM', 1314715 chars)"
+77053,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Stargazing with Celeste Wielobarwny | sprawdź cenę i opinie w MediaM', 1314941 chars)"
 77055,mediamarkt-pl,ok,148.99 PLN
 77056,mediamarkt-pl,ok,281.99 PLN
 77058,mediamarkt-pl,ok,73.49 PLN
 77059,mediamarkt-pl,ok,260.99 PLN
-77070,mediamarkt-pl,ok,73.87 PLN
+77070,mediamarkt-pl,ok,73.66 PLN
 77071,mediamarkt-pl,ok,129.99 PLN
 77073,mediamarkt-pl,ok,299.99 PLN
 77075,mediamarkt-pl,ok,60.2 PLN
@@ -1446,8 +1446,8 @@ set_num,shop,status,detail
 77080,mediamarkt-pl,ok,151.99 PLN
 77081,mediamarkt-pl,ok,358.99 PLN
 77082,mediamarkt-pl,ok,765.99 PLN
-77092,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Great Deku Tree 2-in-1 Wielobarwny | sprawdź cenę i opinie w MediaMa', 1297571 chars)"
-77117,mediamarkt-pl,error,HTTP Error 410: Gone
+77092,mediamarkt-pl,no_price,"price not found (page: 'Klocki LEGO Great Deku Tree 2-in-1 Wielobarwny | sprawdź cenę i opinie w MediaMa', 1297614 chars)"
+77117,mediamarkt-pl,ok,49.23 PLN
 77118,mediamarkt-pl,ok,182.99 PLN
 77119,mediamarkt-pl,ok,115.0 PLN
 77237,mediamarkt-pl,ok,75.58 PLN
@@ -1466,7 +1466,7 @@ set_num,shop,status,detail
 77253,mediamarkt-pl,ok,74.99 PLN
 77254,mediamarkt-pl,ok,117.99 PLN
 77255,mediamarkt-pl,ok,105.99 PLN
-77256,mediamarkt-pl,ok,117.99 PLN
+77256,mediamarkt-pl,ok,115.99 PLN
 77257,mediamarkt-pl,ok,95.99 PLN
 77258,mediamarkt-pl,ok,110.0 PLN
 77259,mediamarkt-pl,ok,118.99 PLN
@@ -1491,7 +1491,7 @@ set_num,shop,status,detail
 10273,neonet-pl,ok,1447.9 PLN
 10280,neonet-pl,ok,139.99 PLN
 10281,neonet-pl,ok,163.9 PLN
-10295,neonet-pl,ok,499.0 PLN
+10295,neonet-pl,ok,558.9 PLN
 10311,neonet-pl,ok,168.9 PLN
 10313,neonet-pl,ok,192.9 PLN
 10315,neonet-pl,ok,339.9 PLN
@@ -1518,7 +1518,7 @@ set_num,shop,status,detail
 10413,neonet-pl,ok,29.99 PLN
 10414,neonet-pl,ok,104.9 PLN
 10415,neonet-pl,ok,49.99 PLN
-10418,neonet-pl,ok,59.99 PLN
+10418,neonet-pl,ok,119.9 PLN
 10419,neonet-pl,ok,89.9 PLN
 10420,neonet-pl,ok,80.9 PLN
 10421,neonet-pl,ok,134.9 PLN
@@ -1568,7 +1568,7 @@ set_num,shop,status,detail
 10781,neonet-pl,ok,48.9 PLN
 10785,neonet-pl,ok,47.9 PLN
 10788,neonet-pl,ok,262.9 PLN
-10792,neonet-pl,ok,47.9 PLN
+10792,neonet-pl,error,HTTP Error 503: Service Unavailable
 10795,neonet-pl,ok,63.9 PLN
 10913,neonet-pl,ok,99.9 PLN
 10914,neonet-pl,ok,160.9 PLN
@@ -2362,51 +2362,51 @@ set_num,shop,status,detail
 10281,planetaklockow-pl,ok,204.99 PLN
 10291,planetaklockow-pl,ok,429.99 PLN
 10295,planetaklockow-pl,ok,729.99 PLN
-10302,planetaklockow-pl,ok,769.99 PLN
-10311,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+10302,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+10311,planetaklockow-pl,ok,209.99 PLN
 10313,planetaklockow-pl,ok,225.05 PLN
 10315,planetaklockow-pl,ok,439.99 PLN
-10328,planetaklockow-pl,ok,227.84 PLN
+10328,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10329,planetaklockow-pl,ok,209.99 PLN
 10330,planetaklockow-pl,ok,329.99 PLN
-10331,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+10331,planetaklockow-pl,ok,209.99 PLN
 10337,planetaklockow-pl,ok,779.99 PLN
 10342,planetaklockow-pl,ok,241.99 PLN
-10343,planetaklockow-pl,ok,121.99 PLN
+10343,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10344,planetaklockow-pl,ok,104.54 PLN
 10347,planetaklockow-pl,ok,121.99 PLN
 10348,planetaklockow-pl,ok,239.99 PLN
 10349,planetaklockow-pl,ok,69.74 PLN
 10353,planetaklockow-pl,ok,313.49 PLN
-10357,planetaklockow-pl,ok,689.99 PLN
+10357,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10358,planetaklockow-pl,ok,779.99 PLN
 10359,planetaklockow-pl,ok,408.49 PLN
 10362,planetaklockow-pl,ok,322.99 PLN
-10363,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-10365,planetaklockow-pl,ok,1749.99 PLN
+10363,planetaklockow-pl,ok,246.44 PLN
+10365,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10367,planetaklockow-pl,ok,475.19 PLN
 10368,planetaklockow-pl,ok,123.99 PLN
 10369,planetaklockow-pl,ok,123.99 PLN
 10374,planetaklockow-pl,ok,244.99 PLN
 10412,planetaklockow-pl,ok,75.99 PLN
 10413,planetaklockow-pl,ok,35.14 PLN
-10414,planetaklockow-pl,ok,119.99 PLN
+10414,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10415,planetaklockow-pl,ok,107.99 PLN
 10416,planetaklockow-pl,ok,224.99 PLN
 10418,planetaklockow-pl,ok,132.99 PLN
 10419,planetaklockow-pl,ok,74.99 PLN
-10421,planetaklockow-pl,ok,146.69 PLN
+10421,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10422,planetaklockow-pl,ok,269.99 PLN
 10423,planetaklockow-pl,ok,130.99 PLN
 10425,planetaklockow-pl,ok,71.24 PLN
 10426,planetaklockow-pl,ok,151.99 PLN
-10427,planetaklockow-pl,ok,316.19 PLN
+10427,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10428,planetaklockow-pl,ok,548.69 PLN
 10432,planetaklockow-pl,ok,118.99 PLN
 10433,planetaklockow-pl,ok,184.99 PLN
 10434,planetaklockow-pl,ok,294.99 PLN
 10435,planetaklockow-pl,ok,334.39 PLN
-10440,planetaklockow-pl,ok,74.39 PLN
+10440,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10441,planetaklockow-pl,ok,117.99 PLN
 10442,planetaklockow-pl,ok,34.87 PLN
 10443,planetaklockow-pl,ok,117.99 PLN
@@ -2417,7 +2417,7 @@ set_num,shop,status,detail
 10448,planetaklockow-pl,ok,130.19 PLN
 10450,planetaklockow-pl,ok,169.99 PLN
 10451,planetaklockow-pl,ok,289.99 PLN
-10452,planetaklockow-pl,ok,80.99 PLN
+10452,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10453,planetaklockow-pl,ok,205.19 PLN
 10456,planetaklockow-pl,ok,118.99 PLN
 10457,planetaklockow-pl,ok,80.99 PLN
@@ -2434,45 +2434,45 @@ set_num,shop,status,detail
 10470,planetaklockow-pl,ok,319.99 PLN
 10471,planetaklockow-pl,ok,35.8 PLN
 10472,planetaklockow-pl,ok,199.99 PLN
-10473,planetaklockow-pl,ok,106.94 PLN
-10474,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+10473,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+10474,planetaklockow-pl,ok,74.99 PLN
 10475,planetaklockow-pl,ok,90.24 PLN
 10476,planetaklockow-pl,ok,369.99 PLN
 10477,planetaklockow-pl,ok,38.49 PLN
 10478,planetaklockow-pl,ok,279.99 PLN
-10479,planetaklockow-pl,ok,74.99 PLN
+10479,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10480,planetaklockow-pl,ok,297.59 PLN
-10776,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+10776,planetaklockow-pl,ok,219.99 PLN
 10788,planetaklockow-pl,ok,306.89 PLN
 10913,planetaklockow-pl,ok,106.94 PLN
-10914,planetaklockow-pl,ok,185.99 PLN
+10914,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10941,planetaklockow-pl,ok,143.99 PLN
-10954,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+10954,planetaklockow-pl,ok,69.74 PLN
 10966,planetaklockow-pl,ok,161.99 PLN
 10967,planetaklockow-pl,ok,28.82 PLN
-10969,planetaklockow-pl,ok,159.99 PLN
+10969,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 10977,planetaklockow-pl,ok,179.99 PLN
 10983,planetaklockow-pl,ok,107.99 PLN
-10989,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+10989,planetaklockow-pl,ok,172.99 PLN
 11023,planetaklockow-pl,ok,36.99 PLN
-11024,planetaklockow-pl,ok,57.99 PLN
+11024,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 11025,planetaklockow-pl,ok,36.99 PLN
 11026,planetaklockow-pl,ok,34.4 PLN
 11034,planetaklockow-pl,ok,139.99 PLN
-11036,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-11039,planetaklockow-pl,ok,37.99 PLN
+11036,planetaklockow-pl,ok,224.99 PLN
+11039,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 11040,planetaklockow-pl,ok,79.99 PLN
 11041,planetaklockow-pl,ok,132.99 PLN
 11045,planetaklockow-pl,ok,185.99 PLN
-11198,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-11199,planetaklockow-pl,ok,159.99 PLN
+11198,planetaklockow-pl,ok,80.99 PLN
+11199,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 11200,planetaklockow-pl,ok,218.49 PLN
 11201,planetaklockow-pl,ok,71.6 PLN
 11202,planetaklockow-pl,ok,123.99 PLN
 11203,planetaklockow-pl,ok,289.99 PLN
 11205,planetaklockow-pl,ok,193.49 PLN
-11206,planetaklockow-pl,ok,38.99 PLN
-11207,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+11206,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+11207,planetaklockow-pl,ok,139.99 PLN
 11208,planetaklockow-pl,ok,214.99 PLN
 11209,planetaklockow-pl,ok,71.6 PLN
 11211,planetaklockow-pl,ok,185.99 PLN
@@ -2489,22 +2489,22 @@ set_num,shop,status,detail
 11378,planetaklockow-pl,ok,559.99 PLN
 11379,planetaklockow-pl,ok,549.99 PLN
 11380,planetaklockow-pl,ok,448.79 PLN
-11381,planetaklockow-pl,ok,548.69 PLN
+11381,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 11382,planetaklockow-pl,ok,549.99 PLN
 11383,planetaklockow-pl,ok,469.99 PLN
 11384,planetaklockow-pl,ok,614.99 PLN
 11385,planetaklockow-pl,ok,559.99 PLN
-11386,planetaklockow-pl,ok,899.99 PLN
+11386,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 11387,planetaklockow-pl,ok,9999.99 PLN
 11501,planetaklockow-pl,ok,218.54 PLN
 11502,planetaklockow-pl,ok,244.99 PLN
 11503,planetaklockow-pl,ok,259.99 PLN
-11504,planetaklockow-pl,ok,231.56 PLN
+11504,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 11505,planetaklockow-pl,ok,297.59 PLN
 11506,planetaklockow-pl,ok,69.74 PLN
 11507,planetaklockow-pl,ok,167.39 PLN
-11508,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-11509,planetaklockow-pl,ok,114.99 PLN
+11508,planetaklockow-pl,ok,53.0 PLN
+11509,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 11510,planetaklockow-pl,ok,219.99 PLN
 11511,planetaklockow-pl,ok,148.79 PLN
 11514,planetaklockow-pl,ok,53.0 PLN
@@ -2514,8 +2514,8 @@ set_num,shop,status,detail
 21063,planetaklockow-pl,ok,1149.99 PLN
 21064,planetaklockow-pl,ok,306.89 PLN
 21065,planetaklockow-pl,ok,3559.99 PLN
-21066,planetaklockow-pl,ok,548.69 PLN
-21067,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+21066,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+21067,planetaklockow-pl,ok,1249.99 PLN
 21256,planetaklockow-pl,ok,253.79 PLN
 21260,planetaklockow-pl,ok,110.66 PLN
 21266,planetaklockow-pl,ok,36.26 PLN
@@ -2531,50 +2531,50 @@ set_num,shop,status,detail
 21277,planetaklockow-pl,ok,218.54 PLN
 21278,planetaklockow-pl,ok,339.99 PLN
 21279,planetaklockow-pl,ok,387.19 PLN
-21339,planetaklockow-pl,ok,479.99 PLN
+21339,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 21345,planetaklockow-pl,ok,339.99 PLN
 21357,planetaklockow-pl,ok,294.99 PLN
 21362,planetaklockow-pl,ok,246.44 PLN
-21366,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-21367,planetaklockow-pl,ok,598.39 PLN
+21366,planetaklockow-pl,ok,417.99 PLN
+21367,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 21368,planetaklockow-pl,ok,302.24 PLN
 21370,planetaklockow-pl,ok,511.49 PLN
 21372,planetaklockow-pl,ok,474.29 PLN
 21582,planetaklockow-pl,ok,108.8 PLN
-21583,planetaklockow-pl,ok,36.26 PLN
+21583,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 21584,planetaklockow-pl,ok,53.93 PLN
 21585,planetaklockow-pl,ok,71.6 PLN
 21586,planetaklockow-pl,ok,71.6 PLN
 21587,planetaklockow-pl,ok,108.8 PLN
-21588,planetaklockow-pl,ok,172.04 PLN
+21588,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 21589,planetaklockow-pl,ok,223.19 PLN
-21590,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+21590,planetaklockow-pl,ok,233.19 PLN
 21592,planetaklockow-pl,ok,91.13 PLN
 21593,planetaklockow-pl,ok,108.8 PLN
 21594,planetaklockow-pl,ok,172.04 PLN
-21595,planetaklockow-pl,ok,223.19 PLN
+21595,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 21596,planetaklockow-pl,ok,344.09 PLN
-21597,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+21597,planetaklockow-pl,ok,376.64 PLN
 30503,planetaklockow-pl,ok,23.24 PLN
 30560,planetaklockow-pl,ok,29.99 PLN
-30645,planetaklockow-pl,ok,24.99 PLN
+30645,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 30653,planetaklockow-pl,ok,23.24 PLN
 30660,planetaklockow-pl,ok,23.24 PLN
-30661,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+30661,planetaklockow-pl,ok,24.99 PLN
 30670,planetaklockow-pl,ok,24.99 PLN
-30672,planetaklockow-pl,ok,23.24 PLN
+30672,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 30673,planetaklockow-pl,ok,23.24 PLN
 30675,planetaklockow-pl,ok,23.24 PLN
 30685,planetaklockow-pl,ok,23.24 PLN
 30686,planetaklockow-pl,ok,23.24 PLN
 30687,planetaklockow-pl,ok,23.24 PLN
 30689,planetaklockow-pl,ok,23.24 PLN
-30690,planetaklockow-pl,ok,23.24 PLN
+30690,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 30692,planetaklockow-pl,ok,23.24 PLN
 30694,planetaklockow-pl,ok,23.24 PLN
 30695,planetaklockow-pl,ok,23.24 PLN
-30696,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-30697,planetaklockow-pl,ok,23.24 PLN
+30696,planetaklockow-pl,ok,23.24 PLN
+30697,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 30698,planetaklockow-pl,ok,23.24 PLN
 30699,planetaklockow-pl,ok,23.24 PLN
 30700,planetaklockow-pl,ok,23.24 PLN
@@ -2584,34 +2584,34 @@ set_num,shop,status,detail
 30704,planetaklockow-pl,ok,24.99 PLN
 30705,planetaklockow-pl,ok,23.24 PLN
 30708,planetaklockow-pl,ok,23.24 PLN
-30709,planetaklockow-pl,ok,24.99 PLN
+30709,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 30710,planetaklockow-pl,ok,24.99 PLN
-30711,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+30711,planetaklockow-pl,ok,23.24 PLN
 30712,planetaklockow-pl,ok,15.99 PLN
 30713,planetaklockow-pl,ok,14.87 PLN
 30715,planetaklockow-pl,ok,16.99 PLN
-30717,planetaklockow-pl,ok,15.99 PLN
+30717,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 30718,planetaklockow-pl,ok,15.99 PLN
 30719,planetaklockow-pl,ok,14.87 PLN
 30720,planetaklockow-pl,ok,16.49 PLN
 30721,planetaklockow-pl,ok,14.87 PLN
 30722,planetaklockow-pl,ok,16.49 PLN
-30723,planetaklockow-pl,ok,14.87 PLN
-30727,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+30723,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+30727,planetaklockow-pl,ok,14.87 PLN
 30728,planetaklockow-pl,ok,14.87 PLN
 30729,planetaklockow-pl,ok,14.87 PLN
 30730,planetaklockow-pl,ok,14.87 PLN
-30731,planetaklockow-pl,ok,16.49 PLN
+30731,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 30733,planetaklockow-pl,ok,24.99 PLN
-30734,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+30734,planetaklockow-pl,ok,23.24 PLN
 30735,planetaklockow-pl,ok,14.87 PLN
 30736,planetaklockow-pl,ok,23.24 PLN
-31109,planetaklockow-pl,ok,549.99 PLN
+31109,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 31129,planetaklockow-pl,ok,204.99 PLN
 31134,planetaklockow-pl,ok,37.99 PLN
-31136,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+31136,planetaklockow-pl,ok,109.99 PLN
 31140,planetaklockow-pl,ok,35.33 PLN
-31141,planetaklockow-pl,ok,634.99 PLN
+31141,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 31146,planetaklockow-pl,ok,69.74 PLN
 31147,planetaklockow-pl,ok,69.74 PLN
 31148,planetaklockow-pl,ok,121.99 PLN
@@ -2631,9 +2631,9 @@ set_num,shop,status,detail
 31169,planetaklockow-pl,ok,116.84 PLN
 31170,planetaklockow-pl,ok,89.27 PLN
 31173,planetaklockow-pl,ok,53.0 PLN
-31174,planetaklockow-pl,ok,121.99 PLN
+31174,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 31209,planetaklockow-pl,ok,849.99 PLN
-31212,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+31212,planetaklockow-pl,ok,869.99 PLN
 31213,planetaklockow-pl,ok,429.99 PLN
 31214,planetaklockow-pl,ok,339.99 PLN
 31215,planetaklockow-pl,ok,879.99 PLN
@@ -2649,23 +2649,23 @@ set_num,shop,status,detail
 31381,planetaklockow-pl,ok,132.99 PLN
 31382,planetaklockow-pl,ok,114.99 PLN
 31383,planetaklockow-pl,ok,106.94 PLN
-31384,planetaklockow-pl,ok,114.99 PLN
+31384,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 31385,planetaklockow-pl,ok,184.79 PLN
 31386,planetaklockow-pl,ok,241.79 PLN
 31387,planetaklockow-pl,ok,371.99 PLN
 31388,planetaklockow-pl,ok,939.99 PLN
-31389,planetaklockow-pl,ok,334.79 PLN
+31389,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 31390,planetaklockow-pl,ok,106.94 PLN
 31391,planetaklockow-pl,ok,106.94 PLN
 31392,planetaklockow-pl,ok,148.79 PLN
 40460,planetaklockow-pl,ok,53.0 PLN
-40499,planetaklockow-pl,ok,158.09 PLN
+40499,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 40524,planetaklockow-pl,ok,60.99 PLN
 40570,planetaklockow-pl,ok,129.99 PLN
 40573,planetaklockow-pl,ok,172.04 PLN
 40634,planetaklockow-pl,ok,629.99 PLN
 40638,planetaklockow-pl,ok,49.99 PLN
-40647,planetaklockow-pl,ok,60.99 PLN
+40647,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 40678,planetaklockow-pl,ok,121.99 PLN
 40709,planetaklockow-pl,ok,47.42 PLN
 40721,planetaklockow-pl,ok,56.72 PLN
@@ -2675,12 +2675,12 @@ set_num,shop,status,detail
 40746,planetaklockow-pl,ok,79.99 PLN
 40747,planetaklockow-pl,ok,57.65 PLN
 40806,planetaklockow-pl,ok,225.98 PLN
-40807,planetaklockow-pl,ok,69.74 PLN
+40807,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 40808,planetaklockow-pl,ok,50.99 PLN
 40809,planetaklockow-pl,ok,148.79 PLN
 40811,planetaklockow-pl,ok,53.0 PLN
 40812,planetaklockow-pl,ok,46.49 PLN
-40813,planetaklockow-pl,ok,114.99 PLN
+40813,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 40814,planetaklockow-pl,ok,106.94 PLN
 40815,planetaklockow-pl,ok,53.0 PLN
 40816,planetaklockow-pl,ok,79.99 PLN
@@ -2691,23 +2691,23 @@ set_num,shop,status,detail
 40863,planetaklockow-pl,ok,99.99 PLN
 40864,planetaklockow-pl,ok,99.99 PLN
 40867,planetaklockow-pl,ok,99.99 PLN
-40871,planetaklockow-pl,ok,99.99 PLN
+40871,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 40872,planetaklockow-pl,ok,99.99 PLN
 40873,planetaklockow-pl,ok,99.99 PLN
 40883,planetaklockow-pl,ok,99.99 PLN
 40920,planetaklockow-pl,ok,999.99 PLN
 41447,planetaklockow-pl,ok,174.99 PLN
-41688,planetaklockow-pl,ok,197.99 PLN
+41688,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 41705,planetaklockow-pl,ok,60.29 PLN
 41713,planetaklockow-pl,ok,319.99 PLN
 41715,planetaklockow-pl,ok,80.99 PLN
 41716,planetaklockow-pl,ok,170.99 PLN
-41717,planetaklockow-pl,ok,197.99 PLN
+41717,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 41724,planetaklockow-pl,ok,175.49 PLN
 41726,planetaklockow-pl,ok,97.64 PLN
-41728,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+41728,planetaklockow-pl,ok,118.99 PLN
 41729,planetaklockow-pl,ok,385.94 PLN
-41734,planetaklockow-pl,ok,358.04 PLN
+41734,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 41739,planetaklockow-pl,ok,80.9 PLN
 41744,planetaklockow-pl,ok,371.99 PLN
 41751,planetaklockow-pl,ok,202.49 PLN
@@ -2717,74 +2717,74 @@ set_num,shop,status,detail
 41760,planetaklockow-pl,no_price,"price not found (page: 'Recenzja zestawu LEGO 41760 Friends Przygoda w Igloo - Planeta Klocków Sklep z k', 149350 chars)"
 41806,planetaklockow-pl,ok,219.99 PLN
 41811,planetaklockow-pl,ok,194.99 PLN
-41838,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+41838,planetaklockow-pl,ok,659.99 PLN
 41916,planetaklockow-pl,ok,21.38 PLN
 41931,planetaklockow-pl,ok,15.8 PLN
-41932,planetaklockow-pl,ok,16.99 PLN
+41932,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 41946,planetaklockow-pl,ok,15.8 PLN
-41954,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+41954,planetaklockow-pl,ok,25.19 PLN
 41957,planetaklockow-pl,ok,124.99 PLN
 41958,planetaklockow-pl,ok,15.8 PLN
-41963,planetaklockow-pl,ok,26.03 PLN
+41963,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 41964,planetaklockow-pl,ok,170.99 PLN
 42129,planetaklockow-pl,ok,1424.99 PLN
 42137,planetaklockow-pl,ok,218.54 PLN
 42141,planetaklockow-pl,ok,902.49 PLN
 42143,planetaklockow-pl,ok,1949.99 PLN
-42151,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+42151,planetaklockow-pl,ok,195.29 PLN
 42154,planetaklockow-pl,ok,466.39 PLN
 42156,planetaklockow-pl,ok,869.99 PLN
 42157,planetaklockow-pl,ok,899.99 PLN
 42158,planetaklockow-pl,ok,409.99 PLN
 42160,planetaklockow-pl,ok,739.99 PLN
-42161,planetaklockow-pl,ok,249.99 PLN
+42161,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42166,planetaklockow-pl,ok,179.99 PLN
 42167,planetaklockow-pl,ok,142.99 PLN
 42169,planetaklockow-pl,ok,209.24 PLN
-42170,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+42170,planetaklockow-pl,ok,339.99 PLN
 42171,planetaklockow-pl,ok,949.99 PLN
-42172,planetaklockow-pl,ok,1949.99 PLN
+42172,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42173,planetaklockow-pl,ok,199.01 PLN
 42174,planetaklockow-pl,ok,519.99 PLN
 42175,planetaklockow-pl,ok,889.99 PLN
-42176,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-42177,planetaklockow-pl,ok,1099.99 PLN
+42176,planetaklockow-pl,ok,651.19 PLN
+42177,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42179,planetaklockow-pl,ok,339.99 PLN
 42197,planetaklockow-pl,ok,38.12 PLN
 42198,planetaklockow-pl,ok,113.99 PLN
 42199,planetaklockow-pl,ok,106.01 PLN
-42200,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-42201,planetaklockow-pl,ok,169.99 PLN
+42200,planetaklockow-pl,ok,106.01 PLN
+42201,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42202,planetaklockow-pl,ok,869.99 PLN
 42203,planetaklockow-pl,ok,214.99 PLN
 42204,planetaklockow-pl,ok,225.98 PLN
 42205,planetaklockow-pl,ok,246.44 PLN
 42206,planetaklockow-pl,ok,999.99 PLN
-42207,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-42208,planetaklockow-pl,ok,223.19 PLN
+42207,planetaklockow-pl,ok,999.99 PLN
+42208,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42209,planetaklockow-pl,ok,399.89 PLN
 42210,planetaklockow-pl,ok,619.99 PLN
 42211,planetaklockow-pl,ok,378.39 PLN
 42212,planetaklockow-pl,ok,223.19 PLN
-42213,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+42213,planetaklockow-pl,ok,223.19 PLN
 42214,planetaklockow-pl,ok,789.99 PLN
-42215,planetaklockow-pl,ok,1649.99 PLN
+42215,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42217,planetaklockow-pl,ok,249.99 PLN
 42218,planetaklockow-pl,ok,38.99 PLN
 42219,planetaklockow-pl,ok,108.8 PLN
 42220,planetaklockow-pl,ok,108.8 PLN
 42221,planetaklockow-pl,ok,239.99 PLN
-42222,planetaklockow-pl,ok,246.44 PLN
+42222,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42223,planetaklockow-pl,ok,283.64 PLN
 42224,planetaklockow-pl,ok,614.99 PLN
 42225,planetaklockow-pl,ok,36.26 PLN
 42226,planetaklockow-pl,ok,264.99 PLN
 42227,planetaklockow-pl,ok,246.44 PLN
-42228,planetaklockow-pl,ok,979.99 PLN
-42229,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+42228,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+42229,planetaklockow-pl,ok,246.44 PLN
 42231,planetaklockow-pl,ok,595.19 PLN
 42232,planetaklockow-pl,ok,1949.99 PLN
-42233,planetaklockow-pl,ok,18.13 PLN
+42233,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42234,planetaklockow-pl,ok,246.44 PLN
 42235,planetaklockow-pl,ok,246.44 PLN
 42236,planetaklockow-pl,ok,344.09 PLN
@@ -2794,56 +2794,56 @@ set_num,shop,status,detail
 42603,planetaklockow-pl,ok,119.99 PLN
 42605,planetaklockow-pl,ok,334.39 PLN
 42609,planetaklockow-pl,ok,64.99 PLN
-42614,planetaklockow-pl,ok,148.49 PLN
+42614,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42616,planetaklockow-pl,ok,269.99 PLN
-42618,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+42618,planetaklockow-pl,ok,159.99 PLN
 42622,planetaklockow-pl,ok,60.99 PLN
 42624,planetaklockow-pl,ok,184.99 PLN
-42625,planetaklockow-pl,ok,76.94 PLN
+42625,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42626,planetaklockow-pl,ok,269.69 PLN
 42637,planetaklockow-pl,ok,139.49 PLN
 42641,planetaklockow-pl,ok,56.72 PLN
-42642,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+42642,planetaklockow-pl,ok,60.99 PLN
 42644,planetaklockow-pl,ok,73.46 PLN
 42646,planetaklockow-pl,ok,78.99 PLN
-42648,planetaklockow-pl,ok,114.99 PLN
+42648,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42649,planetaklockow-pl,ok,121.99 PLN
 42650,planetaklockow-pl,ok,169.99 PLN
 42652,planetaklockow-pl,ok,289.99 PLN
 42653,planetaklockow-pl,ok,201.15 PLN
 42654,planetaklockow-pl,ok,289.99 PLN
-42659,planetaklockow-pl,ok,79.99 PLN
+42659,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42661,planetaklockow-pl,ok,169.99 PLN
 42662,planetaklockow-pl,ok,181.34 PLN
 42663,planetaklockow-pl,ok,249.99 PLN
 42664,planetaklockow-pl,ok,297.59 PLN
 42665,planetaklockow-pl,ok,39.99 PLN
 42666,planetaklockow-pl,ok,121.99 PLN
-42668,planetaklockow-pl,ok,112.99 PLN
+42668,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42669,planetaklockow-pl,ok,385.94 PLN
-42671,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+42671,planetaklockow-pl,ok,362.69 PLN
 42673,planetaklockow-pl,ok,530.09 PLN
 42675,planetaklockow-pl,ok,35.8 PLN
-42676,planetaklockow-pl,ok,106.94 PLN
+42676,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42677,planetaklockow-pl,ok,106.94 PLN
 42678,planetaklockow-pl,ok,69.51 PLN
 42679,planetaklockow-pl,ok,101.99 PLN
-42680,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-42681,planetaklockow-pl,ok,35.8 PLN
+42680,planetaklockow-pl,ok,74.99 PLN
+42681,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42682,planetaklockow-pl,ok,95.99 PLN
 42684,planetaklockow-pl,ok,148.79 PLN
 42685,planetaklockow-pl,ok,209.99 PLN
 42686,planetaklockow-pl,ok,231.56 PLN
-42687,planetaklockow-pl,ok,284.99 PLN
+42687,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42688,planetaklockow-pl,ok,302.24 PLN
-42689,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+42689,planetaklockow-pl,ok,372.99 PLN
 42690,planetaklockow-pl,ok,35.8 PLN
 42691,planetaklockow-pl,ok,519.99 PLN
 42692,planetaklockow-pl,ok,35.8 PLN
-42693,planetaklockow-pl,ok,114.99 PLN
+42693,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 42694,planetaklockow-pl,ok,53.0 PLN
 42695,planetaklockow-pl,ok,114.99 PLN
-42696,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+42696,planetaklockow-pl,ok,114.99 PLN
 42697,planetaklockow-pl,ok,199.99 PLN
 42698,planetaklockow-pl,ok,104.99 PLN
 42699,planetaklockow-pl,ok,175.99 PLN
@@ -2854,9 +2854,9 @@ set_num,shop,status,detail
 42705,planetaklockow-pl,ok,371.99 PLN
 43011,planetaklockow-pl,ok,116.99 PLN
 43012,planetaklockow-pl,ok,116.99 PLN
-43013,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+43013,planetaklockow-pl,ok,108.8 PLN
 43014,planetaklockow-pl,ok,325.59 PLN
-43015,planetaklockow-pl,ok,329.99 PLN
+43015,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43016,planetaklockow-pl,ok,296.99 PLN
 43017,planetaklockow-pl,ok,344.09 PLN
 43018,planetaklockow-pl,ok,716.09 PLN
@@ -2867,17 +2867,17 @@ set_num,shop,status,detail
 43024,planetaklockow-pl,ok,325.59 PLN
 43027,planetaklockow-pl,ok,108.8 PLN
 43028,planetaklockow-pl,ok,116.99 PLN
-43029,planetaklockow-pl,ok,189.71 PLN
+43029,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43030,planetaklockow-pl,ok,306.89 PLN
 43031,planetaklockow-pl,ok,478.94 PLN
-43102,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+43102,planetaklockow-pl,ok,86.99 PLN
 43103,planetaklockow-pl,ok,43.5 PLN
-43104,planetaklockow-pl,ok,43.5 PLN
+43104,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43105,planetaklockow-pl,ok,43.5 PLN
 43106,planetaklockow-pl,ok,43.5 PLN
-43107,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+43107,planetaklockow-pl,ok,43.5 PLN
 43113,planetaklockow-pl,ok,209.99 PLN
-43114,planetaklockow-pl,ok,202.99 PLN
+43114,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43185,planetaklockow-pl,ok,224.99 PLN
 43204,planetaklockow-pl,ok,154.99 PLN
 43206,planetaklockow-pl,ok,362.69 PLN
@@ -2887,34 +2887,34 @@ set_num,shop,status,detail
 43219,planetaklockow-pl,ok,156.99 PLN
 43220,planetaklockow-pl,ok,79.97 PLN
 43221,planetaklockow-pl,ok,231.99 PLN
-43224,planetaklockow-pl,ok,371.99 PLN
+43224,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43231,planetaklockow-pl,ok,211.49 PLN
 43235,planetaklockow-pl,ok,59.39 PLN
 43239,planetaklockow-pl,ok,119.69 PLN
 43240,planetaklockow-pl,ok,344.99 PLN
 43245,planetaklockow-pl,ok,699.99 PLN
-43246,planetaklockow-pl,ok,429.99 PLN
+43246,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43247,planetaklockow-pl,ok,569.99 PLN
 43248,planetaklockow-pl,ok,143.99 PLN
 43249,planetaklockow-pl,ok,269.99 PLN
-43257,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+43257,planetaklockow-pl,ok,260.39 PLN
 43258,planetaklockow-pl,ok,399.89 PLN
-43260,planetaklockow-pl,ok,79.99 PLN
+43260,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43262,planetaklockow-pl,ok,274.34 PLN
 43264,planetaklockow-pl,ok,171.99 PLN
-43265,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+43265,planetaklockow-pl,ok,115.31 PLN
 43266,planetaklockow-pl,ok,161.49 PLN
-43267,planetaklockow-pl,ok,502.19 PLN
+43267,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43268,planetaklockow-pl,ok,343.19 PLN
 43269,planetaklockow-pl,ok,619.99 PLN
-43270,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+43270,planetaklockow-pl,ok,251.74 PLN
 43271,planetaklockow-pl,ok,97.64 PLN
-43272,planetaklockow-pl,ok,158.09 PLN
+43272,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43273,planetaklockow-pl,ok,132.98 PLN
 43276,planetaklockow-pl,ok,204.99 PLN
 43279,planetaklockow-pl,ok,269.69 PLN
-43280,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-43281,planetaklockow-pl,ok,214.99 PLN
+43280,planetaklockow-pl,ok,71.6 PLN
+43281,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 43282,planetaklockow-pl,ok,71.6 PLN
 43283,planetaklockow-pl,ok,108.8 PLN
 43284,planetaklockow-pl,ok,39.99 PLN
@@ -2936,53 +2936,53 @@ set_num,shop,status,detail
 43300,planetaklockow-pl,ok,649.99 PLN
 43301,planetaklockow-pl,ok,644.99 PLN
 43303,planetaklockow-pl,ok,35.19 PLN
-43304,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+43304,planetaklockow-pl,ok,202.99 PLN
 43306,planetaklockow-pl,ok,219.99 PLN
 43307,planetaklockow-pl,ok,219.99 PLN
 53701,planetaklockow-pl,ok,22.99 PLN
 53705,planetaklockow-pl,ok,22.99 PLN
-53707,planetaklockow-pl,ok,34.99 PLN
-53708,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+53707,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+53708,planetaklockow-pl,ok,42.99 PLN
 60293,planetaklockow-pl,ok,124.99 PLN
 60294,planetaklockow-pl,ok,259.99 PLN
 60295,planetaklockow-pl,ok,449.99 PLN
-60304,planetaklockow-pl,ok,80.99 PLN
+60304,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60312,planetaklockow-pl,ok,35.8 PLN
 60316,planetaklockow-pl,ok,259.99 PLN
 60337,planetaklockow-pl,ok,659.99 PLN
 60338,planetaklockow-pl,ok,223.19 PLN
-60339,planetaklockow-pl,ok,499.97 PLN
+60339,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60341,planetaklockow-pl,ok,75.32 PLN
-60355,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+60355,planetaklockow-pl,ok,124.99 PLN
 60357,planetaklockow-pl,ok,224.99 PLN
 60360,planetaklockow-pl,ok,144.99 PLN
-60361,planetaklockow-pl,ok,409.99 PLN
+60361,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60367,planetaklockow-pl,ok,455.69 PLN
 60368,planetaklockow-pl,ok,799.99 PLN
 60373,planetaklockow-pl,ok,75.32 PLN
-60397,planetaklockow-pl,ok,64.99 PLN
+60397,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60400,planetaklockow-pl,ok,37.19 PLN
 60402,planetaklockow-pl,ok,60.99 PLN
 60403,planetaklockow-pl,ok,85.99 PLN
 60404,planetaklockow-pl,ok,75.32 PLN
-60407,planetaklockow-pl,ok,119.99 PLN
+60407,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60411,planetaklockow-pl,ok,35.8 PLN
-60414,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+60414,planetaklockow-pl,ok,339.99 PLN
 60415,planetaklockow-pl,ok,75.32 PLN
 60419,planetaklockow-pl,ok,409.99 PLN
-60423,planetaklockow-pl,ok,374.99 PLN
+60423,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60430,planetaklockow-pl,ok,75.32 PLN
 60433,planetaklockow-pl,ok,419.99 PLN
-60436,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+60436,planetaklockow-pl,ok,299.99 PLN
 60442,planetaklockow-pl,ok,46.49 PLN
-60443,planetaklockow-pl,ok,114.99 PLN
+60443,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60444,planetaklockow-pl,ok,316.19 PLN
 60445,planetaklockow-pl,ok,385.94 PLN
-60447,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+60447,planetaklockow-pl,ok,74.39 PLN
 60451,planetaklockow-pl,ok,74.39 PLN
 60452,planetaklockow-pl,ok,74.39 PLN
 60453,planetaklockow-pl,ok,102.99 PLN
-60454,planetaklockow-pl,ok,106.94 PLN
+60454,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60455,planetaklockow-pl,ok,35.33 PLN
 60456,planetaklockow-pl,ok,114.99 PLN
 60458,planetaklockow-pl,ok,37.19 PLN
@@ -2995,12 +2995,12 @@ set_num,shop,status,detail
 60469,planetaklockow-pl,ok,362.69 PLN
 60470,planetaklockow-pl,ok,829.99 PLN
 60475,planetaklockow-pl,ok,199.99 PLN
-60478,planetaklockow-pl,ok,140.79 PLN
+60478,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60479,planetaklockow-pl,ok,69.74 PLN
 60480,planetaklockow-pl,ok,114.99 PLN
 60481,planetaklockow-pl,ok,35.33 PLN
 60482,planetaklockow-pl,ok,35.33 PLN
-60483,planetaklockow-pl,ok,35.33 PLN
+60483,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60484,planetaklockow-pl,ok,35.33 PLN
 60485,planetaklockow-pl,ok,35.33 PLN
 60486,planetaklockow-pl,ok,35.33 PLN
@@ -3009,50 +3009,50 @@ set_num,shop,status,detail
 60489,planetaklockow-pl,ok,106.94 PLN
 60490,planetaklockow-pl,ok,101.99 PLN
 60491,planetaklockow-pl,ok,78.99 PLN
-60492,planetaklockow-pl,ok,114.99 PLN
+60492,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 60493,planetaklockow-pl,ok,158.39 PLN
 60494,planetaklockow-pl,ok,499.99 PLN
 60496,planetaklockow-pl,ok,185.99 PLN
 60497,planetaklockow-pl,ok,208.31 PLN
 60498,planetaklockow-pl,ok,69.74 PLN
-60499,planetaklockow-pl,ok,266.9 PLN
-60500,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+60499,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+60500,planetaklockow-pl,ok,106.94 PLN
 60502,planetaklockow-pl,ok,399.99 PLN
 60503,planetaklockow-pl,ok,231.56 PLN
 60504,planetaklockow-pl,ok,413.59 PLN
 60505,planetaklockow-pl,ok,266.9 PLN
 60506,planetaklockow-pl,ok,265.04 PLN
-60508,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+60508,planetaklockow-pl,ok,849.99 PLN
 60510,planetaklockow-pl,ok,104.99 PLN
 60511,planetaklockow-pl,ok,359.99 PLN
 71031,planetaklockow-pl,no_price,"price not found (page: 'Już wiemy jak wyglądają minifigurki z serii LEGO Minifigures 71031 Marvel Studio', 145748 chars)"
-71046,planetaklockow-pl,ok,24.99 PLN
+71046,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71051,planetaklockow-pl,ok,15.34 PLN
-71052,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+71052,planetaklockow-pl,ok,179.99 PLN
 71053,planetaklockow-pl,ok,16.49 PLN
 71388,planetaklockow-pl,ok,124.99 PLN
-71390,planetaklockow-pl,ok,299.99 PLN
+71390,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71404,planetaklockow-pl,ok,38.69 PLN
 71405,planetaklockow-pl,ok,106.94 PLN
-71406,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+71406,planetaklockow-pl,ok,139.49 PLN
 71407,planetaklockow-pl,ok,302.24 PLN
 71408,planetaklockow-pl,ok,619.99 PLN
-71409,planetaklockow-pl,ok,302.24 PLN
+71409,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71414,planetaklockow-pl,ok,66.99 PLN
 71417,planetaklockow-pl,ok,278.99 PLN
-71418,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+71418,planetaklockow-pl,ok,279.99 PLN
 71420,planetaklockow-pl,ok,43.99 PLN
-71421,planetaklockow-pl,ok,103.49 PLN
+71421,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71422,planetaklockow-pl,ok,153.44 PLN
 71424,planetaklockow-pl,ok,299.99 PLN
-71425,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+71425,planetaklockow-pl,ok,439.99 PLN
 71426,planetaklockow-pl,ok,279.99 PLN
-71438,planetaklockow-pl,ok,539.39 PLN
+71438,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71440,planetaklockow-pl,ok,217.99 PLN
 71441,planetaklockow-pl,ok,214.99 PLN
 71453,planetaklockow-pl,ok,91.99 PLN
-71455,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-71457,planetaklockow-pl,ok,183.99 PLN
+71455,planetaklockow-pl,ok,159.99 PLN
+71457,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71458,planetaklockow-pl,ok,269.69 PLN
 71459,planetaklockow-pl,ok,348.74 PLN
 71460,planetaklockow-pl,ok,400.39 PLN
@@ -3061,23 +3061,23 @@ set_num,shop,status,detail
 71481,planetaklockow-pl,ok,148.49 PLN
 71483,planetaklockow-pl,ok,184.99 PLN
 71484,planetaklockow-pl,ok,334.99 PLN
-71485,planetaklockow-pl,ok,512.99 PLN
+71485,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71489,planetaklockow-pl,ok,79.99 PLN
-71490,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+71490,planetaklockow-pl,ok,63.99 PLN
 71491,planetaklockow-pl,ok,199.49 PLN
 71492,planetaklockow-pl,ok,195.29 PLN
 71495,planetaklockow-pl,ok,113.45 PLN
-71497,planetaklockow-pl,ok,395.24 PLN
+71497,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71499,planetaklockow-pl,ok,395.24 PLN
 71500,planetaklockow-pl,ok,576.59 PLN
-71508,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+71508,planetaklockow-pl,ok,302.24 PLN
 71512,planetaklockow-pl,ok,266.9 PLN
-71513,planetaklockow-pl,ok,184.79 PLN
+71513,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71514,planetaklockow-pl,ok,381.29 PLN
 71515,planetaklockow-pl,ok,599.99 PLN
 71759,planetaklockow-pl,ok,199.99 PLN
 71780,planetaklockow-pl,ok,37.19 PLN
-71783,planetaklockow-pl,ok,194.99 PLN
+71783,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71804,planetaklockow-pl,ok,60.99 PLN
 71807,planetaklockow-pl,ok,78.99 PLN
 71808,planetaklockow-pl,ok,116.24 PLN
@@ -3088,174 +3088,174 @@ set_num,shop,status,detail
 71824,planetaklockow-pl,ok,42.99 PLN
 71826,planetaklockow-pl,ok,73.46 PLN
 71827,planetaklockow-pl,ok,37.19 PLN
-71828,planetaklockow-pl,ok,88.34 PLN
+71828,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71829,planetaklockow-pl,ok,73.46 PLN
 71830,planetaklockow-pl,ok,195.29 PLN
-71831,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+71831,planetaklockow-pl,ok,161.49 PLN
 71834,planetaklockow-pl,ok,395.24 PLN
 71836,planetaklockow-pl,ok,419.99 PLN
-71838,planetaklockow-pl,ok,37.19 PLN
+71838,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71839,planetaklockow-pl,ok,73.46 PLN
 71842,planetaklockow-pl,ok,199.99 PLN
 71843,planetaklockow-pl,ok,269.69 PLN
-71844,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-71845,planetaklockow-pl,ok,424.99 PLN
+71844,planetaklockow-pl,ok,343.19 PLN
+71845,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71846,planetaklockow-pl,ok,492.89 PLN
 71847,planetaklockow-pl,ok,589.59 PLN
 71849,planetaklockow-pl,ok,34.31 PLN
 71850,planetaklockow-pl,ok,35.8 PLN
 71851,planetaklockow-pl,ok,35.33 PLN
-71853,planetaklockow-pl,ok,69.74 PLN
+71853,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71854,planetaklockow-pl,ok,106.94 PLN
-71856,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+71856,planetaklockow-pl,ok,185.99 PLN
 71857,planetaklockow-pl,ok,302.24 PLN
-71858,planetaklockow-pl,ok,381.29 PLN
+71858,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71859,planetaklockow-pl,ok,381.29 PLN
 71860,planetaklockow-pl,ok,483.99 PLN
 71861,planetaklockow-pl,ok,939.99 PLN
 71863,planetaklockow-pl,ok,35.33 PLN
 71864,planetaklockow-pl,ok,69.74 PLN
-71866,planetaklockow-pl,ok,148.79 PLN
-71867,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+71866,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+71867,planetaklockow-pl,ok,297.59 PLN
 71868,planetaklockow-pl,ok,106.94 PLN
 71869,planetaklockow-pl,ok,359.99 PLN
 71870,planetaklockow-pl,ok,502.19 PLN
-71871,planetaklockow-pl,ok,539.39 PLN
+71871,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 71872,planetaklockow-pl,ok,334.79 PLN
 72032,planetaklockow-pl,ok,80.74 PLN
 72034,planetaklockow-pl,ok,122.99 PLN
 72035,planetaklockow-pl,ok,161.49 PLN
 72036,planetaklockow-pl,ok,316.19 PLN
-72037,planetaklockow-pl,ok,749.99 PLN
-72038,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+72037,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+72038,planetaklockow-pl,ok,214.99 PLN
 72039,planetaklockow-pl,ok,429.99 PLN
 72040,planetaklockow-pl,ok,61.99 PLN
 72041,planetaklockow-pl,ok,123.99 PLN
-72043,planetaklockow-pl,ok,214.99 PLN
+72043,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 72046,planetaklockow-pl,ok,264.99 PLN
 72050,planetaklockow-pl,ok,769.99 PLN
-72051,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+72051,planetaklockow-pl,ok,709.99 PLN
 72150,planetaklockow-pl,ok,269.69 PLN
 72151,planetaklockow-pl,ok,242.99 PLN
 72152,planetaklockow-pl,ok,859.99 PLN
 72153,planetaklockow-pl,ok,9999.99 PLN
 72154,planetaklockow-pl,ok,1099.99 PLN
-72155,planetaklockow-pl,ok,81.99 PLN
+72155,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 72156,planetaklockow-pl,ok,124.99 PLN
 72157,planetaklockow-pl,ok,81.99 PLN
 72158,planetaklockow-pl,ok,154.99 PLN
 72159,planetaklockow-pl,ok,61.99 PLN
-72160,planetaklockow-pl,ok,371.99 PLN
+72160,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 72161,planetaklockow-pl,ok,209.99 PLN
 72162,planetaklockow-pl,ok,249.99 PLN
 72163,planetaklockow-pl,ok,299.99 PLN
-72164,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+72164,planetaklockow-pl,ok,299.99 PLN
 72165,planetaklockow-pl,ok,339.99 PLN
-72166,planetaklockow-pl,ok,379.99 PLN
+72166,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 72167,planetaklockow-pl,ok,519.99 PLN
 72306,planetaklockow-pl,ok,511.49 PLN
 72423,planetaklockow-pl,ok,679.99 PLN
 72537,planetaklockow-pl,ok,269.69 PLN
-75328,planetaklockow-pl,ok,302.24 PLN
-75333,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+75328,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+75333,planetaklockow-pl,ok,142.99 PLN
 75356,planetaklockow-pl,ok,9999.99 PLN
 75358,planetaklockow-pl,ok,172.04 PLN
 75371,planetaklockow-pl,ok,827.99 PLN
-75372,planetaklockow-pl,ok,108.8 PLN
+75372,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75374,planetaklockow-pl,ok,576.59 PLN
-75375,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+75375,planetaklockow-pl,ok,321.19 PLN
 75376,planetaklockow-pl,ok,320.84 PLN
 75379,planetaklockow-pl,ok,391.49 PLN
-75380,planetaklockow-pl,ok,344.99 PLN
+75380,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75384,planetaklockow-pl,ok,206.99 PLN
 75388,planetaklockow-pl,ok,164.99 PLN
 75389,planetaklockow-pl,ok,779.99 PLN
 75393,planetaklockow-pl,ok,479.99 PLN
-75398,planetaklockow-pl,ok,557.99 PLN
+75398,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75399,planetaklockow-pl,ok,289.99 PLN
-75400,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+75400,planetaklockow-pl,ok,57.65 PLN
 75401,planetaklockow-pl,ok,194.99 PLN
 75402,planetaklockow-pl,ok,274.34 PLN
 75403,planetaklockow-pl,ok,378.39 PLN
-75404,planetaklockow-pl,ok,204.24 PLN
+75404,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75405,planetaklockow-pl,ok,269.69 PLN
-75407,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+75407,planetaklockow-pl,ok,260.99 PLN
 75408,planetaklockow-pl,ok,316.19 PLN
 75410,planetaklockow-pl,ok,114.38 PLN
-75411,planetaklockow-pl,ok,61.99 PLN
+75411,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75412,planetaklockow-pl,ok,84.99 PLN
 75413,planetaklockow-pl,ok,679.99 PLN
 75414,planetaklockow-pl,ok,193.49 PLN
 75416,planetaklockow-pl,ok,446.39 PLN
-75417,planetaklockow-pl,ok,879.99 PLN
+75417,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75418,planetaklockow-pl,ok,199.99 PLN
 75420,planetaklockow-pl,ok,79.99 PLN
 75424,planetaklockow-pl,ok,79.99 PLN
 75425,planetaklockow-pl,ok,79.99 PLN
-75427,planetaklockow-pl,ok,689.99 PLN
+75427,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75431,planetaklockow-pl,ok,162.74 PLN
 75432,planetaklockow-pl,ok,260.39 PLN
 75433,planetaklockow-pl,ok,269.69 PLN
 75434,planetaklockow-pl,ok,343.19 PLN
-75436,planetaklockow-pl,ok,36.26 PLN
+75436,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75437,planetaklockow-pl,ok,102.95 PLN
 75438,planetaklockow-pl,ok,153.44 PLN
 75439,planetaklockow-pl,ok,189.71 PLN
 75440,planetaklockow-pl,ok,253.88 PLN
 75443,planetaklockow-pl,ok,70.39 PLN
-75444,planetaklockow-pl,ok,172.04 PLN
-75445,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+75444,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+75445,planetaklockow-pl,ok,274.49 PLN
 75446,planetaklockow-pl,ok,494.99 PLN
 75447,planetaklockow-pl,ok,639.99 PLN
 75448,planetaklockow-pl,ok,53.93 PLN
-75449,planetaklockow-pl,ok,71.6 PLN
+75449,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75451,planetaklockow-pl,ok,189.71 PLN
-75452,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+75452,planetaklockow-pl,ok,353.39 PLN
 75453,planetaklockow-pl,ok,849.99 PLN
 75454,planetaklockow-pl,ok,689.99 PLN
-75455,planetaklockow-pl,ok,709.99 PLN
+75455,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75456,planetaklockow-pl,ok,125.54 PLN
 75457,planetaklockow-pl,ok,9999.99 PLN
-75461,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+75461,planetaklockow-pl,ok,419.99 PLN
 75573,planetaklockow-pl,ok,441.74 PLN
-75579,planetaklockow-pl,ok,479.99 PLN
+75579,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75636,planetaklockow-pl,ok,123.99 PLN
 75637,planetaklockow-pl,ok,214.99 PLN
 75638,planetaklockow-pl,ok,330.14 PLN
 75639,planetaklockow-pl,ok,579.99 PLN
-75640,planetaklockow-pl,ok,1299.99 PLN
+75640,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75641,planetaklockow-pl,ok,108.8 PLN
 75642,planetaklockow-pl,ok,223.19 PLN
 75643,planetaklockow-pl,ok,269.69 PLN
 75644,planetaklockow-pl,ok,306.89 PLN
 75645,planetaklockow-pl,ok,371.99 PLN
-75646,planetaklockow-pl,ok,709.99 PLN
+75646,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 75647,planetaklockow-pl,ok,729.99 PLN
 75681,planetaklockow-pl,ok,124.99 PLN
 75682,planetaklockow-pl,ok,234.99 PLN
 75683,planetaklockow-pl,ok,304.99 PLN
 75684,planetaklockow-pl,ok,382.79 PLN
-75685,planetaklockow-pl,ok,679.99 PLN
-75687,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+75685,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+75687,planetaklockow-pl,ok,104.99 PLN
 75688,planetaklockow-pl,ok,174.99 PLN
 75689,planetaklockow-pl,ok,312.39 PLN
 75981,planetaklockow-pl,ok,299.99 PLN
-76155,planetaklockow-pl,ok,254.99 PLN
+76155,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76156,planetaklockow-pl,ok,423.14 PLN
-76157,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+76157,planetaklockow-pl,ok,199.99 PLN
 76213,planetaklockow-pl,ok,154.99 PLN
 76231,planetaklockow-pl,ok,278.99 PLN
-76240,planetaklockow-pl,ok,1299.99 PLN
+76240,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76253,planetaklockow-pl,ok,43.99 PLN
 76254,planetaklockow-pl,ok,134.99 PLN
-76255,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+76255,planetaklockow-pl,ok,399.49 PLN
 76257,planetaklockow-pl,ok,155.3 PLN
 76258,planetaklockow-pl,ok,155.3 PLN
 76262,planetaklockow-pl,ok,999.99 PLN
 76263,planetaklockow-pl,ok,116.24 PLN
 76273,planetaklockow-pl,ok,324.99 PLN
-76278,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-76279,planetaklockow-pl,ok,132.99 PLN
+76278,planetaklockow-pl,ok,159.99 PLN
+76279,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76281,planetaklockow-pl,ok,331.49 PLN
 76282,planetaklockow-pl,ok,254.99 PLN
 76284,planetaklockow-pl,ok,169.99 PLN
@@ -3268,42 +3268,42 @@ set_num,shop,status,detail
 76307,planetaklockow-pl,ok,58.89 PLN
 76308,planetaklockow-pl,ok,61.99 PLN
 76309,planetaklockow-pl,ok,114.38 PLN
-76311,planetaklockow-pl,ok,204.24 PLN
+76311,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76312,planetaklockow-pl,ok,124.99 PLN
-76313,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+76313,planetaklockow-pl,ok,429.99 PLN
 76314,planetaklockow-pl,ok,499.99 PLN
 76315,planetaklockow-pl,ok,234.99 PLN
 76316,planetaklockow-pl,ok,259.99 PLN
-76319,planetaklockow-pl,ok,142.99 PLN
+76319,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76320,planetaklockow-pl,ok,85.99 PLN
-76321,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+76321,planetaklockow-pl,ok,214.99 PLN
 76322,planetaklockow-pl,ok,214.99 PLN
 76323,planetaklockow-pl,ok,429.99 PLN
 76324,planetaklockow-pl,ok,584.99 PLN
 76325,planetaklockow-pl,ok,529.99 PLN
-76326,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-76327,planetaklockow-pl,ok,264.99 PLN
+76326,planetaklockow-pl,ok,264.99 PLN
+76327,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76330,planetaklockow-pl,ok,290.39 PLN
 76331,planetaklockow-pl,ok,116.99 PLN
 76332,planetaklockow-pl,ok,116.99 PLN
 76334,planetaklockow-pl,ok,102.99 PLN
-76335,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-76336,planetaklockow-pl,ok,79.99 PLN
+76335,planetaklockow-pl,ok,36.26 PLN
+76336,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76337,planetaklockow-pl,ok,59.99 PLN
 76338,planetaklockow-pl,ok,116.99 PLN
 76339,planetaklockow-pl,ok,269.69 PLN
 76340,planetaklockow-pl,ok,199.99 PLN
-76341,planetaklockow-pl,ok,252.99 PLN
+76341,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76342,planetaklockow-pl,ok,474.99 PLN
 76343,planetaklockow-pl,ok,214.99 PLN
-76344,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+76344,planetaklockow-pl,ok,497.19 PLN
 76345,planetaklockow-pl,ok,209.99 PLN
-76347,planetaklockow-pl,ok,371.99 PLN
+76347,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76348,planetaklockow-pl,ok,404.99 PLN
 76350,planetaklockow-pl,ok,185.99 PLN
 76352,planetaklockow-pl,ok,464.99 PLN
-76354,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-76355,planetaklockow-pl,ok,2589.99 PLN
+76354,planetaklockow-pl,ok,1478.69 PLN
+76355,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76403,planetaklockow-pl,ok,427.79 PLN
 76404,planetaklockow-pl,ok,199.99 PLN
 76416,planetaklockow-pl,ok,527.99 PLN
@@ -3314,75 +3314,75 @@ set_num,shop,status,detail
 76429,planetaklockow-pl,ok,434.99 PLN
 76433,planetaklockow-pl,ok,278.99 PLN
 76440,planetaklockow-pl,ok,679.99 PLN
-76441,planetaklockow-pl,ok,97.64 PLN
+76441,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76442,planetaklockow-pl,ok,71.6 PLN
 76443,planetaklockow-pl,ok,199.94 PLN
 76444,planetaklockow-pl,ok,879.99 PLN
 76445,planetaklockow-pl,ok,189.71 PLN
-76446,planetaklockow-pl,ok,189.71 PLN
+76446,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76448,planetaklockow-pl,ok,84.99 PLN
 76449,planetaklockow-pl,ok,264.99 PLN
 76450,planetaklockow-pl,ok,409.19 PLN
 76451,planetaklockow-pl,ok,389.99 PLN
-76452,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+76452,planetaklockow-pl,ok,409.19 PLN
 76454,planetaklockow-pl,ok,1099.99 PLN
 76456,planetaklockow-pl,ok,142.99 PLN
-76459,planetaklockow-pl,ok,71.6 PLN
+76459,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76460,planetaklockow-pl,ok,53.93 PLN
-76461,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+76461,planetaklockow-pl,ok,108.8 PLN
 76462,planetaklockow-pl,ok,189.71 PLN
 76463,planetaklockow-pl,ok,385.94 PLN
-76464,planetaklockow-pl,ok,223.19 PLN
+76464,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76466,planetaklockow-pl,ok,689.99 PLN
 76467,planetaklockow-pl,ok,385.94 PLN
 76469,planetaklockow-pl,ok,125.54 PLN
-76470,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-76471,planetaklockow-pl,ok,371.99 PLN
+76470,planetaklockow-pl,ok,306.89 PLN
+76471,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76473,planetaklockow-pl,ok,1049.99 PLN
 76474,planetaklockow-pl,ok,376.64 PLN
 76475,planetaklockow-pl,ok,108.8 PLN
 76476,planetaklockow-pl,ok,2049.99 PLN
-76781,planetaklockow-pl,ok,394.99 PLN
+76781,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76784,planetaklockow-pl,ok,104.99 PLN
-76785,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+76785,planetaklockow-pl,ok,330.14 PLN
 76787,planetaklockow-pl,ok,153.44 PLN
 76788,planetaklockow-pl,ok,289.99 PLN
 76831,planetaklockow-pl,ok,139.49 PLN
-76900,planetaklockow-pl,ok,179.99 PLN
+76900,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76901,planetaklockow-pl,ok,299.99 PLN
 76906,planetaklockow-pl,ok,149.99 PLN
 76907,planetaklockow-pl,ok,149.99 PLN
 76917,planetaklockow-pl,ok,104.99 PLN
 76919,planetaklockow-pl,ok,106.94 PLN
-76923,planetaklockow-pl,ok,113.99 PLN
+76923,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76924,planetaklockow-pl,ok,189.71 PLN
-76925,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+76925,planetaklockow-pl,ok,244.99 PLN
 76934,planetaklockow-pl,ok,106.01 PLN
 76935,planetaklockow-pl,ok,106.01 PLN
-76967,planetaklockow-pl,ok,97.64 PLN
+76967,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76969,planetaklockow-pl,ok,181.34 PLN
-76970,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+76970,planetaklockow-pl,ok,97.64 PLN
 76972,planetaklockow-pl,ok,142.99 PLN
 76973,planetaklockow-pl,ok,439.99 PLN
-76975,planetaklockow-pl,ok,214.99 PLN
+76975,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 76976,planetaklockow-pl,ok,669.99 PLN
 76992,planetaklockow-pl,ok,227.84 PLN
-76997,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+76997,planetaklockow-pl,ok,234.99 PLN
 76998,planetaklockow-pl,ok,142.99 PLN
-76999,planetaklockow-pl,ok,349.99 PLN
+76999,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 77001,planetaklockow-pl,ok,79.04 PLN
 77002,planetaklockow-pl,ok,117.79 PLN
 77003,planetaklockow-pl,ok,194.99 PLN
-77005,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+77005,planetaklockow-pl,ok,174.99 PLN
 77006,planetaklockow-pl,ok,289.99 PLN
 77037,planetaklockow-pl,ok,185.24 PLN
 77046,planetaklockow-pl,ok,61.99 PLN
-77047,planetaklockow-pl,ok,80.99 PLN
+77047,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 77048,planetaklockow-pl,ok,110.69 PLN
 77049,planetaklockow-pl,ok,153.44 PLN
 77050,planetaklockow-pl,ok,297.59 PLN
 77051,planetaklockow-pl,ok,127.99 PLN
-77052,planetaklockow-pl,ok,264.98 PLN
+77052,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 77053,planetaklockow-pl,ok,42.99 PLN
 77054,planetaklockow-pl,ok,116.84 PLN
 77055,planetaklockow-pl,ok,166.24 PLN
@@ -3394,48 +3394,48 @@ set_num,shop,status,detail
 77073,planetaklockow-pl,ok,360.79 PLN
 77075,planetaklockow-pl,ok,84.99 PLN
 77076,planetaklockow-pl,ok,246.44 PLN
-77077,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+77077,planetaklockow-pl,ok,439.99 PLN
 77078,planetaklockow-pl,ok,989.99 PLN
 77079,planetaklockow-pl,ok,53.93 PLN
 77080,planetaklockow-pl,ok,153.44 PLN
 77081,planetaklockow-pl,ok,371.99 PLN
-77082,planetaklockow-pl,ok,747.99 PLN
-77093,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+77082,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+77093,planetaklockow-pl,ok,434.99 PLN
 77117,planetaklockow-pl,ok,36.26 PLN
 77118,planetaklockow-pl,ok,164.99 PLN
 77119,planetaklockow-pl,ok,108.8 PLN
-77237,planetaklockow-pl,ok,99.5 PLN
+77237,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 77238,planetaklockow-pl,ok,199.94 PLN
 77239,planetaklockow-pl,ok,106.01 PLN
 77240,planetaklockow-pl,ok,106.99 PLN
 77241,planetaklockow-pl,ok,154.99 PLN
 77242,planetaklockow-pl,ok,99.5 PLN
-77243,planetaklockow-pl,ok,99.5 PLN
+77243,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 77244,planetaklockow-pl,ok,99.5 PLN
 77245,planetaklockow-pl,ok,106.01 PLN
 77246,planetaklockow-pl,ok,99.5 PLN
-77248,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
-77249,planetaklockow-pl,ok,99.5 PLN
+77248,planetaklockow-pl,ok,99.5 PLN
+77249,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 77250,planetaklockow-pl,ok,106.01 PLN
 77251,planetaklockow-pl,ok,99.5 PLN
 77252,planetaklockow-pl,ok,119.99 PLN
 77253,planetaklockow-pl,ok,99.5 PLN
-77254,planetaklockow-pl,ok,99.5 PLN
+77254,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 77255,planetaklockow-pl,ok,99.5 PLN
-77256,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+77256,planetaklockow-pl,ok,99.5 PLN
 77257,planetaklockow-pl,ok,106.99 PLN
 77258,planetaklockow-pl,ok,99.5 PLN
-77259,planetaklockow-pl,ok,99.5 PLN
+77259,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 77261,planetaklockow-pl,ok,99.5 PLN
 77262,planetaklockow-pl,ok,106.99 PLN
-77263,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+77263,planetaklockow-pl,ok,99.5 PLN
 77977,planetaklockow-pl,ok,91.13 PLN
-77978,planetaklockow-pl,ok,106.94 PLN
+77978,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
 77981,planetaklockow-pl,ok,299.99 PLN
 77982,planetaklockow-pl,ok,269.69 PLN
 77983,planetaklockow-pl,ok,376.64 PLN
-77984,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
+77984,planetaklockow-pl,ok,419.99 PLN
 77985,planetaklockow-pl,ok,371.99 PLN
 80120,planetaklockow-pl,ok,199.99 PLN
 80121,planetaklockow-pl,ok,459.99 PLN
-88015,planetaklockow-pl,ok,154.99 PLN
+88015,planetaklockow-pl,error,<urlopen error _ssl.c:994: The handshake operation timed out>
